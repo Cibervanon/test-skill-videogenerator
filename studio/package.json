@@ -1,0 +1,23 @@
+{
+  "name": "ai-cinematic-studio",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Deterministic, code-first cinematic animation engine for AI CINEMATIC STUDIO (LOCAL mode).",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts",
+    "still": "remotion still src/index.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.540",
+    "remotion": "4.0.540",
+    "react": "19.1.1",
+    "react-dom": "19.1.1"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.10",
+    "@types/react-dom": "19.1.7",
+    "typescript": "5.9.2"
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "_comment": "Single source of truth for visual styles. Read by studio/src/engine/styles.tsx (renderer) and by scripts/acs/inspect.py + director.py (validation and selection). A style never duplicates the engine: it only re-tunes tokens.",
+  "default": "cinematic",
+  "styles": {
+    "cinematic": {
+      "id": "cinematic",
+      "name": "Cinematic cutout",
+      "use_when": "Narrative shorts, 20-120s, one or two characters, slow camera.",
+      "palette": {
+        "ink": "#241a2b",
+        "paper": "#f6efe3",
+        "text": "#fdf6ea",
+        "muted": "#c9bda9",
+        "accent": "#ffb765",
+        "accentAlt": "#2f6f63",
+        "warn": "#e2705f",
+        "surface": "rgba(20,14,28,0.74)",
+        "surfaceStrong": "rgba(16,11,22,0.9)",
+        "line": "rgba(255,201,138,0.5)"
+      },
+      "type": {
+        "display": "Georgia, 'Times New Roman', serif",
+        "ui": "'Nunito', 'Trebuchet MS', 'Segoe UI', system-ui, sans-serif",
+        "mono": "'Cascadia Mono', 'Consolas', monospace",
+        "titleSize": 58,
+        "labelSize": 30,
+        "microSize": 22,
+        "tracking": 0.4
+      },
+      "ui": { "density": "low", "radius": 14, "panel": "glass", "stroke": 1.4, "maxPanels": 2, "labelStyle": "leader", "backdropBlur": 6 },
+      "graphics": { "shade": "solid", "barShape": "rounded", "grid": false, "fillOpacity": 0.86, "strokeWidth": 3, "area": true },
+      "camera": { "energy": 0.55 },
+      "motion": { "enterFrames": 14, "exitFrames": 10, "rise": 22, "kind": "rise" },
+      "transition": { "defaultFrames": 10 }
+    },
+    "editorial": {
+      "id": "editorial",
+      "name": "Editorial print",
+      "use_when": "Explainers, essays, anything that reads like a magazine spread.",
+      "palette": {
+        "ink": "#14110e",
+        "paper": "#f4ead7",
+        "text": "#14110e",
+        "muted": "#6b5c48",
+        "accent": "#b23a2f",
+        "accentAlt": "#1f3f66",
+        "warn": "#a8571c",
+        "surface": "rgba(244,234,215,0.94)",
+        "surfaceStrong": "#f4ead7",
+        "line": "rgba(20,17,14,0.55)"
+      },
+      "type": {
+        "display": "'Georgia', 'Times New Roman', serif",
+        "ui": "'Segoe UI', 'Helvetica Neue', system-ui, sans-serif",
+        "mono": "'Consolas', monospace",
+        "titleSize": 62,
+        "labelSize": 31,
+        "microSize": 21,
+        "tracking": 0.2
+      },
+      "ui": { "density": "medium", "radius": 2, "panel": "paper", "stroke": 2.2, "maxPanels": 2, "labelStyle": "caption", "backdropBlur": 0 },
+      "graphics": { "shade": "flat", "barShape": "square", "grid": true, "fillOpacity": 1, "strokeWidth": 2.4, "area": false },
+      "camera": { "energy": 0.35 },
+      "motion": { "enterFrames": 10, "exitFrames": 8, "rise": 10, "kind": "wipe" },
+      "transition": { "defaultFrames": 8 }
+    },
+    "infographic": {
+      "id": "infographic",
+      "name": "Data infographic",
+      "use_when": "Numbers-first pieces, dashboards, internal reports, comparison videos.",
+      "palette": {
+        "ink": "#0d1b2a",
+        "paper": "#eef4fb",
+        "text": "#f7fbff",
+        "muted": "#9db4cc",
+        "accent": "#39c6c0",
+        "accentAlt": "#ffb020",
+        "warn": "#ff5d73",
+        "surface": "rgba(12,26,41,0.86)",
+        "surfaceStrong": "rgba(8,19,31,0.95)",
+        "line": "rgba(57,198,192,0.55)"
+      },
+      "type": {
+        "display": "'Nunito', 'Segoe UI', system-ui, sans-serif",
+        "ui": "'Nunito', 'Segoe UI', system-ui, sans-serif",
+        "mono": "'Cascadia Mono', 'Consolas', monospace",
+        "titleSize": 52,
+        "labelSize": 28,
+        "microSize": 20,
+        "tracking": 0.6
+      },
+      "ui": { "density": "high", "radius": 10, "panel": "glass", "stroke": 1.2, "maxPanels": 3, "labelStyle": "tag", "backdropBlur": 4 },
+      "graphics": { "shade": "solid", "barShape": "rounded", "grid": true, "fillOpacity": 0.9, "strokeWidth": 3, "area": true },
+      "camera": { "energy": 0.3 },
+      "motion": { "enterFrames": 12, "exitFrames": 8, "rise": 16, "kind": "rise" },
+      "transition": { "defaultFrames": 6 }
+    },
+    "minimal": {
+      "id": "minimal",
+      "name": "Minimal line",
+      "use_when": "Very short pieces, single idea, maximum negative space.",
+      "palette": {
+        "ink": "#111111",
+        "paper": "#ffffff",
+        "text": "#fdfdfd",
+        "muted": "#a8a8a8",
+        "accent": "#ff4d4d",
+        "accentAlt": "#111111",
+        "warn": "#ff8a3d",
+        "surface": "rgba(10,10,10,0.6)",
+        "surfaceStrong": "rgba(0,0,0,0.86)",
+        "line": "rgba(255,255,255,0.42)"
+      },
+      "type": {
+        "display": "'Segoe UI', 'Helvetica Neue', system-ui, sans-serif",
+        "ui": "'Segoe UI', 'Helvetica Neue', system-ui, sans-serif",
+        "mono": "'Consolas', monospace",
+        "titleSize": 54,
+        "labelSize": 26,
+        "microSize": 18,
+        "tracking": 0.8
+      },
+      "ui": { "density": "low", "radius": 0, "panel": "line", "stroke": 1, "maxPanels": 1, "labelStyle": "plain", "backdropBlur": 0 },
+      "graphics": { "shade": "flat", "barShape": "square", "grid": false, "fillOpacity": 0.95, "strokeWidth": 2, "area": false },
+      "camera": { "energy": 0.25 },
+      "motion": { "enterFrames": 8, "exitFrames": 6, "rise": 8, "kind": "fade" },
+      "transition": { "defaultFrames": 6 }
+    },
+    "cartoon": {
+      "id": "cartoon",
+      "name": "Bright cartoon",
+      "use_when": "Light explainers for a young audience, comedy, friendly tutorials.",
+      "palette": {
+        "ink": "#2b1a2f",
+        "paper": "#fff6e5",
+        "text": "#2b1a2f",
+        "muted": "#7b6280",
+        "accent": "#ff8a3d",
+        "accentAlt": "#3aa6e0",
+        "warn": "#e0483f",
+        "surface": "rgba(255,246,229,0.96)",
+        "surfaceStrong": "#fff6e5",
+        "line": "rgba(43,26,47,0.9)"
+      },
+      "type": {
+        "display": "'Nunito', 'Trebuchet MS', sans-serif",
+        "ui": "'Nunito', 'Trebuchet MS', sans-serif",
+        "mono": "'Consolas', monospace",
+        "titleSize": 64,
+        "labelSize": 32,
+        "microSize": 22,
+        "tracking": 0.3
+      },
+      "ui": { "density": "medium", "radius": 20, "panel": "paper", "stroke": 3, "maxPanels": 2, "labelStyle": "bubble", "backdropBlur": 0 },
+      "graphics": { "shade": "flat", "barShape": "rounded", "grid": false, "fillOpacity": 1, "strokeWidth": 4, "area": false },
+      "camera": { "energy": 0.7 },
+      "motion": { "enterFrames": 16, "exitFrames": 10, "rise": 28, "kind": "pop" },
+      "transition": { "defaultFrames": 10 }
+    }
+  }
+}

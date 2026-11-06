@@ -1,0 +1,987 @@
+{
+  "schema": 2,
+  "note": "Active render data for assets created by scripts/acs/asset_forge.py. Metadata/versions live in assets/registry.json.",
+  "sets": {
+    "laboratorio": {
+      "renderer": "generated-set-v1",
+      "viewBox": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "background": "#0b0f18",
+      "transparent": false,
+      "gradients": [
+        {
+          "id": "wallwash",
+          "x1": 0,
+          "y1": 0,
+          "x2": 0,
+          "y2": 1,
+          "stops": [
+            [
+              0,
+              "#1c2a3d"
+            ],
+            [
+              1,
+              "#111a28"
+            ]
+          ]
+        },
+        {
+          "id": "floorwash",
+          "x1": 0,
+          "y1": 0,
+          "x2": 0,
+          "y2": 1,
+          "stops": [
+            [
+              0,
+              "#151b24"
+            ],
+            [
+              1,
+              "#0b0f18"
+            ]
+          ]
+        },
+        {
+          "id": "skyglass",
+          "x1": 0,
+          "y1": 0,
+          "x2": 0,
+          "y2": 1,
+          "stops": [
+            [
+              0,
+              "#0a1222"
+            ],
+            [
+              1,
+              "#111a28"
+            ]
+          ]
+        },
+        {
+          "id": "windowlight",
+          "x1": 0,
+          "y1": 0,
+          "x2": 0,
+          "y2": 1,
+          "stops": [
+            [
+              0,
+              "#1c2a3d"
+            ],
+            [
+              1,
+              "#0a1222"
+            ]
+          ]
+        }
+      ],
+      "layers": [
+        {
+          "id": "background",
+          "depth": 0.035,
+          "elements": [
+            {
+              "kind": "rect",
+              "x": 0,
+              "y": 0,
+              "w": 1080,
+              "h": 1920,
+              "fill": "#0b0f18"
+            },
+            {
+              "kind": "rect",
+              "x": 0,
+              "y": 0,
+              "w": 1080,
+              "h": 1260,
+              "fill": "url(#wallwash)"
+            },
+            {
+              "kind": "rect",
+              "x": 0,
+              "y": 1260,
+              "w": 1080,
+              "h": 660,
+              "fill": "url(#floorwash)"
+            },
+            {
+              "kind": "rect",
+              "x": 0,
+              "y": 0,
+              "w": 1080,
+              "h": 28,
+              "fill": "#070a10",
+              "opacity": 0.6
+            },
+            {
+              "kind": "rect",
+              "x": 0,
+              "y": 1238,
+              "w": 1080,
+              "h": 10,
+              "fill": "#070a10",
+              "opacity": 0.65
+            },
+            {
+              "kind": "circle",
+              "cx": 540,
+              "cy": 1040,
+              "r": 330,
+              "fill": "#69d5cf",
+              "opacity": 0.035
+            }
+          ],
+          "description": "Wall, floor and base tone."
+        },
+        {
+          "id": "midground",
+          "depth": 0.11,
+          "elements": [
+            {
+              "kind": "rect",
+              "x": 92,
+              "y": 246,
+              "w": 430,
+              "h": 532,
+              "fill": "#070a10",
+              "rx": 8
+            },
+            {
+              "kind": "rect",
+              "x": 104,
+              "y": 258,
+              "w": 406,
+              "h": 508,
+              "fill": "url(#windowlight)",
+              "rx": 4
+            },
+            {
+              "kind": "circle",
+              "cx": 356,
+              "cy": 390,
+              "r": 58,
+              "fill": "#dce8eb",
+              "opacity": 0.45
+            },
+            {
+              "kind": "path",
+              "d": "M 104 620 C 205 540 310 650 510 548 L 510 766 L 104 766 Z",
+              "fill": "#111a28",
+              "opacity": 0.6
+            },
+            {
+              "kind": "rect",
+              "x": 299,
+              "y": 258,
+              "w": 14,
+              "h": 508,
+              "fill": "#070a10",
+              "opacity": 0.9
+            },
+            {
+              "kind": "rect",
+              "x": 104,
+              "y": 496,
+              "w": 406,
+              "h": 12,
+              "fill": "#070a10",
+              "opacity": 0.9
+            },
+            {
+              "kind": "rect",
+              "x": 92,
+              "y": 246,
+              "w": 430,
+              "h": 16,
+              "fill": "#111a28"
+            },
+            {
+              "kind": "rect",
+              "x": 92,
+              "y": 766,
+              "w": 430,
+              "h": 22,
+              "fill": "#111a28"
+            },
+            {
+              "kind": "rect",
+              "x": 620,
+              "y": 330,
+              "w": 350,
+              "h": 30,
+              "fill": "#070a10",
+              "opacity": 0.8
+            },
+            {
+              "kind": "rect",
+              "x": 620,
+              "y": 548,
+              "w": 350,
+              "h": 30,
+              "fill": "#070a10",
+              "opacity": 0.8
+            },
+            {
+              "kind": "rect",
+              "x": 620,
+              "y": 774,
+              "w": 350,
+              "h": 30,
+              "fill": "#070a10",
+              "opacity": 0.8
+            },
+            {
+              "kind": "rect",
+              "x": 620,
+              "y": 330,
+              "w": 16,
+              "h": 474,
+              "fill": "#070a10",
+              "opacity": 0.7
+            },
+            {
+              "kind": "rect",
+              "x": 954,
+              "y": 330,
+              "w": 16,
+              "h": 474,
+              "fill": "#070a10",
+              "opacity": 0.7
+            },
+            {
+              "kind": "rect",
+              "x": 660,
+              "y": 244,
+              "w": 38,
+              "h": 86,
+              "fill": "#69d5cf",
+              "opacity": 0.72,
+              "rx": 5
+            },
+            {
+              "kind": "rect",
+              "x": 712,
+              "y": 260,
+              "w": 28,
+              "h": 70,
+              "fill": "#dce8eb",
+              "opacity": 0.72,
+              "rx": 4
+            },
+            {
+              "kind": "rect",
+              "x": 760,
+              "y": 222,
+              "w": 42,
+              "h": 108,
+              "fill": "#ffb45c",
+              "opacity": 0.64,
+              "rx": 6
+            },
+            {
+              "kind": "rect",
+              "x": 840,
+              "y": 260,
+              "w": 22,
+              "h": 70,
+              "fill": "#69d5cf",
+              "opacity": 0.55,
+              "rx": 3
+            },
+            {
+              "kind": "rect",
+              "x": 878,
+              "y": 238,
+              "w": 48,
+              "h": 92,
+              "fill": "#dce8eb",
+              "opacity": 0.45,
+              "rx": 4
+            },
+            {
+              "kind": "rect",
+              "x": 652,
+              "y": 466,
+              "w": 44,
+              "h": 82,
+              "fill": "#ffb45c",
+              "opacity": 0.62,
+              "rx": 5
+            },
+            {
+              "kind": "rect",
+              "x": 712,
+              "y": 480,
+              "w": 30,
+              "h": 68,
+              "fill": "#69d5cf",
+              "opacity": 0.72,
+              "rx": 4
+            },
+            {
+              "kind": "rect",
+              "x": 778,
+              "y": 456,
+              "w": 58,
+              "h": 92,
+              "fill": "#dce8eb",
+              "opacity": 0.42,
+              "rx": 5
+            },
+            {
+              "kind": "rect",
+              "x": 870,
+              "y": 474,
+              "w": 32,
+              "h": 74,
+              "fill": "#69d5cf",
+              "opacity": 0.55,
+              "rx": 4
+            },
+            {
+              "kind": "rect",
+              "x": 620,
+              "y": 862,
+              "w": 334,
+              "h": 216,
+              "fill": "#070a10",
+              "rx": 6,
+              "opacity": 0.86
+            },
+            {
+              "kind": "rect",
+              "x": 632,
+              "y": 874,
+              "w": 310,
+              "h": 192,
+              "fill": "#111a28",
+              "rx": 4,
+              "opacity": 0.78
+            },
+            {
+              "kind": "line",
+              "x1": 664,
+              "y1": 936,
+              "x2": 910,
+              "y2": 936,
+              "stroke": "#dce8eb",
+              "strokeWidth": 3,
+              "opacity": 0.38
+            },
+            {
+              "kind": "line",
+              "x1": 690,
+              "y1": 980,
+              "x2": 880,
+              "y2": 980,
+              "stroke": "#69d5cf",
+              "strokeWidth": 3,
+              "opacity": 0.55
+            },
+            {
+              "kind": "line",
+              "x1": 720,
+              "y1": 1022,
+              "x2": 850,
+              "y2": 1022,
+              "stroke": "#ffb45c",
+              "strokeWidth": 2,
+              "opacity": 0.42
+            },
+            {
+              "kind": "circle",
+              "cx": 882,
+              "cy": 928,
+              "r": 9,
+              "fill": "#69d5cf",
+              "opacity": 0.65
+            },
+            {
+              "kind": "circle",
+              "cx": 844,
+              "cy": 1014,
+              "r": 6,
+              "fill": "#ffb45c",
+              "opacity": 0.6
+            },
+            {
+              "kind": "line",
+              "x1": 70,
+              "y1": 194,
+              "x2": 70,
+              "y2": 1210,
+              "stroke": "#111a28",
+              "strokeWidth": 14,
+              "opacity": 0.85
+            },
+            {
+              "kind": "line",
+              "x1": 70,
+              "y1": 194,
+              "x2": 1010,
+              "y2": 194,
+              "stroke": "#111a28",
+              "strokeWidth": 14,
+              "opacity": 0.85
+            },
+            {
+              "kind": "rect",
+              "x": 52,
+              "y": 194,
+              "w": 34,
+              "h": 18,
+              "fill": "#070a10",
+              "opacity": 0.7
+            },
+            {
+              "kind": "rect",
+              "x": 990,
+              "y": 194,
+              "w": 34,
+              "h": 18,
+              "fill": "#070a10",
+              "opacity": 0.7
+            }
+          ],
+          "description": "Window, shelving, instruments and wall structure."
+        },
+        {
+          "id": "foreground",
+          "depth": 0.22,
+          "elements": [
+            {
+              "kind": "rect",
+              "x": 54,
+              "y": 1230,
+              "w": 972,
+              "h": 272,
+              "fill": "#111a28",
+              "stroke": "#070a10",
+              "strokeWidth": 8,
+              "rx": 8
+            },
+            {
+              "kind": "rect",
+              "x": 80,
+              "y": 1252,
+              "w": 920,
+              "h": 34,
+              "fill": "#dce8eb",
+              "opacity": 0.18,
+              "rx": 6
+            },
+            {
+              "kind": "rect",
+              "x": 54,
+              "y": 1434,
+              "w": 972,
+              "h": 70,
+              "fill": "#070a10",
+              "opacity": 0.9
+            },
+            {
+              "kind": "rect",
+              "x": 84,
+              "y": 1504,
+              "w": 36,
+              "h": 304,
+              "fill": "#111a28",
+              "opacity": 0.95
+            },
+            {
+              "kind": "rect",
+              "x": 960,
+              "y": 1504,
+              "w": 36,
+              "h": 304,
+              "fill": "#111a28",
+              "opacity": 0.95
+            },
+            {
+              "kind": "rect",
+              "x": 84,
+              "y": 1504,
+              "w": 912,
+              "h": 18,
+              "fill": "#070a10",
+              "opacity": 0.8
+            },
+            {
+              "kind": "rect",
+              "x": 220,
+              "y": 1280,
+              "w": 26,
+              "h": 150,
+              "fill": "#dce8eb",
+              "opacity": 0.28,
+              "rx": 8
+            },
+            {
+              "kind": "rect",
+              "x": 232,
+              "y": 1280,
+              "w": 4,
+              "h": 150,
+              "fill": "#dce8eb",
+              "opacity": 0.6
+            },
+            {
+              "kind": "path",
+              "d": "M 206 1434 Q 206 1478 246 1478 Q 286 1478 286 1434 Z",
+              "fill": "#69d5cf",
+              "opacity": 0.34
+            },
+            {
+              "kind": "path",
+              "d": "M 322 1340 Q 322 1478 382 1478 Q 442 1478 442 1340",
+              "fill": "#dce8eb",
+              "opacity": 0.2
+            },
+            {
+              "kind": "rect",
+              "x": 318,
+              "y": 1332,
+              "w": 128,
+              "h": 10,
+              "fill": "#dce8eb",
+              "opacity": 0.4,
+              "rx": 5
+            },
+            {
+              "kind": "path",
+              "d": "M 350 1438 Q 350 1468 382 1468 Q 414 1468 414 1438 Z",
+              "fill": "#69d5cf",
+              "opacity": 0.3
+            },
+            {
+              "kind": "rect",
+              "x": 610,
+              "y": 1380,
+              "w": 86,
+              "h": 22,
+              "fill": "#070a10",
+              "rx": 7
+            },
+            {
+              "kind": "rect",
+              "x": 640,
+              "y": 1288,
+              "w": 18,
+              "h": 100,
+              "fill": "#111a28",
+              "rx": 6
+            },
+            {
+              "kind": "ellipse",
+              "cx": 650,
+              "cy": 1276,
+              "rx": 30,
+              "ry": 16,
+              "fill": "#ffb45c",
+              "opacity": 0.65
+            },
+            {
+              "kind": "path",
+              "d": "M 650 1290 L 720 1210",
+              "fill": "#070a10",
+              "strokeWidth": 14,
+              "strokeLinecap": "round"
+            },
+            {
+              "kind": "rect",
+              "x": 702,
+              "y": 1180,
+              "w": 42,
+              "h": 46,
+              "fill": "#111a28",
+              "rx": 9,
+              "stroke": "#070a10",
+              "strokeWidth": 4
+            },
+            {
+              "kind": "circle",
+              "cx": 723,
+              "cy": 1202,
+              "r": 12,
+              "fill": "#69d5cf",
+              "opacity": 0.85
+            },
+            {
+              "kind": "ellipse",
+              "cx": 850,
+              "cy": 1510,
+              "rx": 82,
+              "ry": 24,
+              "fill": "#070a10",
+              "opacity": 0.55
+            },
+            {
+              "kind": "rect",
+              "x": 798,
+              "y": 1510,
+              "w": 16,
+              "h": 230,
+              "fill": "#111a28",
+              "rx": 4
+            },
+            {
+              "kind": "rect",
+              "x": 886,
+              "y": 1510,
+              "w": 16,
+              "h": 230,
+              "fill": "#111a28",
+              "rx": 4
+            },
+            {
+              "kind": "rect",
+              "x": 760,
+              "y": 1754,
+              "w": 300,
+              "h": 92,
+              "fill": "#111a28",
+              "rx": 5,
+              "stroke": "#070a10",
+              "strokeWidth": 5
+            },
+            {
+              "kind": "line",
+              "x1": 790,
+              "y1": 1782,
+              "x2": 1030,
+              "y2": 1782,
+              "stroke": "#69d5cf",
+              "strokeWidth": 3,
+              "opacity": 0.25
+            }
+          ],
+          "description": "Bench, glassware, microscope and floor objects."
+        },
+        {
+          "id": "lighting",
+          "depth": 0.16,
+          "elements": [
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  540,
+                  0
+                ],
+                [
+                  470,
+                  900
+                ],
+                [
+                  730,
+                  900
+                ]
+              ],
+              "fill": "#e9a44f",
+              "opacity": 0.075
+            },
+            {
+              "kind": "rect",
+              "x": 500,
+              "y": 0,
+              "w": 80,
+              "h": 18,
+              "fill": "#e9a44f",
+              "opacity": 0.65
+            },
+            {
+              "kind": "ellipse",
+              "cx": 540,
+              "cy": 50,
+              "rx": 180,
+              "ry": 62,
+              "fill": "#e9a44f",
+              "opacity": 0.12
+            },
+            {
+              "kind": "ellipse",
+              "cx": 540,
+              "cy": 1300,
+              "rx": 300,
+              "ry": 80,
+              "fill": "#e9a44f",
+              "opacity": 0.08
+            },
+            {
+              "kind": "circle",
+              "cx": 130,
+              "cy": 900,
+              "r": 190,
+              "fill": "#258f8a",
+              "opacity": 0.05
+            },
+            {
+              "kind": "circle",
+              "cx": 970,
+              "cy": 720,
+              "r": 220,
+              "fill": "#258f8a",
+              "opacity": 0.035
+            }
+          ],
+          "blend": "screen",
+          "description": "Practical lamp, window spill and accent glows."
+        },
+        {
+          "id": "atmosphere",
+          "depth": 0.28,
+          "elements": [
+            {
+              "kind": "circle",
+              "cx": 190,
+              "cy": 860,
+              "r": 4,
+              "fill": "#f6f2e7",
+              "opacity": 0.42,
+              "motion": {
+                "type": "float",
+                "amplitude": 18,
+                "speed": 0.7
+              }
+            },
+            {
+              "kind": "circle",
+              "cx": 360,
+              "cy": 720,
+              "r": 2.5,
+              "fill": "#f6f2e7",
+              "opacity": 0.32,
+              "motion": {
+                "type": "float",
+                "amplitude": 12,
+                "speed": 0.9
+              }
+            },
+            {
+              "kind": "circle",
+              "cx": 780,
+              "cy": 690,
+              "r": 3.5,
+              "fill": "#f6f2e7",
+              "opacity": 0.28,
+              "motion": {
+                "type": "float",
+                "amplitude": 22,
+                "speed": 0.55
+              }
+            },
+            {
+              "kind": "circle",
+              "cx": 910,
+              "cy": 880,
+              "r": 2,
+              "fill": "#f6f2e7",
+              "opacity": 0.3,
+              "motion": {
+                "type": "float",
+                "amplitude": 14,
+                "speed": 0.8
+              }
+            },
+            {
+              "kind": "circle",
+              "cx": 480,
+              "cy": 620,
+              "r": 2,
+              "fill": "#f6f2e7",
+              "opacity": 0.24,
+              "motion": {
+                "type": "float",
+                "amplitude": 10,
+                "speed": 1.1
+              }
+            }
+          ],
+          "description": "Dust motes and a restrained haze band."
+        }
+      ],
+      "subject": "laboratorio",
+      "detail": "medium",
+      "palette_name": "night",
+      "variation_of": "laboratorio",
+      "flat": false
+    }
+  },
+  "characters": {
+    "cientifico": {
+      "id": "char_cientifico",
+      "name": "Cientifico",
+      "coat": "#f6f2e7",
+      "coatDark": "#819795",
+      "hat": "#258f8a",
+      "hatBand": "#819795",
+      "height": 1.0,
+      "headRadius": 46,
+      "hatStyle": "bald",
+      "hairStyle": "curls",
+      "facialHair": "none",
+      "voice": "clear, curious, mid-range",
+      "role": "researcher built for the generated laboratory set",
+      "silhouette": "white lab coat, dark curls, compact silhouette",
+      "palette": [
+        "#f6f2e7",
+        "#819795",
+        "#258f8a",
+        "#e9a44f"
+      ],
+      "gestures": [
+        "holds a sample up to the light",
+        "tilts her head before answering"
+      ],
+      "wardrobe_states": {
+        "default": "white lab coat over dark clothes"
+      }
+    }
+  },
+  "expressions": {
+    "surprise_cientifico": {
+      "name": "Surprise",
+      "values": {
+        "brow": 0.45,
+        "mouth": 0.92,
+        "headTilt": -4.0,
+        "yaw": 0.0,
+        "blink": 0.0
+      },
+      "character_ref": "cientifico"
+    }
+  },
+  "props": {
+    "lampara_laboratorio": {
+      "renderer": "generated-prop-v1",
+      "viewBox": [
+        0,
+        0,
+        200,
+        400
+      ],
+      "pivot": [
+        100,
+        400
+      ],
+      "elements": [
+        {
+          "kind": "path",
+          "d": "M 100 30 L 100 300",
+          "fill": "#182024",
+          "strokeWidth": 7
+        },
+        {
+          "kind": "path",
+          "d": "M 34 34 L 166 34",
+          "fill": "#182024",
+          "strokeWidth": 7,
+          "strokeLinecap": "round"
+        },
+        {
+          "kind": "polygon",
+          "points": [
+            [
+              54,
+              34
+            ],
+            [
+              146,
+              34
+            ],
+            [
+              174,
+              158
+            ],
+            [
+              26,
+              158
+            ]
+          ],
+          "fill": "#e9a44f",
+          "stroke": "#182024",
+          "strokeWidth": 5
+        },
+        {
+          "kind": "path",
+          "d": "M 32 158 L 168 158",
+          "fill": "#182024",
+          "strokeWidth": 6
+        },
+        {
+          "kind": "ellipse",
+          "cx": 100,
+          "cy": 160,
+          "rx": 74,
+          "ry": 18,
+          "fill": "#e9a44f",
+          "opacity": 0.55
+        },
+        {
+          "kind": "circle",
+          "cx": 100,
+          "cy": 175,
+          "r": 54,
+          "fill": "#e9a44f",
+          "opacity": 0.12
+        },
+        {
+          "kind": "rect",
+          "x": 76,
+          "y": 300,
+          "w": 48,
+          "h": 24,
+          "fill": "#819795",
+          "rx": 6,
+          "stroke": "#182024",
+          "strokeWidth": 4
+        }
+      ],
+      "subject": "lampara_laboratorio"
+    }
+  },
+  "graphics": {
+    "comparacion": {
+      "id": "generated-comparison",
+      "type": "bar",
+      "placement": {
+        "kind": "screen"
+      },
+      "anchor": "top-left",
+      "box": {
+        "x": 0.06,
+        "y": 0.08,
+        "w": 0.88,
+        "h": 0.22
+      },
+      "from": 0.08,
+      "to": 0.92,
+      "data": {
+        "title": "Comparación de laboratorio",
+        "caption": "Lectura de dos muestras",
+        "unit": "%",
+        "series": [
+          {
+            "label": "Muestra A",
+            "value": 72,
+            "tone": "accent"
+          },
+          {
+            "label": "Muestra B",
+            "value": 48,
+            "tone": "accentAlt"
+          }
+        ]
+      },
+      "source": "generated sample data; illustrative",
+      "illustrative": true
+    }
+  }
+}

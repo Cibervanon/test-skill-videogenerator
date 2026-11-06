@@ -1,0 +1,69 @@
+{
+  "_comment": "Single source of truth for character identity. Read by studio/src/characters/cast.ts and by scripts/acs/project.py. Wardrobe states are listed separately: a costume change is never a new identity.",
+  "characters": {
+    "elder": {
+      "id": "char_elder",
+      "name": "The Bell-Keeper",
+      "coat": "#b8423f",
+      "coatDark": "#7d2b2b",
+      "hat": "#e9d7b4",
+      "hatBand": "#b8423f",
+      "height": 1.0,
+      "headRadius": 46,
+      "hatStyle": "beanie",
+      "hairStyle": "none",
+      "facialHair": "moustache",
+      "voice": "low, unhurried, mid-60s, slight gravel",
+      "role": "keeper of the bell, refuses to ring it",
+      "silhouette": "tall pear-shaped coat, round beanie, no visible hair",
+      "palette": ["#b8423f", "#7d2b2b", "#e9d7b4", "#f7f0e2"],
+      "gestures": ["holds the lantern low", "tilts head before speaking"],
+      "wardrobe_states": {
+        "default": "red keeper coat, felt beanie"
+      }
+    },
+    "young": {
+      "id": "char_young",
+      "name": "The Apprentice",
+      "coat": "#2f6f63",
+      "coatDark": "#1d4a42",
+      "hat": "#e4c98f",
+      "hatBand": "#2f6f63",
+      "height": 0.92,
+      "headRadius": 44,
+      "hatStyle": "beanie",
+      "hairStyle": "curls",
+      "facialHair": "none",
+      "voice": "bright, quick, late teens",
+      "role": "digs the graves, wants the bell rung",
+      "silhouette": "shorter, rounder coat, cream beanie",
+      "palette": ["#2f6f63", "#1d4a42", "#e4c98f", "#f7f0e2"],
+      "gestures": ["leans on the shovel", "walks with a long stride"],
+      "wardrobe_states": {
+        "default": "teal work coat, cream beanie",
+        "mud": "same coat, darkened hem after digging"
+      }
+    },
+    "widow": {
+      "id": "char_widow",
+      "name": "The Widow",
+      "coat": "#c8892f",
+      "coatDark": "#8b5a1c",
+      "hat": "#3d4358",
+      "hatBand": "#c8892f",
+      "height": 0.95,
+      "headRadius": 45,
+      "hatStyle": "scarf",
+      "hairStyle": "side",
+      "facialHair": "none",
+      "voice": "quiet, precise, withheld",
+      "role": "the first to hear the bell",
+      "silhouette": "ochre coat, dark headscarf",
+      "palette": ["#c8892f", "#8b5a1c", "#3d4358", "#f7f0e2"],
+      "gestures": ["keeps her hands still", "looks away before answering"],
+      "wardrobe_states": {
+        "default": "ochre coat, dark scarf"
+      }
+    }
+  }
+}
