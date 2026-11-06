@@ -1,0 +1,47 @@
+[
+  {
+    "id": "S01",
+    "scene": "townNight",
+    "from": 0,
+    "frames": 240,
+    "frame": 132,
+    "line": "the winter the river stopped, the bell stopped with it",
+    "note": "establishing: two figures cross the square toward the bell, camera pans with them"
+  },
+  {
+    "id": "S02",
+    "scene": "doorway",
+    "from": 240,
+    "frames": 210,
+    "frame": 355,
+    "line": "nine days, the keeper said, and nobody rings it but me",
+    "note": "threshold shot: warm interior against cold snow, the keeper blocks the door"
+  },
+  {
+    "id": "S03",
+    "scene": "faceCloseup",
+    "from": 450,
+    "frames": 180,
+    "frame": 549,
+    "line": "he had rung it once before. it did not end well.",
+    "note": "realisation: push-in on the keeper's face, no camera trick beyond the move"
+  },
+  {
+    "id": "S04",
+    "scene": "fieldDawn",
+    "from": 618,
+    "frames": 270,
+    "frame": 766,
+    "line": "so the apprentice dug, and the ground rang instead",
+    "note": "the action beat: real digging motion, sun behind, long shadows"
+  },
+  {
+    "id": "S05",
+    "scene": "bellInsert",
+    "from": 874,
+    "frames": 180,
+    "frame": 973,
+    "line": "and the bell, at last, answered.",
+    "note": "insert: the object that resolves the story, dust in the light, no zoom-as-animation"
+  }
+]

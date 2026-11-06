@@ -1,0 +1,177 @@
+{
+  "ok": true,
+  "output": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\av_direccion\\output\\final_video.mp4",
+  "file": {
+    "path": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\av_direccion\\output\\final_video.mp4",
+    "file": "final_video.mp4",
+    "duration": 30.933,
+    "size_bytes": 17503420,
+    "bitrate": 4526795,
+    "container": "mov,mp4,m4a,3gp,3g2,mj2",
+    "video": {
+      "codec": "h264",
+      "width": 1080,
+      "height": 1920,
+      "fps": 30.0,
+      "fps_avg": 30.0,
+      "pix_fmt": "yuvj420p",
+      "frames": 927,
+      "aspect": 0.5625,
+      "orientation": "vertical"
+    },
+    "audio": {
+      "codec": "aac",
+      "channels": 2,
+      "sample_rate": 48000,
+      "bitrate": 190758,
+      "duration": 30.933,
+      "streams": 1
+    }
+  },
+  "checks": [
+    {
+      "id": "readable",
+      "pass": true,
+      "value": "mov,mp4,m4a,3gp,3g2,mj2",
+      "detail": "ffprobe parsed the file"
+    },
+    {
+      "id": "has_video",
+      "pass": true,
+      "value": {
+        "codec": "h264",
+        "width": 1080,
+        "height": 1920,
+        "fps": 30.0,
+        "fps_avg": 30.0,
+        "pix_fmt": "yuvj420p",
+        "frames": 927,
+        "aspect": 0.5625,
+        "orientation": "vertical"
+      },
+      "detail": "video stream present"
+    },
+    {
+      "id": "has_audio",
+      "pass": true,
+      "value": {
+        "codec": "aac",
+        "channels": 2,
+        "sample_rate": 48000,
+        "bitrate": 190758,
+        "duration": 30.933,
+        "streams": 1
+      },
+      "detail": "audio stream present"
+    },
+    {
+      "id": "duration",
+      "pass": true,
+      "value": 30.933,
+      "expected": 30.93,
+      "detail": "delta 0.003s (tolerance 0.25s)"
+    },
+    {
+      "id": "format",
+      "pass": true,
+      "value": {
+        "codec": "h264",
+        "width": 1080,
+        "height": 1920,
+        "fps": 30.0,
+        "fps_avg": 30.0,
+        "pix_fmt": "yuvj420p",
+        "frames": 927,
+        "aspect": 0.5625,
+        "orientation": "vertical"
+      },
+      "detail": "to spec"
+    },
+    {
+      "id": "motion",
+      "pass": true,
+      "value": 10.246,
+      "detail": "min 1.0 \u2014 guards against a slideshow of stills"
+    },
+    {
+      "id": "black_frames",
+      "pass": true,
+      "value": 0.0,
+      "detail": "max 0.02 \u2014 a black render must never pass"
+    },
+    {
+      "id": "freeze",
+      "pass": true,
+      "value": 0.069,
+      "detail": "static-frame budget"
+    },
+    {
+      "id": "audio_duration",
+      "pass": true,
+      "value": 30.933,
+      "expected": 30.933,
+      "detail": "audio covers the picture; delta 0.000s"
+    },
+    {
+      "id": "loudness",
+      "pass": true,
+      "value": -12.7,
+      "detail": "acceptable band -22.0..-11.0 dB (mean volume, not LUFS)"
+    },
+    {
+      "id": "audio_activity",
+      "pass": true,
+      "value": 0.195,
+      "detail": "the soundtrack is not near-silence"
+    },
+    {
+      "id": "caption_plan",
+      "pass": true,
+      "value": 0.874,
+      "detail": "computed from the cue plan (shot lines), not from OCR of the render"
+    }
+  ],
+  "captions": {
+    "coverage": 0.874,
+    "total_seconds": 30.93,
+    "uncovered": [
+      {
+        "shot": "S04",
+        "from": 10.27,
+        "to": 11.97
+      },
+      {
+        "shot": "S06",
+        "from": 15.57,
+        "to": 17.77
+      }
+    ],
+    "method": "computed from the cue plan (shot lines), not from OCR of the render"
+  },
+  "motion": {
+    "method": "SAD translation search \u00b16px on 72x128 luma @2.0fps",
+    "samples": 62,
+    "pairs": 61,
+    "mean_motion_energy": 10.246,
+    "median_motion_energy": 4.134,
+    "moving_ratio": 0.705,
+    "pan_ratio": 0.197,
+    "tilt_ratio": 0.213,
+    "median_abs_pan_px": 0,
+    "median_abs_tilt_px": 0,
+    "limits": "translation-only model; zoom/rotation/parallax not measured"
+  },
+  "thresholds": {
+    "duration_tolerance_s": 0.25,
+    "min_motion_energy": 1.0,
+    "max_black_ratio": 0.02,
+    "max_freeze_ratio": 0.55,
+    "loudness_range_lufs": [
+      -22.0,
+      -11.0
+    ],
+    "caption_coverage_min": 0.55,
+    "_comment": "Thresholds are calibrated against this project's own renders (see TEST_REPORT.md); they are gates, not universal quality measurements."
+  },
+  "note": "heuristic gates calibrated on this engine's renders; not an aesthetic judgement"
+}

@@ -1,0 +1,348 @@
+{
+  "project": "av_direccion",
+  "title": "El silencio tuvo fecha",
+  "format": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "aspect": "9:16"
+  },
+  "transition_frames": 10,
+  "shots": [
+    {
+      "id": "S01",
+      "scene": "bellInsert",
+      "environment_id": "env_bell_insert",
+      "seconds": 3.4,
+      "transition_in": 0,
+      "frames": 102,
+      "camera_move": "tiltUp",
+      "camera_intent": "reveal the bell from rim to crown",
+      "camera_offset_y_pct": 0,
+      "actors": [],
+      "caption_line": "Aquella noche, el guardi\u00e1n no toc\u00f3 la campana.",
+      "lighting": "single warm source from below-left, deep blue ambient",
+      "palette": [
+        "#0d1430",
+        "#1e2650",
+        "#e6c179",
+        "#ffd79a"
+      ],
+      "note": "hook: the bell is the question; the line withholds the reason"
+    },
+    {
+      "id": "S02",
+      "scene": "doorway",
+      "environment_id": "env_door_threshold",
+      "seconds": 3.6,
+      "transition_in": 10,
+      "frames": 108,
+      "camera_move": "pushInSlow",
+      "camera_intent": "hold on the face, let the realisation land",
+      "camera_offset_y_pct": 0,
+      "actors": [
+        {
+          "id": "elder",
+          "preset": "closeup",
+          "x": 700,
+          "y": 1900,
+          "scale": 3.3,
+          "facing": 1,
+          "hold": "lantern",
+          "armR": -18,
+          "phase": 1.1
+        }
+      ],
+      "caption_line": "El pueblo llevaba tres inviernos sin o\u00edrla.",
+      "lighting": "practical lamp as key, cold night as rim, hard warm/cold split",
+      "palette": [
+        "#2a1b25",
+        "#4a2b34",
+        "#ffcf8a",
+        "#131a36"
+      ],
+      "note": "information carried by the face; no counter overlay"
+    },
+    {
+      "id": "S03",
+      "scene": "townNight",
+      "environment_id": "env_town_night",
+      "seconds": 3.6,
+      "transition_in": 0,
+      "frames": 108,
+      "camera_move": "panRight",
+      "camera_intent": "follow the digging, reveal the grave",
+      "camera_offset_y_pct": 0,
+      "actors": [
+        {
+          "id": "young",
+          "preset": "walkIn",
+          "x": 760,
+          "y": 1680,
+          "scale": 1.85,
+          "facing": -1,
+          "hold": "rope",
+          "from": 220,
+          "to": -40,
+          "start": 0.05,
+          "end": 0.9,
+          "phase": 0.3
+        }
+      ],
+      "caption_line": "El aprendiz subi\u00f3 al campanario con una cuerda.",
+      "lighting": "moon key (cool, high), window pools (warm, low), no fill outside the pools",
+      "palette": [
+        "#101733",
+        "#3b3f74",
+        "#c9d3e8",
+        "#ffb765"
+      ],
+      "note": "one shot for one continuous action, not a shot per phrase"
+    },
+    {
+      "id": "S04",
+      "scene": "bellInsert",
+      "environment_id": "env_bell_insert",
+      "seconds": 1.7,
+      "transition_in": 0,
+      "frames": 51,
+      "camera_move": "static",
+      "camera_intent": "deliberate stillness",
+      "camera_offset_y_pct": 0,
+      "actors": [],
+      "caption_line": "",
+      "lighting": "single warm source from below-left, deep blue ambient",
+      "palette": [
+        "#0d1430",
+        "#1e2650",
+        "#e6c179",
+        "#ffd79a"
+      ],
+      "note": "deliberate pause: the only static shot, and it earns the stillness"
+    },
+    {
+      "id": "S05",
+      "scene": "townNight",
+      "environment_id": "env_town_night",
+      "seconds": 3.6,
+      "transition_in": 0,
+      "frames": 108,
+      "camera_move": "drift",
+      "camera_intent": "hold with life",
+      "camera_offset_y_pct": 0,
+      "actors": [
+        {
+          "id": "elder",
+          "preset": "idle",
+          "x": 380,
+          "y": 1660,
+          "scale": 1.75,
+          "facing": 1,
+          "hold": "lantern",
+          "phase": 0.4
+        },
+        {
+          "id": "young",
+          "preset": "turn",
+          "x": 760,
+          "y": 1700,
+          "scale": 1.65,
+          "facing": -1,
+          "hold": "shovel",
+          "phase": 1.2
+        }
+      ],
+      "caption_line": "Compar\u00f3 lo que el pueblo cre\u00eda con lo que vio.",
+      "lighting": "moon key (cool, high), window pools (warm, low), no fill outside the pools",
+      "palette": [
+        "#101733",
+        "#3b3f74",
+        "#c9d3e8",
+        "#ffb765"
+      ],
+      "note": "two-shot: the edit withholds the reaction close-up for S06"
+    },
+    {
+      "id": "S06",
+      "scene": "doorway",
+      "environment_id": "env_door_threshold",
+      "seconds": 2.2,
+      "transition_in": 0,
+      "frames": 66,
+      "camera_move": "dollyIn",
+      "camera_intent": "close the distance to the keeper: pressure, not movement",
+      "camera_offset_y_pct": 0,
+      "actors": [
+        {
+          "id": "elder",
+          "preset": "closeup",
+          "x": 700,
+          "y": 1900,
+          "scale": 3.0,
+          "facing": 1,
+          "hold": "lantern",
+          "phase": 0.7
+        }
+      ],
+      "caption_line": "",
+      "lighting": "practical lamp as key, cold night as rim, hard warm/cold split",
+      "palette": [
+        "#2a1b25",
+        "#4a2b34",
+        "#ffcf8a",
+        "#131a36"
+      ],
+      "note": "reaction shot with no line: the keeper's performance carries the beat"
+    },
+    {
+      "id": "S07",
+      "scene": "townNight",
+      "environment_id": "env_town_night",
+      "seconds": 3.2,
+      "transition_in": 0,
+      "frames": 96,
+      "camera_move": "dollyIn",
+      "camera_intent": "close the distance to the keeper: pressure, not movement",
+      "camera_offset_y_pct": 0,
+      "actors": [
+        {
+          "id": "elder",
+          "preset": "idle",
+          "x": 380,
+          "y": 1660,
+          "scale": 1.75,
+          "facing": 1,
+          "hold": "lantern",
+          "phase": 0.4
+        },
+        {
+          "id": "young",
+          "preset": "reach",
+          "x": 690,
+          "y": 1720,
+          "scale": 2.0,
+          "facing": -1,
+          "hold": "rope",
+          "phase": 0.1
+        }
+      ],
+      "caption_line": "El mecanismo ten\u00eda tres pasos.",
+      "lighting": "moon key (cool, high), window pools (warm, low), no fill outside the pools",
+      "palette": [
+        "#101733",
+        "#3b3f74",
+        "#c9d3e8",
+        "#ffb765"
+      ],
+      "note": "reveal through staging: the rope is already in the apprentice's hand"
+    },
+    {
+      "id": "S08",
+      "scene": "townNight",
+      "environment_id": "env_town_night",
+      "seconds": 3.2,
+      "transition_in": 0,
+      "frames": 96,
+      "camera_move": "pushInSlow",
+      "camera_intent": "hold on the face, let the realisation land",
+      "camera_offset_y_pct": 0,
+      "actors": [
+        {
+          "id": "young",
+          "preset": "closeup",
+          "x": 620,
+          "y": 1900,
+          "scale": 3.0,
+          "facing": -1,
+          "hold": "rope",
+          "phase": 0.7
+        }
+      ],
+      "caption_line": "El tercero era el que nadie miraba.",
+      "lighting": "moon key (cool, high), window pools (warm, low), no fill outside the pools",
+      "palette": [
+        "#101733",
+        "#3b3f74",
+        "#c9d3e8",
+        "#ffb765"
+      ],
+      "note": "reveal: the third step is a person, not a mechanism"
+    },
+    {
+      "id": "S09",
+      "scene": "townNight",
+      "environment_id": "env_town_night",
+      "seconds": 3.5,
+      "transition_in": 0,
+      "frames": 105,
+      "camera_move": "trackRight",
+      "camera_intent": "follow the subject while keeping the space readable",
+      "camera_offset_y_pct": 0,
+      "actors": [
+        {
+          "id": "young",
+          "preset": "reach",
+          "x": 600,
+          "y": 1720,
+          "scale": 2.1,
+          "facing": -1,
+          "hold": "rope",
+          "phase": 1.4
+        }
+      ],
+      "caption_line": "El aprendiz se\u00f1al\u00f3 la cuerda que faltaba.",
+      "lighting": "moon key (cool, high), window pools (warm, low), no fill outside the pools",
+      "palette": [
+        "#101733",
+        "#3b3f74",
+        "#c9d3e8",
+        "#ffb765"
+      ],
+      "note": "the answer is an action, not an explanation"
+    },
+    {
+      "id": "S10",
+      "scene": "fieldDawn",
+      "environment_id": "env_graveyard_dawn",
+      "seconds": 3.6,
+      "transition_in": 10,
+      "frames": 108,
+      "camera_move": "dollyOut",
+      "camera_intent": "unspecified move",
+      "camera_offset_y_pct": 0,
+      "actors": [
+        {
+          "id": "elder",
+          "preset": "idle",
+          "x": 380,
+          "y": 1660,
+          "scale": 1.55,
+          "facing": 1,
+          "hold": "lantern",
+          "phase": 0.5
+        },
+        {
+          "id": "young",
+          "preset": "dig",
+          "x": 720,
+          "y": 1700,
+          "scale": 1.5,
+          "facing": -1,
+          "hold": "shovel",
+          "phase": 0.9
+        }
+      ],
+      "caption_line": "Desde entonces, el silencio tuvo fecha.",
+      "lighting": "contre-jour low sun, long soft shadows towards camera, cold bounce from snow",
+      "palette": [
+        "#3f4a78",
+        "#f2a573",
+        "#fdf0e2",
+        "#7a553f"
+      ],
+      "note": "close: consequence, not explanation"
+    }
+  ],
+  "total_shots": 10,
+  "total_seconds": 30.93
+}

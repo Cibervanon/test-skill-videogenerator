@@ -1,0 +1,193 @@
+{
+  "project": "av_direccion",
+  "generated_at": "2026-11-05T15:36:35Z",
+  "method": "beat sheet -> manifest; no generated footage, no extra shots",
+  "structure": {
+    "functions": {
+      "hook": 1,
+      "setup": 1,
+      "development": 2,
+      "insert": 1,
+      "reaction": 1,
+      "reveal": 2,
+      "escalation": 1,
+      "close": 1
+    },
+    "missing": [],
+    "hook_seconds": 3.4
+  },
+  "edit": {
+    "shots": 10,
+    "seconds": 30.933,
+    "average_shot_seconds": 3.09,
+    "scale_counts": {
+      "detail": 2,
+      "close": 3,
+      "wide": 2,
+      "medium": 3
+    },
+    "camera_counts": {
+      "tiltUp": 1,
+      "pushInSlow": 2,
+      "panRight": 1,
+      "static": 1,
+      "drift": 1,
+      "dollyIn": 2,
+      "trackRight": 1,
+      "dollyOut": 1
+    },
+    "wordless_shots": 2,
+    "sound_cues": 15
+  },
+  "validation": {
+    "ok": true,
+    "problems": [],
+    "warnings": []
+  },
+  "shots": [
+    {
+      "id": "S01",
+      "beat": "hook",
+      "scale": "detail",
+      "camera": "tiltUp",
+      "seconds": 3.4,
+      "cameraMotive": "start on the silent bell and reveal its size before we meet the man who refused it",
+      "transition": "cut",
+      "transitionMotive": "open on the object, not on an establishing shot",
+      "line": "Aquella noche, el guardián no tocó la campana.",
+      "sound": [
+        "bell"
+      ]
+    },
+    {
+      "id": "S02",
+      "beat": "setup",
+      "scale": "close",
+      "camera": "pushInSlow",
+      "seconds": 3.6,
+      "cameraMotive": "let the three winters land on the keeper's face instead of illustrating a number",
+      "transition": "dissolve",
+      "transitionMotive": "same night, closer: the object gives way to the man",
+      "line": "El pueblo llevaba tres inviernos sin oírla.",
+      "sound": [
+        "footstep"
+      ]
+    },
+    {
+      "id": "S03",
+      "beat": "development",
+      "scale": "wide",
+      "camera": "panRight",
+      "seconds": 3.6,
+      "cameraMotive": "follow the apprentice across the square so the climb has a direction",
+      "transition": "cut",
+      "transitionMotive": "cut on the action: the rope is already moving",
+      "line": "El aprendiz subió al campanario con una cuerda.",
+      "sound": [
+        "footstep",
+        "footstep",
+        "footstep",
+        "footstep",
+        "footstep"
+      ]
+    },
+    {
+      "id": "S04",
+      "beat": "insert",
+      "scale": "detail",
+      "camera": "static",
+      "seconds": 1.7,
+      "cameraMotive": "hold the rope and the bell long enough for the silence to become information",
+      "transition": "cut",
+      "transitionMotive": "action to consequence: the rope arrives at the bell",
+      "line": "",
+      "sound": []
+    },
+    {
+      "id": "S05",
+      "beat": "development",
+      "scale": "medium",
+      "camera": "drift",
+      "seconds": 3.6,
+      "cameraMotive": "hold both positions in one frame so the comparison is spatial, not narrated",
+      "transition": "cut",
+      "transitionMotive": "from the object back to the two people who disagree about it",
+      "line": "Comparó lo que el pueblo creía con lo que vio.",
+      "sound": [
+        "footstep"
+      ]
+    },
+    {
+      "id": "S06",
+      "beat": "reaction",
+      "scale": "close",
+      "camera": "dollyIn",
+      "seconds": 2.2,
+      "cameraMotive": "close the distance so the keeper's silence answers the comparison",
+      "transition": "cut",
+      "transitionMotive": "hard cut into the reaction: no dissolve softens the judgement",
+      "line": "",
+      "sound": [
+        "footstep"
+      ]
+    },
+    {
+      "id": "S07",
+      "beat": "reveal",
+      "scale": "medium",
+      "camera": "dollyIn",
+      "seconds": 3.2,
+      "cameraMotive": "move into the two-shot as the explanation narrows to the rope",
+      "transition": "cut",
+      "transitionMotive": "from the keeper's reaction to the mechanism he refuses to name",
+      "line": "El mecanismo tenía tres pasos.",
+      "sound": [
+        "footstep"
+      ]
+    },
+    {
+      "id": "S08",
+      "beat": "reveal",
+      "scale": "close",
+      "camera": "pushInSlow",
+      "seconds": 3.2,
+      "cameraMotive": "hold the overlooked apprentice after the line has named him",
+      "transition": "cut",
+      "transitionMotive": "cut to the person the village did not look at",
+      "line": "El tercero era el que nadie miraba.",
+      "sound": [
+        "footstep"
+      ]
+    },
+    {
+      "id": "S09",
+      "beat": "escalation",
+      "scale": "medium",
+      "camera": "trackRight",
+      "seconds": 3.5,
+      "cameraMotive": "track with the rope hand so the overlooked third step is discovered by movement",
+      "transition": "cut",
+      "transitionMotive": "match on the reaching hand",
+      "line": "El aprendiz señaló la cuerda que faltaba.",
+      "sound": [
+        "footstep",
+        "footstep"
+      ]
+    },
+    {
+      "id": "S10",
+      "beat": "close",
+      "scale": "wide",
+      "camera": "dollyOut",
+      "seconds": 3.6,
+      "cameraMotive": "release the frame to the graveyard and let the empty space carry the unanswered question",
+      "transition": "dissolve",
+      "transitionMotive": "night yields to first light: a deliberate change of time and place",
+      "line": "Desde entonces, el silencio tuvo fecha.",
+      "sound": [
+        "dig",
+        "dig"
+      ]
+    }
+  ]
+}

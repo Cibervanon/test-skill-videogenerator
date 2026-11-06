@@ -1,0 +1,270 @@
+{
+  "style": "cinematic",
+  "shots": [
+    {
+      "shot": "S01",
+      "scene": "townNight",
+      "line": "Nadie supo cuándo dejó de sonar la campana.",
+      "still": "projects/sistema_demo/preproduction/board/S01.png",
+      "path": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\sistema_demo\\preproduction\\board\\S01.png",
+      "size": {
+        "width": 432,
+        "height": 768
+      },
+      "empty_ratio": 0.409,
+      "edge_density": 9.22,
+      "subject_score": 3.174,
+      "caption_contrast": {
+        "spread": 183.0,
+        "edges": 14.73
+      },
+      "palette_shift": 0.092,
+      "depth_bands": 3,
+      "depth_profile": [
+        8.18,
+        16.8,
+        22.59
+      ],
+      "has_captions": true,
+      "flags": [],
+      "status": "clean (pixels)"
+    },
+    {
+      "shot": "S02",
+      "scene": "doorway",
+      "line": "El viejo la oía en sueños, todas las noches.",
+      "still": "projects/sistema_demo/preproduction/board/S02.png",
+      "path": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\sistema_demo\\preproduction\\board\\S02.png",
+      "size": {
+        "width": 432,
+        "height": 768
+      },
+      "empty_ratio": 0.417,
+      "edge_density": 7.42,
+      "subject_score": 3.608,
+      "caption_contrast": {
+        "spread": 195.0,
+        "edges": 14.68
+      },
+      "palette_shift": 0.096,
+      "depth_bands": 3,
+      "depth_profile": [
+        8.47,
+        15.04,
+        20.74
+      ],
+      "has_captions": true,
+      "flags": [],
+      "status": "clean (pixels)"
+    },
+    {
+      "shot": "S03",
+      "scene": "townNight",
+      "line": "El aprendiz contó las veces que faltó.",
+      "still": "projects/sistema_demo/preproduction/board/S03.png",
+      "path": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\sistema_demo\\preproduction\\board\\S03.png",
+      "size": {
+        "width": 432,
+        "height": 768
+      },
+      "empty_ratio": 0.413,
+      "edge_density": 9.53,
+      "subject_score": 3.243,
+      "caption_contrast": {
+        "spread": 198.0,
+        "edges": 17.42
+      },
+      "palette_shift": 0.085,
+      "depth_bands": 3,
+      "depth_profile": [
+        7.23,
+        18.4,
+        22.61
+      ],
+      "has_captions": true,
+      "flags": [],
+      "status": "clean (pixels)"
+    },
+    {
+      "shot": "S04",
+      "scene": "fieldDawn",
+      "line": "Y descubrió que el silencio también se hereda.",
+      "still": "projects/sistema_demo/preproduction/board/S04.png",
+      "path": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\sistema_demo\\preproduction\\board\\S04.png",
+      "size": {
+        "width": 432,
+        "height": 768
+      },
+      "empty_ratio": 0.401,
+      "edge_density": 9.05,
+      "subject_score": 3.222,
+      "caption_contrast": {
+        "spread": 197.0,
+        "edges": 23.09
+      },
+      "palette_shift": 0.12,
+      "depth_bands": 3,
+      "depth_profile": [
+        12.97,
+        24.99,
+        24.58
+      ],
+      "has_captions": true,
+      "flags": [],
+      "status": "clean (pixels)"
+    }
+  ],
+  "overlays": {
+    "ok": true,
+    "style": "cinematic",
+    "problems": [],
+    "warnings": [
+      "S03: G1: a data chart in a low-density style — confirm it is the point of the shot"
+    ],
+    "counts": {
+      "label": 1,
+      "hud": 1,
+      "callout": 1,
+      "badge": 1,
+      "bar": 1,
+      "arrow": 1,
+      "panel": 1
+    },
+    "shots": [
+      {
+        "id": "S01",
+        "overlays": [
+          {
+            "id": "L1",
+            "type": "label",
+            "box": [
+              0.2,
+              0.45784062500000006,
+              0.6,
+              0.09
+            ],
+            "from": 0.12,
+            "to": 0.82
+          },
+          {
+            "id": "H1",
+            "type": "hud",
+            "box": [
+              0.07,
+              0.085,
+              0.86,
+              0.05
+            ],
+            "from": 0.08,
+            "to": 0.95
+          }
+        ]
+      },
+      {
+        "id": "S02",
+        "overlays": [
+          {
+            "id": "C1",
+            "type": "callout",
+            "box": [
+              0.5,
+              0.595,
+              0.42,
+              0.15
+            ],
+            "from": 0.26,
+            "to": 0.88
+          },
+          {
+            "id": "B1",
+            "type": "badge",
+            "box": [
+              0.07,
+              0.15,
+              0.4,
+              0.05
+            ],
+            "from": 0.12,
+            "to": 0.72
+          }
+        ]
+      },
+      {
+        "id": "S03",
+        "overlays": [
+          {
+            "id": "G1",
+            "type": "bar",
+            "box": [
+              0.07,
+              0.55,
+              0.86,
+              0.24
+            ],
+            "from": 0.16,
+            "to": 0.9
+          },
+          {
+            "id": "A1",
+            "type": "arrow",
+            "box": [
+              0.55,
+              0.36,
+              0.36,
+              0.12
+            ],
+            "from": 0.3,
+            "to": 0.78
+          }
+        ]
+      },
+      {
+        "id": "S04",
+        "overlays": [
+          {
+            "id": "P1",
+            "type": "panel",
+            "box": [
+              0.07,
+              0.58,
+              0.86,
+              0.22
+            ],
+            "from": 0.22,
+            "to": 0.92
+          }
+        ]
+      }
+    ]
+  },
+  "aesthetic_review": {
+    "status": "pending",
+    "source": "projects/sistema_demo/preproduction/visual_review.json",
+    "note": "composition/acting/storytelling are not measurable by this tool"
+  },
+  "method": {
+    "pixels": "PIL on the storyboard stills (downscaled tiles, luma, edge energy, quantised palette)",
+    "geometry": "overlay boxes resolved from the manifest with the renderer's own constants",
+    "limitations": "no semantic understanding, no OCR, no judgement of taste"
+  },
+  "problems": [],
+  "kind_map": {
+    "empty_ratio": "automatic (pixels)",
+    "edge_density": "automatic (pixels)",
+    "subject_score": "automatic (pixels)",
+    "caption_contrast": "automatic (pixels)",
+    "palette_shift": "automatic (pixels)",
+    "depth_bands": "automatic (pixels)",
+    "overlays": "geometry (manifest)",
+    "cuts": "automatic (video)"
+  },
+  "thresholds": {
+    "empty_ratio_max": 0.62,
+    "caption_spread_min": 70.0,
+    "caption_edge_min": 5.0,
+    "subject_score_min": 1.55,
+    "palette_shift_max": 0.3,
+    "depth_bands_min": 2,
+    "cut_sync_tolerance_s": 0.35
+  }
+}

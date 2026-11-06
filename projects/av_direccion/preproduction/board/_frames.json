@@ -1,0 +1,96 @@
+{
+  "entry": "src/index.ts",
+  "composition": "CinematicDemo",
+  "frames": [
+    {
+      "id": "S01",
+      "scene": "bellInsert",
+      "from": 0,
+      "frames": 102,
+      "frame": 56,
+      "line": "Aquella noche, el guardi\u00e1n no toc\u00f3 la campana.",
+      "note": "hook: the bell is the question; the line withholds the reason"
+    },
+    {
+      "id": "S02",
+      "scene": "doorway",
+      "from": 92,
+      "frames": 108,
+      "frame": 151,
+      "line": "El pueblo llevaba tres inviernos sin o\u00edrla.",
+      "note": "information carried by the face; no counter overlay"
+    },
+    {
+      "id": "S03",
+      "scene": "townNight",
+      "from": 200,
+      "frames": 108,
+      "frame": 259,
+      "line": "El aprendiz subi\u00f3 al campanario con una cuerda.",
+      "note": "one shot for one continuous action, not a shot per phrase"
+    },
+    {
+      "id": "S04",
+      "scene": "bellInsert",
+      "from": 308,
+      "frames": 51,
+      "frame": 336,
+      "line": "",
+      "note": "deliberate pause: the only static shot, and it earns the stillness"
+    },
+    {
+      "id": "S05",
+      "scene": "townNight",
+      "from": 359,
+      "frames": 108,
+      "frame": 418,
+      "line": "Compar\u00f3 lo que el pueblo cre\u00eda con lo que vio.",
+      "note": "two-shot: the edit withholds the reaction close-up for S06"
+    },
+    {
+      "id": "S06",
+      "scene": "doorway",
+      "from": 467,
+      "frames": 66,
+      "frame": 503,
+      "line": "",
+      "note": "reaction shot with no line: the keeper's performance carries the beat"
+    },
+    {
+      "id": "S07",
+      "scene": "townNight",
+      "from": 533,
+      "frames": 96,
+      "frame": 585,
+      "line": "El mecanismo ten\u00eda tres pasos.",
+      "note": "reveal through staging: the rope is already in the apprentice's hand"
+    },
+    {
+      "id": "S08",
+      "scene": "townNight",
+      "from": 629,
+      "frames": 96,
+      "frame": 681,
+      "line": "El tercero era el que nadie miraba.",
+      "note": "reveal: the third step is a person, not a mechanism"
+    },
+    {
+      "id": "S09",
+      "scene": "townNight",
+      "from": 725,
+      "frames": 105,
+      "frame": 782,
+      "line": "El aprendiz se\u00f1al\u00f3 la cuerda que faltaba.",
+      "note": "the answer is an action, not an explanation"
+    },
+    {
+      "id": "S10",
+      "scene": "fieldDawn",
+      "from": 820,
+      "frames": 108,
+      "frame": 879,
+      "line": "Desde entonces, el silencio tuvo fecha.",
+      "note": "close: consequence, not explanation"
+    }
+  ]
+}

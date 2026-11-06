@@ -1,0 +1,80 @@
+{
+  "ok": true,
+  "characters": [
+    {
+      "key": "elder",
+      "id": "char_elder",
+      "name": "The Bell-Keeper",
+      "height": 1.0,
+      "headRadius": 46,
+      "hatStyle": "beanie",
+      "silhouette": "tall pear-shaped coat, round beanie, no visible hair",
+      "wardrobe_states": [
+        "default"
+      ]
+    },
+    {
+      "key": "widow",
+      "id": "char_widow",
+      "name": "The Widow",
+      "height": 0.95,
+      "headRadius": 45,
+      "hatStyle": "scarf",
+      "silhouette": "ochre coat, dark headscarf",
+      "wardrobe_states": [
+        "default"
+      ]
+    },
+    {
+      "key": "young",
+      "id": "char_young",
+      "name": "The Apprentice",
+      "height": 0.92,
+      "headRadius": 44,
+      "hatStyle": "beanie",
+      "silhouette": "shorter, rounder coat, cream beanie",
+      "wardrobe_states": [
+        "default",
+        "mud"
+      ]
+    }
+  ],
+  "coverage": {
+    "elder": {
+      "shots": [
+        "S01",
+        "S02",
+        "S04",
+        "S06",
+        "S08"
+      ],
+      "modes": [
+        "A",
+        "B",
+        "D",
+        "F"
+      ]
+    },
+    "young": {
+      "shots": [
+        "S04",
+        "S07",
+        "S08"
+      ],
+      "modes": [
+        "C",
+        "D",
+        "F"
+      ]
+    },
+    "widow": {
+      "shots": [],
+      "modes": []
+    }
+  },
+  "problems": [],
+  "warnings": [
+    "character 'widow' is in the cast but never appears in this project"
+  ],
+  "method": "cast.json + manifest: canonical ids, required fields, no shot-level identity overrides, registered wardrobe. It does not measure pixels; the identity sheet and the render do."
+}

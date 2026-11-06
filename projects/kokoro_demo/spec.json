@@ -1,0 +1,64 @@
+{
+  "_comment": "Demo de narración en español con Kokoro LOCAL. No se renderiza vídeo: se generan audio real, timings, subtítulos y el stem del montaje. Los planos existen para que el montaje tenga reloj y para probar que la voz puede estirar un plano.",
+  "id": "kokoro_demo",
+  "title": "La cuerda (narración en español)",
+  "logline": "Nueve días de silencio, un guardián que cuenta y un aprendiz que cava.",
+  "fps": 30,
+  "transitionFrames": 12,
+  "library": [
+    "set:townnight",
+    "set:doorway",
+    "set:fielddawn",
+    "set:bellinsert",
+    "camera:cranedown",
+    "camera:dollyin",
+    "camera:panright",
+    "camera:tiltup"
+  ],
+  "shots": [
+    {
+      "id": "S01",
+      "scene": "townNight",
+      "camera": "craneDown",
+      "seconds": 5,
+      "transitionIn": 0,
+      "line": "Nueve días lleva la cuerda quieta. Nadie sube al campanario.",
+      "speaker": "narrator",
+      "actors": [
+        { "id": "elder", "preset": "idle", "x": 540, "y": 1718, "scale": 1.6, "facing": 1 }
+      ]
+    },
+    {
+      "id": "S02",
+      "scene": "doorway",
+      "camera": "dollyIn",
+      "seconds": 5,
+      "transitionIn": 0,
+      "line": "El guardián contó los días desde el umbral, en voz baja.",
+      "actors": [
+        { "id": "elder", "preset": "turn", "x": 560, "y": 1626, "scale": 2.05, "facing": 1, "speaks": true }
+      ]
+    },
+    {
+      "id": "S03",
+      "scene": "fieldDawn",
+      "camera": "panRight",
+      "seconds": 5,
+      "transitionIn": 12,
+      "line": "El aprendiz cavó donde el sonido se había apagado.",
+      "actors": [
+        { "id": "young", "preset": "dig", "x": 470, "y": 1668, "scale": 1.9, "facing": 1, "speaks": true }
+      ]
+    },
+    {
+      "id": "S04",
+      "scene": "bellInsert",
+      "camera": "tiltUp",
+      "seconds": 4,
+      "transitionIn": 12,
+      "line": "Y la campana respondió.",
+      "speaker": "narrator",
+      "actors": []
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "entry": "src/index.ts",
+  "composition": "CinematicDemo",
+  "frames": [
+    {
+      "id": "S01",
+      "scene": "townNight",
+      "from": 0,
+      "frames": 102,
+      "frame": 56,
+      "line": "Aquella noche, el guardi\u00e1n no toc\u00f3 la campana.",
+      "note": "baseline: the scene carries the line, no UI"
+    },
+    {
+      "id": "S02",
+      "scene": "doorway",
+      "from": 92,
+      "frames": 108,
+      "frame": 151,
+      "line": "El pueblo llevaba tres inviernos sin o\u00edrla.",
+      "note": "mode B: a small count over the scene, the keeper keeps the frame"
+    },
+    {
+      "id": "S03",
+      "scene": "bellInsert",
+      "from": 200,
+      "frames": 102,
+      "frame": 256,
+      "line": "El aprendiz subi\u00f3 al campanario con una cuerda.",
+      "note": "action: no graphic, the insert is the information"
+    },
+    {
+      "id": "S04",
+      "scene": "townNight",
+      "from": 292,
+      "frames": 126,
+      "frame": 361,
+      "line": "Compar\u00f3 lo que el pueblo cre\u00eda con lo que vio.",
+      "note": "mode D: two states need focus, the square stays dimmed behind"
+    },
+    {
+      "id": "S05",
+      "scene": "townNight",
+      "from": 404,
+      "frames": 120,
+      "frame": 470,
+      "line": "El mecanismo ten\u00eda tres pasos.",
+      "note": "mode E: the process needs the whole frame; the square steps out"
+    },
+    {
+      "id": "S06",
+      "scene": "townNight",
+      "from": 510,
+      "frames": 108,
+      "frame": 569,
+      "line": "El tercero era el que nadie miraba.",
+      "note": "back to the scene: a short callout, then the square closes the shot alone"
+    },
+    {
+      "id": "S07",
+      "scene": "townNight",
+      "from": 618,
+      "frames": 108,
+      "frame": 677,
+      "line": "El aprendiz se\u00f1al\u00f3 la cuerda que faltaba.",
+      "note": "mode C: the label identifies the actor, the action stays visible"
+    },
+    {
+      "id": "S08",
+      "scene": "fieldDawn",
+      "from": 714,
+      "frames": 108,
+      "frame": 773,
+      "line": "Desde entonces, el silencio tuvo fecha.",
+      "note": "mode F: the count becomes the cut into the close"
+    }
+  ]
+}

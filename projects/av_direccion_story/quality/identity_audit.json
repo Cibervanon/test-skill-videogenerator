@@ -1,0 +1,103 @@
+{
+  "ok": true,
+  "characters": [
+    {
+      "key": "cientifico",
+      "id": "char_cientifico",
+      "name": "Cientifico",
+      "height": 1.0,
+      "headRadius": 46,
+      "head_to_body": 0.541,
+      "body_height_px": 170.0,
+      "hatStyle": "bald",
+      "silhouette": "white lab coat, dark curls, compact silhouette",
+      "wardrobe_states": [
+        "default"
+      ]
+    },
+    {
+      "key": "elder",
+      "id": "char_elder",
+      "name": "The Bell-Keeper",
+      "height": 1.0,
+      "headRadius": 46,
+      "head_to_body": 0.541,
+      "body_height_px": 170.0,
+      "hatStyle": "beanie",
+      "silhouette": "tall pear-shaped coat, round beanie, no visible hair",
+      "wardrobe_states": [
+        "default"
+      ]
+    },
+    {
+      "key": "widow",
+      "id": "char_widow",
+      "name": "The Widow",
+      "height": 0.95,
+      "headRadius": 45,
+      "head_to_body": 0.529,
+      "body_height_px": 170.0,
+      "hatStyle": "scarf",
+      "silhouette": "ochre coat, dark headscarf",
+      "wardrobe_states": [
+        "default"
+      ]
+    },
+    {
+      "key": "young",
+      "id": "char_young",
+      "name": "The Apprentice",
+      "height": 0.92,
+      "headRadius": 44,
+      "head_to_body": 0.518,
+      "body_height_px": 170.0,
+      "hatStyle": "beanie",
+      "silhouette": "shorter, rounder coat, cream beanie",
+      "wardrobe_states": [
+        "default",
+        "mud"
+      ]
+    }
+  ],
+  "coverage": {
+    "elder": {
+      "shots": [
+        "S02",
+        "S05",
+        "S06",
+        "S07",
+        "S10"
+      ],
+      "modes": [
+        "A"
+      ]
+    },
+    "young": {
+      "shots": [
+        "S03",
+        "S05",
+        "S07",
+        "S08",
+        "S09",
+        "S10"
+      ],
+      "modes": [
+        "A"
+      ]
+    },
+    "widow": {
+      "shots": [],
+      "modes": []
+    },
+    "cientifico": {
+      "shots": [],
+      "modes": []
+    }
+  },
+  "problems": [],
+  "warnings": [
+    "character 'cientifico' is in the cast but never appears in this project",
+    "character 'widow' is in the cast but never appears in this project"
+  ],
+  "method": "cast.json + manifest: canonical ids, required fields, no shot-level identity overrides, registered wardrobe and a measured head/body ratio. It does not measure pixels; the identity sheet and the render do."
+}

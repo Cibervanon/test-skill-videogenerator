@@ -1,0 +1,321 @@
+{
+  "provider": "local",
+  "speech": false,
+  "total_lines": 6,
+  "total_words": 39,
+  "lines": [
+    {
+      "shot": "S01",
+      "scene": "townNight",
+      "speaker": "young",
+      "text": "nine days the rope hung still",
+      "start": 0.0,
+      "end": 6.0,
+      "words": [
+        {
+          "w": "nine",
+          "s": 0.06,
+          "e": 0.36,
+          "p": ""
+        },
+        {
+          "w": "days",
+          "s": 0.43,
+          "e": 0.73,
+          "p": ""
+        },
+        {
+          "w": "the",
+          "s": 0.8,
+          "e": 1.1,
+          "p": ""
+        },
+        {
+          "w": "rope",
+          "s": 1.17,
+          "e": 1.47,
+          "p": ""
+        },
+        {
+          "w": "hung",
+          "s": 1.54,
+          "e": 1.84,
+          "p": ""
+        },
+        {
+          "w": "still",
+          "s": 1.91,
+          "e": 2.21,
+          "p": ""
+        }
+      ],
+      "audio": null,
+      "status": "planned",
+      "estimated": true
+    },
+    {
+      "shot": "S02",
+      "scene": "doorway",
+      "speaker": "elder",
+      "text": "the keeper counted them by the door",
+      "start": 6.0,
+      "end": 11.0,
+      "words": [
+        {
+          "w": "the",
+          "s": 6.06,
+          "e": 6.36,
+          "p": ""
+        },
+        {
+          "w": "keeper",
+          "s": 6.43,
+          "e": 6.73,
+          "p": ""
+        },
+        {
+          "w": "counted",
+          "s": 6.8,
+          "e": 7.1,
+          "p": ""
+        },
+        {
+          "w": "them",
+          "s": 7.17,
+          "e": 7.47,
+          "p": ""
+        },
+        {
+          "w": "by",
+          "s": 7.54,
+          "e": 7.84,
+          "p": ""
+        },
+        {
+          "w": "the",
+          "s": 7.91,
+          "e": 8.21,
+          "p": ""
+        },
+        {
+          "w": "door",
+          "s": 8.28,
+          "e": 8.58,
+          "p": ""
+        }
+      ],
+      "audio": null,
+      "status": "planned",
+      "estimated": true
+    },
+    {
+      "shot": "S03",
+      "scene": "faceCloseup",
+      "speaker": "elder",
+      "text": "nine of them, and no bell",
+      "start": 11.0,
+      "end": 15.5,
+      "words": [
+        {
+          "w": "nine",
+          "s": 11.06,
+          "e": 11.36,
+          "p": ""
+        },
+        {
+          "w": "of",
+          "s": 11.43,
+          "e": 11.73,
+          "p": ""
+        },
+        {
+          "w": "them,",
+          "s": 11.8,
+          "e": 12.1,
+          "p": ""
+        },
+        {
+          "w": "and",
+          "s": 12.17,
+          "e": 12.47,
+          "p": ""
+        },
+        {
+          "w": "no",
+          "s": 12.54,
+          "e": 12.84,
+          "p": ""
+        },
+        {
+          "w": "bell",
+          "s": 12.91,
+          "e": 13.21,
+          "p": ""
+        }
+      ],
+      "audio": null,
+      "status": "planned",
+      "estimated": true
+    },
+    {
+      "shot": "S04",
+      "scene": "fieldDawn",
+      "speaker": "young",
+      "text": "so the apprentice dug where the sound had stopped",
+      "start": 15.1,
+      "end": 20.6,
+      "words": [
+        {
+          "w": "so",
+          "s": 15.16,
+          "e": 15.46,
+          "p": ""
+        },
+        {
+          "w": "the",
+          "s": 15.53,
+          "e": 15.83,
+          "p": ""
+        },
+        {
+          "w": "apprentice",
+          "s": 15.9,
+          "e": 16.2,
+          "p": ""
+        },
+        {
+          "w": "dug",
+          "s": 16.27,
+          "e": 16.57,
+          "p": ""
+        },
+        {
+          "w": "where",
+          "s": 16.64,
+          "e": 16.94,
+          "p": ""
+        },
+        {
+          "w": "the",
+          "s": 17.01,
+          "e": 17.31,
+          "p": ""
+        },
+        {
+          "w": "sound",
+          "s": 17.38,
+          "e": 17.68,
+          "p": ""
+        },
+        {
+          "w": "had",
+          "s": 17.75,
+          "e": 18.05,
+          "p": ""
+        },
+        {
+          "w": "stopped",
+          "s": 18.12,
+          "e": 18.42,
+          "p": ""
+        }
+      ],
+      "audio": null,
+      "status": "planned",
+      "estimated": true
+    },
+    {
+      "shot": "S05",
+      "scene": "townNight",
+      "speaker": "elder",
+      "text": "and the keeper reached for the rope",
+      "start": 20.2,
+      "end": 25.7,
+      "words": [
+        {
+          "w": "and",
+          "s": 20.26,
+          "e": 20.56,
+          "p": ""
+        },
+        {
+          "w": "the",
+          "s": 20.63,
+          "e": 20.93,
+          "p": ""
+        },
+        {
+          "w": "keeper",
+          "s": 21.0,
+          "e": 21.3,
+          "p": ""
+        },
+        {
+          "w": "reached",
+          "s": 21.37,
+          "e": 21.67,
+          "p": ""
+        },
+        {
+          "w": "for",
+          "s": 21.74,
+          "e": 22.04,
+          "p": ""
+        },
+        {
+          "w": "the",
+          "s": 22.11,
+          "e": 22.41,
+          "p": ""
+        },
+        {
+          "w": "rope",
+          "s": 22.48,
+          "e": 22.78,
+          "p": ""
+        }
+      ],
+      "audio": null,
+      "status": "planned",
+      "estimated": true
+    },
+    {
+      "shot": "S06",
+      "scene": "bellInsert",
+      "speaker": "narrator",
+      "text": "and the bell answered",
+      "start": 25.233,
+      "end": 29.233,
+      "words": [
+        {
+          "w": "and",
+          "s": 25.293,
+          "e": 25.593,
+          "p": ""
+        },
+        {
+          "w": "the",
+          "s": 25.663,
+          "e": 25.963,
+          "p": ""
+        },
+        {
+          "w": "bell",
+          "s": 26.033,
+          "e": 26.333,
+          "p": ""
+        },
+        {
+          "w": "answered",
+          "s": 26.403,
+          "e": 26.703,
+          "p": ""
+        }
+      ],
+      "audio": null,
+      "status": "planned",
+      "estimated": true
+    }
+  ],
+  "note": "LOCAL: timings only, no speech audio and no network. The score keeps carrying the film; run the elevenlabs provider with --authorize-spend to hear the lines."
+}

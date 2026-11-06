@@ -1,0 +1,621 @@
+{
+  "provider": "kokoro",
+  "speech": true,
+  "total_lines": 8,
+  "total_words": 58,
+  "lines": [
+    {
+      "shot": "S01",
+      "scene": "townNight",
+      "speaker": "elder",
+      "text": "Aquella noche, el guardián no tocó la campana.",
+      "start": 0.0,
+      "end": 3.4,
+      "words": [
+        {
+          "w": "Aquella",
+          "s": 0.0,
+          "e": 0.383,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "noche,",
+          "s": 0.383,
+          "e": 0.959,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "el",
+          "s": 0.959,
+          "e": 1.041,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "guardián",
+          "s": 1.041,
+          "e": 1.561,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "no",
+          "s": 1.561,
+          "e": 1.698,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "tocó",
+          "s": 1.698,
+          "e": 1.972,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "la",
+          "s": 1.972,
+          "e": 2.054,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "campana.",
+          "s": 2.054,
+          "e": 2.767,
+          "p": "",
+          "source": "pred_dur"
+        }
+      ],
+      "audio": "../../assets/voice_cache/kokoro/fbf087846f14d733.wav",
+      "status": "cached",
+      "estimated": false,
+      "audio_duration": 3.23,
+      "alignment": "pred_dur",
+      "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+      "voice": "em_alex",
+      "device": "cpu",
+      "cost_usd": 0.0,
+      "overflow": 0.0
+    },
+    {
+      "shot": "S02",
+      "scene": "doorway",
+      "speaker": "elder",
+      "text": "El pueblo llevaba tres inviernos sin oírla.",
+      "start": 3.067,
+      "end": 6.667,
+      "words": [
+        {
+          "w": "El",
+          "s": 3.067,
+          "e": 3.177,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "pueblo",
+          "s": 3.177,
+          "e": 3.644,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "llevaba",
+          "s": 3.644,
+          "e": 4.083,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "tres",
+          "s": 4.083,
+          "e": 4.357,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "inviernos",
+          "s": 4.357,
+          "e": 4.961,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "sin",
+          "s": 4.961,
+          "e": 5.154,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "oírla.",
+          "s": 5.154,
+          "e": 5.785,
+          "p": "",
+          "source": "pred_dur"
+        }
+      ],
+      "audio": "../../assets/voice_cache/kokoro/bd0a9c535ce6fd92.wav",
+      "status": "cached",
+      "estimated": false,
+      "audio_duration": 3.155,
+      "alignment": "pred_dur",
+      "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+      "voice": "em_alex",
+      "device": "cpu",
+      "cost_usd": 0.0,
+      "overflow": 0.0
+    },
+    {
+      "shot": "S03",
+      "scene": "bellInsert",
+      "speaker": "narrator",
+      "text": "El aprendiz subió al campanario con una cuerda.",
+      "start": 6.667,
+      "end": 10.067,
+      "words": [
+        {
+          "w": "El",
+          "s": 6.667,
+          "e": 6.748,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "aprendiz",
+          "s": 6.748,
+          "e": 7.4,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "subió",
+          "s": 7.4,
+          "e": 7.78,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "al",
+          "s": 7.78,
+          "e": 7.862,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "campanario",
+          "s": 7.862,
+          "e": 8.541,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "con",
+          "s": 8.541,
+          "e": 8.676,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "una",
+          "s": 8.676,
+          "e": 8.839,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "cuerda.",
+          "s": 8.839,
+          "e": 9.437,
+          "p": "",
+          "source": "pred_dur"
+        }
+      ],
+      "audio": "../../assets/voice_cache/kokoro/264fc177fce8ff34.wav",
+      "status": "cached",
+      "estimated": false,
+      "audio_duration": 3.23,
+      "alignment": "pred_dur",
+      "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+      "voice": "ef_dora",
+      "device": "cpu",
+      "cost_usd": 0.0,
+      "overflow": 0.0
+    },
+    {
+      "shot": "S04",
+      "scene": "townNight",
+      "speaker": "narrator",
+      "text": "Comparó lo que el pueblo creía con lo que vio.",
+      "start": 9.733,
+      "end": 13.933,
+      "words": [
+        {
+          "w": "Comparó",
+          "s": 9.733,
+          "e": 10.227,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "lo",
+          "s": 10.227,
+          "e": 10.336,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "que",
+          "s": 10.336,
+          "e": 10.391,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "el",
+          "s": 10.391,
+          "e": 10.501,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "pueblo",
+          "s": 10.501,
+          "e": 10.885,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "creía",
+          "s": 10.885,
+          "e": 11.324,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "con",
+          "s": 11.324,
+          "e": 11.461,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "lo",
+          "s": 11.461,
+          "e": 11.571,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "que",
+          "s": 11.571,
+          "e": 11.68,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "vio.",
+          "s": 11.68,
+          "e": 12.092,
+          "p": "",
+          "source": "pred_dur"
+        }
+      ],
+      "audio": "../../assets/voice_cache/kokoro/85134d76a22979b7.wav",
+      "status": "cached",
+      "estimated": false,
+      "audio_duration": 2.905,
+      "alignment": "pred_dur",
+      "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+      "voice": "ef_dora",
+      "device": "cpu",
+      "cost_usd": 0.0,
+      "overflow": 0.0
+    },
+    {
+      "shot": "S05",
+      "scene": "townNight",
+      "speaker": "narrator",
+      "text": "El mecanismo tenía tres pasos.",
+      "start": 13.467,
+      "end": 17.467,
+      "words": [
+        {
+          "w": "El",
+          "s": 13.467,
+          "e": 13.551,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "mecanismo",
+          "s": 13.551,
+          "e": 14.224,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "tenía",
+          "s": 14.224,
+          "e": 14.589,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "tres",
+          "s": 14.589,
+          "e": 14.869,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "pasos.",
+          "s": 14.869,
+          "e": 15.515,
+          "p": "",
+          "source": "pred_dur"
+        }
+      ],
+      "audio": "../../assets/voice_cache/kokoro/9d755706186ba51a.wav",
+      "status": "cached",
+      "estimated": false,
+      "audio_duration": 2.38,
+      "alignment": "pred_dur",
+      "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+      "voice": "ef_dora",
+      "device": "cpu",
+      "cost_usd": 0.0,
+      "overflow": 0.0
+    },
+    {
+      "shot": "S06",
+      "scene": "townNight",
+      "speaker": "elder",
+      "text": "El tercero era el que nadie miraba.",
+      "start": 17.0,
+      "end": 20.6,
+      "words": [
+        {
+          "w": "El",
+          "s": 17.0,
+          "e": 17.111,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "tercero",
+          "s": 17.111,
+          "e": 17.697,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "era",
+          "s": 17.697,
+          "e": 18.115,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "el",
+          "s": 18.115,
+          "e": 18.226,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "que",
+          "s": 18.226,
+          "e": 18.337,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "nadie",
+          "s": 18.337,
+          "e": 18.672,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "miraba.",
+          "s": 18.672,
+          "e": 19.313,
+          "p": "",
+          "source": "pred_dur"
+        }
+      ],
+      "audio": "../../assets/voice_cache/kokoro/09bc45a7c19f17b9.wav",
+      "status": "cached",
+      "estimated": false,
+      "audio_duration": 2.755,
+      "alignment": "pred_dur",
+      "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+      "voice": "em_alex",
+      "device": "cpu",
+      "cost_usd": 0.0,
+      "overflow": 0.0
+    },
+    {
+      "shot": "S07",
+      "scene": "townNight",
+      "speaker": "young",
+      "text": "El aprendiz señaló la cuerda que faltaba.",
+      "start": 20.6,
+      "end": 24.2,
+      "words": [
+        {
+          "w": "El",
+          "s": 20.6,
+          "e": 20.682,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "aprendiz",
+          "s": 20.682,
+          "e": 21.335,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "señaló",
+          "s": 21.335,
+          "e": 21.771,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "la",
+          "s": 21.771,
+          "e": 21.88,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "cuerda",
+          "s": 21.88,
+          "e": 22.234,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "que",
+          "s": 22.234,
+          "e": 22.343,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "faltaba.",
+          "s": 22.343,
+          "e": 23.023,
+          "p": "",
+          "source": "pred_dur"
+        }
+      ],
+      "audio": "../../assets/voice_cache/kokoro/cbb6de1bb4c4a59a.wav",
+      "status": "cached",
+      "estimated": false,
+      "audio_duration": 2.83,
+      "alignment": "pred_dur",
+      "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+      "voice": "em_santa",
+      "device": "cpu",
+      "cost_usd": 0.0,
+      "overflow": 0.0
+    },
+    {
+      "shot": "S08",
+      "scene": "fieldDawn",
+      "speaker": "narrator",
+      "text": "Desde entonces, el silencio tuvo fecha.",
+      "start": 23.8,
+      "end": 27.4,
+      "words": [
+        {
+          "w": "Desde",
+          "s": 23.8,
+          "e": 24.047,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "entonces,",
+          "s": 24.047,
+          "e": 24.899,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "el",
+          "s": 24.899,
+          "e": 25.009,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "silencio",
+          "s": 25.009,
+          "e": 25.503,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "tuvo",
+          "s": 25.503,
+          "e": 25.751,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "fecha.",
+          "s": 25.751,
+          "e": 26.328,
+          "p": "",
+          "source": "pred_dur"
+        }
+      ],
+      "audio": "../../assets/voice_cache/kokoro/3c3d2bea9494f5b6.wav",
+      "status": "cached",
+      "estimated": false,
+      "audio_duration": 2.855,
+      "alignment": "pred_dur",
+      "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+      "voice": "ef_dora",
+      "device": "cpu",
+      "cost_usd": 0.0,
+      "overflow": 0.0
+    }
+  ],
+  "costs": [
+    {
+      "shot": "S01",
+      "usd": 0.0,
+      "cached": true
+    },
+    {
+      "shot": "S02",
+      "usd": 0.0,
+      "cached": true
+    },
+    {
+      "shot": "S03",
+      "usd": 0.0,
+      "cached": true
+    },
+    {
+      "shot": "S04",
+      "usd": 0.0,
+      "cached": true
+    },
+    {
+      "shot": "S05",
+      "usd": 0.0,
+      "cached": true
+    },
+    {
+      "shot": "S06",
+      "usd": 0.0,
+      "cached": true
+    },
+    {
+      "shot": "S07",
+      "usd": 0.0,
+      "cached": true
+    },
+    {
+      "shot": "S08",
+      "usd": 0.0,
+      "cached": true
+    }
+  ],
+  "credits": 0,
+  "model": "Kokoro-82M-v1.0",
+  "alignment": "pred_dur",
+  "stem": "generation/voice/voice.wav",
+  "note": "LOCAL Kokoro: audio, timings and stem generated on this machine. No network at synthesis time, no credits."
+}

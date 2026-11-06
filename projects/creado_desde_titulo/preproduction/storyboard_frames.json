@@ -1,0 +1,38 @@
+[
+  {
+    "id": "S01",
+    "scene": "townNight",
+    "from": 0,
+    "frames": 165,
+    "frame": 90,
+    "line": "Un pueblo que ajusta cuentas cada amanecer.",
+    "note": "beat 1/4"
+  },
+  {
+    "id": "S02",
+    "scene": "townNight",
+    "from": 157,
+    "frames": 165,
+    "frame": 247,
+    "line": "Todo lo que se sostiene empieza por una decisi\u00f3n peque\u00f1a.",
+    "note": "beat 2/4"
+  },
+  {
+    "id": "S03",
+    "scene": "fieldDawn",
+    "from": 314,
+    "frames": 165,
+    "frame": 404,
+    "line": "Y esa decisi\u00f3n, repetida, termina siendo el lugar.",
+    "note": "beat 3/4"
+  },
+  {
+    "id": "S04",
+    "scene": "fieldDawn",
+    "from": 471,
+    "frames": 165,
+    "frame": 561,
+    "line": "\u2026",
+    "note": "beat 4/4"
+  }
+]

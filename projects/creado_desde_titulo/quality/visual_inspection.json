@@ -1,0 +1,201 @@
+{
+  "style": "cinematic",
+  "shots": [
+    {
+      "shot": "S01",
+      "scene": "townNight",
+      "line": "Un pueblo que ajusta cuentas cada amanecer.",
+      "still": "projects/creado_desde_titulo/preproduction/board/S01.png",
+      "path": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\creado_desde_titulo\\preproduction\\board\\S01.png",
+      "size": {
+        "width": 432,
+        "height": 768
+      },
+      "empty_ratio": 0.405,
+      "edge_density": 8.19,
+      "subject_score": 3.199,
+      "caption_contrast": {
+        "spread": 182.0,
+        "edges": 16.47
+      },
+      "palette_shift": 0.093,
+      "depth_bands": 3,
+      "depth_profile": [
+        12.57,
+        13.87,
+        21.34
+      ],
+      "has_captions": true,
+      "flags": [],
+      "status": "clean (pixels)"
+    },
+    {
+      "shot": "S02",
+      "scene": "townNight",
+      "line": "Todo lo que se sostiene empieza por una decisión pequeña.",
+      "still": "projects/creado_desde_titulo/preproduction/board/S02.png",
+      "path": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\creado_desde_titulo\\preproduction\\board\\S02.png",
+      "size": {
+        "width": 432,
+        "height": 768
+      },
+      "empty_ratio": 0.448,
+      "edge_density": 7.84,
+      "subject_score": 3.573,
+      "caption_contrast": {
+        "spread": 123.0,
+        "edges": 14.66
+      },
+      "palette_shift": 0.092,
+      "depth_bands": 3,
+      "depth_profile": [
+        8.09,
+        13.31,
+        22.39
+      ],
+      "has_captions": true,
+      "flags": [],
+      "status": "clean (pixels)"
+    },
+    {
+      "shot": "S03",
+      "scene": "fieldDawn",
+      "line": "Y esa decisión, repetida, termina siendo el lugar.",
+      "still": "projects/creado_desde_titulo/preproduction/board/S03.png",
+      "path": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\creado_desde_titulo\\preproduction\\board\\S03.png",
+      "size": {
+        "width": 432,
+        "height": 768
+      },
+      "empty_ratio": 0.552,
+      "edge_density": 9.55,
+      "subject_score": 2.711,
+      "caption_contrast": {
+        "spread": 189.0,
+        "edges": 24.73
+      },
+      "palette_shift": 0.096,
+      "depth_bands": 3,
+      "depth_profile": [
+        13.43,
+        26.5,
+        35.2
+      ],
+      "has_captions": true,
+      "flags": [],
+      "status": "clean (pixels)"
+    },
+    {
+      "shot": "S04",
+      "scene": "fieldDawn",
+      "line": "…",
+      "still": "projects/creado_desde_titulo/preproduction/board/S04.png",
+      "path": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\creado_desde_titulo\\preproduction\\board\\S04.png",
+      "size": {
+        "width": 432,
+        "height": 768
+      },
+      "empty_ratio": 0.48,
+      "edge_density": 8.77,
+      "subject_score": 2.593,
+      "caption_contrast": {
+        "spread": 73.0,
+        "edges": 12.73
+      },
+      "palette_shift": 0.098,
+      "depth_bands": 3,
+      "depth_profile": [
+        13.11,
+        27.59,
+        31.41
+      ],
+      "has_captions": true,
+      "flags": [],
+      "status": "clean (pixels)"
+    }
+  ],
+  "overlays": {
+    "ok": true,
+    "style": "cinematic",
+    "problems": [],
+    "warnings": [],
+    "counts": {
+      "label": 1,
+      "callout": 1
+    },
+    "shots": [
+      {
+        "id": "S01",
+        "overlays": [
+          {
+            "id": "L1",
+            "type": "label",
+            "box": [
+              0.09814814814814815,
+              0.12415937499999997,
+              0.6,
+              0.09
+            ],
+            "from": 0.14,
+            "to": 0.78
+          }
+        ]
+      },
+      {
+        "id": "S02",
+        "overlays": [
+          {
+            "id": "C2",
+            "type": "callout",
+            "box": [
+              0.55,
+              0.62,
+              0.37,
+              0.13
+            ],
+            "from": 0.3,
+            "to": 0.82
+          }
+        ]
+      },
+      {
+        "id": "S03",
+        "overlays": []
+      },
+      {
+        "id": "S04",
+        "overlays": []
+      }
+    ]
+  },
+  "aesthetic_review": {
+    "status": "pending",
+    "source": "projects/creado_desde_titulo/preproduction/visual_review.json",
+    "note": "composition/acting/storytelling are not measurable by this tool"
+  },
+  "method": {
+    "pixels": "PIL on the storyboard stills (downscaled tiles, luma, edge energy, quantised palette)",
+    "geometry": "overlay boxes resolved from the manifest with the renderer's own constants",
+    "limitations": "no semantic understanding, no OCR, no judgement of taste"
+  },
+  "problems": [],
+  "kind_map": {
+    "empty_ratio": "automatic (pixels)",
+    "edge_density": "automatic (pixels)",
+    "subject_score": "automatic (pixels)",
+    "caption_contrast": "automatic (pixels)",
+    "palette_shift": "automatic (pixels)",
+    "depth_bands": "automatic (pixels)",
+    "overlays": "geometry (manifest)",
+    "cuts": "automatic (video)"
+  },
+  "thresholds": {
+    "empty_ratio_max": 0.62,
+    "caption_spread_min": 70.0,
+    "caption_edge_min": 5.0,
+    "subject_score_min": 1.55,
+    "palette_shift_max": 0.3,
+    "depth_bands_min": 2,
+    "cut_sync_tolerance_s": 0.35
+  }
+}

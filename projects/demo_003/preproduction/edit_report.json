@@ -1,0 +1,42 @@
+{
+  "shifts": [
+    {
+      "shot": "S02",
+      "word": "the",
+      "drift": 0.06,
+      "applied": 0.06,
+      "within_tolerance": true
+    },
+    {
+      "shot": "S03",
+      "word": "nine",
+      "drift": 0.06,
+      "applied": 0.06,
+      "within_tolerance": true
+    },
+    {
+      "shot": "S04",
+      "word": "so",
+      "drift": 0.06,
+      "applied": 0.06,
+      "within_tolerance": true
+    },
+    {
+      "shot": "S05",
+      "word": "and",
+      "drift": 0.06,
+      "applied": 0.06,
+      "within_tolerance": true
+    },
+    {
+      "shot": "S06",
+      "word": "and",
+      "drift": 0.06,
+      "applied": 0.06,
+      "within_tolerance": true
+    }
+  ],
+  "total_shift": 0.3,
+  "tolerance": 0.45,
+  "ok": true
+}

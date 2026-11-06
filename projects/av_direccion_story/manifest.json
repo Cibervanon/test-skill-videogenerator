@@ -1,0 +1,563 @@
+{
+  "id": "av_direccion_story",
+  "title": "El silencio tuvo fecha",
+  "logline": "El guardián, el aprendiz y una campana que solo sonó una vez.",
+  "mode": "LOCAL",
+  "style": "cinematic",
+  "format": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "aspect": "9:16"
+  },
+  "transitionFrames": 10,
+  "narration": true,
+  "library": [
+    "rig:default",
+    "character:elder",
+    "character:young",
+    "set:townnight",
+    "set:doorway",
+    "set:facecloseup",
+    "set:fielddawn",
+    "set:bellinsert",
+    "camera:pushinslow",
+    "camera:dollyin",
+    "camera:dollyout",
+    "camera:tiltup",
+    "camera:drift",
+    "camera:static",
+    "camera:panright",
+    "camera:trackright",
+    "transition:cut",
+    "transition:dissolve",
+    "sfx:bell",
+    "sfx:footstep",
+    "sfx:dig"
+  ],
+  "shots": [
+    {
+      "id": "S01",
+      "function": "hook",
+      "scene": "bellInsert",
+      "line": "Aquella noche, el guardián no tocó la campana.",
+      "speaker": "narrator",
+      "seconds": 3.4,
+      "scale": "detail",
+      "camera": "tiltUp",
+      "cameraMotive": "start on the silent bell and reveal its size before we meet the man who refused it",
+      "transitionMotive": "open on the object, not on an establishing shot",
+      "note": "hook: the bell is the question; the line withholds the reason",
+      "beat": "hook",
+      "transition": "cut",
+      "transitionIn": 0,
+      "dialogue": false,
+      "intent": "hook",
+      "actors": [],
+      "sound": [
+        {
+          "type": "bell",
+          "at": 0.35,
+          "dur": 8.0,
+          "freq": 392.0,
+          "gain": 0.5
+        }
+      ],
+      "overlays": [],
+      "presentation": {
+        "mode": "A",
+        "reason": "the scene already carries the information: no UI",
+        "scrim": 0.0,
+        "independent": false,
+        "bridge": false
+      },
+      "offsetY": 0,
+      "props": []
+    },
+    {
+      "id": "S02",
+      "function": "setup",
+      "scene": "doorway",
+      "line": "El pueblo llevaba tres inviernos sin oírla.",
+      "speaker": "narrator",
+      "seconds": 3.6,
+      "scale": "close",
+      "camera": "pushInSlow",
+      "cameraMotive": "let the three winters land on the keeper's face instead of illustrating a number",
+      "note": "information carried by the face; no counter overlay",
+      "beat": "setup",
+      "transition": "dissolve",
+      "transitionIn": 10,
+      "transitionMotive": "same night, closer: the object gives way to the man",
+      "dialogue": false,
+      "intent": "setup",
+      "actors": [
+        {
+          "id": "elder",
+          "preset": "closeup",
+          "x": 700,
+          "y": 1900,
+          "scale": 3.3,
+          "facing": 1,
+          "hold": "lantern",
+          "armR": -18,
+          "phase": 1.1
+        }
+      ],
+      "sound": [
+        {
+          "type": "footstep",
+          "at": 0.5,
+          "gain": 0.12,
+          "pan": -0.1
+        }
+      ],
+      "overlays": [],
+      "presentation": {
+        "mode": "A",
+        "reason": "the scene already carries the information: no UI",
+        "scrim": 0.0,
+        "independent": false,
+        "bridge": false
+      },
+      "offsetY": 0,
+      "props": []
+    },
+    {
+      "id": "S03",
+      "function": "development",
+      "scene": "townNight",
+      "line": "El aprendiz subió al campanario con una cuerda.",
+      "speaker": "narrator",
+      "seconds": 3.6,
+      "scale": "wide",
+      "camera": "panRight",
+      "cameraMotive": "follow the apprentice across the square so the climb has a direction",
+      "transitionMotive": "cut on the action: the rope is already moving",
+      "note": "one shot for one continuous action, not a shot per phrase",
+      "beat": "development",
+      "transition": "cut",
+      "transitionIn": 0,
+      "dialogue": false,
+      "intent": "development",
+      "actors": [
+        {
+          "id": "young",
+          "preset": "walkIn",
+          "x": 760,
+          "y": 1680,
+          "scale": 1.85,
+          "facing": -1,
+          "hold": "rope",
+          "from": 220,
+          "to": -40,
+          "start": 0.05,
+          "end": 0.9,
+          "phase": 0.3
+        }
+      ],
+      "sound": [
+        {
+          "type": "footstep",
+          "at": 0.6,
+          "gain": 0.18,
+          "pan": 0.25
+        },
+        {
+          "type": "footstep",
+          "at": 1.25,
+          "gain": 0.16,
+          "pan": 0.25
+        },
+        {
+          "type": "footstep",
+          "at": 1.9,
+          "gain": 0.17,
+          "pan": 0.25
+        },
+        {
+          "type": "footstep",
+          "at": 2.55,
+          "gain": 0.16,
+          "pan": 0.25
+        },
+        {
+          "type": "footstep",
+          "at": 3.15,
+          "gain": 0.14,
+          "pan": 0.25
+        }
+      ],
+      "overlays": [],
+      "presentation": {
+        "mode": "A",
+        "reason": "the scene already carries the information: no UI",
+        "scrim": 0.0,
+        "independent": false,
+        "bridge": false
+      },
+      "offsetY": 0,
+      "props": []
+    },
+    {
+      "id": "S04",
+      "function": "insert",
+      "scene": "bellInsert",
+      "line": "",
+      "speaker": "none",
+      "seconds": 1.7,
+      "scale": "detail",
+      "camera": "static",
+      "cameraMotive": "hold the rope and the bell long enough for the silence to become information",
+      "transitionMotive": "action to consequence: the rope arrives at the bell",
+      "note": "deliberate pause: the only static shot, and it earns the stillness",
+      "beat": "insert",
+      "transition": "cut",
+      "transitionIn": 0,
+      "dialogue": false,
+      "intent": "insert",
+      "actors": [],
+      "sound": [],
+      "overlays": [],
+      "presentation": {
+        "mode": "A",
+        "reason": "the scene already carries the information: no UI",
+        "scrim": 0.0,
+        "independent": false,
+        "bridge": false
+      },
+      "offsetY": 0,
+      "props": []
+    },
+    {
+      "id": "S05",
+      "function": "development",
+      "scene": "townNight",
+      "line": "Comparó lo que el pueblo creía con lo que vio.",
+      "speaker": "narrator",
+      "seconds": 3.6,
+      "scale": "medium",
+      "camera": "drift",
+      "cameraMotive": "hold both positions in one frame so the comparison is spatial, not narrated",
+      "transitionMotive": "from the object back to the two people who disagree about it",
+      "note": "two-shot: the edit withholds the reaction close-up for S06",
+      "beat": "development",
+      "transition": "cut",
+      "transitionIn": 0,
+      "dialogue": false,
+      "intent": "development",
+      "actors": [
+        {
+          "id": "elder",
+          "preset": "idle",
+          "x": 380,
+          "y": 1660,
+          "scale": 1.75,
+          "facing": 1,
+          "hold": "lantern",
+          "phase": 0.4
+        },
+        {
+          "id": "young",
+          "preset": "turn",
+          "x": 760,
+          "y": 1700,
+          "scale": 1.65,
+          "facing": -1,
+          "hold": "shovel",
+          "phase": 1.2
+        }
+      ],
+      "sound": [
+        {
+          "type": "footstep",
+          "at": 0.4,
+          "gain": 0.11,
+          "pan": -0.2
+        }
+      ],
+      "overlays": [],
+      "presentation": {
+        "mode": "A",
+        "reason": "the scene already carries the information: no UI",
+        "scrim": 0.0,
+        "independent": false,
+        "bridge": false
+      },
+      "offsetY": 0,
+      "props": []
+    },
+    {
+      "id": "S06",
+      "function": "reaction",
+      "scene": "doorway",
+      "line": "",
+      "speaker": "none",
+      "seconds": 2.2,
+      "scale": "close",
+      "camera": "dollyIn",
+      "cameraMotive": "close the distance so the keeper's silence answers the comparison",
+      "transitionMotive": "hard cut into the reaction: no dissolve softens the judgement",
+      "note": "reaction shot with no line: the keeper's performance carries the beat",
+      "beat": "reaction",
+      "transition": "cut",
+      "transitionIn": 0,
+      "dialogue": false,
+      "intent": "reaction",
+      "actors": [
+        {
+          "id": "elder",
+          "preset": "closeup",
+          "x": 700,
+          "y": 1900,
+          "scale": 3.0,
+          "facing": 1,
+          "hold": "lantern",
+          "phase": 0.7
+        }
+      ],
+      "sound": [
+        {
+          "type": "footstep",
+          "at": 0.35,
+          "gain": 0.1,
+          "pan": 0.1
+        }
+      ],
+      "overlays": [],
+      "presentation": {
+        "mode": "A",
+        "reason": "the scene already carries the information: no UI",
+        "scrim": 0.0,
+        "independent": false,
+        "bridge": false
+      },
+      "offsetY": 0,
+      "props": []
+    },
+    {
+      "id": "S07",
+      "function": "reveal",
+      "scene": "townNight",
+      "line": "El mecanismo tenía tres pasos.",
+      "speaker": "narrator",
+      "seconds": 3.2,
+      "scale": "medium",
+      "camera": "dollyIn",
+      "cameraMotive": "move into the two-shot as the explanation narrows to the rope",
+      "transitionMotive": "from the keeper's reaction to the mechanism he refuses to name",
+      "note": "reveal through staging: the rope is already in the apprentice's hand",
+      "beat": "reveal",
+      "transition": "cut",
+      "transitionIn": 0,
+      "dialogue": false,
+      "intent": "reveal",
+      "actors": [
+        {
+          "id": "elder",
+          "preset": "idle",
+          "x": 380,
+          "y": 1660,
+          "scale": 1.75,
+          "facing": 1,
+          "hold": "lantern",
+          "phase": 0.4
+        },
+        {
+          "id": "young",
+          "preset": "reach",
+          "x": 690,
+          "y": 1720,
+          "scale": 2.0,
+          "facing": -1,
+          "hold": "rope",
+          "phase": 0.1
+        }
+      ],
+      "sound": [
+        {
+          "type": "footstep",
+          "at": 0.45,
+          "gain": 0.15,
+          "pan": -0.15
+        }
+      ],
+      "overlays": [],
+      "presentation": {
+        "mode": "A",
+        "reason": "the scene already carries the information: no UI",
+        "scrim": 0.0,
+        "independent": false,
+        "bridge": false
+      },
+      "offsetY": 0,
+      "props": []
+    },
+    {
+      "id": "S08",
+      "function": "reveal",
+      "scene": "townNight",
+      "line": "El tercero era el que nadie miraba.",
+      "speaker": "narrator",
+      "seconds": 3.2,
+      "scale": "close",
+      "camera": "pushInSlow",
+      "cameraMotive": "hold the overlooked apprentice after the line has named him",
+      "transitionMotive": "cut to the person the village did not look at",
+      "note": "reveal: the third step is a person, not a mechanism",
+      "beat": "reveal",
+      "transition": "cut",
+      "transitionIn": 0,
+      "dialogue": false,
+      "intent": "reveal",
+      "actors": [
+        {
+          "id": "young",
+          "preset": "closeup",
+          "x": 620,
+          "y": 1900,
+          "scale": 3.0,
+          "facing": -1,
+          "hold": "rope",
+          "phase": 0.7
+        }
+      ],
+      "sound": [
+        {
+          "type": "footstep",
+          "at": 0.35,
+          "gain": 0.1,
+          "pan": 0.1
+        }
+      ],
+      "overlays": [],
+      "presentation": {
+        "mode": "A",
+        "reason": "the scene already carries the information: no UI",
+        "scrim": 0.0,
+        "independent": false,
+        "bridge": false
+      },
+      "offsetY": 0,
+      "props": []
+    },
+    {
+      "id": "S09",
+      "function": "escalation",
+      "scene": "townNight",
+      "line": "El aprendiz señaló la cuerda que faltaba.",
+      "speaker": "narrator",
+      "seconds": 3.5,
+      "scale": "medium",
+      "camera": "trackRight",
+      "cameraMotive": "track with the rope hand so the overlooked third step is discovered by movement",
+      "transitionMotive": "match on the reaching hand",
+      "note": "the answer is an action, not an explanation",
+      "beat": "escalation",
+      "transition": "cut",
+      "transitionIn": 0,
+      "dialogue": false,
+      "intent": "escalation",
+      "actors": [
+        {
+          "id": "young",
+          "preset": "reach",
+          "x": 600,
+          "y": 1720,
+          "scale": 2.1,
+          "facing": -1,
+          "hold": "rope",
+          "phase": 1.4
+        }
+      ],
+      "sound": [
+        {
+          "type": "footstep",
+          "at": 0.35,
+          "gain": 0.14,
+          "pan": 0.3
+        },
+        {
+          "type": "footstep",
+          "at": 1.05,
+          "gain": 0.16,
+          "pan": 0.3
+        }
+      ],
+      "overlays": [],
+      "presentation": {
+        "mode": "A",
+        "reason": "the scene already carries the information: no UI",
+        "scrim": 0.0,
+        "independent": false,
+        "bridge": false
+      },
+      "offsetY": 0,
+      "props": []
+    },
+    {
+      "id": "S10",
+      "function": "close",
+      "scene": "fieldDawn",
+      "line": "Desde entonces, el silencio tuvo fecha.",
+      "speaker": "narrator",
+      "seconds": 3.6,
+      "scale": "wide",
+      "camera": "dollyOut",
+      "cameraMotive": "release the frame to the graveyard and let the empty space carry the unanswered question",
+      "note": "close: consequence, not explanation",
+      "beat": "close",
+      "transition": "dissolve",
+      "transitionIn": 10,
+      "transitionMotive": "night yields to first light: a deliberate change of time and place",
+      "dialogue": false,
+      "intent": "close",
+      "actors": [
+        {
+          "id": "elder",
+          "preset": "idle",
+          "x": 380,
+          "y": 1660,
+          "scale": 1.55,
+          "facing": 1,
+          "hold": "lantern",
+          "phase": 0.5
+        },
+        {
+          "id": "young",
+          "preset": "dig",
+          "x": 720,
+          "y": 1700,
+          "scale": 1.5,
+          "facing": -1,
+          "hold": "shovel",
+          "phase": 0.9
+        }
+      ],
+      "sound": [
+        {
+          "type": "dig",
+          "at": 1.2,
+          "gain": 0.18,
+          "pan": -0.25
+        },
+        {
+          "type": "dig",
+          "at": 2.3,
+          "gain": 0.16,
+          "pan": -0.25
+        }
+      ],
+      "overlays": [],
+      "presentation": {
+        "mode": "A",
+        "reason": "the scene already carries the information: no UI",
+        "scrim": 0.0,
+        "independent": false,
+        "bridge": false
+      },
+      "offsetY": 0,
+      "props": []
+    }
+  ]
+}

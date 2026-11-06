@@ -1,0 +1,60 @@
+{
+  "entry": "src/index.ts",
+  "composition": "CinematicDemo",
+  "frames": [
+    {
+      "id": "S01",
+      "scene": "townNight",
+      "from": 0,
+      "frames": 180,
+      "frame": 99,
+      "line": "nine days the rope hung still",
+      "note": "establishing from above the square, settling onto the bell post"
+    },
+    {
+      "id": "S02",
+      "scene": "doorway",
+      "from": 180,
+      "frames": 150,
+      "frame": 262,
+      "line": "the keeper counted them by the door",
+      "note": "threshold; he turns from the snow to the room behind him"
+    },
+    {
+      "id": "S03",
+      "scene": "faceCloseup",
+      "from": 330,
+      "frames": 135,
+      "frame": 404,
+      "line": "nine of them, and no bell",
+      "note": "realisation: the number lands on his face, not on a caption"
+    },
+    {
+      "id": "S04",
+      "scene": "fieldDawn",
+      "from": 453,
+      "frames": 165,
+      "frame": 543,
+      "line": "so the apprentice dug where the sound had stopped",
+      "note": "the action beat: a strike with anticipation, impact and recovery"
+    },
+    {
+      "id": "S05",
+      "scene": "townNight",
+      "from": 606,
+      "frames": 165,
+      "frame": 696,
+      "line": "and the keeper reached for the rope",
+      "note": "the turn of the story: the forbidden action, arm arc with overshoot"
+    },
+    {
+      "id": "S06",
+      "scene": "bellInsert",
+      "from": 757,
+      "frames": 120,
+      "frame": 823,
+      "line": "and the bell answered",
+      "note": "insert: the object resolves the film, no actor"
+    }
+  ]
+}

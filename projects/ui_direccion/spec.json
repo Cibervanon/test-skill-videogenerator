@@ -1,0 +1,319 @@
+{
+  "_comment": "UI-direction demo. Each shot declares its narrative intent and a UI proposal; `studio.py ui` decides the presentation mode, the box and the reading window, and can discard what the scene does not need. The renderer draws only the decision.",
+  "id": "ui_direccion",
+  "title": "El silencio tuvo fecha",
+  "logline": "El guardián, el aprendiz y una campana que solo sonó una vez.",
+  "fps": 30,
+  "style": "cinematic",
+  "transitionFrames": 10,
+  "library": [
+    "rig:default",
+    "character:elder",
+    "character:young",
+    "set:townnight",
+    "set:doorway",
+    "set:fielddawn",
+    "camera:pushinslow",
+    "camera:dollyin",
+    "camera:tiltup",
+    "camera:drift",
+    "camera:static",
+    "camera:panleft",
+    "camera:dollyout",
+    "transition:cut",
+    "transition:dissolve"
+  ],
+  "shots": [
+    {
+      "id": "S01",
+      "scene": "townNight",
+      "camera": "pushInSlow",
+      "seconds": 3.4,
+      "transitionIn": 0,
+      "line": "Aquella noche, el guardián no tocó la campana.",
+      "speaker": "elder",
+      "intent": "narracion",
+      "note": "baseline: the scene carries the line, no UI",
+      "actors": [
+        {
+          "id": "elder",
+          "preset": "idle",
+          "x": 470,
+          "y": 1640,
+          "scale": 1.8,
+          "facing": 1,
+          "hold": "lantern",
+          "armR": -30,
+          "phase": 0.2
+        }
+      ],
+      "overlays": []
+    },
+    {
+      "id": "S02",
+      "scene": "doorway",
+      "camera": "dollyIn",
+      "seconds": 3.6,
+      "transitionIn": 10,
+      "line": "El pueblo llevaba tres inviernos sin oírla.",
+      "speaker": "elder",
+      "intent": "dato",
+      "note": "mode B: a small count over the scene, the keeper keeps the frame",
+      "actors": [
+        {
+          "id": "elder",
+          "preset": "closeup",
+          "x": 700,
+          "y": 1900,
+          "scale": 3.4,
+          "facing": 1,
+          "hold": "lantern",
+          "armR": -18,
+          "phase": 1.1
+        }
+      ],
+      "overlays": [
+        {
+          "id": "U2",
+          "type": "counter",
+          "placement": { "kind": "screen" },
+          "anchor": "top-left",
+          "from": 0.18,
+          "to": 0.84,
+          "illustrative": true,
+          "ui_reason": "una cifra redonda necesita un solo número, no una escena nueva",
+          "data": {
+            "title": "sin campana",
+            "value": 3,
+            "unit": "inviernos",
+            "caption": "contado por el aprendiz"
+          }
+        }
+      ]
+    },
+    {
+      "id": "S03",
+      "scene": "bellInsert",
+      "camera": "tiltUp",
+      "seconds": 3.4,
+      "transitionIn": 0,
+      "line": "El aprendiz subió al campanario con una cuerda.",
+      "speaker": "narrator",
+      "intent": "accion",
+      "note": "action: no graphic, the insert is the information",
+      "actors": [],
+      "overlays": []
+    },
+    {
+      "id": "S04",
+      "scene": "townNight",
+      "camera": "drift",
+      "seconds": 4.2,
+      "transitionIn": 10,
+      "line": "Comparó lo que el pueblo creía con lo que vio.",
+      "speaker": "narrator",
+      "intent": "comparacion",
+      "note": "mode D: two states need focus, the square stays dimmed behind",
+      "actors": [
+        {
+          "id": "elder",
+          "preset": "idle",
+          "x": 380,
+          "y": 1660,
+          "scale": 1.7,
+          "facing": 1,
+          "hold": "lantern",
+          "phase": 0.4
+        },
+        {
+          "id": "young",
+          "preset": "turn",
+          "x": 760,
+          "y": 1700,
+          "scale": 1.6,
+          "facing": -1,
+          "hold": "shovel",
+          "phase": 1.2
+        }
+      ],
+      "overlays": [
+        {
+          "id": "U4",
+          "type": "bar",
+          "placement": { "kind": "screen" },
+          "anchor": "auto",
+          "from": 0.14,
+          "to": 0.88,
+          "illustrative": true,
+          "ui_reason": "la comparación es el contenido del plano, no un adorno",
+          "data": {
+            "title": "creído / visto",
+            "series": [
+              { "label": "el pueblo", "value": 12 },
+              { "label": "el aprendiz", "value": 1, "tone": "accentAlt" }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "S05",
+      "scene": "townNight",
+      "camera": "static",
+      "seconds": 4.0,
+      "transitionIn": 14,
+      "line": "El mecanismo tenía tres pasos.",
+      "speaker": "narrator",
+      "intent": "proceso",
+      "note": "mode E: the process needs the whole frame; the square steps out",
+      "actors": [],
+      "overlays": [
+        {
+          "id": "U5",
+          "type": "process",
+          "placement": { "kind": "screen" },
+          "anchor": "center",
+          "from": 0.06,
+          "to": 0.94,
+          "ui_reason": "un diagrama de tres pasos sería ilegible sobre el escenario",
+          "data": {
+            "title": "cómo suena",
+            "steps": [
+              { "label": "tensar", "detail": "la cuerda" },
+              { "label": "soltar", "detail": "el badajo" },
+              { "label": "esperar", "detail": "el aire" }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "S06",
+      "scene": "townNight",
+      "camera": "drift",
+      "seconds": 3.6,
+      "transitionIn": 14,
+      "line": "El tercero era el que nadie miraba.",
+      "speaker": "elder",
+      "intent": "aclaracion",
+      "note": "back to the scene: a short callout, then the square closes the shot alone",
+      "actors": [
+        {
+          "id": "elder",
+          "preset": "idle",
+          "x": 320,
+          "y": 1660,
+          "scale": 1.75,
+          "facing": 1,
+          "hold": "lantern",
+          "phase": 0.9
+        }
+      ],
+      "overlays": [
+        {
+          "id": "U6",
+          "type": "callout",
+          "placement": { "kind": "screen" },
+          "anchor": "auto",
+          "from": 0.22,
+          "to": 0.78,
+          "ui_reason": "la aclaración es secundaria: entra, se lee y se retira",
+          "data": {
+            "title": "el tercer paso",
+            "caption": "nadie miraba el nudo"
+          }
+        }
+      ]
+    },
+    {
+      "id": "S07",
+      "scene": "townNight",
+      "camera": "panLeft",
+      "seconds": 3.6,
+      "transitionIn": 0,
+      "line": "El aprendiz señaló la cuerda que faltaba.",
+      "speaker": "young",
+      "intent": "accion",
+      "note": "mode C: the label identifies the actor, the action stays visible",
+      "actors": [
+        {
+          "id": "young",
+          "preset": "reach",
+          "x": 600,
+          "y": 1720,
+          "scale": 2.1,
+          "facing": 1,
+          "hold": "rope",
+          "phase": 0.6
+        }
+      ],
+      "overlays": [
+        {
+          "id": "U7",
+          "type": "label",
+          "placement": { "kind": "actor", "actor": "young", "at": "head" },
+          "anchor": "above-character",
+          "from": 0.14,
+          "to": 0.82,
+          "ui_reason": "identifica al personaje sin tapar el gesto",
+          "data": {
+            "name": "el aprendiz",
+            "role": "tiró del nudo",
+            "status": "acción"
+          }
+        }
+      ]
+    },
+    {
+      "id": "S08",
+      "scene": "fieldDawn",
+      "camera": "dollyOut",
+      "seconds": 3.6,
+      "transitionIn": 12,
+      "line": "Desde entonces, el silencio tuvo fecha.",
+      "speaker": "narrator",
+      "intent": "cierre",
+      "ui_role": "bridge",
+      "note": "mode F: the count becomes the cut into the close",
+      "actors": [
+        {
+          "id": "elder",
+          "preset": "idle",
+          "x": 380,
+          "y": 1680,
+          "scale": 1.7,
+          "facing": 1,
+          "phase": 0.3
+        },
+        {
+          "id": "young",
+          "preset": "idle",
+          "x": 740,
+          "y": 1700,
+          "scale": 1.55,
+          "facing": -1,
+          "hold": "shovel",
+          "phase": 1.4
+        }
+      ],
+      "overlays": [
+        {
+          "id": "U8",
+          "type": "counter",
+          "placement": { "kind": "screen" },
+          "anchor": "center",
+          "from": 0.45,
+          "to": 1.0,
+          "ui_role": "bridge",
+          "illustrative": true,
+          "ui_reason": "un solo número cierra la historia y conduce al corte",
+          "data": {
+            "title": "desde entonces",
+            "value": 1,
+            "unit": "vez"
+          }
+        }
+      ]
+    }
+  ]
+}

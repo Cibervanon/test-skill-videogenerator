@@ -1,0 +1,240 @@
+[
+  {
+    "w": "Nueve",
+    "s": 0.0,
+    "e": 0.294,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "días",
+    "s": 0.294,
+    "e": 0.641,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "lleva",
+    "s": 0.641,
+    "e": 0.881,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "la",
+    "s": 0.881,
+    "e": 0.961,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "cuerda",
+    "s": 0.961,
+    "e": 1.282,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "quieta.",
+    "s": 1.282,
+    "e": 2.003,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "Nadie",
+    "s": 2.003,
+    "e": 2.323,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "sube",
+    "s": 2.323,
+    "e": 2.563,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "al",
+    "s": 2.563,
+    "e": 2.617,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "campanario.",
+    "s": 2.617,
+    "e": 3.471,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "El",
+    "s": 5.0,
+    "e": 5.081,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "guardián",
+    "s": 5.081,
+    "e": 5.569,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "contó",
+    "s": 5.569,
+    "e": 5.895,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "los",
+    "s": 5.895,
+    "e": 6.03,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "días",
+    "s": 6.03,
+    "e": 6.356,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "desde",
+    "s": 6.356,
+    "e": 6.573,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "el",
+    "s": 6.573,
+    "e": 6.627,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "umbral,",
+    "s": 6.627,
+    "e": 7.196,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "en",
+    "s": 7.196,
+    "e": 7.305,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "voz",
+    "s": 7.305,
+    "e": 7.576,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "baja.",
+    "s": 7.576,
+    "e": 8.118,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "El",
+    "s": 9.6,
+    "e": 9.681,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "aprendiz",
+    "s": 9.681,
+    "e": 10.22,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "cavó",
+    "s": 10.22,
+    "e": 10.49,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "donde",
+    "s": 10.49,
+    "e": 10.705,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "el",
+    "s": 10.705,
+    "e": 10.759,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "sonido",
+    "s": 10.759,
+    "e": 11.271,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "se",
+    "s": 11.271,
+    "e": 11.352,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "había",
+    "s": 11.352,
+    "e": 11.649,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "apagado.",
+    "s": 11.649,
+    "e": 12.35,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "Y",
+    "s": 14.2,
+    "e": 14.258,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "la",
+    "s": 14.258,
+    "e": 14.375,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "campana",
+    "s": 14.375,
+    "e": 14.898,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "respondió.",
+    "s": 14.898,
+    "e": 15.8,
+    "p": "",
+    "source": "pred_dur"
+  }
+]

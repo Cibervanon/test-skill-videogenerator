@@ -1,0 +1,47 @@
+{
+  "artifacts": {
+    "output\\picture_silent.mp4": {
+      "sha256": "2163772243aa519eae08d2354dbbed392f3247e0032c441af8b64279f7c9e87e",
+      "bytes": 16190412
+    },
+    "generation\\audio\\score.wav": {
+      "sha256": "3afefb0bca56aada6d22949dca4ec3cf31449729b1b812a78a073182033d8937",
+      "bytes": 3539860
+    },
+    "output\\final_video.mp4": {
+      "sha256": "0109dc1ac90c69348e29afad1f7d388e4d08449a2121390225cd9ad0efe36f6f",
+      "bytes": 12039297
+    },
+    "output\\final_video_preview.mp4": {
+      "sha256": "b03eda7a06d3faa1dbab3464334e5953c728e2460beac0f4409c1b62561a39d5",
+      "bytes": 1086819
+    }
+  },
+  "delivery": {
+    "output": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\sistema_demo\\output\\final_video.mp4",
+    "duration": 20.067,
+    "size_bytes": 12039297,
+    "video": {
+      "codec": "h264",
+      "width": 1080,
+      "height": 1920,
+      "fps": 30.0,
+      "fps_avg": 30.0,
+      "pix_fmt": "yuvj420p",
+      "frames": 602,
+      "aspect": 0.5625,
+      "orientation": "vertical"
+    },
+    "audio": {
+      "codec": "aac",
+      "channels": 2,
+      "sample_rate": 48000,
+      "bitrate": 190419,
+      "streams": 1
+    },
+    "source": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\sistema_demo\\output\\picture_silent.mp4",
+    "soundtrack": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\sistema_demo\\generation\\audio\\mix.wav",
+    "target_lufs": -14.0,
+    "note": "two-pass linear loudnorm; verify with qa.py"
+  }
+}

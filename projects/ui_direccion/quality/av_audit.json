@@ -1,0 +1,196 @@
+{
+  "project": "ui_direccion",
+  "generated_at": "2026-11-05T14:59:23Z",
+  "method": "structural audit of the edit plan; narrative, performance and taste remain human review",
+  "metrics": {
+    "shots": 8,
+    "seconds": 27.4,
+    "average_shot_seconds": 3.42,
+    "beat_counts": {},
+    "scale_counts": {
+      "full": 5,
+      "close": 1,
+      "detail": 1,
+      "wide": 1
+    },
+    "scale_source": [
+      "derived from actor scale",
+      "derived from scene"
+    ],
+    "longest_scale_run": 3,
+    "camera_counts": {
+      "pushInSlow": 1,
+      "dollyIn": 1,
+      "tiltUp": 1,
+      "drift": 2,
+      "static": 1,
+      "panLeft": 1,
+      "dollyOut": 1
+    },
+    "moving_ratio": 0.875,
+    "camera_motives": "0/7",
+    "dissolve_motives": "0/0",
+    "sound_shots": 7,
+    "sound_cues": 7,
+    "action_shots": 2,
+    "reaction_shots": 0,
+    "two_actor_shots": 2,
+    "wordless_shots": 0,
+    "spoken_lines": 8,
+    "actors_used": [
+      "elder",
+      "young"
+    ],
+    "scenes": [
+      "bellInsert",
+      "doorway",
+      "fieldDawn",
+      "townNight"
+    ]
+  },
+  "checks": [
+    {
+      "id": "structure",
+      "label": "beat structure",
+      "status": "pending",
+      "value": null,
+      "pass": null,
+      "evidence": "legacy manifest: no beat fields"
+    },
+    {
+      "id": "hook",
+      "label": "hook",
+      "status": "pending",
+      "value": null,
+      "pass": null,
+      "evidence": "legacy manifest: no hook decision recorded"
+    },
+    {
+      "id": "reaction",
+      "label": "reaction shot",
+      "status": "pending",
+      "value": null,
+      "pass": null,
+      "evidence": "legacy manifest: no reaction beat recorded"
+    },
+    {
+      "id": "scale_variety",
+      "label": "shot scales vary",
+      "status": "measured",
+      "value": {
+        "unique": 4,
+        "counts": {
+          "full": 5,
+          "close": 1,
+          "detail": 1,
+          "wide": 1
+        }
+      },
+      "pass": true,
+      "evidence": "at least three scales; source: derived from actor scale, derived from scene"
+    },
+    {
+      "id": "scale_run",
+      "label": "no more than two consecutive shots of the same scale",
+      "status": "measured",
+      "value": 3,
+      "pass": false,
+      "evidence": "repetition is allowed, a run is not"
+    },
+    {
+      "id": "camera_variety",
+      "label": "camera intents vary",
+      "status": "measured",
+      "value": {
+        "unique": 7,
+        "counts": {
+          "pushInSlow": 1,
+          "dollyIn": 1,
+          "tiltUp": 1,
+          "drift": 2,
+          "static": 1,
+          "panLeft": 1,
+          "dollyOut": 1
+        }
+      },
+      "pass": true,
+      "evidence": "static shots are allowed; an entire film of one move is not"
+    },
+    {
+      "id": "camera_motivation",
+      "label": "every non-static camera move has a narrative motive",
+      "status": "measured",
+      "value": "0/7",
+      "pass": false,
+      "evidence": "motive fields in the manifest"
+    },
+    {
+      "id": "movement_balance",
+      "label": "movement is neither absent nor constant",
+      "status": "measured",
+      "value": 0.875,
+      "pass": true,
+      "evidence": "share of moving shots; quiet shots are not penalised by themselves"
+    },
+    {
+      "id": "transition_motivation",
+      "label": "every dissolve is motivated",
+      "status": "measured",
+      "value": "0/0",
+      "pass": null,
+      "evidence": "cuts need no overlap; a dissolve must explain why"
+    },
+    {
+      "id": "sound_coverage",
+      "label": "sound follows action in at least half the shots",
+      "status": "measured",
+      "value": "7/8",
+      "pass": true,
+      "evidence": "declared cues or the existing scene-derived effects"
+    },
+    {
+      "id": "action_coverage",
+      "label": "characters perform actions, not only poses",
+      "status": "measured",
+      "value": "2/8",
+      "pass": false,
+      "evidence": "walkIn/dig/reach/turn/call presets"
+    },
+    {
+      "id": "information",
+      "label": "no narration line is repeated",
+      "status": "measured",
+      "value": [],
+      "pass": true,
+      "evidence": "duplicate spoken lines would repeat information"
+    },
+    {
+      "id": "duration",
+      "label": "the cut is a short vertical piece, not a fragment",
+      "status": "measured",
+      "value": 27.4,
+      "pass": true,
+      "evidence": "measured after transition overlaps"
+    }
+  ],
+  "summary": {
+    "ok": false,
+    "failed": [
+      "scale_run",
+      "camera_motivation",
+      "action_coverage"
+    ],
+    "pending": [
+      "structure",
+      "hook",
+      "reaction"
+    ],
+    "headline": "fallos estructurales: scale_run, camera_motivation, action_coverage"
+  },
+  "human_review": [
+    "narrative",
+    "acting",
+    "rhythm",
+    "style_integrity"
+  ]
+}

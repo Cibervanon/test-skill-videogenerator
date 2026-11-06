@@ -1,0 +1,120 @@
+{
+  "id": "tres_campanas_y_una_deuda",
+  "title": "Tres campanas y una deuda",
+  "logline": "Un pueblo que ajusta cuentas cada amanecer",
+  "mode": "LOCAL",
+  "style": "cinematic",
+  "format": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "aspect": "9:16"
+  },
+  "transitionFrames": 8,
+  "library": [],
+  "shots": [
+    {
+      "id": "S01",
+      "scene": "townNight",
+      "camera": "pushInSlow",
+      "seconds": 5.5,
+      "offsetY": 0,
+      "transitionIn": 0,
+      "line": "Un pueblo que ajusta cuentas cada amanecer.",
+      "actors": [
+        {
+          "id": "elder",
+          "preset": "closeup",
+          "x": 430,
+          "y": 1180,
+          "scale": 2.35,
+          "facing": 1
+        }
+      ],
+      "overlays": [
+        {
+          "id": "L1",
+          "type": "label",
+          "placement": {
+            "kind": "actor",
+            "actor": "elder",
+            "at": "head"
+          },
+          "from": 0.14,
+          "to": 0.78,
+          "data": {
+            "name": "The Bell-Keeper",
+            "role": "keeper of the bell, refuses to ring it",
+            "status": "en escena"
+          }
+        }
+      ],
+      "note": "beat 1/4"
+    },
+    {
+      "id": "S02",
+      "scene": "townNight",
+      "camera": "dollyIn",
+      "seconds": 5.5,
+      "offsetY": 0,
+      "transitionIn": 8,
+      "line": "Todo lo que se sostiene empieza por una decisi\u00f3n peque\u00f1a.",
+      "actors": [
+        {
+          "id": "young",
+          "preset": "turn",
+          "x": 640,
+          "y": 1180,
+          "scale": 1.85,
+          "facing": -1
+        }
+      ],
+      "overlays": [
+        {
+          "id": "C2",
+          "type": "callout",
+          "placement": {
+            "kind": "screen",
+            "box": {
+              "x": 0.52,
+              "y": 0.6,
+              "w": 0.4,
+              "h": 0.14
+            }
+          },
+          "from": 0.3,
+          "to": 0.82,
+          "data": {
+            "title": "la idea",
+            "caption": "Todo lo que se sostiene empieza por una decisi\u00f3n peque\u00f1a."
+          }
+        }
+      ],
+      "note": "beat 2/4"
+    },
+    {
+      "id": "S03",
+      "scene": "fieldDawn",
+      "camera": "panLeft",
+      "seconds": 5.5,
+      "offsetY": 0,
+      "transitionIn": 8,
+      "line": "Y esa decisi\u00f3n, repetida, termina siendo el lugar.",
+      "actors": [],
+      "overlays": [],
+      "note": "beat 3/4"
+    },
+    {
+      "id": "S04",
+      "scene": "fieldDawn",
+      "camera": "drift",
+      "seconds": 5.5,
+      "offsetY": 0,
+      "transitionIn": 8,
+      "line": "\u2026",
+      "actors": [],
+      "overlays": [],
+      "note": "beat 4/4"
+    }
+  ]
+}

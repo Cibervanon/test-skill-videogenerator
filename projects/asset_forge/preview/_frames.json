@@ -1,0 +1,8 @@
+{
+  "entry": "src/index.ts",
+  "composition": "AssetForgeDemo",
+  "frames": [
+    { "id": "A01_generated", "frame": 70 },
+    { "id": "A02_existing", "frame": 158 }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "duration": 64.9,
+  "shots": [
+    {
+      "index": 0,
+      "start": 0.0,
+      "end": 3.067,
+      "duration": 3.067
+    },
+    {
+      "index": 1,
+      "start": 3.067,
+      "end": 5.233,
+      "duration": 2.166
+    },
+    {
+      "index": 2,
+      "start": 5.233,
+      "end": 6.1,
+      "duration": 0.867
+    },
+    {
+      "index": 3,
+      "start": 6.1,
+      "end": 18.967,
+      "duration": 12.867
+    },
+    {
+      "index": 4,
+      "start": 18.967,
+      "end": 39.6,
+      "duration": 20.633
+    },
+    {
+      "index": 5,
+      "start": 39.6,
+      "end": 46.8,
+      "duration": 7.2
+    },
+    {
+      "index": 6,
+      "start": 46.8,
+      "end": 64.9,
+      "duration": 18.1
+    }
+  ],
+  "hard_cuts": [
+    3.067
+  ],
+  "shot_duration_stats": {
+    "mean": 9.271,
+    "median": 7.2,
+    "min": 0.867,
+    "max": 20.633,
+    "stdev": 7.999
+  }
+}

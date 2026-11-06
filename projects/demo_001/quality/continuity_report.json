@@ -1,0 +1,22 @@
+{
+  "project": "demo_001",
+  "characters_used": [
+    "elder",
+    "young"
+  ],
+  "environments_used": [
+    "bellInsert",
+    "doorway",
+    "faceCloseup",
+    "fieldDawn",
+    "townNight"
+  ],
+  "issues": [],
+  "ok": true,
+  "checks": [
+    "every actor id exists in character_bible.json",
+    "every scene exists in environment_bible.json",
+    "captions present on every shot",
+    "single source of truth: studio/src/data/project.json + cast.json"
+  ]
+}

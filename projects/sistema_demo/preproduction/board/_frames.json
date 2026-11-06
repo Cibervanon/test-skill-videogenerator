@@ -1,0 +1,42 @@
+{
+  "entry": "src/index.ts",
+  "composition": "CinematicDemo",
+  "frames": [
+    {
+      "id": "S01",
+      "scene": "townNight",
+      "from": 0,
+      "frames": 156,
+      "frame": 85,
+      "line": "Nadie supo cu\u00e1ndo dej\u00f3 de sonar la campana.",
+      "note": "establishing: the keeper stands under the bell post"
+    },
+    {
+      "id": "S02",
+      "scene": "doorway",
+      "from": 146,
+      "frames": 150,
+      "frame": 228,
+      "line": "El viejo la o\u00eda en sue\u00f1os, todas las noches.",
+      "note": "threshold, closer framing: the sound he hears is not there"
+    },
+    {
+      "id": "S03",
+      "scene": "townNight",
+      "from": 296,
+      "frames": 156,
+      "frame": 381,
+      "line": "El aprendiz cont\u00f3 las veces que falt\u00f3.",
+      "note": "the data beat: what the apprentice counted, explicitly illustrative"
+    },
+    {
+      "id": "S04",
+      "scene": "fieldDawn",
+      "from": 440,
+      "frames": 162,
+      "frame": 529,
+      "line": "Y descubri\u00f3 que el silencio tambi\u00e9n se hereda.",
+      "note": "resolution: two figures, the panel names the exchange"
+    }
+  ]
+}

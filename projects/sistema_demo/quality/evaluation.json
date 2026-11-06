@@ -1,0 +1,184 @@
+{
+  "project": "sistema_demo",
+  "style": "cinematic",
+  "dimensions": {
+    "composition": {
+      "status": "measured",
+      "kind": "automatic (pixels)",
+      "value": {
+        "empty_ratio_max": 0.417,
+        "subject_min": 3.174
+      },
+      "evidence": "0 plano(s) con más del 55% de teselas planas",
+      "pass": true
+    },
+    "legibility": {
+      "status": "measured",
+      "kind": "automatic (pixels)",
+      "value": {
+        "worst_spread": 183.0,
+        "worst_edges": 14.68
+      },
+      "evidence": "0 plano(s) con texto de riesgo",
+      "pass": true
+    },
+    "consistency": {
+      "status": "measured",
+      "kind": "automatic (pixels)",
+      "value": {
+        "palette_shift_max": 0.12
+      },
+      "evidence": "deriva de paleta respecto al estilo elegido",
+      "pass": true
+    },
+    "overlays": {
+      "status": "measured",
+      "kind": "geometry (manifest)",
+      "value": {
+        "label": 1,
+        "hud": 1,
+        "callout": 1,
+        "badge": 1,
+        "bar": 1,
+        "arrow": 1,
+        "panel": 1
+      },
+      "evidence": "0 problema(s), 1 aviso(s)",
+      "pass": true
+    },
+    "style_integrity": {
+      "status": "pending",
+      "kind": "subjective",
+      "evidence": "sin revisión humana: no se puntúa",
+      "value": null,
+      "measured_part": {
+        "palette_shift_max": 0.12
+      }
+    },
+    "narrative": {
+      "status": "pending",
+      "kind": "subjective",
+      "evidence": "sin revisión humana: no se puntúa",
+      "value": null
+    },
+    "acting": {
+      "status": "pending",
+      "kind": "subjective",
+      "evidence": "sin revisión humana: no se puntúa",
+      "value": null
+    },
+    "rhythm": {
+      "status": "pending",
+      "kind": "subjective",
+      "evidence": "sin revisión humana: no se puntúa",
+      "value": null
+    },
+    "motion": {
+      "status": "measured",
+      "kind": "automatic (qa)",
+      "value": 8.769,
+      "evidence": "min 1.0 — guards against a slideshow of stills",
+      "pass": true
+    },
+    "technical": {
+      "status": "measured",
+      "kind": "automatic (qa)",
+      "value": {
+        "codec": "h264",
+        "width": 1080,
+        "height": 1920,
+        "fps": 30.0,
+        "fps_avg": 30.0,
+        "pix_fmt": "yuvj420p",
+        "frames": 602,
+        "aspect": 0.5625,
+        "orientation": "vertical"
+      },
+      "evidence": "to spec",
+      "pass": true
+    },
+    "sound": {
+      "status": "measured",
+      "kind": "automatic (qa)",
+      "value": -12.8,
+      "evidence": "acceptable band -22.0..-11.0 dB (mean volume, not LUFS)",
+      "pass": true
+    },
+    "captions": {
+      "status": "measured",
+      "kind": "automatic (qa)",
+      "value": 1.0,
+      "evidence": "computed from the cue plan (shot lines), not from OCR of the render",
+      "pass": true
+    }
+  },
+  "summary": {
+    "measured": 8,
+    "pending": 4,
+    "failed": [],
+    "headline": "sin fallos medidos"
+  },
+  "note": "No hay una nota global: cada dimensión conserva su tipo de evidencia. Lo pendiente no se puntúa.",
+  "catalogue": [
+    {
+      "id": "composition",
+      "kind": "automatic (pixels)",
+      "source": "inspection: empty_ratio, subject_score, depth_bands"
+    },
+    {
+      "id": "legibility",
+      "kind": "automatic (pixels)",
+      "source": "inspection: caption contrast on the caption band"
+    },
+    {
+      "id": "consistency",
+      "kind": "automatic (pixels)",
+      "source": "inspection: palette drift against the chosen style"
+    },
+    {
+      "id": "motion",
+      "kind": "automatic (video)",
+      "source": "qa: mean motion energy"
+    },
+    {
+      "id": "technical",
+      "kind": "automatic (qa)",
+      "source": "qa: readable/format/duration/black/freeze"
+    },
+    {
+      "id": "sound",
+      "kind": "automatic (qa)",
+      "source": "qa: loudness band + audio activity"
+    },
+    {
+      "id": "captions",
+      "kind": "automatic (plan)",
+      "source": "qa: caption coverage from the cue plan"
+    },
+    {
+      "id": "overlays",
+      "kind": "geometry (manifest)",
+      "source": "overlays: safe area, face, caption band, collisions"
+    },
+    {
+      "id": "narrative",
+      "kind": "subjective",
+      "source": "human review"
+    },
+    {
+      "id": "acting",
+      "kind": "subjective",
+      "source": "human review"
+    },
+    {
+      "id": "rhythm",
+      "kind": "subjective",
+      "source": "human review"
+    },
+    {
+      "id": "style_integrity",
+      "kind": "subjective + measured",
+      "source": "palette drift + human review"
+    }
+  ]
+}

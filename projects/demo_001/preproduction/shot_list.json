@@ -1,0 +1,165 @@
+{
+  "project": "demo_001",
+  "shots": [
+    {
+      "id": "S01",
+      "scene": "townNight",
+      "environment_id": "env_town_night",
+      "seconds": 8,
+      "frames": 240,
+      "camera_move": "panLeft",
+      "camera_intent": "scan the square with the walk, keep the bell in frame",
+      "camera_offset_y_pct": 0,
+      "actors": [
+        {
+          "id": "elder",
+          "preset": "walkIn",
+          "x": 470,
+          "y": 1690,
+          "scale": 1.5,
+          "facing": 1,
+          "from": -180,
+          "to": 0,
+          "start": 0.06,
+          "end": 0.86,
+          "hold": "lantern"
+        },
+        {
+          "id": "young",
+          "preset": "walkIn",
+          "x": 700,
+          "y": 1730,
+          "scale": 1.42,
+          "facing": 1,
+          "from": -230,
+          "to": 0,
+          "start": 0.0,
+          "end": 0.92,
+          "hold": "shovel"
+        }
+      ],
+      "caption_line": "the winter the river stopped, the bell stopped with it",
+      "lighting": "moon key (cool, high), window pools (warm, low), no fill outside the pools",
+      "palette": [
+        "#101733",
+        "#3b3f74",
+        "#c9d3e8",
+        "#ffb765"
+      ],
+      "note": "establishing: two figures cross the square toward the bell, camera pans with them"
+    },
+    {
+      "id": "S02",
+      "scene": "doorway",
+      "environment_id": "env_door_threshold",
+      "seconds": 7,
+      "frames": 210,
+      "camera_move": "dollyIn",
+      "camera_intent": "close the distance to the keeper: pressure, not movement",
+      "camera_offset_y_pct": 4,
+      "actors": [
+        {
+          "id": "elder",
+          "preset": "idle",
+          "x": 540,
+          "y": 1640,
+          "scale": 2.15,
+          "facing": 1,
+          "hold": "lantern",
+          "armR": -34,
+          "phase": 0.4
+        }
+      ],
+      "caption_line": "nine days, the keeper said, and nobody rings it but me",
+      "lighting": "practical lamp as key, cold night as rim, hard warm/cold split",
+      "palette": [
+        "#2a1b25",
+        "#4a2b34",
+        "#ffcf8a",
+        "#131a36"
+      ],
+      "note": "threshold shot: warm interior against cold snow, the keeper blocks the door"
+    },
+    {
+      "id": "S03",
+      "scene": "faceCloseup",
+      "environment_id": "env_closeup_night",
+      "seconds": 6,
+      "frames": 180,
+      "camera_move": "pushInSlow",
+      "camera_intent": "hold on the face, let the realisation land",
+      "camera_offset_y_pct": 0,
+      "actors": [
+        {
+          "id": "elder",
+          "preset": "closeup",
+          "x": 540,
+          "y": 2010,
+          "scale": 5.3,
+          "facing": 1,
+          "phase": 1.2
+        }
+      ],
+      "caption_line": "he had rung it once before. it did not end well.",
+      "lighting": "warm key from camera left, cold ambient, no hard shadows",
+      "palette": [
+        "#101633",
+        "#232a52",
+        "#ffd08a",
+        "#a9c2f0"
+      ],
+      "note": "realisation: push-in on the keeper's face, no camera trick beyond the move"
+    },
+    {
+      "id": "S04",
+      "scene": "fieldDawn",
+      "environment_id": "env_graveyard_dawn",
+      "seconds": 9,
+      "frames": 270,
+      "camera_move": "panRight",
+      "camera_intent": "follow the digging, reveal the grave",
+      "camera_offset_y_pct": 0,
+      "actors": [
+        {
+          "id": "young",
+          "preset": "dig",
+          "x": 420,
+          "y": 1660,
+          "scale": 1.9,
+          "facing": 1,
+          "hold": "shovel",
+          "phase": 0
+        }
+      ],
+      "caption_line": "so the apprentice dug, and the ground rang instead",
+      "lighting": "contre-jour low sun, long soft shadows towards camera, cold bounce from snow",
+      "palette": [
+        "#3f4a78",
+        "#f2a573",
+        "#fdf0e2",
+        "#7a553f"
+      ],
+      "note": "the action beat: real digging motion, sun behind, long shadows"
+    },
+    {
+      "id": "S05",
+      "scene": "bellInsert",
+      "environment_id": "env_bell_insert",
+      "seconds": 6,
+      "frames": 180,
+      "camera_move": "tiltUp",
+      "camera_intent": "reveal the bell from rim to crown",
+      "camera_offset_y_pct": 0,
+      "actors": [],
+      "caption_line": "and the bell, at last, answered.",
+      "lighting": "single warm source from below-left, deep blue ambient",
+      "palette": [
+        "#0d1430",
+        "#1e2650",
+        "#e6c179",
+        "#ffd79a"
+      ],
+      "note": "insert: the object that resolves the story, dust in the light, no zoom-as-animation"
+    }
+  ]
+}

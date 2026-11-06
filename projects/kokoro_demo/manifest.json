@@ -1,0 +1,96 @@
+{
+  "id": "kokoro_demo",
+  "title": "La cuerda (narraci\u00f3n en espa\u00f1ol)",
+  "logline": "Nueve d\u00edas de silencio, un guardi\u00e1n que cuenta y un aprendiz que cava.",
+  "mode": "LOCAL",
+  "format": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "aspect": "9:16"
+  },
+  "transitionFrames": 12,
+  "library": [
+    "set:townnight",
+    "set:doorway",
+    "set:fielddawn",
+    "set:bellinsert",
+    "camera:cranedown",
+    "camera:dollyin",
+    "camera:panright",
+    "camera:tiltup"
+  ],
+  "shots": [
+    {
+      "id": "S01",
+      "scene": "townNight",
+      "camera": "craneDown",
+      "seconds": 5.0,
+      "transitionIn": 0,
+      "line": "Nueve d\u00edas lleva la cuerda quieta. Nadie sube al campanario.",
+      "speaker": "narrator",
+      "actors": [
+        {
+          "id": "elder",
+          "preset": "idle",
+          "x": 540,
+          "y": 1718,
+          "scale": 1.6,
+          "facing": 1
+        }
+      ],
+      "offsetY": 0
+    },
+    {
+      "id": "S02",
+      "scene": "doorway",
+      "camera": "dollyIn",
+      "seconds": 5.0,
+      "transitionIn": 0,
+      "line": "El guardi\u00e1n cont\u00f3 los d\u00edas desde el umbral, en voz baja.",
+      "actors": [
+        {
+          "id": "elder",
+          "preset": "turn",
+          "x": 560,
+          "y": 1626,
+          "scale": 2.05,
+          "facing": 1,
+          "speaks": true
+        }
+      ],
+      "offsetY": 0
+    },
+    {
+      "id": "S03",
+      "scene": "fieldDawn",
+      "camera": "panRight",
+      "seconds": 5.0,
+      "transitionIn": 12,
+      "line": "El aprendiz cav\u00f3 donde el sonido se hab\u00eda apagado.",
+      "actors": [
+        {
+          "id": "young",
+          "preset": "dig",
+          "x": 470,
+          "y": 1668,
+          "scale": 1.9,
+          "facing": 1,
+          "speaks": true
+        }
+      ],
+      "offsetY": 0
+    },
+    {
+      "id": "S04",
+      "scene": "bellInsert",
+      "camera": "tiltUp",
+      "seconds": 4.0,
+      "transitionIn": 12,
+      "line": "Y la campana respondi\u00f3.",
+      "speaker": "narrator",
+      "actors": [],
+      "offsetY": 0
+    }
+  ]
+}

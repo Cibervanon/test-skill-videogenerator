@@ -1,0 +1,723 @@
+{
+  "style": "cinematic",
+  "shots": [
+    {
+      "shot": "S01",
+      "scene": "townNight",
+      "mode": "A",
+      "line": "Aquella noche, el guardián no tocó la campana.",
+      "still": "projects/ui_direccion/preproduction/board/S01.png",
+      "path": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\ui_direccion\\preproduction\\board\\S01.png",
+      "size": {
+        "width": 486,
+        "height": 864
+      },
+      "empty_ratio": 0.452,
+      "edge_density": 7.36,
+      "subject_score": 3.569,
+      "caption_contrast": {
+        "spread": 175.0,
+        "edges": 15.19
+      },
+      "palette_shift": 0.094,
+      "depth_bands": 3,
+      "depth_profile": [
+        6.78,
+        13.55,
+        20.19
+      ],
+      "has_captions": true,
+      "flags": [],
+      "status": "clean (pixels)"
+    },
+    {
+      "shot": "S02",
+      "scene": "doorway",
+      "mode": "B",
+      "line": "El pueblo llevaba tres inviernos sin oírla.",
+      "still": "projects/ui_direccion/preproduction/board/S02.png",
+      "path": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\ui_direccion\\preproduction\\board\\S02.png",
+      "size": {
+        "width": 486,
+        "height": 864
+      },
+      "empty_ratio": 0.377,
+      "edge_density": 7.51,
+      "subject_score": 3.653,
+      "caption_contrast": {
+        "spread": 205.0,
+        "edges": 16.54
+      },
+      "palette_shift": 0.096,
+      "depth_bands": 3,
+      "depth_profile": [
+        9.25,
+        14.13,
+        19.73
+      ],
+      "has_captions": true,
+      "flags": [],
+      "status": "clean (pixels)"
+    },
+    {
+      "shot": "S03",
+      "scene": "bellInsert",
+      "mode": "A",
+      "line": "El aprendiz subió al campanario con una cuerda.",
+      "still": "projects/ui_direccion/preproduction/board/S03.png",
+      "path": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\ui_direccion\\preproduction\\board\\S03.png",
+      "size": {
+        "width": 486,
+        "height": 864
+      },
+      "empty_ratio": 0.504,
+      "edge_density": 5.51,
+      "subject_score": 3.402,
+      "caption_contrast": {
+        "spread": 212.0,
+        "edges": 7.83
+      },
+      "palette_shift": 0.079,
+      "depth_bands": 3,
+      "depth_profile": [
+        10.75,
+        12.67,
+        6.41
+      ],
+      "has_captions": true,
+      "flags": [],
+      "status": "clean (pixels)"
+    },
+    {
+      "shot": "S04",
+      "scene": "townNight",
+      "mode": "D",
+      "line": "Comparó lo que el pueblo creía con lo que vio.",
+      "still": "projects/ui_direccion/preproduction/board/S04.png",
+      "path": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\ui_direccion\\preproduction\\board\\S04.png",
+      "size": {
+        "width": 486,
+        "height": 864
+      },
+      "empty_ratio": 0.512,
+      "edge_density": 6.68,
+      "subject_score": 5.009,
+      "caption_contrast": {
+        "spread": 204.0,
+        "edges": 9.01
+      },
+      "palette_shift": 0.048,
+      "depth_bands": 3,
+      "depth_profile": [
+        9.66,
+        8.81,
+        10.22
+      ],
+      "has_captions": true,
+      "flags": [],
+      "status": "clean (pixels)"
+    },
+    {
+      "shot": "S05",
+      "scene": "townNight",
+      "mode": "E",
+      "line": "El mecanismo tenía tres pasos.",
+      "still": "projects/ui_direccion/preproduction/board/S05.png",
+      "path": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\ui_direccion\\preproduction\\board\\S05.png",
+      "size": {
+        "width": 486,
+        "height": 864
+      },
+      "empty_ratio": 0.853,
+      "edge_density": 4.93,
+      "subject_score": 9.061,
+      "caption_contrast": {
+        "spread": 213.0,
+        "edges": 8.15
+      },
+      "palette_shift": 0.028,
+      "depth_bands": 3,
+      "depth_profile": [
+        6.32,
+        9.57,
+        5.63
+      ],
+      "has_captions": true,
+      "flags": [],
+      "status": "clean (pixels)"
+    },
+    {
+      "shot": "S06",
+      "scene": "townNight",
+      "mode": "B",
+      "line": "El tercero era el que nadie miraba.",
+      "still": "projects/ui_direccion/preproduction/board/S06.png",
+      "path": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\ui_direccion\\preproduction\\board\\S06.png",
+      "size": {
+        "width": 486,
+        "height": 864
+      },
+      "empty_ratio": 0.468,
+      "edge_density": 8.24,
+      "subject_score": 4.105,
+      "caption_contrast": {
+        "spread": 166.0,
+        "edges": 13.28
+      },
+      "palette_shift": 0.079,
+      "depth_bands": 3,
+      "depth_profile": [
+        7.47,
+        14.04,
+        20.26
+      ],
+      "has_captions": true,
+      "flags": [],
+      "status": "clean (pixels)"
+    },
+    {
+      "shot": "S07",
+      "scene": "townNight",
+      "mode": "C",
+      "line": "El aprendiz señaló la cuerda que faltaba.",
+      "still": "projects/ui_direccion/preproduction/board/S07.png",
+      "path": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\ui_direccion\\preproduction\\board\\S07.png",
+      "size": {
+        "width": 486,
+        "height": 864
+      },
+      "empty_ratio": 0.421,
+      "edge_density": 8.11,
+      "subject_score": 4.69,
+      "caption_contrast": {
+        "spread": 197.0,
+        "edges": 15.55
+      },
+      "palette_shift": 0.089,
+      "depth_bands": 3,
+      "depth_profile": [
+        6.7,
+        14.89,
+        19.7
+      ],
+      "has_captions": true,
+      "flags": [],
+      "status": "clean (pixels)"
+    },
+    {
+      "shot": "S08",
+      "scene": "fieldDawn",
+      "mode": "F",
+      "line": "Desde entonces, el silencio tuvo fecha.",
+      "still": "projects/ui_direccion/preproduction/board/S08.png",
+      "path": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\ui_direccion\\preproduction\\board\\S08.png",
+      "size": {
+        "width": 486,
+        "height": 864
+      },
+      "empty_ratio": 0.869,
+      "edge_density": 3.71,
+      "subject_score": 5.589,
+      "caption_contrast": {
+        "spread": 206.0,
+        "edges": 7.93
+      },
+      "palette_shift": 0.026,
+      "depth_bands": 3,
+      "depth_profile": [
+        7.6,
+        7.42,
+        6.21
+      ],
+      "has_captions": true,
+      "flags": [],
+      "status": "clean (pixels)"
+    }
+  ],
+  "overlays": {
+    "ok": true,
+    "style": "cinematic",
+    "problems": [],
+    "warnings": [
+      "S04: U4: a data chart in a low-density style — confirm it is the point of the shot"
+    ],
+    "counts": {
+      "counter": 2,
+      "bar": 1,
+      "process": 1,
+      "callout": 1,
+      "label": 1
+    },
+    "shots": [
+      {
+        "id": "S01",
+        "overlays": []
+      },
+      {
+        "id": "S02",
+        "overlays": [
+          {
+            "id": "U2",
+            "type": "counter",
+            "box": [
+              0.06,
+              0.06,
+              0.34,
+              0.12
+            ],
+            "from": 0.18,
+            "to": 0.84
+          }
+        ]
+      },
+      {
+        "id": "S03",
+        "overlays": []
+      },
+      {
+        "id": "S04",
+        "overlays": [
+          {
+            "id": "U4",
+            "type": "bar",
+            "box": [
+              0.07,
+              0.06,
+              0.86,
+              0.3
+            ],
+            "from": 0.14,
+            "to": 0.89
+          }
+        ]
+      },
+      {
+        "id": "S05",
+        "overlays": [
+          {
+            "id": "U5",
+            "type": "process",
+            "box": [
+              0.05999999999999994,
+              0.28,
+              0.88,
+              0.36
+            ],
+            "from": 0.06,
+            "to": 0.94
+          }
+        ]
+      },
+      {
+        "id": "S06",
+        "overlays": [
+          {
+            "id": "U6",
+            "type": "callout",
+            "box": [
+              0.5399999999999999,
+              0.06,
+              0.4,
+              0.13
+            ],
+            "from": 0.22,
+            "to": 0.9
+          }
+        ]
+      },
+      {
+        "id": "S07",
+        "overlays": [
+          {
+            "id": "U7",
+            "type": "label",
+            "box": [
+              0.2555555555555556,
+              0.477944,
+              0.6,
+              0.09
+            ],
+            "from": 0.14,
+            "to": 0.82
+          }
+        ]
+      },
+      {
+        "id": "S08",
+        "overlays": [
+          {
+            "id": "U8",
+            "type": "counter",
+            "box": [
+              0.0,
+              0.0,
+              1.0,
+              1.0
+            ],
+            "from": 0.45,
+            "to": 1.0
+          }
+        ]
+      }
+    ]
+  },
+  "ui": {
+    "ok": true,
+    "modes": {
+      "A": 2,
+      "B": 2,
+      "D": 1,
+      "E": 1,
+      "C": 1,
+      "F": 1
+    },
+    "totals": {
+      "overlays": 6,
+      "problems": 0,
+      "warnings": 0
+    },
+    "shots": [
+      {
+        "shot": "S01",
+        "mode": "A",
+        "mode_reason": "la escena ya explica la frase: no se añade UI",
+        "intent": "narracion",
+        "overlays": [],
+        "flags": [],
+        "status": "clean"
+      },
+      {
+        "shot": "S02",
+        "mode": "B",
+        "mode_reason": "aclaración breve sobre el fondo; la escena sigue viva",
+        "intent": "dato",
+        "overlays": [
+          {
+            "id": "U2",
+            "type": "counter",
+            "box": [
+              0.06,
+              0.06,
+              0.34,
+              0.12
+            ],
+            "from": 0.18,
+            "to": 0.84,
+            "window_seconds": 2.38,
+            "reading_seconds": 2.2
+          }
+        ],
+        "flags": [],
+        "status": "clean"
+      },
+      {
+        "shot": "S03",
+        "mode": "A",
+        "mode_reason": "la escena ya explica la frase: no se añade UI",
+        "intent": "accion",
+        "overlays": [],
+        "flags": [],
+        "status": "clean"
+      },
+      {
+        "shot": "S04",
+        "mode": "D",
+        "mode_reason": "la comparación pide foco: la escena se atenúa sin desaparecer",
+        "intent": "comparacion",
+        "overlays": [
+          {
+            "id": "U4",
+            "type": "bar",
+            "box": [
+              0.07,
+              0.06,
+              0.86,
+              0.3
+            ],
+            "from": 0.14,
+            "to": 0.89,
+            "window_seconds": 3.15,
+            "reading_seconds": 3.15
+          }
+        ],
+        "flags": [],
+        "status": "clean"
+      },
+      {
+        "shot": "S05",
+        "mode": "E",
+        "mode_reason": "la explicación no cabe en el encuadre: composición independiente",
+        "intent": "proceso",
+        "overlays": [
+          {
+            "id": "U5",
+            "type": "process",
+            "box": [
+              0.06,
+              0.28,
+              0.88,
+              0.36
+            ],
+            "from": 0.06,
+            "to": 0.94,
+            "window_seconds": 3.52,
+            "reading_seconds": 3.45
+          }
+        ],
+        "flags": [],
+        "status": "clean"
+      },
+      {
+        "shot": "S06",
+        "mode": "B",
+        "mode_reason": "aclaración breve sobre el fondo; la escena sigue viva",
+        "intent": "aclaracion",
+        "overlays": [
+          {
+            "id": "U6",
+            "type": "callout",
+            "box": [
+              0.54,
+              0.06,
+              0.4,
+              0.13
+            ],
+            "from": 0.22,
+            "to": 0.9,
+            "window_seconds": 2.45,
+            "reading_seconds": 2.45
+          }
+        ],
+        "flags": [],
+        "status": "clean"
+      },
+      {
+        "shot": "S07",
+        "mode": "C",
+        "mode_reason": "la UI identifica algo del personaje y se integra en el encuadre",
+        "intent": "accion",
+        "overlays": [
+          {
+            "id": "U7",
+            "type": "label",
+            "box": [
+              0.2556,
+              0.4779,
+              0.6,
+              0.09
+            ],
+            "from": 0.14,
+            "to": 0.82,
+            "window_seconds": 2.45,
+            "reading_seconds": 2.2
+          }
+        ],
+        "flags": [],
+        "status": "clean"
+      },
+      {
+        "shot": "S08",
+        "mode": "F",
+        "mode_reason": "la UI conduce al plano siguiente como transición",
+        "intent": "cierre",
+        "overlays": [
+          {
+            "id": "U8",
+            "type": "counter",
+            "box": [
+              0.0,
+              0.0,
+              1.0,
+              1.0
+            ],
+            "from": 0.45,
+            "to": 1.0,
+            "window_seconds": 1.98,
+            "reading_seconds": 1.2
+          }
+        ],
+        "flags": [],
+        "status": "clean"
+      }
+    ],
+    "problems": [],
+    "warnings": [],
+    "method": "geometría resuelta + ventanas del manifiesto; la lectura se estima por palabras del propio elemento",
+    "limits": [
+      "la caja del cuerpo es un sobre aproximado (cabeza, torso, abrigo, arco de brazos): no rastrea dedos",
+      "no hay OCR ni comprensión semántica: el motivo narrativo se audita contra el campo `intent` declarado",
+      "el tiempo de lectura es una estimación de 3.3 palabras/s, no una medición ocular"
+    ],
+    "render": {
+      "status": "measured",
+      "video": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\ui_direccion\\output\\final_video.mp4",
+      "frames": [
+        {
+          "shot": "S01",
+          "mode": "A",
+          "seconds": 1.87,
+          "sample": 0.55,
+          "frame": "quality/ui_frames/S01.png",
+          "scene_edges": 3.27,
+          "ui": null,
+          "ui_note": "plano sin UI"
+        },
+        {
+          "shot": "S02",
+          "mode": "B",
+          "seconds": 4.9,
+          "sample": 0.51,
+          "frame": "quality/ui_frames/S02.png",
+          "scene_edges": 3.99,
+          "ui": {
+            "std": 53.75,
+            "contrast": 176
+          },
+          "ui_note": null
+        },
+        {
+          "shot": "S03",
+          "mode": "A",
+          "seconds": 8.54,
+          "sample": 0.55,
+          "frame": "quality/ui_frames/S03.png",
+          "scene_edges": 2.73,
+          "ui": null,
+          "ui_note": "plano sin UI"
+        },
+        {
+          "shot": "S04",
+          "mode": "D",
+          "seconds": 11.9,
+          "sample": 0.515,
+          "frame": "quality/ui_frames/S04.png",
+          "scene_edges": 3.86,
+          "ui": {
+            "std": 39.74,
+            "contrast": 164
+          },
+          "ui_note": null
+        },
+        {
+          "shot": "S05",
+          "mode": "E",
+          "seconds": 15.47,
+          "sample": 0.5,
+          "frame": "quality/ui_frames/S05.png",
+          "scene_edges": 3.93,
+          "ui": {
+            "std": 31.58,
+            "contrast": 31
+          },
+          "ui_note": null
+        },
+        {
+          "shot": "S06",
+          "mode": "B",
+          "seconds": 19.02,
+          "sample": 0.56,
+          "frame": "quality/ui_frames/S06.png",
+          "scene_edges": 3.92,
+          "ui": {
+            "std": 29.96,
+            "contrast": 55
+          },
+          "ui_note": null
+        },
+        {
+          "shot": "S07",
+          "mode": "C",
+          "seconds": 22.33,
+          "sample": 0.48,
+          "frame": "quality/ui_frames/S07.png",
+          "scene_edges": 4.07,
+          "ui": null,
+          "ui_note": "etiqueta anclada al actor: sin caja declarada"
+        },
+        {
+          "shot": "S08",
+          "mode": "F",
+          "seconds": 26.41,
+          "sample": 0.725,
+          "frame": "quality/ui_frames/S08.png",
+          "scene_edges": 1.45,
+          "ui": {
+            "std": 16.69,
+            "contrast": 24
+          },
+          "ui_note": null
+        }
+      ],
+      "by_mode": {
+        "A": {
+          "shots": 2,
+          "scene_edges": 3.0,
+          "ui_contrast": null,
+          "ui_shots": 0
+        },
+        "B": {
+          "shots": 2,
+          "scene_edges": 3.96,
+          "ui_contrast": 115.5,
+          "ui_shots": 2
+        },
+        "D": {
+          "shots": 1,
+          "scene_edges": 3.86,
+          "ui_contrast": 164.0,
+          "ui_shots": 1
+        },
+        "E": {
+          "shots": 1,
+          "scene_edges": 3.93,
+          "ui_contrast": 31.0,
+          "ui_shots": 1
+        },
+        "C": {
+          "shots": 1,
+          "scene_edges": 4.07,
+          "ui_contrast": null,
+          "ui_shots": 0
+        },
+        "F": {
+          "shots": 1,
+          "scene_edges": 1.45,
+          "ui_contrast": 24.0,
+          "ui_shots": 1
+        }
+      },
+      "note": "scene_edges es energía de bordes del frame completo; ui_contrast es el rango p95-p5 dentro de la caja, medido en el centro de la ventana del elemento. Confirma que B/C conservan escena y que E/F son placas gráficas; no puntúa gusto. Las etiquetas ancladas al actor no tienen caja declarada y no se miden."
+    }
+  },
+  "aesthetic_review": {
+    "status": "pending",
+    "source": "projects/ui_direccion/preproduction/visual_review.json",
+    "note": "composition/acting/storytelling are not measurable by this tool"
+  },
+  "method": {
+    "pixels": "PIL on the storyboard stills (downscaled tiles, luma, edge energy, quantised palette)",
+    "geometry": "overlay boxes resolved from the manifest with the renderer's own constants",
+    "limitations": "no semantic understanding, no OCR, no judgement of taste"
+  },
+  "problems": [],
+  "kind_map": {
+    "empty_ratio": "automatic (pixels)",
+    "edge_density": "automatic (pixels)",
+    "subject_score": "automatic (pixels)",
+    "caption_contrast": "automatic (pixels)",
+    "palette_shift": "automatic (pixels)",
+    "depth_bands": "automatic (pixels)",
+    "overlays": "geometry (manifest)",
+    "ui": "geometry + timing (manifest)",
+    "cuts": "automatic (video)"
+  },
+  "thresholds": {
+    "empty_ratio_max": 0.62,
+    "caption_spread_min": 70.0,
+    "caption_edge_min": 5.0,
+    "subject_score_min": 1.55,
+    "palette_shift_max": 0.3,
+    "depth_bands_min": 2,
+    "cut_sync_tolerance_s": 0.35
+  }
+}

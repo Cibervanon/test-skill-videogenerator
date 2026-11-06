@@ -1,0 +1,258 @@
+{
+  "version": 1,
+  "project": "ui_direccion",
+  "style": "cinematic",
+  "rule": "la UI está subordinada a la historia: sin justificación no hay elemento",
+  "modes": {
+    "A": 2,
+    "B": 2,
+    "D": 1,
+    "E": 1,
+    "C": 1,
+    "F": 1
+  },
+  "shots": [
+    {
+      "shot": "S01",
+      "seconds": 3.4,
+      "intent": "narracion",
+      "mode": "A",
+      "reason": "la escena ya explica la frase: no se añade UI",
+      "escalated_from": null,
+      "dropped": [],
+      "warnings": [],
+      "presentation": {
+        "mode": "A",
+        "reason": "la escena ya explica la frase: no se añade UI",
+        "scrim": 0.0,
+        "independent": false,
+        "bridge": false
+      },
+      "overlays": []
+    },
+    {
+      "shot": "S02",
+      "seconds": 3.6,
+      "intent": "dato",
+      "mode": "B",
+      "reason": "aclaración breve sobre el fondo; la escena sigue viva",
+      "escalated_from": null,
+      "dropped": [],
+      "warnings": [],
+      "presentation": {
+        "mode": "B",
+        "reason": "aclaración breve sobre el fondo; la escena sigue viva",
+        "scrim": 0.0,
+        "independent": false,
+        "bridge": false
+      },
+      "overlays": [
+        {
+          "id": "U2",
+          "type": "counter",
+          "box": {
+            "x": 0.06,
+            "y": 0.06,
+            "w": 0.34,
+            "h": 0.12
+          },
+          "anchor": "top-left",
+          "reading_seconds": 2.2,
+          "window_seconds": 2.38,
+          "from": 0.18,
+          "to": 0.84
+        }
+      ]
+    },
+    {
+      "shot": "S03",
+      "seconds": 3.4,
+      "intent": "accion",
+      "mode": "A",
+      "reason": "la escena ya explica la frase: no se añade UI",
+      "escalated_from": null,
+      "dropped": [],
+      "warnings": [],
+      "presentation": {
+        "mode": "A",
+        "reason": "la escena ya explica la frase: no se añade UI",
+        "scrim": 0.0,
+        "independent": false,
+        "bridge": false
+      },
+      "overlays": []
+    },
+    {
+      "shot": "S04",
+      "seconds": 4.2,
+      "intent": "comparacion",
+      "mode": "D",
+      "reason": "la comparación pide foco: la escena se atenúa sin desaparecer",
+      "escalated_from": null,
+      "dropped": [],
+      "warnings": [],
+      "presentation": {
+        "mode": "D",
+        "reason": "la comparación pide foco: la escena se atenúa sin desaparecer",
+        "scrim": 0.58,
+        "independent": false,
+        "bridge": false
+      },
+      "overlays": [
+        {
+          "id": "U4",
+          "type": "bar",
+          "box": {
+            "x": 0.07,
+            "y": 0.06,
+            "w": 0.86,
+            "h": 0.3
+          },
+          "anchor": "top-center",
+          "reading_seconds": 3.15,
+          "window_seconds": 3.15,
+          "from": 0.14,
+          "to": 0.89
+        }
+      ]
+    },
+    {
+      "shot": "S05",
+      "seconds": 4.0,
+      "intent": "proceso",
+      "mode": "E",
+      "reason": "la explicación no cabe en el encuadre: composición independiente",
+      "escalated_from": null,
+      "dropped": [],
+      "warnings": [],
+      "presentation": {
+        "mode": "E",
+        "reason": "la explicación no cabe en el encuadre: composición independiente",
+        "scrim": 0.0,
+        "independent": true,
+        "bridge": false
+      },
+      "overlays": [
+        {
+          "id": "U5",
+          "type": "process",
+          "box": {
+            "x": 0.06,
+            "y": 0.28,
+            "w": 0.88,
+            "h": 0.36
+          },
+          "anchor": "center",
+          "reading_seconds": 3.45,
+          "window_seconds": 3.52,
+          "from": 0.06,
+          "to": 0.94
+        }
+      ]
+    },
+    {
+      "shot": "S06",
+      "seconds": 3.6,
+      "intent": "aclaracion",
+      "mode": "B",
+      "reason": "aclaración breve sobre el fondo; la escena sigue viva",
+      "escalated_from": null,
+      "dropped": [],
+      "warnings": [],
+      "presentation": {
+        "mode": "B",
+        "reason": "aclaración breve sobre el fondo; la escena sigue viva",
+        "scrim": 0.0,
+        "independent": false,
+        "bridge": false
+      },
+      "overlays": [
+        {
+          "id": "U6",
+          "type": "callout",
+          "box": {
+            "x": 0.54,
+            "y": 0.06,
+            "w": 0.4,
+            "h": 0.13
+          },
+          "anchor": "top-right",
+          "reading_seconds": 2.45,
+          "window_seconds": 2.45,
+          "from": 0.22,
+          "to": 0.9
+        }
+      ]
+    },
+    {
+      "shot": "S07",
+      "seconds": 3.6,
+      "intent": "accion",
+      "mode": "C",
+      "reason": "la UI identifica algo del personaje y se integra en el encuadre",
+      "escalated_from": null,
+      "dropped": [],
+      "warnings": [],
+      "presentation": {
+        "mode": "C",
+        "reason": "la UI identifica algo del personaje y se integra en el encuadre",
+        "scrim": 0.0,
+        "independent": false,
+        "bridge": false
+      },
+      "overlays": [
+        {
+          "id": "U7",
+          "type": "label",
+          "box": null,
+          "anchor": "above-character",
+          "reading_seconds": 2.2,
+          "window_seconds": 2.45,
+          "from": 0.14,
+          "to": 0.82
+        }
+      ]
+    },
+    {
+      "shot": "S08",
+      "seconds": 3.6,
+      "intent": "cierre",
+      "mode": "F",
+      "reason": "la UI conduce al plano siguiente como transición",
+      "escalated_from": null,
+      "dropped": [],
+      "warnings": [],
+      "presentation": {
+        "mode": "F",
+        "reason": "la UI conduce al plano siguiente como transición",
+        "scrim": 0.0,
+        "independent": false,
+        "bridge": true
+      },
+      "overlays": [
+        {
+          "id": "U8",
+          "type": "counter",
+          "box": {
+            "x": 0.0,
+            "y": 0.0,
+            "w": 1.0,
+            "h": 1.0
+          },
+          "anchor": "center",
+          "reading_seconds": 1.2,
+          "window_seconds": 1.98,
+          "from": 0.45,
+          "to": 1.0
+        }
+      ]
+    }
+  ],
+  "warnings": [],
+  "totals": {
+    "shots": 8,
+    "overlays": 6,
+    "dropped": 0,
+    "escalated": 0
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "id": "asset_forge",
+  "title": "El laboratorio de la campana",
+  "logline": "Una científica examina una lámpara imposible mientras el pueblo sigue esperando.",
+  "style": "cinematic",
+  "fps": 30,
+  "transitionFrames": 0,
+  "library": [
+    "set:laboratorio",
+    "set:doorway",
+    "character:cientifico",
+    "character:elder",
+    "expression:surprise_cientifico",
+    "prop:lampara_laboratorio",
+    "graphic:comparacion",
+    "camera:pushInSlow",
+    "camera:static",
+    "transition:cut"
+  ],
+  "shots": [
+    {
+      "id": "A01",
+      "scene": "laboratorio",
+      "camera": "pushInSlow",
+      "seconds": 3.6,
+      "transitionIn": 0,
+      "line": "La lámpara no debería encenderse.",
+      "speaker": "cientifico",
+      "intent": "descubrimiento",
+      "note": "generated set + generated character + expression + prop + graphic",
+      "actors": [
+        {
+          "id": "cientifico",
+          "preset": "reach",
+          "x": 560,
+          "y": 1610,
+          "scale": 1.9,
+          "facing": 1,
+          "expression": "surprise_cientifico",
+          "phase": 0.2
+        }
+      ],
+      "props": [
+        {
+          "id": "prop:lampara_laboratorio",
+          "x": 235,
+          "y": 1410,
+          "scale": 0.92,
+          "rotation": -3,
+          "layer": "front"
+        }
+      ],
+      "graphics": ["graphic:comparacion"],
+      "overlays": [],
+      "offsetY": 0,
+      "presentation": {
+        "mode": "B",
+        "reason": "the generated comparison graphic supports the discovery beat",
+        "scrim": 0.0
+      }
+    },
+    {
+      "id": "A02",
+      "scene": "doorway",
+      "camera": "static",
+      "seconds": 3.2,
+      "transitionIn": 0,
+      "line": "El guardián todavía no lo sabía.",
+      "speaker": "elder",
+      "intent": "reaccion",
+      "note": "existing set and existing character reused without rebuilding",
+      "actors": [
+        {
+          "id": "elder",
+          "preset": "closeup",
+          "x": 690,
+          "y": 1880,
+          "scale": 1.7,
+          "facing": -1,
+          "hold": "lantern",
+          "phase": 0.4
+        }
+      ],
+      "props": [],
+      "graphics": [],
+      "overlays": [],
+      "offsetY": 0,
+      "presentation": {
+        "mode": "A",
+        "reason": "the existing scene carries the line",
+        "scrim": 0.0
+      }
+    }
+  ]
+}

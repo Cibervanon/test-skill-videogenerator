@@ -1,0 +1,99 @@
+{
+  "version": 1,
+  "title": "Tres campanas y una deuda",
+  "language": "es",
+  "audience": "público general",
+  "concept": {
+    "title": "Tres campanas y una deuda",
+    "idea": "Un pueblo que ajusta cuentas cada amanecer",
+    "logline": "Un pueblo que ajusta cuentas cada amanecer",
+    "hook": "Un pueblo que ajusta cuentas cada amanecer.",
+    "promise": "una idea, un personaje, una consecuencia"
+  },
+  "structure": {
+    "shape": "gancho → desarrollo → consecuencia",
+    "beats": [
+      {
+        "beat": 1,
+        "function": "gancho",
+        "line": "Un pueblo que ajusta cuentas cada amanecer.",
+        "shots": [
+          "S01"
+        ]
+      },
+      {
+        "beat": 2,
+        "function": "desarrollo",
+        "line": "Todo lo que se sostiene empieza por una decisión pequeña.",
+        "shots": [
+          "S02"
+        ]
+      },
+      {
+        "beat": 3,
+        "function": "giro",
+        "line": "Y esa decisión, repetida, termina siendo el lugar.",
+        "shots": [
+          "S03"
+        ]
+      },
+      {
+        "beat": 4,
+        "function": "cierre",
+        "line": "…",
+        "shots": [
+          "S04"
+        ]
+      }
+    ],
+    "shots": 4,
+    "seconds": 22.0,
+    "natural_narration_seconds": 9.62,
+    "duration_note": "la duración pedida es mayor que la narración natural"
+  },
+  "style": {
+    "id": "cinematic",
+    "reason": "Historia con personajes y duración media: narración cinematográfica.",
+    "alternatives_considered": [
+      {
+        "style": "editorial",
+        "why_not": "Explicativo con voz de ensayo: tipografía de revista y gráficos planos."
+      },
+      {
+        "style": "infographic",
+        "why_not": "El vídeo trata de datos: densidad alta, rejilla y cifras con fuente."
+      },
+      {
+        "style": "minimal",
+        "why_not": "Una sola idea y menos de ~12 s: máximo espacio negativo."
+      }
+    ],
+    "respects_user_choice": true
+  },
+  "casting": {
+    "characters": [
+      "elder",
+      "young"
+    ],
+    "rule": "los personajes se reutilizan del catálogo; no se inventa un diseño nuevo por proyecto"
+  },
+  "narration": {
+    "source": "template",
+    "requires_author_approval": true,
+    "lines": [
+      "Un pueblo que ajusta cuentas cada amanecer.",
+      "Todo lo que se sostiene empieza por una decisión pequeña.",
+      "Y esa decisión, repetida, termina siendo el lugar.",
+      "…"
+    ]
+  },
+  "overlays": {
+    "planned": 2,
+    "numeric": 0,
+    "sources": [],
+    "rule": "sin fuente no hay cifra: los gráficos numéricos solo salen de hechos con origen"
+  },
+  "warnings": [
+    "La narración es una plantilla; necesita aprobación del autor antes de considerarse guion."
+  ]
+}

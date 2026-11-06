@@ -1,0 +1,215 @@
+{
+  "mode": "local",
+  "counts": {
+    "code": 23
+  },
+  "decisions": [
+    {
+      "element": "S01.environment",
+      "kind": "environment",
+      "strategy": "code",
+      "reason": "producible procedurally: vector set + parallax layers + procedural atmosphere",
+      "provider": null,
+      "estimated_cost_usd": 0.0,
+      "quality_risk": "low"
+    },
+    {
+      "element": "S01.elder",
+      "kind": "character",
+      "strategy": "code",
+      "reason": "producible procedurally: vector rig (SVG) + procedural performance presets",
+      "provider": null,
+      "estimated_cost_usd": 0.0,
+      "quality_risk": "low"
+    },
+    {
+      "element": "S01.young",
+      "kind": "character",
+      "strategy": "code",
+      "reason": "producible procedurally: vector rig (SVG) + procedural performance presets",
+      "provider": null,
+      "estimated_cost_usd": 0.0,
+      "quality_risk": "low"
+    },
+    {
+      "element": "S01.camera",
+      "kind": "camera",
+      "strategy": "code",
+      "reason": "producible procedurally: transform curves (dolly/pan/tilt/crane/drift)",
+      "provider": null,
+      "estimated_cost_usd": 0.0,
+      "quality_risk": "low"
+    },
+    {
+      "element": "S01.caption",
+      "kind": "caption",
+      "strategy": "code",
+      "reason": "producible procedurally: burned-in typographic layer, word-chunked",
+      "provider": null,
+      "estimated_cost_usd": 0.0,
+      "quality_risk": "low"
+    },
+    {
+      "element": "S02.environment",
+      "kind": "environment",
+      "strategy": "code",
+      "reason": "producible procedurally: vector set + parallax layers + procedural atmosphere",
+      "provider": null,
+      "estimated_cost_usd": 0.0,
+      "quality_risk": "low"
+    },
+    {
+      "element": "S02.elder",
+      "kind": "character",
+      "strategy": "code",
+      "reason": "producible procedurally: vector rig (SVG) + procedural performance presets",
+      "provider": null,
+      "estimated_cost_usd": 0.0,
+      "quality_risk": "low"
+    },
+    {
+      "element": "S02.camera",
+      "kind": "camera",
+      "strategy": "code",
+      "reason": "producible procedurally: transform curves (dolly/pan/tilt/crane/drift)",
+      "provider": null,
+      "estimated_cost_usd": 0.0,
+      "quality_risk": "low"
+    },
+    {
+      "element": "S02.caption",
+      "kind": "caption",
+      "strategy": "code",
+      "reason": "producible procedurally: burned-in typographic layer, word-chunked",
+      "provider": null,
+      "estimated_cost_usd": 0.0,
+      "quality_risk": "low"
+    },
+    {
+      "element": "S03.environment",
+      "kind": "environment",
+      "strategy": "code",
+      "reason": "producible procedurally: vector set + parallax layers + procedural atmosphere",
+      "provider": null,
+      "estimated_cost_usd": 0.0,
+      "quality_risk": "low"
+    },
+    {
+      "element": "S03.elder",
+      "kind": "character",
+      "strategy": "code",
+      "reason": "producible procedurally: vector rig (SVG) + procedural performance presets",
+      "provider": null,
+      "estimated_cost_usd": 0.0,
+      "quality_risk": "low"
+    },
+    {
+      "element": "S03.camera",
+      "kind": "camera",
+      "strategy": "code",
+      "reason": "producible procedurally: transform curves (dolly/pan/tilt/crane/drift)",
+      "provider": null,
+      "estimated_cost_usd": 0.0,
+      "quality_risk": "low"
+    },
+    {
+      "element": "S03.caption",
+      "kind": "caption",
+      "strategy": "code",
+      "reason": "producible procedurally: burned-in typographic layer, word-chunked",
+      "provider": null,
+      "estimated_cost_usd": 0.0,
+      "quality_risk": "low"
+    },
+    {
+      "element": "S04.environment",
+      "kind": "environment",
+      "strategy": "code",
+      "reason": "producible procedurally: vector set + parallax layers + procedural atmosphere",
+      "provider": null,
+      "estimated_cost_usd": 0.0,
+      "quality_risk": "low"
+    },
+    {
+      "element": "S04.young",
+      "kind": "character",
+      "strategy": "code",
+      "reason": "producible procedurally: vector rig (SVG) + procedural performance presets",
+      "provider": null,
+      "estimated_cost_usd": 0.0,
+      "quality_risk": "low"
+    },
+    {
+      "element": "S04.camera",
+      "kind": "camera",
+      "strategy": "code",
+      "reason": "producible procedurally: transform curves (dolly/pan/tilt/crane/drift)",
+      "provider": null,
+      "estimated_cost_usd": 0.0,
+      "quality_risk": "low"
+    },
+    {
+      "element": "S04.caption",
+      "kind": "caption",
+      "strategy": "code",
+      "reason": "producible procedurally: burned-in typographic layer, word-chunked",
+      "provider": null,
+      "estimated_cost_usd": 0.0,
+      "quality_risk": "low"
+    },
+    {
+      "element": "S05.environment",
+      "kind": "environment",
+      "strategy": "code",
+      "reason": "producible procedurally: vector set + parallax layers + procedural atmosphere",
+      "provider": null,
+      "estimated_cost_usd": 0.0,
+      "quality_risk": "low"
+    },
+    {
+      "element": "S05.camera",
+      "kind": "camera",
+      "strategy": "code",
+      "reason": "producible procedurally: transform curves (dolly/pan/tilt/crane/drift)",
+      "provider": null,
+      "estimated_cost_usd": 0.0,
+      "quality_risk": "low"
+    },
+    {
+      "element": "S05.caption",
+      "kind": "caption",
+      "strategy": "code",
+      "reason": "producible procedurally: burned-in typographic layer, word-chunked",
+      "provider": null,
+      "estimated_cost_usd": 0.0,
+      "quality_risk": "low"
+    },
+    {
+      "element": "film.music",
+      "kind": "music",
+      "strategy": "code",
+      "reason": "producible procedurally: procedural score (additive synthesis, deterministic)",
+      "provider": null,
+      "estimated_cost_usd": 0.0,
+      "quality_risk": "low"
+    },
+    {
+      "element": "film.ambience",
+      "kind": "ambience",
+      "strategy": "code",
+      "reason": "producible procedurally: filtered noise beds + event foley (deterministic)",
+      "provider": null,
+      "estimated_cost_usd": 0.0,
+      "quality_risk": "low"
+    },
+    {
+      "element": "film.edit",
+      "kind": "edit",
+      "strategy": "code",
+      "reason": "producible procedurally: FFmpeg assembly + loudness normalisation",
+      "provider": null,
+      "estimated_cost_usd": 0.0,
+      "quality_risk": "low"
+    }
+  ]
+}

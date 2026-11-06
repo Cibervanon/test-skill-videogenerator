@@ -1,0 +1,69 @@
+{
+  "id": "av_direccion",
+  "title": "El silencio tuvo fecha",
+  "created_by": "scripts/studio.py",
+  "layout": [
+    "input",
+    "analysis",
+    "preproduction",
+    "assets/characters",
+    "assets/environments",
+    "assets/props",
+    "assets/reference_images",
+    "generation/images",
+    "generation/video_clips",
+    "generation/audio",
+    "generation/prompts",
+    "editing/intermediate",
+    "editing/subtitles",
+    "quality/shot_reports",
+    "output",
+    "logs"
+  ],
+  "mode": "local",
+  "artifacts": {
+    "output\\picture_silent.mp4": {
+      "sha256": "28ec16b8a1fb86ea215b7f163110548ea64e9aa8aedbaad6bcaf8136d0ee1ce4",
+      "bytes": 23289361
+    },
+    "generation\\audio\\score.wav": {
+      "sha256": "42b8cb3a956c9e396a1f80236ffda71ab3cebbb38d69a85035776f061807099e",
+      "bytes": 5456624
+    },
+    "output\\final_video.mp4": {
+      "sha256": "b05c141b4ee708b185abe890a5dfa29d27107000e999d049eb418f7d22e3af33",
+      "bytes": 17503420
+    },
+    "output\\final_video_preview.mp4": {
+      "sha256": "2c47e3a995c091d10caac4882dca77d0f370a0ae0e729e160ca43662cec8e9b5",
+      "bytes": 1612543
+    }
+  },
+  "delivery": {
+    "output": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\av_direccion\\output\\final_video.mp4",
+    "duration": 30.933,
+    "size_bytes": 17503420,
+    "video": {
+      "codec": "h264",
+      "width": 1080,
+      "height": 1920,
+      "fps": 30.0,
+      "fps_avg": 30.0,
+      "pix_fmt": "yuvj420p",
+      "frames": 927,
+      "aspect": 0.5625,
+      "orientation": "vertical"
+    },
+    "audio": {
+      "codec": "aac",
+      "channels": 2,
+      "sample_rate": 48000,
+      "bitrate": 190758,
+      "streams": 1
+    },
+    "source": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\av_direccion\\output\\picture_silent.mp4",
+    "soundtrack": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\av_direccion\\generation\\audio\\mix.wav",
+    "target_lufs": -14.0,
+    "note": "two-pass linear loudnorm; verify with qa.py"
+  }
+}

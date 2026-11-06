@@ -1,0 +1,226 @@
+[
+  {
+    "w": "Nadie",
+    "s": 0.0,
+    "e": 0.329,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "supo",
+    "s": 0.329,
+    "e": 0.714,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "cuándo",
+    "s": 0.714,
+    "e": 1.071,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "dejó",
+    "s": 1.071,
+    "e": 1.428,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "de",
+    "s": 1.428,
+    "e": 1.537,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "sonar",
+    "s": 1.537,
+    "e": 1.867,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "la",
+    "s": 1.867,
+    "e": 1.977,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "campana.",
+    "s": 1.977,
+    "e": 2.718,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "El",
+    "s": 4.867,
+    "e": 4.949,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "viejo",
+    "s": 4.949,
+    "e": 5.334,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "la",
+    "s": 5.334,
+    "e": 5.444,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "oía",
+    "s": 5.444,
+    "e": 5.746,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "en",
+    "s": 5.746,
+    "e": 5.855,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "sueños,",
+    "s": 5.855,
+    "e": 6.432,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "todas",
+    "s": 6.432,
+    "e": 6.734,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "las",
+    "s": 6.734,
+    "e": 6.899,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "noches.",
+    "s": 6.899,
+    "e": 7.53,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "El",
+    "s": 9.867,
+    "e": 9.949,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "aprendiz",
+    "s": 9.949,
+    "e": 10.523,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "contó",
+    "s": 10.523,
+    "e": 10.905,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "las",
+    "s": 10.905,
+    "e": 11.069,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "veces",
+    "s": 11.069,
+    "e": 11.479,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "que",
+    "s": 11.479,
+    "e": 11.588,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "faltó.",
+    "s": 11.588,
+    "e": 12.216,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "Y",
+    "s": 14.667,
+    "e": 14.722,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "descubrió",
+    "s": 14.722,
+    "e": 15.326,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "que",
+    "s": 15.326,
+    "e": 15.381,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "el",
+    "s": 15.381,
+    "e": 15.464,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "silencio",
+    "s": 15.464,
+    "e": 16.151,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "también",
+    "s": 16.151,
+    "e": 16.645,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "se",
+    "s": 16.645,
+    "e": 16.755,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "hereda.",
+    "s": 16.755,
+    "e": 17.332,
+    "p": "",
+    "source": "pred_dur"
+  }
+]

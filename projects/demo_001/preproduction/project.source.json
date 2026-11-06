@@ -1,0 +1,126 @@
+{
+  "id": "demo_001",
+  "title": "The Bell That Broke",
+  "logline": "A town that stopped ringing its bell must decide whether the silence was mercy or cowardice.",
+  "mode": "LOCAL",
+  "format": { "width": 1080, "height": 1920, "fps": 30, "aspect": "9:16" },
+  "reference": {
+    "source": "Ejemplos/Video/The Ancient Jar That Warned an Empire [VS1Z_Q-Klt8].mp4",
+    "analysis": "projects/demo_001/analysis",
+    "borrowed": "shot rhythm, vertical framing, painted 2D look, burned-in captions",
+    "not_borrowed": "story, characters, dialogue, names, assets"
+  },
+  "transitionFrames": 14,
+  "shots": [
+    {
+      "id": "S01",
+      "scene": "townNight",
+      "camera": "panLeft",
+      "seconds": 8,
+      "offsetY": 0,
+      "line": "the winter the river stopped, the bell stopped with it",
+      "actors": [
+        {
+          "id": "elder",
+          "preset": "walkIn",
+          "x": 470,
+          "y": 1690,
+          "scale": 1.5,
+          "facing": 1,
+          "from": -180,
+          "to": 0,
+          "start": 0.06,
+          "end": 0.86,
+          "hold": "lantern"
+        },
+        {
+          "id": "young",
+          "preset": "walkIn",
+          "x": 700,
+          "y": 1730,
+          "scale": 1.42,
+          "facing": 1,
+          "from": -230,
+          "to": 0,
+          "start": 0.0,
+          "end": 0.92,
+          "hold": "shovel"
+        }
+      ],
+      "note": "establishing: two figures cross the square toward the bell, camera pans with them"
+    },
+    {
+      "id": "S02",
+      "scene": "doorway",
+      "camera": "dollyIn",
+      "seconds": 7,
+      "offsetY": 4,
+      "line": "nine days, the keeper said, and nobody rings it but me",
+      "actors": [
+        {
+          "id": "elder",
+          "preset": "idle",
+          "x": 540,
+          "y": 1640,
+          "scale": 2.15,
+          "facing": 1,
+          "hold": "lantern",
+          "armR": -34,
+          "phase": 0.4
+        }
+      ],
+      "note": "threshold shot: warm interior against cold snow, the keeper blocks the door"
+    },
+    {
+      "id": "S03",
+      "scene": "faceCloseup",
+      "camera": "pushInSlow",
+      "seconds": 6,
+      "offsetY": 0,
+      "line": "he had rung it once before. it did not end well.",
+      "actors": [
+        {
+          "id": "elder",
+          "preset": "closeup",
+          "x": 540,
+          "y": 2010,
+          "scale": 5.3,
+          "facing": 1,
+          "phase": 1.2
+        }
+      ],
+      "note": "realisation: push-in on the keeper's face, no camera trick beyond the move"
+    },
+    {
+      "id": "S04",
+      "scene": "fieldDawn",
+      "camera": "panRight",
+      "seconds": 9,
+      "offsetY": 0,
+      "line": "so the apprentice dug, and the ground rang instead",
+      "actors": [
+        {
+          "id": "young",
+          "preset": "dig",
+          "x": 420,
+          "y": 1660,
+          "scale": 1.9,
+          "facing": 1,
+          "hold": "shovel",
+          "phase": 0
+        }
+      ],
+      "note": "the action beat: real digging motion, sun behind, long shadows"
+    },
+    {
+      "id": "S05",
+      "scene": "bellInsert",
+      "camera": "tiltUp",
+      "seconds": 6,
+      "offsetY": 0,
+      "line": "and the bell, at last, answered.",
+      "actors": [],
+      "note": "insert: the object that resolves the story, dust in the light, no zoom-as-animation"
+    }
+  ]
+}

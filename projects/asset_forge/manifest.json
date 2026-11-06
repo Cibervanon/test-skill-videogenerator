@@ -1,0 +1,140 @@
+{
+  "id": "asset_forge",
+  "title": "El laboratorio de la campana",
+  "logline": "Una cient\u00edfica examina una l\u00e1mpara imposible mientras el pueblo sigue esperando.",
+  "mode": "LOCAL",
+  "style": "cinematic",
+  "format": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "aspect": "9:16"
+  },
+  "transitionFrames": 0,
+  "library": [
+    "set:laboratorio",
+    "set:doorway",
+    "character:cientifico",
+    "character:elder",
+    "expression:surprise_cientifico",
+    "prop:lampara_laboratorio",
+    "graphic:comparacion",
+    "camera:pushInSlow",
+    "camera:static",
+    "transition:cut"
+  ],
+  "shots": [
+    {
+      "id": "A01",
+      "scene": "laboratorio",
+      "camera": "pushInSlow",
+      "seconds": 3.6,
+      "transitionIn": 0,
+      "line": "La l\u00e1mpara no deber\u00eda encenderse.",
+      "speaker": "cientifico",
+      "intent": "descubrimiento",
+      "note": "generated set + generated character + expression + prop + graphic",
+      "actors": [
+        {
+          "id": "cientifico",
+          "preset": "reach",
+          "x": 560,
+          "y": 1610,
+          "scale": 1.9,
+          "facing": 1,
+          "expression": "surprise_cientifico",
+          "phase": 0.2
+        }
+      ],
+      "props": [
+        {
+          "id": "prop:lampara_laboratorio",
+          "x": 235,
+          "y": 1410,
+          "scale": 0.92,
+          "rotation": -3,
+          "layer": "front"
+        }
+      ],
+      "graphics": [
+        "graphic:comparacion"
+      ],
+      "overlays": [
+        {
+          "id": "generated-comparison",
+          "type": "bar",
+          "placement": {
+            "kind": "screen"
+          },
+          "anchor": "top-left",
+          "box": {
+            "x": 0.06,
+            "y": 0.08,
+            "w": 0.88,
+            "h": 0.22
+          },
+          "from": 0.08,
+          "to": 0.92,
+          "data": {
+            "title": "Comparaci\u00f3n de laboratorio",
+            "caption": "Lectura de dos muestras",
+            "unit": "%",
+            "series": [
+              {
+                "label": "Muestra A",
+                "value": 72,
+                "tone": "accent"
+              },
+              {
+                "label": "Muestra B",
+                "value": 48,
+                "tone": "accentAlt"
+              }
+            ]
+          },
+          "source": "generated sample data; illustrative",
+          "illustrative": true,
+          "asset": "graphic:comparacion"
+        }
+      ],
+      "offsetY": 0,
+      "presentation": {
+        "mode": "B",
+        "reason": "the generated comparison graphic supports the discovery beat",
+        "scrim": 0.0
+      }
+    },
+    {
+      "id": "A02",
+      "scene": "doorway",
+      "camera": "static",
+      "seconds": 3.2,
+      "transitionIn": 0,
+      "line": "El guardi\u00e1n todav\u00eda no lo sab\u00eda.",
+      "speaker": "elder",
+      "intent": "reaccion",
+      "note": "existing set and existing character reused without rebuilding",
+      "actors": [
+        {
+          "id": "elder",
+          "preset": "closeup",
+          "x": 690,
+          "y": 1880,
+          "scale": 1.7,
+          "facing": -1,
+          "hold": "lantern",
+          "phase": 0.4
+        }
+      ],
+      "props": [],
+      "graphics": [],
+      "overlays": [],
+      "offsetY": 0,
+      "presentation": {
+        "mode": "A",
+        "reason": "the existing scene carries the line",
+        "scrim": 0.0
+      }
+    }
+  ]
+}

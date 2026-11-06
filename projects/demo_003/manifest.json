@@ -1,0 +1,183 @@
+{
+  "id": "demo_003",
+  "title": "The Rope",
+  "logline": "Nine days of silence end when the apprentice reaches for a rope the keeper forbade.",
+  "mode": "LOCAL",
+  "format": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "aspect": "9:16"
+  },
+  "transitionFrames": 14,
+  "library": [
+    "rig:default",
+    "character:elder",
+    "character:young",
+    "set:townnight",
+    "set:doorway",
+    "set:facecloseup",
+    "set:fielddawn",
+    "set:bellinsert",
+    "camera:cranedown",
+    "camera:dollyin",
+    "camera:pushinslow",
+    "camera:panright",
+    "camera:dollyout",
+    "camera:tiltup",
+    "transition:cut",
+    "transition:dissolve",
+    "engine:atmosphere",
+    "engine:perspective",
+    "engine:texture"
+  ],
+  "shots": [
+    {
+      "id": "S01",
+      "scene": "townNight",
+      "camera": "craneDown",
+      "seconds": 6.0,
+      "transitionIn": 0,
+      "line": "nine days the rope hung still",
+      "note": "establishing from above the square, settling onto the bell post",
+      "actors": [
+        {
+          "id": "young",
+          "preset": "walkIn",
+          "x": 760,
+          "y": 1712,
+          "scale": 1.55,
+          "facing": 1,
+          "from": -240,
+          "to": 0,
+          "start": 0.05,
+          "end": 0.82,
+          "hold": "shovel"
+        },
+        {
+          "id": "elder",
+          "preset": "idle",
+          "x": 306,
+          "y": 1718,
+          "scale": 1.5,
+          "facing": 1,
+          "hold": "lantern",
+          "armR": -30,
+          "phase": 0.4
+        }
+      ],
+      "offsetY": 0
+    },
+    {
+      "id": "S02",
+      "scene": "doorway",
+      "camera": "dollyIn",
+      "seconds": 5.0,
+      "transitionIn": 0,
+      "transitionNote": "cut: the same keeper at a new scale would ghost in a dissolve",
+      "line": "the keeper counted them by the door",
+      "note": "threshold; he turns from the snow to the room behind him",
+      "actors": [
+        {
+          "id": "elder",
+          "preset": "turn",
+          "x": 560,
+          "y": 1626,
+          "scale": 2.05,
+          "facing": 1,
+          "hold": "lantern",
+          "armR": -24,
+          "phase": 0.2
+        }
+      ],
+      "offsetY": 0
+    },
+    {
+      "id": "S03",
+      "scene": "faceCloseup",
+      "camera": "pushInSlow",
+      "seconds": 4.5,
+      "transitionIn": 0,
+      "transitionNote": "cut: 2.05x to 5.15x on the same face",
+      "line": "nine of them, and no bell",
+      "note": "realisation: the number lands on his face, not on a caption",
+      "actors": [
+        {
+          "id": "elder",
+          "preset": "closeup",
+          "x": 604,
+          "y": 2032,
+          "scale": 5.15,
+          "facing": 1,
+          "phase": 1.2
+        }
+      ],
+      "offsetY": 0
+    },
+    {
+      "id": "S04",
+      "scene": "fieldDawn",
+      "camera": "panRight",
+      "seconds": 5.5,
+      "transitionIn": 12,
+      "line": "so the apprentice dug where the sound had stopped",
+      "note": "the action beat: a strike with anticipation, impact and recovery",
+      "actors": [
+        {
+          "id": "young",
+          "preset": "dig",
+          "x": 470,
+          "y": 1668,
+          "scale": 1.9,
+          "facing": 1,
+          "hold": "shovel",
+          "phase": 0
+        }
+      ],
+      "offsetY": 0
+    },
+    {
+      "id": "S05",
+      "scene": "townNight",
+      "camera": "dollyOut",
+      "seconds": 5.5,
+      "transitionIn": 12,
+      "line": "and the keeper reached for the rope",
+      "note": "the turn of the story: the forbidden action, arm arc with overshoot",
+      "actors": [
+        {
+          "id": "elder",
+          "preset": "reach",
+          "x": 512,
+          "y": 1710,
+          "scale": 1.75,
+          "facing": 1,
+          "hold": "none",
+          "phase": 0.6
+        },
+        {
+          "id": "young",
+          "preset": "idle",
+          "x": 812,
+          "y": 1740,
+          "scale": 1.4,
+          "facing": -1,
+          "hold": "shovel",
+          "phase": 1.1
+        }
+      ],
+      "offsetY": 0
+    },
+    {
+      "id": "S06",
+      "scene": "bellInsert",
+      "camera": "tiltUp",
+      "seconds": 4.0,
+      "transitionIn": 14,
+      "line": "and the bell answered",
+      "note": "insert: the object resolves the film, no actor",
+      "actors": [],
+      "offsetY": 0
+    }
+  ]
+}

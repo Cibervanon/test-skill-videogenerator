@@ -1,0 +1,93 @@
+{
+  "project": "av_direccion",
+  "rule": "an environment keeps its identity across framings; no empty generic plates",
+  "environments": [
+    {
+      "id": "env_bell_insert",
+      "name": "The bell",
+      "description": "Insert of the bronze bell on its headstock, frost and dust in the light.",
+      "depth_layers": [
+        "yoke + headstock",
+        "bell body",
+        "clapper",
+        "dust motes",
+        "bokeh town lights"
+      ],
+      "lighting": "single warm source from below-left, deep blue ambient",
+      "palette": [
+        "#0d1430",
+        "#1e2650",
+        "#e6c179",
+        "#ffd79a"
+      ],
+      "weather": "indoor/covered, dust in the air",
+      "recurring": true
+    },
+    {
+      "id": "env_door_threshold",
+      "name": "The keeper's threshold",
+      "description": "Open door seen from the snow: warm interior with a hanging lamp, cold blue night outside.",
+      "depth_layers": [
+        "interior wall",
+        "lamp",
+        "door leaf",
+        "snow",
+        "frost on the lintel"
+      ],
+      "lighting": "practical lamp as key, cold night as rim, hard warm/cold split",
+      "palette": [
+        "#2a1b25",
+        "#4a2b34",
+        "#ffcf8a",
+        "#131a36"
+      ],
+      "weather": "snow outside the frame edge",
+      "recurring": true
+    },
+    {
+      "id": "env_town_night",
+      "name": "The frozen square",
+      "description": "Snowbound village square at night, bell post at centre, two rows of houses with warm windows.",
+      "depth_layers": [
+        "stars/moon",
+        "ridge + pines",
+        "mid houses",
+        "bell post",
+        "snow ground",
+        "window light pools",
+        "foreground bank"
+      ],
+      "lighting": "moon key (cool, high), window pools (warm, low), no fill outside the pools",
+      "palette": [
+        "#101733",
+        "#3b3f74",
+        "#c9d3e8",
+        "#ffb765"
+      ],
+      "weather": "light snow, no wind gusts",
+      "recurring": true
+    },
+    {
+      "id": "env_graveyard_dawn",
+      "name": "The graveyard at first light",
+      "description": "Snow field, fence, headstones, an open grave and a soil mound; low sun behind the treeline.",
+      "depth_layers": [
+        "dawn sky + sun",
+        "treeline",
+        "fence",
+        "headstones",
+        "grave + mound",
+        "snow drifts"
+      ],
+      "lighting": "contre-jour low sun, long soft shadows towards camera, cold bounce from snow",
+      "palette": [
+        "#3f4a78",
+        "#f2a573",
+        "#fdf0e2",
+        "#7a553f"
+      ],
+      "weather": "clear, cold haze near the ground",
+      "recurring": true
+    }
+  ]
+}
