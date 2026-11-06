@@ -1,0 +1,43 @@
+{
+  "_comment": "Voice identity per character. LOCAL mode never calls a provider: it writes word timings only. `voice_id` is null on purpose: a Voice ID is chosen by the user in their ElevenLabs account and pasted here (or set per project). Never invent one, never commit a key.",
+  "provider": "elevenlabs",
+  "defaults": {
+    "model": "eleven_multilingual_v2",
+    "language": "en",
+    "settings": {
+      "stability": 0.42,
+      "similarity_boost": 0.8,
+      "style": 0.3,
+      "use_speaker_boost": true
+    },
+    "output_format": "mp3_44100_128"
+  },
+  "authorize_spend": false,
+  "budget_credits": 0,
+  "voices": {
+    "narrator": {
+      "name": "Narrator",
+      "voice_id": null,
+      "language": "en",
+      "style": "low, unhurried, close to the microphone",
+      "speed": 1.0,
+      "settings": { "stability": 0.45, "similarity_boost": 0.8, "style": 0.25 }
+    },
+    "elder": {
+      "name": "The Bell-Keeper",
+      "voice_id": null,
+      "language": "en",
+      "style": "mid-60s, slight gravel, withheld anger",
+      "speed": 0.94,
+      "settings": { "stability": 0.5, "similarity_boost": 0.82, "style": 0.3 }
+    },
+    "young": {
+      "name": "The Apprentice",
+      "voice_id": null,
+      "language": "en",
+      "style": "bright, quick, late teens",
+      "speed": 1.06,
+      "settings": { "stability": 0.36, "similarity_boost": 0.78, "style": 0.42 }
+    }
+  }
+}

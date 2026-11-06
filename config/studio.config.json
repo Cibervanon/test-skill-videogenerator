@@ -1,0 +1,41 @@
+{
+  "version": "0.1.0",
+  "mode": "local",
+  "studio_dir": "studio",
+  "generation": {
+    "authorize_spend": false,
+    "budget_usd": 0.0,
+    "max_spend_per_run_usd": 0.0,
+    "_comment": "LOCAL mode never spends. HYBRID/PREMIUM require authorize_spend=true after explicit user approval; budget_usd is a hard ceiling enforced by CostGuard."
+  },
+  "render": {
+    "entry": "src/index.ts",
+    "composition": "CinematicDemo",
+    "concurrency": 6,
+    "crf": 18,
+    "preset": "medium"
+  },
+  "audio": {
+    "seed": 20261103,
+    "target_lufs": -14.0,
+    "true_peak_db": -1.5,
+    "sample_rate": 44100
+  },
+  "qa": {
+    "duration_tolerance_s": 0.25,
+    "min_motion_energy": 1.0,
+    "max_black_ratio": 0.02,
+    "max_freeze_ratio": 0.55,
+    "loudness_range_lufs": [
+      -22.0,
+      -11.0
+    ],
+    "caption_coverage_min": 0.55,
+    "_comment": "Thresholds are calibrated against this project's own renders (see TEST_REPORT.md); they are gates, not universal quality measurements."
+  },
+  "paths": {
+    "projects": "projects",
+    "references": "references",
+    "config": "config"
+  }
+}

@@ -1,0 +1,14 @@
+node_modules/
+__pycache__/
+*.pyc
+.tmp/
+.pytest_cache/
+.freebuff/
+studio/node_modules/
+projects/*/output/*.png
+projects/*/analysis/*/frames/
+
+# Kokoro local runtime and weights (never committed)
+.venv-kokoro/
+.models/
+.cache/

@@ -1,0 +1,41 @@
+{
+  "_comment": "Kokoro is a LOCAL provider: no API key, no credits, no audio leaves this machine. torch has no Python 3.14 wheels, so the model runs in .venv-kokoro (3.12) through scripts/acs/kokoro_worker.py. Models are downloaded only when --allow-model-download is passed, and they live outside git (see .gitignore).",
+  "provider": "kokoro",
+  "python": ".venv-kokoro/Scripts/python.exe",
+  "repo_id": "hexgrad/Kokoro-82M",
+  "model_id": "Kokoro-82M-v1.0",
+  "models_dir": ".models/kokoro",
+  "cache_dir": "assets/voice_cache/kokoro",
+  "lang_code": "e",
+  "language": "es",
+  "sample_rate": 24000,
+  "device": "cpu",
+  "authorize_download": false,
+  "alignment": "pred_dur",
+  "voices": {
+    "narrator": {
+      "kokoro": "ef_dora",
+      "language": "es",
+      "description": "Spanish female (Kokoro grade: fair). Narration default."
+    },
+    "elder": {
+      "kokoro": "em_alex",
+      "language": "es",
+      "description": "Spanish male, lower and slower. The bell-keeper."
+    },
+    "young": {
+      "kokoro": "em_santa",
+      "language": "es",
+      "description": "Spanish male, brighter and faster. The apprentice."
+    }
+  },
+  "speed": {
+    "narrator": 0.98,
+    "elder": 0.92,
+    "young": 1.05
+  },
+  "limits": {
+    "note": "Only three Spanish voices ship with Kokoro-82M v1.0. Casting is by voice + speed, not by timbre range.",
+    "max_line_seconds": 40
+  }
+}

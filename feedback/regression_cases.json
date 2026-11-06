@@ -1,0 +1,13 @@
+{
+  "_comment": "Checks an accepted render must keep passing.",
+  "cases": [
+    {
+      "id": "R-001",
+      "description": "sistema_demo inspecciona sin flags y con overlays válidos",
+      "check": "inspect.overlays.ok && inspect.flags==0",
+      "threshold": "true",
+      "evidence": "quality/visual_inspection.json",
+      "added": "2026-11-04"
+    }
+  ]
+}
