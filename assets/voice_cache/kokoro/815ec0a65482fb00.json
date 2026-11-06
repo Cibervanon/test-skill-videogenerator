@@ -1,0 +1,89 @@
+{
+  "ok": true,
+  "provider": "kokoro",
+  "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+  "kokoro_version": "0.9.4",
+  "torch": "2.15.0+cpu",
+  "device": "cpu",
+  "cuda": false,
+  "voice": "em_santa",
+  "lang_code": "e",
+  "speed": 1.05,
+  "sample_rate": 24000,
+  "duration": 3.18,
+  "chunks": 1,
+  "words": [
+    {
+      "w": "El",
+      "s": 0.0,
+      "e": 0.081,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "aprendiz",
+      "s": 0.081,
+      "e": 0.62,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "cavó",
+      "s": 0.62,
+      "e": 0.89,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "donde",
+      "s": 0.89,
+      "e": 1.105,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "el",
+      "s": 1.105,
+      "e": 1.159,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "sonido",
+      "s": 1.159,
+      "e": 1.671,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "se",
+      "s": 1.671,
+      "e": 1.752,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "había",
+      "s": 1.752,
+      "e": 2.049,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "apagado.",
+      "s": 2.049,
+      "e": 2.75,
+      "p": "",
+      "source": "pred_dur"
+    }
+  ],
+  "alignment": "pred_dur",
+  "timing": {
+    "load_seconds": 27.51,
+    "synth_seconds": 6.2,
+    "realtime_factor": 1.95
+  },
+  "wall_seconds": 35.62,
+  "text": "El aprendiz cavó donde el sonido se había apagado.",
+  "speaker": "young"
+}

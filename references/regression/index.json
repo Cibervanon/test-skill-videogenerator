@@ -1,0 +1,134 @@
+{
+  "_comment": "Accepted renders used as regression references.",
+  "renders": [
+    {
+      "id": "sistema_demo_v1",
+      "date": "2026-11-04",
+      "video": "projects/sistema_demo/output/final_video.mp4",
+      "sha256": "0109dc1ac90c69348e29afad1f7d388e4d08449a2121390225cd9ad0efe36f6f",
+      "bytes": 12039297,
+      "metrics": {
+        "empty_ratio_max": 0.417,
+        "palette_shift_max": 0.12,
+        "caption_spread_min": 183.0,
+        "subject_score_min": 3.174
+      },
+      "inspection": [
+        {
+          "shot": "S01",
+          "scene": "townNight",
+          "line": "Nadie supo cuándo dejó de sonar la campana.",
+          "still": "projects/sistema_demo/preproduction/board/S01.png",
+          "path": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\sistema_demo\\preproduction\\board\\S01.png",
+          "size": {
+            "width": 432,
+            "height": 768
+          },
+          "empty_ratio": 0.409,
+          "edge_density": 9.22,
+          "subject_score": 3.174,
+          "caption_contrast": {
+            "spread": 183.0,
+            "edges": 14.73
+          },
+          "palette_shift": 0.092,
+          "depth_bands": 3,
+          "depth_profile": [
+            8.18,
+            16.8,
+            22.59
+          ],
+          "has_captions": true,
+          "flags": [],
+          "status": "clean (pixels)"
+        },
+        {
+          "shot": "S02",
+          "scene": "doorway",
+          "line": "El viejo la oía en sueños, todas las noches.",
+          "still": "projects/sistema_demo/preproduction/board/S02.png",
+          "path": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\sistema_demo\\preproduction\\board\\S02.png",
+          "size": {
+            "width": 432,
+            "height": 768
+          },
+          "empty_ratio": 0.417,
+          "edge_density": 7.42,
+          "subject_score": 3.608,
+          "caption_contrast": {
+            "spread": 195.0,
+            "edges": 14.68
+          },
+          "palette_shift": 0.096,
+          "depth_bands": 3,
+          "depth_profile": [
+            8.47,
+            15.04,
+            20.74
+          ],
+          "has_captions": true,
+          "flags": [],
+          "status": "clean (pixels)"
+        },
+        {
+          "shot": "S03",
+          "scene": "townNight",
+          "line": "El aprendiz contó las veces que faltó.",
+          "still": "projects/sistema_demo/preproduction/board/S03.png",
+          "path": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\sistema_demo\\preproduction\\board\\S03.png",
+          "size": {
+            "width": 432,
+            "height": 768
+          },
+          "empty_ratio": 0.413,
+          "edge_density": 9.53,
+          "subject_score": 3.243,
+          "caption_contrast": {
+            "spread": 198.0,
+            "edges": 17.42
+          },
+          "palette_shift": 0.085,
+          "depth_bands": 3,
+          "depth_profile": [
+            7.23,
+            18.4,
+            22.61
+          ],
+          "has_captions": true,
+          "flags": [],
+          "status": "clean (pixels)"
+        },
+        {
+          "shot": "S04",
+          "scene": "fieldDawn",
+          "line": "Y descubrió que el silencio también se hereda.",
+          "still": "projects/sistema_demo/preproduction/board/S04.png",
+          "path": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\sistema_demo\\preproduction\\board\\S04.png",
+          "size": {
+            "width": 432,
+            "height": 768
+          },
+          "empty_ratio": 0.401,
+          "edge_density": 9.05,
+          "subject_score": 3.222,
+          "caption_contrast": {
+            "spread": 197.0,
+            "edges": 23.09
+          },
+          "palette_shift": 0.12,
+          "depth_bands": 3,
+          "depth_profile": [
+            12.97,
+            24.99,
+            24.58
+          ],
+          "has_captions": true,
+          "flags": [],
+          "status": "clean (pixels)"
+        }
+      ],
+      "accepted": true,
+      "note": "primer render híbrido: personaje + gráfico + etiqueta + UI + voz"
+    }
+  ]
+}

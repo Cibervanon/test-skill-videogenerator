@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="540" height="720" viewBox="0 0 540 720">
+<rect width="540" height="720" rx="22" fill="#0e0c16"/>
+<text x="36" y="54" fill="#f6efe3" font-family="Segoe UI, sans-serif" font-size="24" font-weight="700">Cientifico</text>
+<text x="36" y="82" fill="#69d5cf" font-family="Segoe UI, sans-serif" font-size="14">GENERATED CAST · IDENTITY PREVIEW</text>
+<g transform="translate(270 400) scale(1.5)">
+  <path d="M -64 -132 C -82 -38 -74 118 -52 218 L 52 218 C 74 118 82 -38 64 -132 Z" fill="#f6f2e7" stroke="#1a1626" stroke-width="4"/>
+  <path d="M -38 -132 C -56 -50 -54 90 -40 200" stroke="#819795" stroke-width="3" fill="none" opacity=".55"/>
+  <path d="M -26 -130 L 0 -100 L 26 -130" stroke="#819795" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <circle cx="70" cy="68" r="28" fill="#819795"/><circle cx="102" cy="48" r="34" fill="#819795"/><circle cx="136" cy="68" r="28" fill="#819795"/><circle cx="86" cy="92" r="20" fill="#819795"/><circle cx="118" cy="92" r="20" fill="#819795"/>
+  <circle cx="0" cy="0" r="58" fill="#e9a44f" stroke="#1a1626" stroke-width="4"/>
+  <path d="M -30 -14 q 12 -9 24 0 M 6 -14 q 12 -9 24 0" stroke="#1a1626" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <ellipse cx="-19" cy="-2" rx="5" ry="7" fill="#1a1626"/><ellipse cx="19" cy="-2" rx="5" ry="7" fill="#1a1626"/>
+  <path d="M -10 23 Q 0 30 10 23" stroke="#1a1626" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <rect x="-12" y="-104" width="24" height="20" rx="7" fill="#819795"/>
+</g>
+<g transform="translate(36 598)">
+  <rect width="468" height="82" rx="12" fill="#171320"/>
+  <text x="18" y="28" fill="#f6efe3" font-family="Segoe UI, sans-serif" font-size="15">researcher built for the generated laboratory set</text>
+  <text x="18" y="54" fill="#a79fb8" font-family="Segoe UI, sans-serif" font-size="13">head r46 · height 1.0 · bald</text>
+</g>
+<rect x="36" y="696" width="64" height="10" fill="#f6f2e7"/><rect x="106" y="696" width="64" height="10" fill="#819795"/><rect x="176" y="696" width="64" height="10" fill="#258f8a"/><rect x="246" y="696" width="64" height="10" fill="#e9a44f"/>
+</svg>

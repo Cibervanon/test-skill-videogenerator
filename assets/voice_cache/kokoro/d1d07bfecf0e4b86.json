@@ -1,0 +1,103 @@
+{
+  "ok": true,
+  "provider": "kokoro",
+  "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+  "kokoro_version": "0.9.4",
+  "torch": "2.15.0+cpu",
+  "device": "cpu",
+  "cuda": false,
+  "voice": "em_alex",
+  "lang_code": "e",
+  "speed": 0.92,
+  "sample_rate": 24000,
+  "duration": 3.605,
+  "chunks": 1,
+  "words": [
+    {
+      "w": "El",
+      "s": 0.0,
+      "e": 0.081,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "guardián",
+      "s": 0.081,
+      "e": 0.569,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "contó",
+      "s": 0.569,
+      "e": 0.895,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "los",
+      "s": 0.895,
+      "e": 1.03,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "días",
+      "s": 1.03,
+      "e": 1.356,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "desde",
+      "s": 1.356,
+      "e": 1.573,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "el",
+      "s": 1.573,
+      "e": 1.627,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "umbral,",
+      "s": 1.627,
+      "e": 2.196,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "en",
+      "s": 2.196,
+      "e": 2.305,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "voz",
+      "s": 2.305,
+      "e": 2.576,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "baja.",
+      "s": 2.576,
+      "e": 3.118,
+      "p": "",
+      "source": "pred_dur"
+    }
+  ],
+  "alignment": "pred_dur",
+  "timing": {
+    "load_seconds": 20.66,
+    "synth_seconds": 7.36,
+    "realtime_factor": 2.04
+  },
+  "wall_seconds": 29.95,
+  "text": "El guardián contó los días desde el umbral, en voz baja.",
+  "speaker": "elder"
+}

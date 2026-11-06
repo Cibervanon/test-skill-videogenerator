@@ -1,0 +1,75 @@
+{
+  "ok": true,
+  "provider": "kokoro",
+  "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+  "kokoro_version": "0.9.4",
+  "torch": "2.15.0+cpu",
+  "device": "cpu",
+  "cuda": false,
+  "voice": "em_alex",
+  "lang_code": "e",
+  "speed": 0.92,
+  "sample_rate": 24000,
+  "duration": 2.755,
+  "chunks": 1,
+  "words": [
+    {
+      "w": "El",
+      "s": 0.0,
+      "e": 0.111,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "tercero",
+      "s": 0.111,
+      "e": 0.697,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "era",
+      "s": 0.697,
+      "e": 1.115,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "el",
+      "s": 1.115,
+      "e": 1.226,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "que",
+      "s": 1.226,
+      "e": 1.337,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "nadie",
+      "s": 1.337,
+      "e": 1.672,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "miraba.",
+      "s": 1.672,
+      "e": 2.313,
+      "p": "",
+      "source": "pred_dur"
+    }
+  ],
+  "alignment": "pred_dur",
+  "timing": {
+    "load_seconds": 15.72,
+    "synth_seconds": 3.93,
+    "realtime_factor": 1.43
+  },
+  "wall_seconds": 21.17,
+  "text": "El tercero era el que nadie miraba.",
+  "speaker": "elder"
+}

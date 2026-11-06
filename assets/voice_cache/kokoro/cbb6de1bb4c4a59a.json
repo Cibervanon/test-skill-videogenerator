@@ -1,0 +1,75 @@
+{
+  "ok": true,
+  "provider": "kokoro",
+  "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+  "kokoro_version": "0.9.4",
+  "torch": "2.15.0+cpu",
+  "device": "cpu",
+  "cuda": false,
+  "voice": "em_santa",
+  "lang_code": "e",
+  "speed": 1.05,
+  "sample_rate": 24000,
+  "duration": 2.83,
+  "chunks": 1,
+  "words": [
+    {
+      "w": "El",
+      "s": 0.0,
+      "e": 0.082,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "aprendiz",
+      "s": 0.082,
+      "e": 0.735,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "señaló",
+      "s": 0.735,
+      "e": 1.171,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "la",
+      "s": 1.171,
+      "e": 1.28,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "cuerda",
+      "s": 1.28,
+      "e": 1.634,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "que",
+      "s": 1.634,
+      "e": 1.743,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "faltaba.",
+      "s": 1.743,
+      "e": 2.423,
+      "p": "",
+      "source": "pred_dur"
+    }
+  ],
+  "alignment": "pred_dur",
+  "timing": {
+    "load_seconds": 15.99,
+    "synth_seconds": 4.13,
+    "realtime_factor": 1.46
+  },
+  "wall_seconds": 21.93,
+  "text": "El aprendiz señaló la cuerda que faltaba.",
+  "speaker": "young"
+}

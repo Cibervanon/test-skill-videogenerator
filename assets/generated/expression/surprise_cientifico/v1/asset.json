@@ -1,0 +1,19 @@
+{
+  "renderer": "generated-expression-v1",
+  "name": "Surprise",
+  "expression": "surprise",
+  "values": {
+    "brow": 0.45,
+    "mouth": 0.92,
+    "headTilt": -4.0,
+    "yaw": 0.0,
+    "blink": 0.0
+  },
+  "character_ref": "character:cientifico",
+  "viewBox": [
+    0,
+    0,
+    540,
+    620
+  ]
+}

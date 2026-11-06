@@ -1,0 +1,87 @@
+{
+  "renderer": "generated-prop-v1",
+  "viewBox": [
+    0,
+    0,
+    200,
+    400
+  ],
+  "pivot": [
+    100,
+    400
+  ],
+  "elements": [
+    {
+      "kind": "path",
+      "d": "M 100 30 L 100 300",
+      "fill": "#182024",
+      "strokeWidth": 7
+    },
+    {
+      "kind": "path",
+      "d": "M 34 34 L 166 34",
+      "fill": "#182024",
+      "strokeWidth": 7,
+      "strokeLinecap": "round"
+    },
+    {
+      "kind": "polygon",
+      "points": [
+        [
+          54,
+          34
+        ],
+        [
+          146,
+          34
+        ],
+        [
+          174,
+          158
+        ],
+        [
+          26,
+          158
+        ]
+      ],
+      "fill": "#e9a44f",
+      "stroke": "#182024",
+      "strokeWidth": 5
+    },
+    {
+      "kind": "path",
+      "d": "M 32 158 L 168 158",
+      "fill": "#182024",
+      "strokeWidth": 6
+    },
+    {
+      "kind": "ellipse",
+      "cx": 100,
+      "cy": 160,
+      "rx": 74,
+      "ry": 18,
+      "fill": "#e9a44f",
+      "opacity": 0.55
+    },
+    {
+      "kind": "circle",
+      "cx": 100,
+      "cy": 175,
+      "r": 54,
+      "fill": "#e9a44f",
+      "opacity": 0.12
+    },
+    {
+      "kind": "rect",
+      "x": 76,
+      "y": 300,
+      "w": 48,
+      "h": 24,
+      "fill": "#819795",
+      "rx": 6,
+      "stroke": "#182024",
+      "strokeWidth": 4
+    }
+  ],
+  "subject": "lampara_laboratorio"
+}

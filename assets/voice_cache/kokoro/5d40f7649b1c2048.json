@@ -1,0 +1,82 @@
+{
+  "ok": true,
+  "provider": "kokoro",
+  "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+  "kokoro_version": "0.9.4",
+  "torch": "2.15.0+cpu",
+  "device": "cpu",
+  "cuda": false,
+  "voice": "ef_dora",
+  "lang_code": "e",
+  "speed": 0.98,
+  "sample_rate": 24000,
+  "duration": 3.105,
+  "chunks": 1,
+  "words": [
+    {
+      "w": "Aquella",
+      "s": 0.0,
+      "e": 0.382,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "noche,",
+      "s": 0.382,
+      "e": 0.954,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "el",
+      "s": 0.954,
+      "e": 1.036,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "guardián",
+      "s": 1.036,
+      "e": 1.553,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "no",
+      "s": 1.553,
+      "e": 1.69,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "tocó",
+      "s": 1.69,
+      "e": 1.935,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "la",
+      "s": 1.935,
+      "e": 2.017,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "campana.",
+      "s": 2.017,
+      "e": 2.725,
+      "p": "",
+      "source": "pred_dur"
+    }
+  ],
+  "alignment": "pred_dur",
+  "timing": {
+    "load_seconds": 30.95,
+    "synth_seconds": 9.64,
+    "realtime_factor": 3.11
+  },
+  "wall_seconds": 43.74,
+  "text": "Aquella noche, el guardián no tocó la campana.",
+  "speaker": "narrator"
+}

@@ -1,0 +1,68 @@
+{
+  "ok": true,
+  "provider": "kokoro",
+  "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+  "kokoro_version": "0.9.4",
+  "torch": "2.15.0+cpu",
+  "device": "cpu",
+  "cuda": false,
+  "voice": "em_alex",
+  "lang_code": "e",
+  "speed": 0.92,
+  "sample_rate": 24000,
+  "duration": 2.355,
+  "chunks": 1,
+  "words": [
+    {
+      "w": "El",
+      "s": 0.0,
+      "e": 0.085,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "guardián",
+      "s": 0.085,
+      "e": 0.739,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "le",
+      "s": 0.739,
+      "e": 0.825,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "entregó",
+      "s": 0.825,
+      "e": 1.28,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "la",
+      "s": 1.28,
+      "e": 1.393,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "llave.",
+      "s": 1.393,
+      "e": 1.991,
+      "p": "",
+      "source": "pred_dur"
+    }
+  ],
+  "alignment": "pred_dur",
+  "timing": {
+    "load_seconds": 22.9,
+    "synth_seconds": 4.14,
+    "realtime_factor": 1.76
+  },
+  "wall_seconds": 28.9,
+  "text": "El guardián le entregó la llave.",
+  "speaker": "elder"
+}

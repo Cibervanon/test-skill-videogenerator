@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "note": "Persistent references, selected per request. Not assets: no reference is rendered directly.",
+  "references": [
+    {
+      "id": "ref:cinematic-warm-cool",
+      "name": "Warm/cool cinematic contrast",
+      "purpose": "lighting",
+      "source": "projects/av_direccion/quality/after_contact.jpg",
+      "license": "original",
+      "provenance": {
+        "origin": "project-evidence",
+        "date": "2026-11-05"
+      },
+      "tags": ["night", "warm", "cool", "contrast", "cinematic"],
+      "applies_to": ["set", "lighting", "mood"],
+      "notes": "Use when a night set needs a practical warm source against a cold ambient field.",
+      "status": "active"
+    },
+    {
+      "id": "ref:procedural-rig-identity",
+      "name": "One rig, persistent identity",
+      "purpose": "character",
+      "source": "studio/src/characters/Character.tsx",
+      "license": "original",
+      "provenance": {
+        "origin": "project-source",
+        "date": "2026-11-05"
+      },
+      "tags": ["rig", "identity", "proportions", "palette"],
+      "applies_to": ["character", "expression"],
+      "notes": "A new character or expression must reuse the rig and preserve identity fields.",
+      "status": "active"
+    },
+    {
+      "id": "ref:layered-storybook-set",
+      "name": "Layered storybook set",
+      "purpose": "composition",
+      "source": "studio/src/scenes/TownNight.tsx",
+      "license": "original",
+      "provenance": {
+        "origin": "project-source",
+        "date": "2026-11-05"
+      },
+      "tags": ["background", "midground", "foreground", "layers", "svg"],
+      "applies_to": ["set", "background"],
+      "notes": "Depth is authored as coordinated SVG layers; no false depth from incompatible plates.",
+      "status": "active"
+    }
+  ]
+}

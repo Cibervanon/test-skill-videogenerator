@@ -1,0 +1,96 @@
+{
+  "ok": true,
+  "provider": "kokoro",
+  "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+  "kokoro_version": "0.9.4",
+  "torch": "2.15.0+cpu",
+  "device": "cpu",
+  "cuda": false,
+  "voice": "ef_dora",
+  "lang_code": "e",
+  "speed": 0.98,
+  "sample_rate": 24000,
+  "duration": 2.905,
+  "chunks": 1,
+  "words": [
+    {
+      "w": "Comparó",
+      "s": 0.0,
+      "e": 0.494,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "lo",
+      "s": 0.494,
+      "e": 0.603,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "que",
+      "s": 0.603,
+      "e": 0.658,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "el",
+      "s": 0.658,
+      "e": 0.768,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "pueblo",
+      "s": 0.768,
+      "e": 1.152,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "creía",
+      "s": 1.152,
+      "e": 1.591,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "con",
+      "s": 1.591,
+      "e": 1.728,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "lo",
+      "s": 1.728,
+      "e": 1.838,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "que",
+      "s": 1.838,
+      "e": 1.947,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "vio.",
+      "s": 1.947,
+      "e": 2.359,
+      "p": "",
+      "source": "pred_dur"
+    }
+  ],
+  "alignment": "pred_dur",
+  "timing": {
+    "load_seconds": 15.67,
+    "synth_seconds": 4.81,
+    "realtime_factor": 1.66
+  },
+  "wall_seconds": 21.96,
+  "text": "Comparó lo que el pueblo creía con lo que vio.",
+  "speaker": "narrator"
+}

@@ -1,0 +1,75 @@
+{
+  "ok": true,
+  "provider": "kokoro",
+  "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+  "kokoro_version": "0.9.4",
+  "torch": "2.15.0+cpu",
+  "device": "cpu",
+  "cuda": false,
+  "voice": "em_santa",
+  "lang_code": "e",
+  "speed": 1.05,
+  "sample_rate": 24000,
+  "duration": 2.73,
+  "chunks": 1,
+  "words": [
+    {
+      "w": "El",
+      "s": 0.0,
+      "e": 0.082,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "aprendiz",
+      "s": 0.082,
+      "e": 0.656,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "contó",
+      "s": 0.656,
+      "e": 1.038,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "las",
+      "s": 1.038,
+      "e": 1.202,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "veces",
+      "s": 1.202,
+      "e": 1.612,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "que",
+      "s": 1.612,
+      "e": 1.721,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "faltó.",
+      "s": 1.721,
+      "e": 2.349,
+      "p": "",
+      "source": "pred_dur"
+    }
+  ],
+  "alignment": "pred_dur",
+  "timing": {
+    "load_seconds": 15.16,
+    "synth_seconds": 3.65,
+    "realtime_factor": 1.34
+  },
+  "wall_seconds": 20.47,
+  "text": "El aprendiz contó las veces que faltó.",
+  "speaker": "young"
+}

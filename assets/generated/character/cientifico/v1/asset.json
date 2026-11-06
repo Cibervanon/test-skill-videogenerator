@@ -1,0 +1,29 @@
+{
+  "id": "char_cientifico",
+  "name": "Cientifico",
+  "coat": "#f6f2e7",
+  "coatDark": "#819795",
+  "hat": "#258f8a",
+  "hatBand": "#819795",
+  "height": 1.0,
+  "headRadius": 46,
+  "hatStyle": "bald",
+  "hairStyle": "curls",
+  "facialHair": "none",
+  "voice": "clear, curious, mid-range",
+  "role": "researcher built for the generated laboratory set",
+  "silhouette": "white lab coat, dark curls, compact silhouette",
+  "palette": [
+    "#f6f2e7",
+    "#819795",
+    "#258f8a",
+    "#e9a44f"
+  ],
+  "gestures": [
+    "holds a sample up to the light",
+    "tilts her head before answering"
+  ],
+  "wardrobe_states": {
+    "default": "white lab coat over dark clothes"
+  }
+}

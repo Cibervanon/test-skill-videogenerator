@@ -1,0 +1,96 @@
+{
+  "ok": true,
+  "provider": "kokoro",
+  "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+  "kokoro_version": "0.9.4",
+  "torch": "2.15.0+cpu",
+  "device": "cpu",
+  "cuda": false,
+  "voice": "ef_dora",
+  "lang_code": "e",
+  "speed": 0.98,
+  "sample_rate": 24000,
+  "duration": 3.33,
+  "chunks": 1,
+  "words": [
+    {
+      "w": "La",
+      "s": 0.0,
+      "e": 0.081,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "campana",
+      "s": 0.081,
+      "e": 0.569,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "sonó",
+      "s": 0.569,
+      "e": 0.812,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "una",
+      "s": 0.812,
+      "e": 0.975,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "vez.",
+      "s": 0.975,
+      "e": 1.49,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "Nadie",
+      "s": 1.49,
+      "e": 1.815,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "supo",
+      "s": 1.815,
+      "e": 2.058,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "quién",
+      "s": 2.058,
+      "e": 2.221,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "la",
+      "s": 2.221,
+      "e": 2.329,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "tocó.",
+      "s": 2.329,
+      "e": 2.844,
+      "p": "",
+      "source": "pred_dur"
+    }
+  ],
+  "alignment": "pred_dur",
+  "timing": {
+    "load_seconds": 26.25,
+    "synth_seconds": 5.3,
+    "realtime_factor": 1.59
+  },
+  "wall_seconds": 33.47,
+  "text": "La campana sonó una vez. Nadie supo quién la tocó.",
+  "speaker": "narrator"
+}

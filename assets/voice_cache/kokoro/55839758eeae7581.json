@@ -1,0 +1,89 @@
+{
+  "ok": true,
+  "provider": "kokoro",
+  "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+  "kokoro_version": "0.9.4",
+  "torch": "2.15.0+cpu",
+  "device": "cpu",
+  "cuda": false,
+  "voice": "em_alex",
+  "lang_code": "e",
+  "speed": 0.92,
+  "sample_rate": 24000,
+  "duration": 3.155,
+  "chunks": 1,
+  "words": [
+    {
+      "w": "El",
+      "s": 0.0,
+      "e": 0.082,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "viejo",
+      "s": 0.082,
+      "e": 0.467,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "la",
+      "s": 0.467,
+      "e": 0.577,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "oía",
+      "s": 0.577,
+      "e": 0.879,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "en",
+      "s": 0.879,
+      "e": 0.988,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "sueños,",
+      "s": 0.988,
+      "e": 1.565,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "todas",
+      "s": 1.565,
+      "e": 1.867,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "las",
+      "s": 1.867,
+      "e": 2.032,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "noches.",
+      "s": 2.032,
+      "e": 2.663,
+      "p": "",
+      "source": "pred_dur"
+    }
+  ],
+  "alignment": "pred_dur",
+  "timing": {
+    "load_seconds": 16.17,
+    "synth_seconds": 4.48,
+    "realtime_factor": 1.42
+  },
+  "wall_seconds": 22.22,
+  "text": "El viejo la oía en sueños, todas las noches.",
+  "speaker": "elder"
+}

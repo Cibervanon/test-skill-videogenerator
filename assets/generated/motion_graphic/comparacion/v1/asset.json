@@ -1,0 +1,39 @@
+{
+  "renderer": "generated-graphic-v1",
+  "overlay": {
+    "id": "generated-comparison",
+    "type": "bar",
+    "placement": {
+      "kind": "screen"
+    },
+    "anchor": "auto",
+    "from": 0.08,
+    "to": 0.92,
+    "data": {
+      "title": "Comparación de laboratorio",
+      "caption": "Lectura de dos muestras",
+      "unit": "%",
+      "series": [
+        {
+          "label": "Muestra A",
+          "value": 72,
+          "tone": "accent"
+        },
+        {
+          "label": "Muestra B",
+          "value": 48,
+          "tone": "accentAlt"
+        }
+      ]
+    },
+    "source": "generated sample data; illustrative",
+    "illustrative": true
+  },
+  "description": "Illustrative generated data; every numeric value is explicitly marked illustrative.",
+  "viewBox": [
+    0,
+    0,
+    640,
+    720
+  ]
+}

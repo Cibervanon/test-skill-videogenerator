@@ -1,0 +1,82 @@
+{
+  "ok": true,
+  "provider": "kokoro",
+  "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+  "kokoro_version": "0.9.4",
+  "torch": "2.15.0+cpu",
+  "device": "cpu",
+  "cuda": false,
+  "voice": "em_alex",
+  "lang_code": "e",
+  "speed": 0.92,
+  "sample_rate": 24000,
+  "duration": 3.13,
+  "chunks": 1,
+  "words": [
+    {
+      "w": "Y",
+      "s": 0.0,
+      "e": 0.055,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "descubrió",
+      "s": 0.055,
+      "e": 0.659,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "que",
+      "s": 0.659,
+      "e": 0.714,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "el",
+      "s": 0.714,
+      "e": 0.797,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "silencio",
+      "s": 0.797,
+      "e": 1.484,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "también",
+      "s": 1.484,
+      "e": 1.978,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "se",
+      "s": 1.978,
+      "e": 2.088,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "hereda.",
+      "s": 2.088,
+      "e": 2.665,
+      "p": "",
+      "source": "pred_dur"
+    }
+  ],
+  "alignment": "pred_dur",
+  "timing": {
+    "load_seconds": 15.35,
+    "synth_seconds": 4.02,
+    "realtime_factor": 1.28
+  },
+  "wall_seconds": 20.87,
+  "text": "Y descubrió que el silencio también se hereda.",
+  "speaker": "elder"
+}

@@ -1,0 +1,61 @@
+{
+  "ok": true,
+  "provider": "kokoro",
+  "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+  "kokoro_version": "0.9.4",
+  "torch": "2.15.0+cpu",
+  "device": "cpu",
+  "cuda": false,
+  "voice": "ef_dora",
+  "lang_code": "e",
+  "speed": 0.98,
+  "sample_rate": 24000,
+  "duration": 2.38,
+  "chunks": 1,
+  "words": [
+    {
+      "w": "El",
+      "s": 0.0,
+      "e": 0.084,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "mecanismo",
+      "s": 0.084,
+      "e": 0.757,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "tenía",
+      "s": 0.757,
+      "e": 1.122,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "tres",
+      "s": 1.122,
+      "e": 1.402,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "pasos.",
+      "s": 1.402,
+      "e": 2.048,
+      "p": "",
+      "source": "pred_dur"
+    }
+  ],
+  "alignment": "pred_dur",
+  "timing": {
+    "load_seconds": 15.76,
+    "synth_seconds": 3.34,
+    "realtime_factor": 1.4
+  },
+  "wall_seconds": 20.77,
+  "text": "El mecanismo tenía tres pasos.",
+  "speaker": "narrator"
+}

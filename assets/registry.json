@@ -1,0 +1,414 @@
+{
+  "schema": 2,
+  "note": "Versioned metadata for hand-authored and forged assets. The derived catalogue merges these entries; it never replaces them.",
+  "assets": [
+    {
+      "schema": 2,
+      "id": "character:cientifico",
+      "name": "Cientifico",
+      "type": "character",
+      "category": "Cast",
+      "style": "cinematic",
+      "description": "Generated character identity 'Cientifico' built for the procedural rig, with palette, proportions, wardrobe and expression metadata.",
+      "resolution": {
+        "width": 1080,
+        "height": 1920
+      },
+      "aspect": "9:16",
+      "transparent": false,
+      "path": "assets/generated/character/cientifico/v1/asset.json",
+      "preview": "assets/generated/character/cientifico/v1/preview.svg",
+      "version": 1,
+      "versions": [
+        {
+          "version": 1,
+          "path": "assets/generated/character/cientifico/v1/asset.json",
+          "preview": "assets/generated/character/cientifico/v1/preview.svg",
+          "created": "2026-11-05T16:19:25Z",
+          "signature": "1884972b65b773d8",
+          "status": "validated"
+        }
+      ],
+      "dependencies": [
+        "rig:default"
+      ],
+      "tags": [
+        "cast",
+        "character",
+        "cientifico",
+        "identity",
+        "rig"
+      ],
+      "usage": [
+        "cast",
+        "actor"
+      ],
+      "character": "cientifico",
+      "scene": null,
+      "config": {
+        "castKey": "cientifico",
+        "rig": "rig:default"
+      },
+      "license": "CC0-1.0",
+      "provenance": {
+        "origin": "generated-locally",
+        "author": "asset_forge / local deterministic primitives",
+        "source": "generated locally from a prompt; no external model, image or asset was used",
+        "date": "2026-11-05T16:19:25Z",
+        "restrictions": [
+          "No external model or reference asset was used."
+        ]
+      },
+      "compatibility": {
+        "engine": "remotion",
+        "renderer": "generated-character-v1"
+      },
+      "status": "validated",
+      "validated": true,
+      "created": "2026-11-05T16:19:25Z",
+      "layers": [],
+      "signature": "1884972b65b773d8"
+    },
+    {
+      "schema": 2,
+      "id": "expression:surprise_cientifico",
+      "name": "Surprise Cientifico",
+      "type": "expression",
+      "category": "Expression",
+      "style": "cinematic",
+      "description": "Reusable expression 'surprise' for the procedural character rig; identity-changing fields are prohibited.",
+      "resolution": {
+        "width": 1080,
+        "height": 1920
+      },
+      "aspect": "9:16",
+      "transparent": false,
+      "path": "assets/generated/expression/surprise_cientifico/v1/asset.json",
+      "preview": "assets/generated/expression/surprise_cientifico/v1/preview.svg",
+      "version": 1,
+      "versions": [
+        {
+          "version": 1,
+          "path": "assets/generated/expression/surprise_cientifico/v1/asset.json",
+          "preview": "assets/generated/expression/surprise_cientifico/v1/preview.svg",
+          "created": "2026-11-05T16:19:25Z",
+          "signature": "67735dd903c8d45f",
+          "status": "validated"
+        }
+      ],
+      "dependencies": [
+        "character:cientifico"
+      ],
+      "tags": [
+        "expression",
+        "surprise",
+        "surprise_cientifico"
+      ],
+      "usage": [
+        "expression",
+        "actor"
+      ],
+      "character": null,
+      "scene": null,
+      "config": {
+        "castKey": "cientifico",
+        "expression": "surprise",
+        "values": {
+          "brow": 0.45,
+          "mouth": 0.92,
+          "headTilt": -4.0,
+          "yaw": 0.0,
+          "blink": 0.0
+        }
+      },
+      "license": "CC0-1.0",
+      "provenance": {
+        "origin": "generated-locally",
+        "author": "asset_forge / local deterministic primitives",
+        "source": "generated locally from a prompt; no external model, image or asset was used",
+        "date": "2026-11-05T16:19:25Z",
+        "restrictions": [
+          "No external model or reference asset was used."
+        ]
+      },
+      "compatibility": {
+        "engine": "remotion",
+        "renderer": "generated-expression-v1"
+      },
+      "status": "validated",
+      "validated": true,
+      "created": "2026-11-05T16:19:25Z",
+      "layers": [],
+      "signature": "67735dd903c8d45f"
+    },
+    {
+      "schema": 2,
+      "id": "graphic:comparacion",
+      "name": "Comparacion",
+      "type": "motion_graphic",
+      "category": "Motion graphic",
+      "style": "cinematic",
+      "description": "Generated motion graphic 'Comparacion' using the existing overlay renderer.",
+      "resolution": {
+        "width": 1080,
+        "height": 1920
+      },
+      "aspect": "9:16",
+      "transparent": false,
+      "path": "assets/generated/motion_graphic/comparacion/v2/asset.json",
+      "preview": "assets/generated/motion_graphic/comparacion/v2/preview.svg",
+      "version": 2,
+      "versions": [
+        {
+          "version": 1,
+          "path": "assets/generated/motion_graphic/comparacion/v1/asset.json",
+          "preview": "assets/generated/motion_graphic/comparacion/v1/preview.svg",
+          "created": "2026-11-05T16:19:27Z",
+          "signature": "4ab32b272d5b5f87",
+          "status": "validated"
+        },
+        {
+          "version": 2,
+          "path": "assets/generated/motion_graphic/comparacion/v2/asset.json",
+          "preview": "assets/generated/motion_graphic/comparacion/v2/preview.svg",
+          "created": "2026-11-05T16:25:44Z",
+          "signature": "7102fb23dccea536",
+          "status": "validated"
+        }
+      ],
+      "dependencies": [],
+      "tags": [
+        "chart",
+        "comparacion",
+        "motion-graphic",
+        "motion_graphic",
+        "overlay"
+      ],
+      "usage": [
+        "motion-graphic",
+        "overlay"
+      ],
+      "character": null,
+      "scene": null,
+      "config": {
+        "renderer": "OverlayLayer",
+        "graphicKey": "comparacion",
+        "overlay": {
+          "id": "generated-comparison",
+          "type": "bar",
+          "placement": {
+            "kind": "screen"
+          },
+          "anchor": "top-left",
+          "box": {
+            "x": 0.06,
+            "y": 0.08,
+            "w": 0.88,
+            "h": 0.22
+          },
+          "from": 0.08,
+          "to": 0.92,
+          "data": {
+            "title": "Comparación de laboratorio",
+            "caption": "Lectura de dos muestras",
+            "unit": "%",
+            "series": [
+              {
+                "label": "Muestra A",
+                "value": 72,
+                "tone": "accent"
+              },
+              {
+                "label": "Muestra B",
+                "value": 48,
+                "tone": "accentAlt"
+              }
+            ]
+          },
+          "source": "generated sample data; illustrative",
+          "illustrative": true
+        }
+      },
+      "license": "CC0-1.0",
+      "provenance": {
+        "origin": "generated-locally",
+        "author": "asset_forge / local deterministic primitives",
+        "source": "generated locally from a prompt; no external model, image or asset was used",
+        "date": "2026-11-05T16:25:44Z",
+        "restrictions": [
+          "No external model or reference asset was used."
+        ]
+      },
+      "compatibility": {
+        "engine": "remotion",
+        "renderer": "generated-graphic-v1"
+      },
+      "status": "validated",
+      "validated": true,
+      "created": "2026-11-05T16:25:44Z",
+      "layers": [],
+      "signature": "7102fb23dccea536"
+    },
+    {
+      "schema": 2,
+      "id": "prop:lampara_laboratorio",
+      "name": "Lampara Laboratorio",
+      "type": "prop",
+      "category": "Prop",
+      "style": "cinematic",
+      "description": "Generated reusable prop 'Lampara Laboratorio' drawn from coordinated SVG primitives.",
+      "resolution": {
+        "width": 1080,
+        "height": 1920
+      },
+      "aspect": "9:16",
+      "transparent": false,
+      "path": "assets/generated/prop/lampara_laboratorio/v1/asset.json",
+      "preview": "assets/generated/prop/lampara_laboratorio/v1/preview.svg",
+      "version": 1,
+      "versions": [
+        {
+          "version": 1,
+          "path": "assets/generated/prop/lampara_laboratorio/v1/asset.json",
+          "preview": "assets/generated/prop/lampara_laboratorio/v1/preview.svg",
+          "created": "2026-11-05T16:19:53Z",
+          "signature": "d1746eff372b75b7",
+          "status": "validated"
+        }
+      ],
+      "dependencies": [
+        "set:laboratorio"
+      ],
+      "tags": [
+        "lampara_laboratorio",
+        "prop",
+        "svg"
+      ],
+      "usage": [
+        "prop",
+        "foreground",
+        "reusable"
+      ],
+      "character": null,
+      "scene": null,
+      "config": {
+        "renderer": "PropLayer",
+        "propKey": "lampara_laboratorio",
+        "pivot": [
+          100,
+          400
+        ]
+      },
+      "license": "CC0-1.0",
+      "provenance": {
+        "origin": "generated-locally",
+        "author": "asset_forge / local deterministic primitives",
+        "source": "generated locally from a prompt; no external model, image or asset was used",
+        "date": "2026-11-05T16:19:53Z",
+        "restrictions": [
+          "No external model or reference asset was used."
+        ]
+      },
+      "compatibility": {
+        "engine": "remotion",
+        "renderer": "generated-prop-v1"
+      },
+      "status": "validated",
+      "validated": true,
+      "created": "2026-11-05T16:19:53Z",
+      "layers": [],
+      "signature": "d1746eff372b75b7"
+    },
+    {
+      "schema": 2,
+      "id": "set:laboratorio",
+      "name": "Laboratorio",
+      "type": "set",
+      "category": "Set",
+      "style": "cinematic",
+      "description": "Generated night laboratory set with coordinated background, midground, foreground, lighting and atmosphere layers.",
+      "resolution": {
+        "width": 1080,
+        "height": 1920
+      },
+      "aspect": "9:16",
+      "transparent": false,
+      "path": "assets/generated/set/laboratorio/v2/asset.json",
+      "preview": "assets/generated/set/laboratorio/v2/preview.svg",
+      "version": 2,
+      "versions": [
+        {
+          "version": 1,
+          "path": "assets/generated/set/laboratorio/v1/asset.json",
+          "preview": "assets/generated/set/laboratorio/v1/preview.svg",
+          "created": "2026-11-05T16:19:13Z",
+          "signature": "256afb0586b76333",
+          "status": "validated"
+        },
+        {
+          "version": 2,
+          "path": "assets/generated/set/laboratorio/v2/asset.json",
+          "preview": "assets/generated/set/laboratorio/v2/preview.svg",
+          "created": "2026-11-05T16:25:43Z",
+          "signature": "236e75e549f5ad77",
+          "status": "validated"
+        }
+      ],
+      "dependencies": [
+        "engine:atmosphere",
+        "engine:texture"
+      ],
+      "tags": [
+        "laboratorio",
+        "laboratory",
+        "layered",
+        "night",
+        "set",
+        "svg"
+      ],
+      "usage": [
+        "background",
+        "scene",
+        "reusable"
+      ],
+      "character": null,
+      "scene": "laboratorio",
+      "config": {
+        "renderer": "GeneratedScene",
+        "sceneKey": "laboratorio",
+        "layerOrder": [
+          "background",
+          "midground",
+          "foreground",
+          "lighting",
+          "atmosphere"
+        ]
+      },
+      "license": "CC0-1.0",
+      "provenance": {
+        "origin": "generated-locally",
+        "author": "asset_forge / local deterministic primitives",
+        "source": "generated locally from a prompt; no external model, image or asset was used",
+        "date": "2026-11-05T16:25:43Z",
+        "restrictions": [
+          "No external model or reference asset was used."
+        ]
+      },
+      "compatibility": {
+        "engine": "remotion",
+        "renderer": "generated-set-v1"
+      },
+      "status": "validated",
+      "validated": true,
+      "created": "2026-11-05T16:25:43Z",
+      "layers": [
+        "background",
+        "midground",
+        "foreground",
+        "lighting",
+        "atmosphere"
+      ],
+      "signature": "236e75e549f5ad77"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "ok": true,
+  "provider": "kokoro",
+  "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+  "kokoro_version": "0.9.4",
+  "torch": "2.15.0+cpu",
+  "device": "cpu",
+  "cuda": false,
+  "voice": "ef_dora",
+  "lang_code": "e",
+  "speed": 0.98,
+  "sample_rate": 24000,
+  "duration": 4.005,
+  "chunks": 1,
+  "words": [
+    {
+      "w": "Nueve",
+      "s": 0.0,
+      "e": 0.294,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "días",
+      "s": 0.294,
+      "e": 0.641,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "lleva",
+      "s": 0.641,
+      "e": 0.881,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "la",
+      "s": 0.881,
+      "e": 0.961,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "cuerda",
+      "s": 0.961,
+      "e": 1.282,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "quieta.",
+      "s": 1.282,
+      "e": 2.003,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "Nadie",
+      "s": 2.003,
+      "e": 2.323,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "sube",
+      "s": 2.323,
+      "e": 2.563,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "al",
+      "s": 2.563,
+      "e": 2.617,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "campanario.",
+      "s": 2.617,
+      "e": 3.471,
+      "p": "",
+      "source": "pred_dur"
+    }
+  ],
+  "alignment": "pred_dur",
+  "timing": {
+    "load_seconds": 22.4,
+    "synth_seconds": 6.47,
+    "realtime_factor": 1.62
+  },
+  "wall_seconds": 30.32,
+  "text": "Nueve días lleva la cuerda quieta. Nadie sube al campanario.",
+  "speaker": "narrator"
+}

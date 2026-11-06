@@ -1,0 +1,54 @@
+{
+  "ok": true,
+  "provider": "kokoro",
+  "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+  "kokoro_version": "0.9.4",
+  "torch": "2.15.0+cpu",
+  "device": "cpu",
+  "cuda": false,
+  "voice": "ef_dora",
+  "lang_code": "e",
+  "speed": 0.98,
+  "sample_rate": 24000,
+  "duration": 1.855,
+  "chunks": 1,
+  "words": [
+    {
+      "w": "Y",
+      "s": 0.0,
+      "e": 0.058,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "la",
+      "s": 0.058,
+      "e": 0.175,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "campana",
+      "s": 0.175,
+      "e": 0.698,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "respondió.",
+      "s": 0.698,
+      "e": 1.6,
+      "p": "",
+      "source": "pred_dur"
+    }
+  ],
+  "alignment": "pred_dur",
+  "timing": {
+    "load_seconds": 16.14,
+    "synth_seconds": 3.42,
+    "realtime_factor": 1.85
+  },
+  "wall_seconds": 20.94,
+  "text": "Y la campana respondió.",
+  "speaker": "narrator"
+}

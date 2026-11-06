@@ -1,0 +1,75 @@
+{
+  "ok": true,
+  "provider": "kokoro",
+  "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+  "kokoro_version": "0.9.4",
+  "torch": "2.15.0+cpu",
+  "device": "cpu",
+  "cuda": false,
+  "voice": "ef_dora",
+  "lang_code": "e",
+  "speed": 0.98,
+  "sample_rate": 24000,
+  "duration": 3.03,
+  "chunks": 1,
+  "words": [
+    {
+      "w": "El",
+      "s": 0.0,
+      "e": 0.109,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "pueblo",
+      "s": 0.109,
+      "e": 0.574,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "llevaba",
+      "s": 0.574,
+      "e": 0.983,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "tres",
+      "s": 0.983,
+      "e": 1.256,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "inviernos",
+      "s": 1.256,
+      "e": 1.83,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "sin",
+      "s": 1.83,
+      "e": 1.967,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "oírla.",
+      "s": 1.967,
+      "e": 2.595,
+      "p": "",
+      "source": "pred_dur"
+    }
+  ],
+  "alignment": "pred_dur",
+  "timing": {
+    "load_seconds": 29.59,
+    "synth_seconds": 7.2,
+    "realtime_factor": 2.38
+  },
+  "wall_seconds": 39.57,
+  "text": "El pueblo llevaba tres inviernos sin oírla.",
+  "speaker": "narrator"
+}

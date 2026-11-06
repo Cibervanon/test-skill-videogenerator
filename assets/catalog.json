@@ -1,0 +1,1160 @@
+{
+  "version": 1,
+  "generated_at": "2026-11-05T21:04:24Z",
+  "source": "derived from cast.json, scenes, engine, voices.json, audio_gen and assets/registry.json (schema 2: generated assets, versions, previews, provenance)",
+  "counts": {
+    "camera": 12,
+    "character": 4,
+    "engine": 4,
+    "expression": 1,
+    "motion_graphic": 1,
+    "prop": 1,
+    "rig": 1,
+    "set": 6,
+    "sfx": 3,
+    "transition": 2,
+    "voice": 3
+  },
+  "assets": [
+    {
+      "id": "camera:cranedown",
+      "name": "craneDown",
+      "type": "camera",
+      "category": "Camera move",
+      "path": "studio/src/engine/CameraRig.tsx",
+      "description": "Named camera intent expressed as a transform curve.",
+      "version": 1793890678,
+      "dependencies": [],
+      "config": {},
+      "license": "original",
+      "created": "2026-11-05",
+      "validated": true,
+      "tags": [
+        "camera",
+        "craneDown"
+      ]
+    },
+    {
+      "id": "camera:dollyin",
+      "name": "dollyIn",
+      "type": "camera",
+      "category": "Camera move",
+      "path": "studio/src/engine/CameraRig.tsx",
+      "description": "Named camera intent expressed as a transform curve.",
+      "version": 1793890678,
+      "dependencies": [],
+      "config": {},
+      "license": "original",
+      "created": "2026-11-05",
+      "validated": true,
+      "tags": [
+        "camera",
+        "dollyIn"
+      ]
+    },
+    {
+      "id": "camera:dollyout",
+      "name": "dollyOut",
+      "type": "camera",
+      "category": "Camera move",
+      "path": "studio/src/engine/CameraRig.tsx",
+      "description": "Named camera intent expressed as a transform curve.",
+      "version": 1793890678,
+      "dependencies": [],
+      "config": {},
+      "license": "original",
+      "created": "2026-11-05",
+      "validated": true,
+      "tags": [
+        "camera",
+        "dollyOut"
+      ]
+    },
+    {
+      "id": "camera:drift",
+      "name": "drift",
+      "type": "camera",
+      "category": "Camera move",
+      "path": "studio/src/engine/CameraRig.tsx",
+      "description": "Named camera intent expressed as a transform curve.",
+      "version": 1793890678,
+      "dependencies": [],
+      "config": {},
+      "license": "original",
+      "created": "2026-11-05",
+      "validated": true,
+      "tags": [
+        "camera",
+        "drift"
+      ]
+    },
+    {
+      "id": "camera:panleft",
+      "name": "panLeft",
+      "type": "camera",
+      "category": "Camera move",
+      "path": "studio/src/engine/CameraRig.tsx",
+      "description": "Named camera intent expressed as a transform curve.",
+      "version": 1793890678,
+      "dependencies": [],
+      "config": {},
+      "license": "original",
+      "created": "2026-11-05",
+      "validated": true,
+      "tags": [
+        "camera",
+        "panLeft"
+      ]
+    },
+    {
+      "id": "camera:panright",
+      "name": "panRight",
+      "type": "camera",
+      "category": "Camera move",
+      "path": "studio/src/engine/CameraRig.tsx",
+      "description": "Named camera intent expressed as a transform curve.",
+      "version": 1793890678,
+      "dependencies": [],
+      "config": {},
+      "license": "original",
+      "created": "2026-11-05",
+      "validated": true,
+      "tags": [
+        "camera",
+        "panRight"
+      ]
+    },
+    {
+      "id": "camera:pushinslow",
+      "name": "pushInSlow",
+      "type": "camera",
+      "category": "Camera move",
+      "path": "studio/src/engine/CameraRig.tsx",
+      "description": "Named camera intent expressed as a transform curve.",
+      "version": 1793890678,
+      "dependencies": [],
+      "config": {},
+      "license": "original",
+      "created": "2026-11-05",
+      "validated": true,
+      "tags": [
+        "camera",
+        "pushInSlow"
+      ]
+    },
+    {
+      "id": "camera:reframe",
+      "name": "reframe",
+      "type": "camera",
+      "category": "Camera move",
+      "path": "studio/src/engine/CameraRig.tsx",
+      "description": "Named camera intent expressed as a transform curve.",
+      "version": 1793890678,
+      "dependencies": [],
+      "config": {},
+      "license": "original",
+      "created": "2026-11-05",
+      "validated": true,
+      "tags": [
+        "camera",
+        "reframe"
+      ]
+    },
+    {
+      "id": "camera:static",
+      "name": "static",
+      "type": "camera",
+      "category": "Camera move",
+      "path": "studio/src/engine/CameraRig.tsx",
+      "description": "Named camera intent expressed as a transform curve.",
+      "version": 1793890678,
+      "dependencies": [],
+      "config": {},
+      "license": "original",
+      "created": "2026-11-05",
+      "validated": true,
+      "tags": [
+        "camera",
+        "static"
+      ]
+    },
+    {
+      "id": "camera:tiltup",
+      "name": "tiltUp",
+      "type": "camera",
+      "category": "Camera move",
+      "path": "studio/src/engine/CameraRig.tsx",
+      "description": "Named camera intent expressed as a transform curve.",
+      "version": 1793890678,
+      "dependencies": [],
+      "config": {},
+      "license": "original",
+      "created": "2026-11-05",
+      "validated": true,
+      "tags": [
+        "camera",
+        "tiltUp"
+      ]
+    },
+    {
+      "id": "camera:trackleft",
+      "name": "trackLeft",
+      "type": "camera",
+      "category": "Camera move",
+      "path": "studio/src/engine/CameraRig.tsx",
+      "description": "Named camera intent expressed as a transform curve.",
+      "version": 1793890678,
+      "dependencies": [],
+      "config": {},
+      "license": "original",
+      "created": "2026-11-05",
+      "validated": true,
+      "tags": [
+        "camera",
+        "trackLeft"
+      ]
+    },
+    {
+      "id": "camera:trackright",
+      "name": "trackRight",
+      "type": "camera",
+      "category": "Camera move",
+      "path": "studio/src/engine/CameraRig.tsx",
+      "description": "Named camera intent expressed as a transform curve.",
+      "version": 1793890678,
+      "dependencies": [],
+      "config": {},
+      "license": "original",
+      "created": "2026-11-05",
+      "validated": true,
+      "tags": [
+        "camera",
+        "trackRight"
+      ]
+    },
+    {
+      "schema": 2,
+      "id": "character:cientifico",
+      "name": "Cientifico",
+      "type": "character",
+      "category": "Cast",
+      "style": "cinematic",
+      "description": "Generated character identity 'Cientifico' built for the procedural rig, with palette, proportions, wardrobe and expression metadata.",
+      "resolution": {
+        "width": 1080,
+        "height": 1920
+      },
+      "aspect": "9:16",
+      "transparent": false,
+      "path": "assets/generated/character/cientifico/v1/asset.json",
+      "preview": "assets/generated/character/cientifico/v1/preview.svg",
+      "version": 1,
+      "versions": [
+        {
+          "version": 1,
+          "path": "assets/generated/character/cientifico/v1/asset.json",
+          "preview": "assets/generated/character/cientifico/v1/preview.svg",
+          "created": "2026-11-05T16:19:25Z",
+          "signature": "1884972b65b773d8",
+          "status": "validated"
+        }
+      ],
+      "dependencies": [
+        "rig:default"
+      ],
+      "tags": [
+        "cast",
+        "character",
+        "cientifico",
+        "identity",
+        "rig"
+      ],
+      "usage": [
+        "cast",
+        "actor"
+      ],
+      "character": "cientifico",
+      "scene": null,
+      "config": {
+        "castKey": "cientifico",
+        "rig": "rig:default"
+      },
+      "license": "CC0-1.0",
+      "provenance": {
+        "origin": "generated-locally",
+        "author": "asset_forge / local deterministic primitives",
+        "source": "generated locally from a prompt; no external model, image or asset was used",
+        "date": "2026-11-05T16:19:25Z",
+        "restrictions": [
+          "No external model or reference asset was used."
+        ]
+      },
+      "compatibility": {
+        "engine": "remotion",
+        "renderer": "generated-character-v1"
+      },
+      "status": "validated",
+      "validated": true,
+      "created": "2026-11-05T16:19:25Z",
+      "layers": [],
+      "signature": "1884972b65b773d8",
+      "author": "asset_forge / local deterministic primitives",
+      "source": "generated locally from a prompt; no external model, image or asset was used"
+    },
+    {
+      "id": "character:elder",
+      "name": "The Bell-Keeper",
+      "type": "character",
+      "category": "Cast",
+      "path": "studio/src/data/cast.json",
+      "description": "keeper of the bell, refuses to ring it",
+      "version": 1793717091,
+      "dependencies": [
+        "rig:default"
+      ],
+      "config": {
+        "coat": "#b8423f",
+        "coatDark": "#7d2b2b",
+        "hat": "#e9d7b4",
+        "headRadius": 46,
+        "height": 1.0,
+        "voice": "low, unhurried, mid-60s, slight gravel",
+        "wardrobe_states": [
+          "default"
+        ]
+      },
+      "license": "original",
+      "created": "2026-11-03",
+      "validated": true,
+      "tags": [
+        "beanie",
+        "none",
+        "cast",
+        "elder"
+      ]
+    },
+    {
+      "id": "character:widow",
+      "name": "The Widow",
+      "type": "character",
+      "category": "Cast",
+      "path": "studio/src/data/cast.json",
+      "description": "the first to hear the bell",
+      "version": 1793717091,
+      "dependencies": [
+        "rig:default"
+      ],
+      "config": {
+        "coat": "#c8892f",
+        "coatDark": "#8b5a1c",
+        "hat": "#3d4358",
+        "headRadius": 45,
+        "height": 0.95,
+        "voice": "quiet, precise, withheld",
+        "wardrobe_states": [
+          "default"
+        ]
+      },
+      "license": "original",
+      "created": "2026-11-03",
+      "validated": true,
+      "tags": [
+        "scarf",
+        "side",
+        "cast",
+        "widow"
+      ]
+    },
+    {
+      "id": "character:young",
+      "name": "The Apprentice",
+      "type": "character",
+      "category": "Cast",
+      "path": "studio/src/data/cast.json",
+      "description": "digs the graves, wants the bell rung",
+      "version": 1793717091,
+      "dependencies": [
+        "rig:default"
+      ],
+      "config": {
+        "coat": "#2f6f63",
+        "coatDark": "#1d4a42",
+        "hat": "#e4c98f",
+        "headRadius": 44,
+        "height": 0.92,
+        "voice": "bright, quick, late teens",
+        "wardrobe_states": [
+          "default",
+          "mud"
+        ]
+      },
+      "license": "original",
+      "created": "2026-11-03",
+      "validated": true,
+      "tags": [
+        "beanie",
+        "curls",
+        "cast",
+        "young"
+      ]
+    },
+    {
+      "id": "engine:atmosphere",
+      "name": "Atmosphere primitives",
+      "type": "engine",
+      "category": "Engine module",
+      "path": "studio/src/engine/atmosphere.tsx",
+      "description": "Cast shadows, light shafts, fog, dust, glows, contrast veil.",
+      "version": 1793740341,
+      "dependencies": [],
+      "config": {},
+      "license": "original",
+      "created": "2026-11-03",
+      "validated": true,
+      "tags": [
+        "engine",
+        "atmosphere"
+      ]
+    },
+    {
+      "id": "engine:filmfinish",
+      "name": "Film finish",
+      "type": "engine",
+      "category": "Engine module",
+      "path": "studio/src/engine/FilmFinish.tsx",
+      "description": "Grain, vignette, warm/cool grade, halation.",
+      "version": 1793716551,
+      "dependencies": [],
+      "config": {},
+      "license": "original",
+      "created": "2026-11-03",
+      "validated": true,
+      "tags": [
+        "engine",
+        "filmfinish"
+      ]
+    },
+    {
+      "id": "engine:math",
+      "name": "Math helpers",
+      "type": "engine",
+      "category": "Engine module",
+      "path": "studio/src/engine/math.ts",
+      "description": "Deterministic easing, keyframes, PRNG and hashing.",
+      "version": 1793740341,
+      "dependencies": [],
+      "config": {},
+      "license": "original",
+      "created": "2026-11-03",
+      "validated": true,
+      "tags": [
+        "engine",
+        "math"
+      ]
+    },
+    {
+      "id": "engine:texture",
+      "name": "Material patterns",
+      "type": "engine",
+      "category": "Engine module",
+      "path": "studio/src/engine/texture.tsx",
+      "description": "Procedural ashlar, planks, shingles, snow, carpet, wallpaper, frost.",
+      "version": 1793718619,
+      "dependencies": [],
+      "config": {},
+      "license": "original",
+      "created": "2026-11-03",
+      "validated": true,
+      "tags": [
+        "engine",
+        "texture"
+      ]
+    },
+    {
+      "schema": 2,
+      "id": "expression:surprise_cientifico",
+      "name": "Surprise Cientifico",
+      "type": "expression",
+      "category": "Expression",
+      "style": "cinematic",
+      "description": "Reusable expression 'surprise' for the procedural character rig; identity-changing fields are prohibited.",
+      "resolution": {
+        "width": 1080,
+        "height": 1920
+      },
+      "aspect": "9:16",
+      "transparent": false,
+      "path": "assets/generated/expression/surprise_cientifico/v1/asset.json",
+      "preview": "assets/generated/expression/surprise_cientifico/v1/preview.svg",
+      "version": 1,
+      "versions": [
+        {
+          "version": 1,
+          "path": "assets/generated/expression/surprise_cientifico/v1/asset.json",
+          "preview": "assets/generated/expression/surprise_cientifico/v1/preview.svg",
+          "created": "2026-11-05T16:19:25Z",
+          "signature": "67735dd903c8d45f",
+          "status": "validated"
+        }
+      ],
+      "dependencies": [
+        "character:cientifico"
+      ],
+      "tags": [
+        "expression",
+        "surprise",
+        "surprise_cientifico"
+      ],
+      "usage": [
+        "expression",
+        "actor"
+      ],
+      "character": null,
+      "scene": null,
+      "config": {
+        "castKey": "cientifico",
+        "expression": "surprise",
+        "values": {
+          "brow": 0.45,
+          "mouth": 0.92,
+          "headTilt": -4.0,
+          "yaw": 0.0,
+          "blink": 0.0
+        }
+      },
+      "license": "CC0-1.0",
+      "provenance": {
+        "origin": "generated-locally",
+        "author": "asset_forge / local deterministic primitives",
+        "source": "generated locally from a prompt; no external model, image or asset was used",
+        "date": "2026-11-05T16:19:25Z",
+        "restrictions": [
+          "No external model or reference asset was used."
+        ]
+      },
+      "compatibility": {
+        "engine": "remotion",
+        "renderer": "generated-expression-v1"
+      },
+      "status": "validated",
+      "validated": true,
+      "created": "2026-11-05T16:19:25Z",
+      "layers": [],
+      "signature": "67735dd903c8d45f",
+      "author": "asset_forge / local deterministic primitives",
+      "source": "generated locally from a prompt; no external model, image or asset was used"
+    },
+    {
+      "schema": 2,
+      "id": "graphic:comparacion",
+      "name": "Comparacion",
+      "type": "motion_graphic",
+      "category": "Motion graphic",
+      "style": "cinematic",
+      "description": "Generated motion graphic 'Comparacion' using the existing overlay renderer.",
+      "resolution": {
+        "width": 1080,
+        "height": 1920
+      },
+      "aspect": "9:16",
+      "transparent": false,
+      "path": "assets/generated/motion_graphic/comparacion/v2/asset.json",
+      "preview": "assets/generated/motion_graphic/comparacion/v2/preview.svg",
+      "version": 2,
+      "versions": [
+        {
+          "version": 1,
+          "path": "assets/generated/motion_graphic/comparacion/v1/asset.json",
+          "preview": "assets/generated/motion_graphic/comparacion/v1/preview.svg",
+          "created": "2026-11-05T16:19:27Z",
+          "signature": "4ab32b272d5b5f87",
+          "status": "validated"
+        },
+        {
+          "version": 2,
+          "path": "assets/generated/motion_graphic/comparacion/v2/asset.json",
+          "preview": "assets/generated/motion_graphic/comparacion/v2/preview.svg",
+          "created": "2026-11-05T16:25:44Z",
+          "signature": "7102fb23dccea536",
+          "status": "validated"
+        }
+      ],
+      "dependencies": [],
+      "tags": [
+        "chart",
+        "comparacion",
+        "motion-graphic",
+        "motion_graphic",
+        "overlay"
+      ],
+      "usage": [
+        "motion-graphic",
+        "overlay"
+      ],
+      "character": null,
+      "scene": null,
+      "config": {
+        "renderer": "OverlayLayer",
+        "graphicKey": "comparacion",
+        "overlay": {
+          "id": "generated-comparison",
+          "type": "bar",
+          "placement": {
+            "kind": "screen"
+          },
+          "anchor": "top-left",
+          "box": {
+            "x": 0.06,
+            "y": 0.08,
+            "w": 0.88,
+            "h": 0.22
+          },
+          "from": 0.08,
+          "to": 0.92,
+          "data": {
+            "title": "Comparación de laboratorio",
+            "caption": "Lectura de dos muestras",
+            "unit": "%",
+            "series": [
+              {
+                "label": "Muestra A",
+                "value": 72,
+                "tone": "accent"
+              },
+              {
+                "label": "Muestra B",
+                "value": 48,
+                "tone": "accentAlt"
+              }
+            ]
+          },
+          "source": "generated sample data; illustrative",
+          "illustrative": true
+        }
+      },
+      "license": "CC0-1.0",
+      "provenance": {
+        "origin": "generated-locally",
+        "author": "asset_forge / local deterministic primitives",
+        "source": "generated locally from a prompt; no external model, image or asset was used",
+        "date": "2026-11-05T16:25:44Z",
+        "restrictions": [
+          "No external model or reference asset was used."
+        ]
+      },
+      "compatibility": {
+        "engine": "remotion",
+        "renderer": "generated-graphic-v1"
+      },
+      "status": "validated",
+      "validated": true,
+      "created": "2026-11-05T16:25:44Z",
+      "layers": [],
+      "signature": "7102fb23dccea536",
+      "author": "asset_forge / local deterministic primitives",
+      "source": "generated locally from a prompt; no external model, image or asset was used"
+    },
+    {
+      "schema": 2,
+      "id": "prop:lampara_laboratorio",
+      "name": "Lampara Laboratorio",
+      "type": "prop",
+      "category": "Prop",
+      "style": "cinematic",
+      "description": "Generated reusable prop 'Lampara Laboratorio' drawn from coordinated SVG primitives.",
+      "resolution": {
+        "width": 1080,
+        "height": 1920
+      },
+      "aspect": "9:16",
+      "transparent": false,
+      "path": "assets/generated/prop/lampara_laboratorio/v1/asset.json",
+      "preview": "assets/generated/prop/lampara_laboratorio/v1/preview.svg",
+      "version": 1,
+      "versions": [
+        {
+          "version": 1,
+          "path": "assets/generated/prop/lampara_laboratorio/v1/asset.json",
+          "preview": "assets/generated/prop/lampara_laboratorio/v1/preview.svg",
+          "created": "2026-11-05T16:19:53Z",
+          "signature": "d1746eff372b75b7",
+          "status": "validated"
+        }
+      ],
+      "dependencies": [
+        "set:laboratorio"
+      ],
+      "tags": [
+        "lampara_laboratorio",
+        "prop",
+        "svg"
+      ],
+      "usage": [
+        "prop",
+        "foreground",
+        "reusable"
+      ],
+      "character": null,
+      "scene": null,
+      "config": {
+        "renderer": "PropLayer",
+        "propKey": "lampara_laboratorio",
+        "pivot": [
+          100,
+          400
+        ]
+      },
+      "license": "CC0-1.0",
+      "provenance": {
+        "origin": "generated-locally",
+        "author": "asset_forge / local deterministic primitives",
+        "source": "generated locally from a prompt; no external model, image or asset was used",
+        "date": "2026-11-05T16:19:53Z",
+        "restrictions": [
+          "No external model or reference asset was used."
+        ]
+      },
+      "compatibility": {
+        "engine": "remotion",
+        "renderer": "generated-prop-v1"
+      },
+      "status": "validated",
+      "validated": true,
+      "created": "2026-11-05T16:19:53Z",
+      "layers": [],
+      "signature": "d1746eff372b75b7",
+      "author": "asset_forge / local deterministic primitives",
+      "source": "generated locally from a prompt; no external model, image or asset was used"
+    },
+    {
+      "id": "rig:default",
+      "name": "Procedural character rig",
+      "type": "rig",
+      "category": "Rig",
+      "path": "studio/src/characters/Character.tsx",
+      "description": "Two-segment arms with elbow, volume-shaded coat, brows, boots, head lead.",
+      "version": 1793887932,
+      "dependencies": [
+        "engine:math"
+      ],
+      "config": {
+        "props": [
+          "hold",
+          "brow",
+          "blink",
+          "gait",
+          "phase"
+        ]
+      },
+      "license": "original",
+      "created": "2026-11-05",
+      "validated": true,
+      "tags": [
+        "rig",
+        "character",
+        "procedural"
+      ]
+    },
+    {
+      "id": "set:bellinsert",
+      "name": "Bell Insert",
+      "type": "set",
+      "category": "Set",
+      "path": "studio/src/scenes/BellInsert.tsx",
+      "description": "Insert: belfry louvres, stone arch, headstock and the bronze bell.",
+      "version": 1793719571,
+      "dependencies": [
+        "engine:atmosphere",
+        "engine:texture"
+      ],
+      "config": {
+        "component": "BellInsert"
+      },
+      "license": "original",
+      "created": "2026-11-03",
+      "validated": true,
+      "tags": [
+        "set",
+        "bellinsert",
+        "svg"
+      ]
+    },
+    {
+      "id": "set:doorway",
+      "name": "Doorway",
+      "type": "set",
+      "category": "Set",
+      "path": "studio/src/scenes/Doorway.tsx",
+      "description": "Threshold: warm furnished interior seen from the snow, lamp and light spill.",
+      "version": 1793801676,
+      "dependencies": [
+        "engine:atmosphere",
+        "engine:texture"
+      ],
+      "config": {
+        "component": "Doorway"
+      },
+      "license": "original",
+      "created": "2026-11-04",
+      "validated": true,
+      "tags": [
+        "set",
+        "doorway",
+        "svg"
+      ]
+    },
+    {
+      "id": "set:facecloseup",
+      "name": "Face Closeup",
+      "type": "set",
+      "category": "Set",
+      "path": "studio/src/scenes/FaceCloseup.tsx",
+      "description": "Close-up plate: bokeh and lattice behind the keeper's face.",
+      "version": 1793716463,
+      "dependencies": [
+        "engine:atmosphere",
+        "engine:texture"
+      ],
+      "config": {
+        "component": "FaceCloseup"
+      },
+      "license": "original",
+      "created": "2026-11-03",
+      "validated": true,
+      "tags": [
+        "set",
+        "facecloseup",
+        "svg"
+      ]
+    },
+    {
+      "id": "set:fielddawn",
+      "name": "Field Dawn",
+      "type": "set",
+      "category": "Set",
+      "path": "studio/src/scenes/FieldDawn.tsx",
+      "description": "Dawn graveyard: headstones, chapel, stone wall, open grave, low sun.",
+      "version": 1793738748,
+      "dependencies": [
+        "engine:atmosphere",
+        "engine:texture"
+      ],
+      "config": {
+        "component": "FieldDawn"
+      },
+      "license": "original",
+      "created": "2026-11-03",
+      "validated": true,
+      "tags": [
+        "set",
+        "fielddawn",
+        "svg"
+      ]
+    },
+    {
+      "schema": 2,
+      "id": "set:laboratorio",
+      "name": "Laboratorio",
+      "type": "set",
+      "category": "Set",
+      "style": "cinematic",
+      "description": "Generated night laboratory set with coordinated background, midground, foreground, lighting and atmosphere layers.",
+      "resolution": {
+        "width": 1080,
+        "height": 1920
+      },
+      "aspect": "9:16",
+      "transparent": false,
+      "path": "assets/generated/set/laboratorio/v2/asset.json",
+      "preview": "assets/generated/set/laboratorio/v2/preview.svg",
+      "version": 2,
+      "versions": [
+        {
+          "version": 1,
+          "path": "assets/generated/set/laboratorio/v1/asset.json",
+          "preview": "assets/generated/set/laboratorio/v1/preview.svg",
+          "created": "2026-11-05T16:19:13Z",
+          "signature": "256afb0586b76333",
+          "status": "validated"
+        },
+        {
+          "version": 2,
+          "path": "assets/generated/set/laboratorio/v2/asset.json",
+          "preview": "assets/generated/set/laboratorio/v2/preview.svg",
+          "created": "2026-11-05T16:25:43Z",
+          "signature": "236e75e549f5ad77",
+          "status": "validated"
+        }
+      ],
+      "dependencies": [
+        "engine:atmosphere",
+        "engine:texture"
+      ],
+      "tags": [
+        "laboratorio",
+        "laboratory",
+        "layered",
+        "night",
+        "set",
+        "svg"
+      ],
+      "usage": [
+        "background",
+        "scene",
+        "reusable"
+      ],
+      "character": null,
+      "scene": "laboratorio",
+      "config": {
+        "renderer": "GeneratedScene",
+        "sceneKey": "laboratorio",
+        "layerOrder": [
+          "background",
+          "midground",
+          "foreground",
+          "lighting",
+          "atmosphere"
+        ]
+      },
+      "license": "CC0-1.0",
+      "provenance": {
+        "origin": "generated-locally",
+        "author": "asset_forge / local deterministic primitives",
+        "source": "generated locally from a prompt; no external model, image or asset was used",
+        "date": "2026-11-05T16:25:43Z",
+        "restrictions": [
+          "No external model or reference asset was used."
+        ]
+      },
+      "compatibility": {
+        "engine": "remotion",
+        "renderer": "generated-set-v1"
+      },
+      "status": "validated",
+      "validated": true,
+      "created": "2026-11-05T16:25:43Z",
+      "layers": [
+        "background",
+        "midground",
+        "foreground",
+        "lighting",
+        "atmosphere"
+      ],
+      "signature": "236e75e549f5ad77",
+      "author": "asset_forge / local deterministic primitives",
+      "source": "generated locally from a prompt; no external model, image or asset was used"
+    },
+    {
+      "id": "set:townnight",
+      "name": "Town Night",
+      "type": "set",
+      "category": "Set",
+      "path": "studio/src/scenes/TownNight.tsx",
+      "description": "Night square: timber-framed houses, bell post, lantern, well, sledge.",
+      "version": 1793742056,
+      "dependencies": [
+        "engine:atmosphere",
+        "engine:texture"
+      ],
+      "config": {
+        "component": "TownNight"
+      },
+      "license": "original",
+      "created": "2026-11-03",
+      "validated": true,
+      "tags": [
+        "set",
+        "townnight",
+        "svg"
+      ]
+    },
+    {
+      "id": "sfx:bell",
+      "name": "bell",
+      "type": "sfx",
+      "category": "Sound effect",
+      "path": "scripts/acs/audio_gen.py",
+      "description": "Synthesised on demand (deterministic, LOCAL mode, no credits).",
+      "version": 1793890690,
+      "dependencies": [],
+      "config": {
+        "generator": "audio_gen",
+        "event": "bell"
+      },
+      "license": "original",
+      "created": "2026-11-05",
+      "validated": true,
+      "tags": [
+        "sfx",
+        "procedural",
+        "bell"
+      ]
+    },
+    {
+      "id": "sfx:dig",
+      "name": "dig",
+      "type": "sfx",
+      "category": "Sound effect",
+      "path": "scripts/acs/audio_gen.py",
+      "description": "Synthesised on demand (deterministic, LOCAL mode, no credits).",
+      "version": 1793890690,
+      "dependencies": [],
+      "config": {
+        "generator": "audio_gen",
+        "event": "dig"
+      },
+      "license": "original",
+      "created": "2026-11-05",
+      "validated": true,
+      "tags": [
+        "sfx",
+        "procedural",
+        "dig"
+      ]
+    },
+    {
+      "id": "sfx:footstep",
+      "name": "footstep",
+      "type": "sfx",
+      "category": "Sound effect",
+      "path": "scripts/acs/audio_gen.py",
+      "description": "Synthesised on demand (deterministic, LOCAL mode, no credits).",
+      "version": 1793890690,
+      "dependencies": [],
+      "config": {
+        "generator": "audio_gen",
+        "event": "footstep"
+      },
+      "license": "original",
+      "created": "2026-11-05",
+      "validated": true,
+      "tags": [
+        "sfx",
+        "procedural",
+        "footstep"
+      ]
+    },
+    {
+      "id": "transition:cut",
+      "name": "cut",
+      "type": "transition",
+      "category": "Transition",
+      "path": "studio/src/composition/Demo.tsx",
+      "description": "0 frames of overlap: subject continues, framing changes.",
+      "version": 1793895735,
+      "dependencies": [],
+      "config": {},
+      "license": "original",
+      "created": "2026-11-05",
+      "validated": true,
+      "tags": [
+        "transition",
+        "cut",
+        "edit"
+      ]
+    },
+    {
+      "id": "transition:dissolve",
+      "name": "dissolve",
+      "type": "transition",
+      "category": "Transition",
+      "path": "studio/src/composition/Demo.tsx",
+      "description": "Overlap of the next shot's transitionIn frames: different setup.",
+      "version": 1793895735,
+      "dependencies": [],
+      "config": {},
+      "license": "original",
+      "created": "2026-11-05",
+      "validated": true,
+      "tags": [
+        "transition",
+        "dissolve",
+        "edit"
+      ]
+    },
+    {
+      "id": "voice:elder",
+      "name": "The Bell-Keeper",
+      "type": "voice",
+      "category": "Voice",
+      "path": "config/voices.json",
+      "description": "mid-60s, slight gravel, withheld anger",
+      "version": 1793740255,
+      "dependencies": [],
+      "config": {
+        "provider": null,
+        "voice_id": null,
+        "language": "en",
+        "configured": false,
+        "settings": {
+          "stability": 0.5,
+          "similarity_boost": 0.82,
+          "style": 0.3
+        }
+      },
+      "license": "user-provided (ElevenLabs terms)",
+      "created": "2026-11-03",
+      "validated": true,
+      "tags": [
+        "voice",
+        "elder"
+      ]
+    },
+    {
+      "id": "voice:narrator",
+      "name": "Narrator",
+      "type": "voice",
+      "category": "Voice",
+      "path": "config/voices.json",
+      "description": "low, unhurried, close to the microphone",
+      "version": 1793740255,
+      "dependencies": [],
+      "config": {
+        "provider": null,
+        "voice_id": null,
+        "language": "en",
+        "configured": false,
+        "settings": {
+          "stability": 0.45,
+          "similarity_boost": 0.8,
+          "style": 0.25
+        }
+      },
+      "license": "user-provided (ElevenLabs terms)",
+      "created": "2026-11-03",
+      "validated": true,
+      "tags": [
+        "voice",
+        "narrator"
+      ]
+    },
+    {
+      "id": "voice:young",
+      "name": "The Apprentice",
+      "type": "voice",
+      "category": "Voice",
+      "path": "config/voices.json",
+      "description": "bright, quick, late teens",
+      "version": 1793740255,
+      "dependencies": [],
+      "config": {
+        "provider": null,
+        "voice_id": null,
+        "language": "en",
+        "configured": false,
+        "settings": {
+          "stability": 0.36,
+          "similarity_boost": 0.78,
+          "style": 0.42
+        }
+      },
+      "license": "user-provided (ElevenLabs terms)",
+      "created": "2026-11-03",
+      "validated": true,
+      "tags": [
+        "voice",
+        "young"
+      ]
+    }
+  ]
+}

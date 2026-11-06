@@ -1,0 +1,83 @@
+{
+  "generated_by": "scripts/analyze_reference.py",
+  "videos": [
+    {
+      "file": "The Ancient Jar That Warned an Empire [VS1Z_Q-Klt8].mp4",
+      "duration": 64.9,
+      "resolution": "608x1080",
+      "fps": 30.0,
+      "shots": 7,
+      "soft_cuts": 9,
+      "cuts_per_min_soft": 8.32,
+      "shot_mean": 9.271,
+      "shot_max": 20.633,
+      "palette": [
+        "#58454a",
+        "#8c654f",
+        "#b08c77",
+        "#e4c1a7",
+        "#312637",
+        "#4358a2"
+      ],
+      "mean_motion_energy": 24.297,
+      "pan_ratio": 0.397,
+      "mean_volume_db": -16.8,
+      "active_ratio": 0.0,
+      "analysis_dir": "projects\\demo_001\\analysis\\The_Ancient_Jar_That_Warned_an_Empire__VS1Z_Q-Klt8_"
+    },
+    {
+      "file": "The Job Nobody Wants in Japan [0m6G8pDtzNs].mp4",
+      "duration": 60.558,
+      "resolution": "608x1080",
+      "fps": 30.0,
+      "shots": 6,
+      "soft_cuts": 9,
+      "cuts_per_min_soft": 8.92,
+      "shot_mean": 10.093,
+      "shot_max": 30.891,
+      "palette": [
+        "#9ba174",
+        "#6b89b9",
+        "#d9d7d8",
+        "#1f43ac",
+        "#262945",
+        "#755550"
+      ],
+      "mean_motion_energy": 29.646,
+      "pan_ratio": 0.663,
+      "mean_volume_db": -16.9,
+      "active_ratio": 0.0,
+      "analysis_dir": "projects\\demo_001\\analysis\\The_Job_Nobody_Wants_in_Japan__0m6G8pDtzNs_"
+    },
+    {
+      "file": "Why Perfect Railroads Don't Work [7xS87iActkU].mp4",
+      "duration": 65.225,
+      "resolution": "608x1080",
+      "fps": 30.0,
+      "shots": 8,
+      "soft_cuts": 12,
+      "cuts_per_min_soft": 11.04,
+      "shot_mean": 8.153,
+      "shot_max": 20.533,
+      "palette": [
+        "#956b6c",
+        "#2e2c50",
+        "#6e322e",
+        "#cec3c3",
+        "#dd7638",
+        "#5e88ce"
+      ],
+      "mean_motion_energy": 30.431,
+      "pan_ratio": 0.677,
+      "mean_volume_db": -16.8,
+      "active_ratio": 0.0,
+      "analysis_dir": "projects\\demo_001\\analysis\\Why_Perfect_Railroads_Don_t_Work__7xS87iActkU_"
+    }
+  ],
+  "method": {
+    "cuts": "ffmpeg select 'gt(scene,T)' + metadata=print",
+    "palette": "k-means k=6 on 1fps 48px decode",
+    "motion": "SAD translation search \u00b16px",
+    "audio": "volumedetect + 8kHz RMS envelope"
+  }
+}

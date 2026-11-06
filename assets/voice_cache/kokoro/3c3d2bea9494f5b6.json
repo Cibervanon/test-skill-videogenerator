@@ -1,0 +1,68 @@
+{
+  "ok": true,
+  "provider": "kokoro",
+  "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+  "kokoro_version": "0.9.4",
+  "torch": "2.15.0+cpu",
+  "device": "cpu",
+  "cuda": false,
+  "voice": "ef_dora",
+  "lang_code": "e",
+  "speed": 0.98,
+  "sample_rate": 24000,
+  "duration": 2.855,
+  "chunks": 1,
+  "words": [
+    {
+      "w": "Desde",
+      "s": 0.0,
+      "e": 0.247,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "entonces,",
+      "s": 0.247,
+      "e": 1.099,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "el",
+      "s": 1.099,
+      "e": 1.209,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "silencio",
+      "s": 1.209,
+      "e": 1.703,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "tuvo",
+      "s": 1.703,
+      "e": 1.951,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "fecha.",
+      "s": 1.951,
+      "e": 2.528,
+      "p": "",
+      "source": "pred_dur"
+    }
+  ],
+  "alignment": "pred_dur",
+  "timing": {
+    "load_seconds": 15.5,
+    "synth_seconds": 3.94,
+    "realtime_factor": 1.38
+  },
+  "wall_seconds": 21.09,
+  "text": "Desde entonces, el silencio tuvo fecha.",
+  "speaker": "narrator"
+}

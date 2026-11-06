@@ -1,0 +1,82 @@
+{
+  "ok": true,
+  "provider": "kokoro",
+  "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+  "kokoro_version": "0.9.4",
+  "torch": "2.15.0+cpu",
+  "device": "cpu",
+  "cuda": false,
+  "voice": "em_alex",
+  "lang_code": "e",
+  "speed": 0.92,
+  "sample_rate": 24000,
+  "duration": 3.155,
+  "chunks": 1,
+  "words": [
+    {
+      "w": "Nadie",
+      "s": 0.0,
+      "e": 0.329,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "supo",
+      "s": 0.329,
+      "e": 0.714,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "cuándo",
+      "s": 0.714,
+      "e": 1.071,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "dejó",
+      "s": 1.071,
+      "e": 1.428,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "de",
+      "s": 1.428,
+      "e": 1.537,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "sonar",
+      "s": 1.537,
+      "e": 1.867,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "la",
+      "s": 1.867,
+      "e": 1.977,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "campana.",
+      "s": 1.977,
+      "e": 2.718,
+      "p": "",
+      "source": "pred_dur"
+    }
+  ],
+  "alignment": "pred_dur",
+  "timing": {
+    "load_seconds": 15.01,
+    "synth_seconds": 5.45,
+    "realtime_factor": 1.73
+  },
+  "wall_seconds": 22.37,
+  "text": "Nadie supo cuándo dejó de sonar la campana.",
+  "speaker": "elder"
+}

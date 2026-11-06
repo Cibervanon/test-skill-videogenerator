@@ -1,0 +1,82 @@
+{
+  "ok": true,
+  "provider": "kokoro",
+  "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+  "kokoro_version": "0.9.4",
+  "torch": "2.15.0+cpu",
+  "device": "cpu",
+  "cuda": false,
+  "voice": "ef_dora",
+  "lang_code": "e",
+  "speed": 0.98,
+  "sample_rate": 24000,
+  "duration": 3.23,
+  "chunks": 1,
+  "words": [
+    {
+      "w": "El",
+      "s": 0.0,
+      "e": 0.081,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "aprendiz",
+      "s": 0.081,
+      "e": 0.733,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "subió",
+      "s": 0.733,
+      "e": 1.113,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "al",
+      "s": 1.113,
+      "e": 1.195,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "campanario",
+      "s": 1.195,
+      "e": 1.874,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "con",
+      "s": 1.874,
+      "e": 2.009,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "una",
+      "s": 2.009,
+      "e": 2.172,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "cuerda.",
+      "s": 2.172,
+      "e": 2.77,
+      "p": "",
+      "source": "pred_dur"
+    }
+  ],
+  "alignment": "pred_dur",
+  "timing": {
+    "load_seconds": 15.28,
+    "synth_seconds": 4.74,
+    "realtime_factor": 1.47
+  },
+  "wall_seconds": 21.55,
+  "text": "El aprendiz subió al campanario con una cuerda.",
+  "speaker": "narrator"
+}
