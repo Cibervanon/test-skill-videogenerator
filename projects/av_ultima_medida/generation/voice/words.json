@@ -1,0 +1,366 @@
+[
+  {
+    "w": "La",
+    "s": 0.0,
+    "e": 0.109,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "cinta",
+    "s": 0.109,
+    "e": 0.434,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "de",
+    "s": 0.434,
+    "e": 0.488,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "medir",
+    "s": 0.488,
+    "e": 1.004,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "se",
+    "s": 1.004,
+    "e": 1.113,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "rompió",
+    "s": 1.113,
+    "e": 1.574,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "a",
+    "s": 1.574,
+    "e": 1.601,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "la",
+    "s": 1.601,
+    "e": 1.71,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "una",
+    "s": 1.71,
+    "e": 1.9,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "de",
+    "s": 1.9,
+    "e": 1.954,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "la",
+    "s": 1.954,
+    "e": 2.035,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "mañana.",
+    "s": 2.035,
+    "e": 2.714,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "El",
+    "s": 3.5,
+    "e": 3.606,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "sastre",
+    "s": 3.606,
+    "e": 3.951,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "y",
+    "s": 3.951,
+    "e": 4.004,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "su",
+    "s": 4.004,
+    "e": 4.083,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "aprendiz",
+    "s": 4.083,
+    "e": 4.666,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "tenían",
+    "s": 4.666,
+    "e": 5.249,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "hasta",
+    "s": 5.249,
+    "e": 5.488,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "el",
+    "s": 5.488,
+    "e": 5.541,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "amanecer",
+    "s": 5.541,
+    "e": 6.071,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "para",
+    "s": 6.071,
+    "e": 6.257,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "terminar",
+    "s": 6.257,
+    "e": 6.734,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "el",
+    "s": 6.734,
+    "e": 6.813,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "abrigo.",
+    "s": 6.813,
+    "e": 7.343,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "El",
+    "s": 8.3,
+    "e": 8.381,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "aprendiz",
+    "s": 8.381,
+    "e": 8.951,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "quería",
+    "s": 8.951,
+    "e": 9.358,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "cerrar",
+    "s": 9.358,
+    "e": 9.738,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "la",
+    "s": 9.738,
+    "e": 9.847,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "costura",
+    "s": 9.847,
+    "e": 10.335,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "y",
+    "s": 10.335,
+    "e": 10.362,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "marcharse.",
+    "s": 10.362,
+    "e": 11.149,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "El",
+    "s": 14.3,
+    "e": 14.407,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "sastre",
+    "s": 14.407,
+    "e": 14.81,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "señaló",
+    "s": 14.81,
+    "e": 15.319,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "la",
+    "s": 15.319,
+    "e": 15.427,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "puntada",
+    "s": 15.427,
+    "e": 15.963,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "que",
+    "s": 15.963,
+    "e": 16.017,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "el",
+    "s": 16.017,
+    "e": 16.07,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "aprendiz",
+    "s": 16.07,
+    "e": 16.58,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "había",
+    "s": 16.58,
+    "e": 16.848,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "saltado.",
+    "s": 16.848,
+    "e": 17.519,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "Al",
+    "s": 18.3,
+    "e": 18.38,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "amanecer,",
+    "s": 18.38,
+    "e": 19.024,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "el",
+    "s": 19.024,
+    "e": 19.104,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "abrigo",
+    "s": 19.104,
+    "e": 19.426,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "estaba",
+    "s": 19.426,
+    "e": 19.828,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "terminado;",
+    "s": 19.828,
+    "e": 20.685,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "la",
+    "s": 20.685,
+    "e": 20.765,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "medida",
+    "s": 20.765,
+    "e": 21.141,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "también.",
+    "s": 21.141,
+    "e": 21.73,
+    "p": "",
+    "source": "pred_dur"
+  }
+]

@@ -1,0 +1,71 @@
+{
+  "id": "av_direccion_demo",
+  "title": "El silencio tuvo fecha \u2014 demo de direcci\u00f3n",
+  "created_by": "scripts/studio.py",
+  "layout": [
+    "input",
+    "analysis",
+    "preproduction",
+    "assets/characters",
+    "assets/environments",
+    "assets/props",
+    "assets/reference_images",
+    "generation/images",
+    "generation/video_clips",
+    "generation/audio",
+    "generation/prompts",
+    "editing/intermediate",
+    "editing/subtitles",
+    "quality/shot_reports",
+    "output",
+    "logs"
+  ],
+  "mode": "local",
+  "artifacts": {
+    "output\\picture_silent.mp4": {
+      "sha256": "8f5c8db9db4234fee93e76b301f4c4db3c81fc7c3f1bf043d9defca62c09f27b",
+      "bytes": 14662505
+    },
+    "generation\\audio\\score.wav": {
+      "sha256": "7741d3cd94decff054cfac488254f6a857ee3eb9d168049d9ae2432a36a6c508",
+      "bytes": 3604424
+    },
+    "output\\final_video.mp4": {
+      "sha256": "7d11349507d8f7db308078c317c5b329fabb64a6801835509127fa60eb4c7bfc",
+      "bytes": 11024558
+    },
+    "output\\final_video_preview.mp4": {
+      "sha256": "30fef5df8f748456cf66c832f34412d55a1ad99e3f54cd42b26899d3417a004d",
+      "bytes": 1051973
+    }
+  },
+  "delivery": {
+    "output": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\av_direccion_demo\\output\\final_video.mp4",
+    "duration": 20.433,
+    "size_bytes": 11024558,
+    "video": {
+      "codec": "h264",
+      "width": 1080,
+      "height": 1920,
+      "fps": 30.0,
+      "fps_avg": 30.0,
+      "pix_fmt": "yuvj420p",
+      "frames": 612,
+      "aspect": 0.5625,
+      "orientation": "vertical"
+    },
+    "audio": {
+      "codec": "aac",
+      "channels": 2,
+      "sample_rate": 48000,
+      "bitrate": 192084,
+      "duration": 20.433,
+      "streams": 1
+    },
+    "source": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\av_direccion_demo\\output\\picture_silent.mp4",
+    "soundtrack": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\av_direccion_demo\\generation\\audio\\mix.wav",
+    "target_lufs": -14.0,
+    "audio_duration": 20.683,
+    "note": "two-pass linear loudnorm; verify with qa.py"
+  }
+}

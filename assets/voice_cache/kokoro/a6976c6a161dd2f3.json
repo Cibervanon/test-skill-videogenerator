@@ -1,0 +1,89 @@
+{
+  "ok": true,
+  "provider": "kokoro",
+  "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+  "kokoro_version": "0.9.4",
+  "torch": "2.15.0+cpu",
+  "device": "cpu",
+  "cuda": false,
+  "voice": "ef_dora",
+  "lang_code": "e",
+  "speed": 0.98,
+  "sample_rate": 24000,
+  "duration": 3.68,
+  "chunks": 1,
+  "words": [
+    {
+      "w": "El",
+      "s": 0.0,
+      "e": 0.081,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "aprendiz",
+      "s": 0.081,
+      "e": 0.645,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "cruzó",
+      "s": 0.645,
+      "e": 1.128,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "el",
+      "s": 1.128,
+      "e": 1.209,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "invernadero",
+      "s": 1.209,
+      "e": 2.015,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "con",
+      "s": 2.015,
+      "e": 2.149,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "la",
+      "s": 2.149,
+      "e": 2.23,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "regadera",
+      "s": 2.23,
+      "e": 2.74,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "llena.",
+      "s": 2.74,
+      "e": 3.251,
+      "p": "",
+      "source": "pred_dur"
+    }
+  ],
+  "alignment": "pred_dur",
+  "timing": {
+    "load_seconds": 22.9,
+    "synth_seconds": 6.57,
+    "realtime_factor": 1.78
+  },
+  "wall_seconds": 31.5,
+  "text": "El aprendiz cruzó el invernadero con la regadera llena.",
+  "speaker": "narrator"
+}

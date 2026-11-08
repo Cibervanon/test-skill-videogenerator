@@ -1,0 +1,71 @@
+{
+  "id": "av_ultima_medida",
+  "title": "La \u00faltima medida",
+  "created_by": "scripts/studio.py",
+  "layout": [
+    "input",
+    "analysis",
+    "preproduction",
+    "assets/characters",
+    "assets/environments",
+    "assets/props",
+    "assets/reference_images",
+    "generation/images",
+    "generation/video_clips",
+    "generation/audio",
+    "generation/prompts",
+    "editing/intermediate",
+    "editing/subtitles",
+    "quality/shot_reports",
+    "output",
+    "logs"
+  ],
+  "mode": "local",
+  "artifacts": {
+    "output\\picture_silent.mp4": {
+      "sha256": "57eb7dd90adf3ddd62bef243afdc93d8e270394904f4041507cbb3057cd02cb6",
+      "bytes": 15944885
+    },
+    "generation\\audio\\score.wav": {
+      "sha256": "f8532f29cabd768f760aaeeb774abe7e54fd0b6cf0cb13305fb3836b83fbfaef",
+      "bytes": 3951400
+    },
+    "output\\final_video.mp4": {
+      "sha256": "46dfc5f8eb80f5b56d943fab1b123f814f0cb15254bda41c161c81fbee8c8cbf",
+      "bytes": 11989156
+    },
+    "output\\final_video_preview.mp4": {
+      "sha256": "78b1a5ab06c6a298ebdaa3704c984f59c25e282a4cb7420931b0529cd42ad41c",
+      "bytes": 818943
+    }
+  },
+  "delivery": {
+    "output": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\av_ultima_medida\\output\\final_video.mp4",
+    "duration": 22.4,
+    "size_bytes": 11989156,
+    "video": {
+      "codec": "h264",
+      "width": 1080,
+      "height": 1920,
+      "fps": 30.0,
+      "fps_avg": 30.0,
+      "pix_fmt": "yuvj420p",
+      "frames": 672,
+      "aspect": 0.5625,
+      "orientation": "vertical"
+    },
+    "audio": {
+      "codec": "aac",
+      "channels": 2,
+      "sample_rate": 48000,
+      "bitrate": 191340,
+      "duration": 22.4,
+      "streams": 1
+    },
+    "source": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\av_ultima_medida\\output\\picture_silent.mp4",
+    "soundtrack": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\av_ultima_medida\\generation\\audio\\mix.wav",
+    "target_lufs": -14.0,
+    "audio_duration": 22.65,
+    "note": "two-pass linear loudnorm; verify with qa.py"
+  }
+}

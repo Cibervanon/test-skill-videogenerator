@@ -72,7 +72,24 @@
         "bridge": false
       },
       "offsetY": 0,
-      "props": []
+      "props": [],
+      "captions": [
+        {
+          "text": "Aquella noche, el",
+          "start": 0.0,
+          "end": 1.036
+        },
+        {
+          "text": "guardián no tocó",
+          "start": 1.036,
+          "end": 1.935
+        },
+        {
+          "text": "la campana.",
+          "start": 1.935,
+          "end": 2.725
+        }
+      ]
     },
     {
       "id": "S02",
@@ -121,7 +138,24 @@
         "bridge": false
       },
       "offsetY": 0,
-      "props": []
+      "props": [],
+      "captions": [
+        {
+          "text": "El pueblo llevaba",
+          "start": 0.0,
+          "end": 0.983
+        },
+        {
+          "text": "tres inviernos sin",
+          "start": 0.983,
+          "end": 1.967
+        },
+        {
+          "text": "oírla.",
+          "start": 1.967,
+          "end": 2.595
+        }
+      ]
     },
     {
       "id": "S03",
@@ -197,7 +231,24 @@
         "bridge": false
       },
       "offsetY": 0,
-      "props": []
+      "props": [],
+      "captions": [
+        {
+          "text": "El aprendiz subió",
+          "start": 0.0,
+          "end": 1.113
+        },
+        {
+          "text": "al campanario con",
+          "start": 1.113,
+          "end": 2.009
+        },
+        {
+          "text": "una cuerda.",
+          "start": 2.009,
+          "end": 2.77
+        }
+      ]
     },
     {
       "id": "S04",
@@ -285,7 +336,29 @@
         "bridge": false
       },
       "offsetY": 0,
-      "props": []
+      "props": [],
+      "captions": [
+        {
+          "text": "Comparó lo que",
+          "start": 0.0,
+          "end": 0.658
+        },
+        {
+          "text": "el pueblo creía",
+          "start": 0.658,
+          "end": 1.591
+        },
+        {
+          "text": "con lo que",
+          "start": 1.591,
+          "end": 2.091
+        },
+        {
+          "text": "vio.",
+          "start": 1.947,
+          "end": 2.447
+        }
+      ]
     },
     {
       "id": "S06",
@@ -391,7 +464,19 @@
         "bridge": false
       },
       "offsetY": 0,
-      "props": []
+      "props": [],
+      "captions": [
+        {
+          "text": "El mecanismo tenía",
+          "start": 0.0,
+          "end": 1.122
+        },
+        {
+          "text": "tres pasos.",
+          "start": 1.122,
+          "end": 2.048
+        }
+      ]
     },
     {
       "id": "S08",
@@ -439,7 +524,24 @@
         "bridge": false
       },
       "offsetY": 0,
-      "props": []
+      "props": [],
+      "captions": [
+        {
+          "text": "El tercero era",
+          "start": 0.0,
+          "end": 1.052
+        },
+        {
+          "text": "el que nadie",
+          "start": 1.052,
+          "end": 1.606
+        },
+        {
+          "text": "miraba.",
+          "start": 1.606,
+          "end": 2.243
+        }
+      ]
     },
     {
       "id": "S09",
@@ -493,7 +595,24 @@
         "bridge": false
       },
       "offsetY": 0,
-      "props": []
+      "props": [],
+      "captions": [
+        {
+          "text": "El aprendiz señaló",
+          "start": 0.0,
+          "end": 1.233
+        },
+        {
+          "text": "la cuerda que",
+          "start": 1.233,
+          "end": 1.809
+        },
+        {
+          "text": "faltaba.",
+          "start": 1.809,
+          "end": 2.521
+        }
+      ]
     },
     {
       "id": "S10",
@@ -557,7 +676,19 @@
         "bridge": false
       },
       "offsetY": 0,
-      "props": []
+      "props": [],
+      "captions": [
+        {
+          "text": "Desde entonces, el",
+          "start": 0.0,
+          "end": 1.209
+        },
+        {
+          "text": "silencio tuvo fecha.",
+          "start": 1.209,
+          "end": 2.528
+        }
+      ]
     }
   ]
 }

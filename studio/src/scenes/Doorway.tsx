@@ -43,8 +43,9 @@ const Jar: React.FC<{ x: number; y: number; h: number; c: string }> = ({ x, y, h
 // filled the opening the room still read as a flat panel.
 const ROOM = makeRoom({ x: 540, y: 800 }, { x0: 296, x1: 784, y0: 556, y1: 1236 }, 3.1);
 
-export const Doorway: React.FC<{ progress: number }> = ({ progress }) => {
+export const Doorway: React.FC<{ progress: number; state?: "table" | "held" | "pour" | "bloom" | "left" }> = ({ progress, state }) => {
   const frame = useCurrentFrame();
+  const leftLantern = state === "left";
   const flicker = 0.92 + Math.sin(frame / 5.2) * 0.05 + Math.sin(frame / 1.9) * 0.02;
   const swing = Math.sin(frame / 70) * 1.2;
 
@@ -243,6 +244,19 @@ export const Doorway: React.FC<{ progress: number }> = ({ progress }) => {
         <rect y={1500} width={1080} height={420} fill="url(#door-snow)" opacity={0.55} />
         <path d="M 0 1496 Q 300 1458 540 1482 Q 800 1508 1080 1472" stroke="#eef4ff" strokeWidth={7} fill="none" opacity={0.75} />
         <ellipse cx={540} cy={1560} rx={330} ry={78} fill="#ffcf8a" opacity={0.2 * flicker} />
+        {/* The young lamplighter leaves his own lantern in the snow. This is a
+            set state, not a handoff simulation: the cut from his walk-out to the
+            next shot is where ownership changes. */}
+        {leftLantern ? (
+          <g transform="translate(500 1518)">
+            <ellipse cx={0} cy={102} rx={62} ry={14} fill="#7b88ad" opacity={0.45} />
+            <path d="M 0 12 v 22" stroke="#3b2b22" strokeWidth={4} />
+            <path d="M -30 34 h 60 l 12 62 h -84 z" fill="#c79a55" stroke={MAT.ink} strokeWidth={4} />
+            <ellipse cx={0} cy={66} rx={20} ry={20} fill="#fff0bd" opacity={0.95} />
+            <path d="M -30 34 q 30 14 60 0" stroke="#8b5e2e" strokeWidth={4} fill="none" />
+            <ellipse cx={0} cy={104} rx={54} ry={12} fill="#ffcf8a" opacity={0.3} />
+          </g>
+        ) : null}
         {/* the keeper's footprints in the snow */}
         <g opacity={0.32} fill="#8f9dc4">
           {[0, 1, 2, 3].map((i) => (

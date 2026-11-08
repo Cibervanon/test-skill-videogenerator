@@ -1,0 +1,117 @@
+{
+  "ok": true,
+  "provider": "kokoro",
+  "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+  "kokoro_version": "0.9.4",
+  "torch": "2.15.0+cpu",
+  "device": "cpu",
+  "cuda": false,
+  "voice": "ef_dora",
+  "lang_code": "e",
+  "speed": 0.98,
+  "sample_rate": 24000,
+  "duration": 4.48,
+  "chunks": 1,
+  "words": [
+    {
+      "w": "El",
+      "s": 0.0,
+      "e": 0.106,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "sastre",
+      "s": 0.106,
+      "e": 0.451,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "y",
+      "s": 0.451,
+      "e": 0.504,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "su",
+      "s": 0.504,
+      "e": 0.583,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "aprendiz",
+      "s": 0.583,
+      "e": 1.166,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "tenían",
+      "s": 1.166,
+      "e": 1.749,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "hasta",
+      "s": 1.749,
+      "e": 1.988,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "el",
+      "s": 1.988,
+      "e": 2.041,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "amanecer",
+      "s": 2.041,
+      "e": 2.571,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "para",
+      "s": 2.571,
+      "e": 2.757,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "terminar",
+      "s": 2.757,
+      "e": 3.234,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "el",
+      "s": 3.234,
+      "e": 3.313,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "abrigo.",
+      "s": 3.313,
+      "e": 3.843,
+      "p": "",
+      "source": "pred_dur"
+    }
+  ],
+  "alignment": "pred_dur",
+  "timing": {
+    "load_seconds": 20.36,
+    "synth_seconds": 11.43,
+    "realtime_factor": 2.55
+  },
+  "wall_seconds": 34.16,
+  "text": "El sastre y su aprendiz tenían hasta el amanecer para terminar el abrigo.",
+  "speaker": "narrator"
+}

@@ -27,7 +27,12 @@ def read_json(path: str, default=None):
 
 
 def key_frames(project: dict) -> list[dict]:
-    """The frame each shot is judged at: 55% into its visible span."""
+    """The frame each shot is judged at: the midpoint of its visible span.
+
+    The midpoint is used instead of 55% because a 55% sample can land in the
+    gap after a shot's last caption, which makes the legibility check measure a
+    blank band rather than the subtitle it is supposed to judge.
+    """
     fps = project["format"]["fps"]
     default = project.get("transitionFrames", 0)
     shots = project["shots"]
@@ -42,7 +47,7 @@ def key_frames(project: dict) -> list[dict]:
                 "scene": shot.get("scene", ""),
                 "from": cursor,
                 "frames": frames,
-                "frame": cursor + int(frames * 0.55),
+                "frame": cursor + int(frames * 0.50),
                 "line": shot.get("line", ""),
                 "note": shot.get("note", ""),
             }

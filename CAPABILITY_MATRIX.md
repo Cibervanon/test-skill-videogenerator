@@ -8,7 +8,7 @@ file that proves the claim. Status vocabulary:
 - **adapter only** — the interface exists, the provider/feature does not;
 - **missing** — no code.
 
-Updated: 2026-11-05.
+Updated: 2026-11-06.
 
 ## Engine and composition
 
@@ -19,17 +19,24 @@ Updated: 2026-11-05.
 | Camera vocabulary (12 moves) | implemented | `engine/CameraRig.tsx` | transform-based, no true 3D parallax or lens model |
 | Parallax layers | implemented | `CameraRig.ParallaxGroup`, used by every set | 2.5D shift, depth is authored per set |
 | Procedural character rig | implemented | `characters/Character.tsx`, `geometry.ts` | one body plan, 3 wardrobe identities |
-| Acting presets (idle/walkIn/closeup/dig/reach/turn/call) | implemented | `composition/Actors.tsx` | keyframed intent curves, not physics or mocap |
+| Acting presets (idle/walkIn/closeup/dig/reach/turn/call/point/react) | implemented | `composition/Actors.tsx` | keyframed intent curves, not physics or mocap |
+| Compound action phases | implemented | `ActorSpec.sequence`, `av_director` validation | within-shot preset score with ±4% cross-fades; no IK or contact |
+| **Carried actor state across shots** | implemented | `av_director._resolve_actor_continuity`, `manifest.continuity` | x/facing/hold are inherited at plan time; no runtime body simulation |
+| **Scene-change carry guard** | implemented | planner failure on `carry` across a scene; 260 px teleport guard | requires explicit `continuityMotive`; no 3D transition model |
+| Camera intensity + handheld | implemented | `CameraRig.tsx`, manifest `cameraIntensity` | deterministic operator drift; still a 2.5D transform |
 | Mouth/eyes/brows | partial | `Character.tsx` | mouth is a shape, not visemes: **no lip-sync** |
-| Sets | implemented | `scenes/*.tsx` (5) | all drawn in one illustrative language |
+| Sets | implemented | `scenes/*.tsx` (6) | all drawn in one illustrative language; `Workshop` is the dawn interior |
 | Atmosphere, materials, grain/vignette | implemented | `engine/atmosphere.tsx`, `texture.tsx`, `FilmFinish.tsx` | no volumetric lighting |
-| Burned-in captions | implemented | `engine/Subtitles.tsx` | chunked by words, not timed to audio in the render (SRT is the timed artefact) |
+| Burned-in captions | implemented | `engine/Subtitles.tsx`, `acs/captions.py` | 2–3-word chunks revealed on the take's first word; timings are Kokoro `pred_dur`, and there is no word emphasis or lip-sync |
+| **Word-timed caption cues in the manifest** | implemented | `studio.py captions`, `shot.captions` | 8 shots / 23 cues, **0 ms** error vs the plan (gate 120 ms); rendered pixels not OCR-verified |
+| Caption fallback for manifests without cues | implemented | `Subtitles.buildCues` | character-weight distribution; documented, not a timed claim |
 | Presentation modes A–F | implemented | `composition/Demo.tsx`, `motion-graphics/modes.tsx` | per shot, not per element; cut/dissolve between modes |
 | **Style token system (5 styles)** | implemented | `engine/styles.tsx`, `data/styles.json` | tokens only: shapes do not change per style |
 | **Motion graphics (13 overlay types)** | implemented | `motion-graphics/*` | 2D SVG/DOM only; no 3D charts |
 | **Audiovisual beat planner** | implemented | `scripts/acs/av_director.py`, `studio.py av` | authored beat sheet → manifest; it does not write prose or invent shots |
 | **Declared shot scale + camera/transition motives** | implemented | `av_director.plan`, manifest fields | scale is a directorial unit, not a lens model |
-| **Structural creative QA** | implemented | `scripts/acs/avqa.py`, `studio.py avqa` | structure only; narrative, acting and taste remain human |
+| **Structural creative QA** | implemented | `scripts/acs/avqa.py`, `studio.py avqa` | beat order/framing, axis, static intent, purpose, speech density and action completion; narrative, acting and taste remain human |
+| **Per-shot motion evidence** | implemented | `motion.analyze_shots`, `qa.shot_motion` | translation-only heuristic; low motion is a diagnostic, not a defect by itself |
 | **Before/after edit comparison** | implemented | `avqa.compare`, `quality/before_after.md` | structural metrics, not a quality score |
 | **Contextual UI director (modes A–F)** | implemented | `scripts/acs/ui_director.py`, `studio.py ui` | rule-based intents; the director chooses the mode, it does not write copy |
 | **Adaptive placement with escalation** | implemented | `overlays.resolve_ui_box`, `uiqa.py` | resolved once per shot: **no per-frame reflow** under camera motion |
@@ -54,12 +61,15 @@ Updated: 2026-11-05.
 | ElevenLabs provider | adapter only | `acs/providers/`, `voice.py` | gated by `authorize_spend`; not exercised in this session |
 | Word timings | partial | `kokoro_worker.words_from_pred` | model duration predictor, not forced alignment |
 | SRT subtitles from the real take | implemented | `scripts/acs/subtitles.py` | Spanish line breaking is word-count based |
-| Ducking + mix check | implemented | `scripts/acs/mixdown.py`, `mixcheck.py` | sidechain compressor, fixed attack/release |
+| Ducking + mix check | implemented | `scripts/acs/mixdown.py`, `mixcheck.py` | NumPy envelope ducking, 20 ms attack / 250 ms release, 80/120 ms edge fades; measured, not by ear |
 | Voice-driven shot fitting | implemented | `kokoro_tts.fit_shots` | stretches shots only when `--fit-shots` is passed |
-| Narration validation over take/stem/mix | implemented | `scripts/acs/narration.py`, `studio.py voicecheck` | signal, not intelligibility; no ASR |
+| Narration validation over take/stem/mix | implemented | `scripts/acs/narration.py`, `studio.py voicecheck` | signal, not intelligibility; mix-vs-voice correlation; no ASR |
+| Voice present in the muxed delivery | implemented | `qa.voice_fit`, `voice_in_delivery` | correlation after removing the bed; not a transcript |
 | One narrator in narration mode | implemented | `voice.speaker_of`, `narration.validate`, tests | explicit `dialogue: true` opt-out; no automatic dialogue detection |
 | Audio coverage through the last spoken line | implemented | `narration.validate`, `assemble.assemble`, `qa.audio_duration` | speech coverage, not a subjective mix judgment |
-| Render progress log + manifest restoration | implemented | `providers/local.py`, `studio.py render` | two consecutive provider renders still pending |
+| Render progress log + manifest restoration | implemented | `providers/local.py`, `studio.py render` | two full consecutive renders still pending |
+| Concurrent-render manifest lock | implemented | `studio.manifest_lock`, `ManifestBusy` | fail-fast (5 s); does not enable parallel renders |
+| Short-render determinism gate | implemented | `render --frames`, `--out` | structural (PSNR/SSIM); pixel MD5 differs from Chrome rasterisation |
 
 ## Character identity
 

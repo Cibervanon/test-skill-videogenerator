@@ -1,0 +1,68 @@
+{
+  "ok": true,
+  "provider": "kokoro",
+  "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+  "kokoro_version": "0.9.4",
+  "torch": "2.15.0+cpu",
+  "device": "cpu",
+  "cuda": false,
+  "voice": "ef_dora",
+  "lang_code": "e",
+  "speed": 0.98,
+  "sample_rate": 24000,
+  "duration": 2.755,
+  "chunks": 1,
+  "words": [
+    {
+      "w": "El",
+      "s": 0.0,
+      "e": 0.083,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "aprendiz",
+      "s": 0.083,
+      "e": 0.662,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "trajo",
+      "s": 0.662,
+      "e": 1.131,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "la",
+      "s": 1.131,
+      "e": 1.241,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "regadera",
+      "s": 1.241,
+      "e": 1.765,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "vacía.",
+      "s": 1.765,
+      "e": 2.427,
+      "p": "",
+      "source": "pred_dur"
+    }
+  ],
+  "alignment": "pred_dur",
+  "timing": {
+    "load_seconds": 21.86,
+    "synth_seconds": 5.31,
+    "realtime_factor": 1.93
+  },
+  "wall_seconds": 29.31,
+  "text": "El aprendiz trajo la regadera vacía.",
+  "speaker": "narrator"
+}

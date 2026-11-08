@@ -31,18 +31,18 @@
       "bytes": 5456624
     },
     "output\\final_video.mp4": {
-      "sha256": "312479756074c5aa1ffb7d87382a0ae9a24a186f50ffe1d6677afcf9d7b644cc",
-      "bytes": 17276883
+      "sha256": "6f849e4a92592b8d91966190056ced223966c0cf491184db630cdb88d052c011",
+      "bytes": 17279149
     },
     "output\\final_video_preview.mp4": {
-      "sha256": "f97d433987671677dc59fd4b3e4cab12b8b16a5ffa45f680d66deb1597a4b701",
-      "bytes": 1610724
+      "sha256": "e90be8ffb797868f11a07e137cf56f3ebb1e3167107cb805ab615302a87bf479",
+      "bytes": 1610167
     }
   },
   "delivery": {
     "output": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\av_direccion_story\\output\\final_video.mp4",
     "duration": 30.933,
-    "size_bytes": 17276883,
+    "size_bytes": 17279149,
     "video": {
       "codec": "h264",
       "width": 1080,
@@ -58,14 +58,14 @@
       "codec": "aac",
       "channels": 2,
       "sample_rate": 48000,
-      "bitrate": 190758,
+      "bitrate": 191337,
       "duration": 30.933,
       "streams": 1
     },
     "source": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\av_direccion_story\\output\\picture_silent.mp4",
     "soundtrack": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\av_direccion_story\\generation\\audio\\mix.wav",
     "target_lufs": -14.0,
-    "audio_duration": 30.933,
+    "audio_duration": 31.183,
     "note": "two-pass linear loudnorm; verify with qa.py"
   }
 }

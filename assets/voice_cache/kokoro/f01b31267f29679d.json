@@ -1,0 +1,68 @@
+{
+  "ok": true,
+  "provider": "kokoro",
+  "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+  "kokoro_version": "0.9.4",
+  "torch": "2.15.0+cpu",
+  "device": "cpu",
+  "cuda": false,
+  "voice": "ef_dora",
+  "lang_code": "e",
+  "speed": 0.98,
+  "sample_rate": 24000,
+  "duration": 2.305,
+  "chunks": 1,
+  "words": [
+    {
+      "w": "La",
+      "s": 0.0,
+      "e": 0.113,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "planta",
+      "s": 0.113,
+      "e": 0.563,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "bebió;",
+      "s": 0.563,
+      "e": 1.098,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "la",
+      "s": 1.098,
+      "e": 1.211,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "flor",
+      "s": 1.211,
+      "e": 1.436,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "abrió.",
+      "s": 1.436,
+      "e": 2.0,
+      "p": "",
+      "source": "pred_dur"
+    }
+  ],
+  "alignment": "pred_dur",
+  "timing": {
+    "load_seconds": 30.29,
+    "synth_seconds": 7.59,
+    "realtime_factor": 3.29
+  },
+  "wall_seconds": 41.66,
+  "text": "La planta bebió; la flor abrió.",
+  "speaker": "narrator"
+}

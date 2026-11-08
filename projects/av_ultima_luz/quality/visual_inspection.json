@@ -1,0 +1,395 @@
+{
+  "style": "cinematic",
+  "shots": [
+    {
+      "shot": "S01",
+      "scene": "doorway",
+      "mode": "A",
+      "line": "La luz del umbral seguía encendida.",
+      "still": "projects/av_ultima_luz/preproduction/board/S01.png",
+      "path": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\av_ultima_luz\\preproduction\\board\\S01.png",
+      "size": {
+        "width": 1080,
+        "height": 1920
+      },
+      "empty_ratio": 0.429,
+      "edge_density": 4.46,
+      "subject_score": 3.854,
+      "caption_contrast": {
+        "spread": 207.0,
+        "edges": 12.66
+      },
+      "palette_shift": 0.107,
+      "depth_bands": 3,
+      "depth_profile": [
+        6.0,
+        6.35,
+        11.38
+      ],
+      "has_captions": true,
+      "flags": [],
+      "status": "clean (pixels)"
+    },
+    {
+      "shot": "S02",
+      "scene": "doorway",
+      "mode": "A",
+      "line": "La vieja esperaba a alguien que no volvía.",
+      "still": "projects/av_ultima_luz/preproduction/board/S02.png",
+      "path": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\av_ultima_luz\\preproduction\\board\\S02.png",
+      "size": {
+        "width": 1080,
+        "height": 1920
+      },
+      "empty_ratio": 0.353,
+      "edge_density": 4.59,
+      "subject_score": 3.79,
+      "caption_contrast": {
+        "spread": 206.0,
+        "edges": 10.11
+      },
+      "palette_shift": 0.113,
+      "depth_bands": 3,
+      "depth_profile": [
+        5.48,
+        6.31,
+        12.37
+      ],
+      "has_captions": true,
+      "flags": [],
+      "status": "clean (pixels)"
+    },
+    {
+      "shot": "S03",
+      "scene": "doorway",
+      "mode": "A",
+      "line": "El farolero vino a apagarla.",
+      "still": "projects/av_ultima_luz/preproduction/board/S03.png",
+      "path": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\av_ultima_luz\\preproduction\\board\\S03.png",
+      "size": {
+        "width": 1080,
+        "height": 1920
+      },
+      "empty_ratio": 0.341,
+      "edge_density": 5.02,
+      "subject_score": 3.434,
+      "caption_contrast": {
+        "spread": 213.0,
+        "edges": 11.31
+      },
+      "palette_shift": 0.116,
+      "depth_bands": 3,
+      "depth_profile": [
+        5.77,
+        6.48,
+        12.65
+      ],
+      "has_captions": true,
+      "flags": [],
+      "status": "clean (pixels)"
+    },
+    {
+      "shot": "S04",
+      "scene": "doorway",
+      "mode": "A",
+      "line": "",
+      "still": "projects/av_ultima_luz/preproduction/board/S04.png",
+      "path": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\av_ultima_luz\\preproduction\\board\\S04.png",
+      "size": {
+        "width": 1080,
+        "height": 1920
+      },
+      "empty_ratio": 0.536,
+      "edge_density": 4.6,
+      "subject_score": 4.517,
+      "caption_contrast": {
+        "spread": 186.0,
+        "edges": 6.92
+      },
+      "palette_shift": 0.097,
+      "depth_bands": 3,
+      "depth_profile": [
+        4.47,
+        6.92,
+        11.26
+      ],
+      "has_captions": false,
+      "flags": [
+        "escena vacía: 54% de teselas planas, detalle 4.6"
+      ],
+      "status": "reviewed (pixels)"
+    },
+    {
+      "shot": "S05",
+      "scene": "doorway",
+      "mode": "A",
+      "line": "Él dejó su propia luz en la nieve.",
+      "still": "projects/av_ultima_luz/preproduction/board/S05.png",
+      "path": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\av_ultima_luz\\preproduction\\board\\S05.png",
+      "size": {
+        "width": 1080,
+        "height": 1920
+      },
+      "empty_ratio": 0.313,
+      "edge_density": 4.77,
+      "subject_score": 3.738,
+      "caption_contrast": {
+        "spread": 205.0,
+        "edges": 10.08
+      },
+      "palette_shift": 0.112,
+      "depth_bands": 3,
+      "depth_profile": [
+        5.41,
+        6.22,
+        12.8
+      ],
+      "has_captions": true,
+      "flags": [],
+      "status": "clean (pixels)"
+    },
+    {
+      "shot": "S06",
+      "scene": "doorway",
+      "mode": "A",
+      "line": "Y se fue sin decir nada.",
+      "still": "projects/av_ultima_luz/preproduction/board/S06.png",
+      "path": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\av_ultima_luz\\preproduction\\board\\S06.png",
+      "size": {
+        "width": 1080,
+        "height": 1920
+      },
+      "empty_ratio": 0.373,
+      "edge_density": 4.68,
+      "subject_score": 3.393,
+      "caption_contrast": {
+        "spread": 204.0,
+        "edges": 9.5
+      },
+      "palette_shift": 0.11,
+      "depth_bands": 3,
+      "depth_profile": [
+        5.42,
+        6.73,
+        12.26
+      ],
+      "has_captions": true,
+      "flags": [],
+      "status": "clean (pixels)"
+    }
+  ],
+  "overlays": {
+    "ok": true,
+    "style": "cinematic",
+    "problems": [],
+    "warnings": [],
+    "counts": {},
+    "shots": [
+      {
+        "id": "S01",
+        "overlays": []
+      },
+      {
+        "id": "S02",
+        "overlays": []
+      },
+      {
+        "id": "S03",
+        "overlays": []
+      },
+      {
+        "id": "S04",
+        "overlays": []
+      },
+      {
+        "id": "S05",
+        "overlays": []
+      },
+      {
+        "id": "S06",
+        "overlays": []
+      }
+    ]
+  },
+  "ui": {
+    "ok": true,
+    "modes": {
+      "A": 6
+    },
+    "totals": {
+      "overlays": 0,
+      "problems": 0,
+      "warnings": 0
+    },
+    "shots": [
+      {
+        "shot": "S01",
+        "mode": "A",
+        "mode_reason": "the scene already carries the information: no UI",
+        "intent": "hook",
+        "overlays": [],
+        "flags": [],
+        "status": "clean"
+      },
+      {
+        "shot": "S02",
+        "mode": "A",
+        "mode_reason": "the scene already carries the information: no UI",
+        "intent": "setup",
+        "overlays": [],
+        "flags": [],
+        "status": "clean"
+      },
+      {
+        "shot": "S03",
+        "mode": "A",
+        "mode_reason": "the scene already carries the information: no UI",
+        "intent": "escalation",
+        "overlays": [],
+        "flags": [],
+        "status": "clean"
+      },
+      {
+        "shot": "S04",
+        "mode": "A",
+        "mode_reason": "the scene already carries the information: no UI",
+        "intent": "reaction",
+        "overlays": [],
+        "flags": [],
+        "status": "clean"
+      },
+      {
+        "shot": "S05",
+        "mode": "A",
+        "mode_reason": "the scene already carries the information: no UI",
+        "intent": "reveal",
+        "overlays": [],
+        "flags": [],
+        "status": "clean"
+      },
+      {
+        "shot": "S06",
+        "mode": "A",
+        "mode_reason": "the scene already carries the information: no UI",
+        "intent": "close",
+        "overlays": [],
+        "flags": [],
+        "status": "clean"
+      }
+    ],
+    "problems": [],
+    "warnings": [],
+    "method": "geometría resuelta + ventanas del manifiesto; la lectura se estima por palabras del propio elemento",
+    "limits": [
+      "la caja del cuerpo es un sobre aproximado (cabeza, torso, abrigo, arco de brazos): no rastrea dedos",
+      "no hay OCR ni comprensión semántica: el motivo narrativo se audita contra el campo `intent` declarado",
+      "el tiempo de lectura es una estimación de 3.3 palabras/s, no una medición ocular"
+    ],
+    "render": {
+      "status": "measured",
+      "video": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\av_ultima_luz\\output\\final_video.mp4",
+      "frames": [
+        {
+          "shot": "S01",
+          "mode": "A",
+          "seconds": 1.98,
+          "sample": 0.55,
+          "frame": "quality/ui_frames/S01.png",
+          "scene_edges": 3.18,
+          "ui": null,
+          "ui_note": "plano sin UI"
+        },
+        {
+          "shot": "S02",
+          "mode": "A",
+          "seconds": 5.8,
+          "sample": 0.55,
+          "frame": "quality/ui_frames/S02.png",
+          "scene_edges": 3.68,
+          "ui": null,
+          "ui_note": "plano sin UI"
+        },
+        {
+          "shot": "S03",
+          "mode": "A",
+          "seconds": 9.69,
+          "sample": 0.55,
+          "frame": "quality/ui_frames/S03.png",
+          "scene_edges": 3.72,
+          "ui": null,
+          "ui_note": "plano sin UI"
+        },
+        {
+          "shot": "S04",
+          "mode": "A",
+          "seconds": 12.88,
+          "sample": 0.55,
+          "frame": "quality/ui_frames/S04.png",
+          "scene_edges": 3.82,
+          "ui": null,
+          "ui_note": "plano sin UI"
+        },
+        {
+          "shot": "S05",
+          "mode": "A",
+          "seconds": 16.19,
+          "sample": 0.55,
+          "frame": "quality/ui_frames/S05.png",
+          "scene_edges": 3.68,
+          "ui": null,
+          "ui_note": "plano sin UI"
+        },
+        {
+          "shot": "S06",
+          "mode": "A",
+          "seconds": 19.77,
+          "sample": 0.55,
+          "frame": "quality/ui_frames/S06.png",
+          "scene_edges": 3.15,
+          "ui": null,
+          "ui_note": "plano sin UI"
+        }
+      ],
+      "by_mode": {
+        "A": {
+          "shots": 6,
+          "scene_edges": 3.54,
+          "ui_contrast": null,
+          "ui_shots": 0
+        }
+      },
+      "note": "scene_edges es energía de bordes del frame completo; ui_contrast es el rango p95-p5 dentro de la caja, medido en el centro de la ventana del elemento. Confirma que B/C conservan escena y que E/F son placas gráficas; no puntúa gusto. Las etiquetas ancladas al actor no tienen caja declarada y no se miden."
+    }
+  },
+  "aesthetic_review": {
+    "status": "pending",
+    "source": "projects/av_ultima_luz/preproduction/visual_review.json",
+    "note": "composition/acting/storytelling are not measurable by this tool"
+  },
+  "method": {
+    "pixels": "PIL on the storyboard stills (downscaled tiles, luma, edge energy, quantised palette)",
+    "geometry": "overlay boxes resolved from the manifest with the renderer's own constants",
+    "limitations": "no semantic understanding, no OCR, no judgement of taste"
+  },
+  "problems": [],
+  "kind_map": {
+    "empty_ratio": "automatic (pixels)",
+    "edge_density": "automatic (pixels)",
+    "subject_score": "automatic (pixels)",
+    "caption_contrast": "automatic (pixels)",
+    "palette_shift": "automatic (pixels)",
+    "depth_bands": "automatic (pixels)",
+    "overlays": "geometry (manifest)",
+    "ui": "geometry + timing (manifest)",
+    "cuts": "automatic (video)"
+  },
+  "thresholds": {
+    "empty_ratio_max": 0.62,
+    "caption_spread_min": 70.0,
+    "caption_edge_min": 5.0,
+    "subject_score_min": 1.55,
+    "palette_shift_max": 0.3,
+    "depth_bands_min": 2,
+    "cut_sync_tolerance_s": 0.35
+  }
+}

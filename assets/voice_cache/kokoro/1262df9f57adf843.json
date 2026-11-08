@@ -1,0 +1,96 @@
+{
+  "ok": true,
+  "provider": "kokoro",
+  "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+  "kokoro_version": "0.9.4",
+  "torch": "2.15.0+cpu",
+  "device": "cpu",
+  "cuda": false,
+  "voice": "ef_dora",
+  "lang_code": "e",
+  "speed": 0.98,
+  "sample_rate": 24000,
+  "duration": 4.155,
+  "chunks": 1,
+  "words": [
+    {
+      "w": "La",
+      "s": 0.0,
+      "e": 0.107,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "última",
+      "s": 0.107,
+      "e": 0.506,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "hoja",
+      "s": 0.506,
+      "e": 0.772,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "del",
+      "s": 0.772,
+      "e": 0.879,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "invernadero",
+      "s": 0.879,
+      "e": 1.784,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "llevaba",
+      "s": 1.784,
+      "e": 2.157,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "tres",
+      "s": 2.157,
+      "e": 2.397,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "días",
+      "s": 2.397,
+      "e": 2.69,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "pidiendo",
+      "s": 2.69,
+      "e": 3.143,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "agua.",
+      "s": 3.143,
+      "e": 3.596,
+      "p": "",
+      "source": "pred_dur"
+    }
+  ],
+  "alignment": "pred_dur",
+  "timing": {
+    "load_seconds": 22.58,
+    "synth_seconds": 8.01,
+    "realtime_factor": 1.93
+  },
+  "wall_seconds": 32.91,
+  "text": "La última hoja del invernadero llevaba tres días pidiendo agua.",
+  "speaker": "narrator"
+}

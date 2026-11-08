@@ -1,5 +1,207 @@
 # CHANGELOG
 
+## 0.10.6 — 2026-11-07
+
+Character state is now planned, carried and audited, and a new workshop story
+exercises it end to end. The existing renderer and preset rig are reused; this is
+a planning/state layer, not a second animation system.
+
+- **Continuity ledger.** `av_director` records entry/exit `x`, `facing`, `hold`,
+  preset, scene and shift per actor, and exposes `manifest.continuity.states`.
+  `carry` inherits the previous exit and is refused across a scene change.
+- **Teleport guard.** A same-scene move over 260 px fails unless the shot declares
+  `continuityMotive`. Facing flips and held-prop changes without a phase are
+  warnings, not silent passes.
+- **QA.** `avqa.character_continuity` reports carried states, unmotivated shifts
+  and a missing ledger; 3 new planner/QA tests cover inheritance, scene refusal
+  and the teleport guard.
+- **New set and story.** `Workshop.tsx` (dawn window, worktable, dress form,
+  snapped tape, skipped stitch); `projects/av_ultima_medida/` — *La última
+  medida*, 6 shots / 22.4 s, hook → setup → escalation → reaction → reveal →
+  close. No bell, snow, village or cemetery.
+- **Render evidence.** 672 frames, 1080×1920, 30 fps, H.264/AAC, 11.989.156
+  bytes; QA **13/13**, `continuity_issues: []`, `inspect` **0/6**, `evaluate`
+  **10 measured / 0 failures / 4 human pending**.
+- **Composition correction.** An initial empty-set reading was fixed by returning
+  the tailor to S01, not by lowering the QA threshold.
+- **Verification.** `184 passed`; `tsc --noEmit` exit 0.
+
+## 0.10.5 — 2026-11-07
+
+Compound actions and per-shot motion evidence. The existing presets, rig,
+manifest and renderer are reused; this is an action score and a measurement, not
+a second animation system.
+
+### Added
+
+- **`ActorSpec.sequence`**: ordered phases of existing presets on the shot clock.
+  `S02` is `walkIn → turn`; `S03` is `turn → reach`. Each phase is evaluated on
+  its own clock and adjacent phases cross-fade over ±4% of the shot.
+- **Planner validation**: unknown phase presets, empty sequences, invalid windows
+  and overlaps fail before a manifest is written. Pose gaps and sequences ending
+  mid-walk are warnings; `avqa` turns a last `walkIn` into `action_completion`
+  failure.
+- **Per-shot motion audit**: `motion.analyze_shots` measures each visible shot
+  (seconds minus incoming overlap) and `qa` writes `shot_motion` with samples,
+  mean energy, moving ratio, pan/tilt and low-motion flags. It is a translation
+  heuristic, not an acting score.
+
+### Demo
+
+- S02 completes a walk, stop and turn; S03 turns to the rope and reaches it.
+  `avqa`: **2 sequences / 4 phases**, no unfinished sequence.
+- Render: **613 frames in 500,47 s**; delivery 612 frames, 20,433 s, 11.024.558
+  bytes.
+- QA **13/13**: voice **0,9273**, loudness −17,2 dB, motion **8,858**, freeze
+  **0,0489**. `inspect`: **0/6**. `avqa`: **20/20**. `evaluate`: **10 measured /
+  4 human pending**.
+- Per-shot motion: minimum **2,438**, mean **4,249**, **no low-motion shots**.
+  S02 **4,334** and S03 **4,337** are above the diagnostic floor.
+- Tests: **181 passed**; `tsc --noEmit` exit 0.
+
+### Limits
+
+- Phases interpolate preset parameters; there is still no IK, prop contact or
+  viseme track. A phase boundary is a blend, not a physical handoff.
+- `sequence` is within one shot. Cross-shot character state is still declared by
+  the manifest, not simulated.
+- Per-shot motion is translation-only and low motion is reported, not
+automatically treated as a defect: S04 is a deliberate held reaction.
+
+## 0.10.4 — 2026-11-06
+
+Direction continuity, interaction presets and a shorter rendered demo. The
+renderer, catalogue, voice path and feedback store are reused; no second engine
+and no paid provider.
+
+### Added
+
+- **`cameraIntensity`** per shot (0.35–1.35, static 0): the existing camera
+  vocabulary can now whisper or push without changing the rig. `CameraRig`
+  scales translation, rotation and the scale delta by it.
+- **`handheld`** camera move: deterministic low-amplitude operator drift, not
+  random noise.
+- **`point` and `react` acting presets**: eyes-then-arm pointing for interaction,
+  and a recoil/brow/breath curve for a wordless reaction close-up.
+- **Creative QA continuity checks** in `avqa`: `beat_order`, `beat_framing`,
+  `axis_continuity`, `static_intent`, `shot_purpose`, `speech_density` and
+  `camera_intensity`. An unmotivated static shot, a reaction in wide, a late hook
+  or an axis flip now fails the structural audit.
+- **Length-independent before/after rates**: action, two-actor shots, camera and
+  scale variety per shot, and audio events per second.
+- **Mix edge fades**: 80 ms in / 120 ms out on the mix and ducked bed, preventing
+  a click after AAC muxing.
+
+### Demo
+
+- `projects/av_direccion_demo/`: **6 planos / 20,433 s**, hook → setup →
+  development → reaction → escalation → close. Five spoken lines (36 words,
+  15,15 s), one wordless reaction, 10 sound cues and two motivated dissolves.
+- **613 frames rendered in 751,16 s**; `final_video.mp4` is 612 frames, 11,0 MB,
+  1080×1920 at 30 fps, H.264/AAC 48 kHz stereo.
+- QA **13/13**: `voice_in_delivery` **0,9273**, loudness −17,2 dB, motion **8,853**,
+  black 0, freeze 0,049. `inspect`: **0/6** flagged, overlays OK, UI mode A.
+- `avqa`: **20/20**, no structural failures. `evaluate`: **10 measured / 4 human
+  pending**.
+- Mix at `music_gain=0.14`: **1 window** within 3 dB of the voice.
+- Tests: **178 passed**; `tsc --noEmit` exit 0.
+
+### Limits
+
+- The demo is structural evidence, not a solved film: narrative, acting, rhythm
+  and style remain human review (`visual_review.json` is still absent).
+- No OCR/ASR, no lip-sync, no over-the-shoulder/POV geometry and no prop-contact
+  IK. `point`/`react` are authored curves.
+- The full 31 s story was not re-rendered; the earlier audio repair still stands.
+
+## 0.10.3 — 2026-11-06
+
+Critical audio repair plus the architectural risks left open by the 0.10.2
+audit. No second renderer, no new dependency and no paid provider call.
+
+### Fixed
+
+- **The delivered video had no narration.** The FFmpeg mix graph reused the
+  voice as the `sidechaincompress` key and as an `amix` input, and referenced
+  `[ducked]` twice; the output was essentially amplified score. The old MP4
+  correlated 0.987 with the old mix but **0.0002** with `voice.wav`.
+  `mixdown.py` is now a deterministic NumPy mixer: 48 kHz stereo stems, a 20 ms
+  RMS voice envelope, 20 ms attack / 250 ms release, attenuated score, voice
+  summed and a linear limiter at 0.89. Peak is 0.844, not 1.47.
+- `assemble` now prefers `mix.wav` over `score.wav`, so the corrected mix cannot
+  be silently bypassed.
+- `qa` gained `voice_in_delivery`: the muxed MP4 is correlated against the voice
+  stem after removing the bed. `voicecheck` gained mix-vs-voice correlation and
+  now fails when the mix does not contain the narration stem.
+- Concurrent renders can no longer swap the active manifest under each other.
+  A fail-fast file lock (`ManifestBusy`) covers the whole command; a second
+  process exits in 5 s, and locks older than 3 h are discarded.
+- `render` accepts `--frames` and `--out`, enabling a short reproducibility gate
+  without overwriting `picture_silent.mp4`.
+- QA threshold `loudness_range_lufs` was renamed to `loudness_band_db`; the old
+  key is still accepted as an alias.
+
+### Evidence
+
+- `python -m pytest tests -q`: **174 passed** (167 before), 68.06 s.
+- `npx tsc --noEmit`: exit 0.
+- `studio.py voicecheck`: OK, 8 lines, 58 words, 23.09 s; mix-vs-voice
+  **0.8985**, no problems.
+- `studio.py qa`: **PASS 13/13**; `voice_in_delivery` **0.9209**.
+- `studio.py mix --margin 3`: **3 windows** within 3 dB of the voice.
+- Delivery: 30.933 s, 1080×1920, 30 fps, H.264/AAC 48 kHz stereo, 17,279,149
+  bytes, narration present.
+- Mix regeneration is byte-identical: SHA-256 prefix `6fb129fa9384dd4aed6f18dc`
+  on both runs.
+- Two 30-frame renders through the same manifest path: PSNR **53.12 dB**, SSIM
+  **0.99696**, mean absolute difference **0.39/255**. Exact pixel MD5 differs
+  because Chrome re-rasterises the SVG grain filter.
+
+### Limits
+
+- The MP4 was re-assembled from the existing picture, not re-rendered; its
+  burned-in captions are still the previous build's.
+- Two consecutive **full 927-frame** renders remain open; the short structural
+  gate passes.
+- Timings are Kokoro `pred_dur`, not forced alignment; no OCR, ASR or lip-sync.
+
+## 0.10.2 — 2026-11-06
+
+Repository audit and targeted repairs. No second renderer, no new dependency
+and no paid provider call.
+
+### Fixed
+
+- Burned-in captions now consume the take clock. A new `studio.py captions`
+  stage maps `voice_plan.json` word timings onto `shot.captions` in shot-local
+  seconds; `Subtitles.buildCues` reveals each chunk on its real first word and
+  keeps the character-weight fallback only for manifests without timings.
+- `narration.validate` read `mix.wav` as if it were always 48 kHz. A mix at any
+  other rate could shift every window or be reported as silent; it now uses the
+  rate returned by the file.
+- `qa.caption_coverage` raised `KeyError` on a shot without a `line` key. It now
+  treats a missing line as wordless.
+- `LIMITATIONS.md` claimed ~500 frames/min and 8–10 minutes for a 34 s film.
+  The measured render is 927 frames in 1464.45 s (38 frames/min); docs corrected.
+
+### Evidence
+
+- `python -m pytest tests -q`: **167 passed** (159 before), 73.47 s.
+- `npx tsc --noEmit`: exit 0.
+- `studio.py captions`: 8 shots, 23 cues, **0 ms** max reveal error (gate 120 ms).
+- `studio.py storyboard --scale 0.35`: 10 stills + contact sheet in 54 s; active
+  manifest hash unchanged (`2af5cfb4a38a5915`).
+- `studio.py voicecheck`: OK, 8 lines, 58 words, 23.09 s.
+- `studio.py qa`: **PASS 12/12** on the 30.933 s delivery.
+- Full audit: `quality/repository_audit/`.
+
+### Limits
+
+- The delivered MP4 was not re-rendered (24 min); its captions are from the
+  previous build. The storyboard is the render evidence for the new path.
+- Two consecutive full renders remain open.
+- Timings are Kokoro `pred_dur`, not forced alignment; no OCR, ASR or lip-sync.
+
 ## 0.10.1 — 2026-11-05
 
 Corrective maintenance of the existing story pipeline. No UI work and no second

@@ -26,7 +26,7 @@
     "min_motion_energy": 1.0,
     "max_black_ratio": 0.02,
     "max_freeze_ratio": 0.55,
-    "loudness_range_lufs": [
+    "loudness_band_db": [
       -22.0,
       -11.0
     ],

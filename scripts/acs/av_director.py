@@ -45,9 +45,22 @@ CAMERA_MOVES = (
     "trackLeft",
     "trackRight",
     "reframe",
+    "handheld",
 )
 
 SOUND_TYPES = ("bell", "footstep", "dig")
+
+ACTOR_PRESETS = (
+    "idle",
+    "walkIn",
+    "closeup",
+    "dig",
+    "reach",
+    "turn",
+    "call",
+    "point",
+    "react",
+)
 
 DEFAULT_SCALE = {
     "hook": "detail",
@@ -69,6 +82,17 @@ DEFAULT_CAMERA = {
     "reaction": "dollyIn",
     "reveal": "pushInSlow",
     "close": "dollyOut",
+}
+
+DEFAULT_CAMERA_INTENSITY = {
+    "hook": 0.9,
+    "setup": 0.7,
+    "development": 0.8,
+    "insert": 0.0,
+    "escalation": 1.0,
+    "reaction": 0.85,
+    "reveal": 0.9,
+    "close": 0.75,
 }
 
 DEFAULT_MOTIVE = {
@@ -108,6 +132,158 @@ def _transition(beat: dict, default_frames: int) -> tuple[str, int, str]:
     return kind, frames, str(motive)
 
 
+def _actor_sequence(shot_id: str, actor: dict) -> tuple[list[str], list[str]]:
+    """Validate a compound performance and fill its local time windows.
+
+    A sequence is intentionally small: ordered phases on the shot's normalized
+    clock, each evaluated by an existing preset. This is not a new animation
+    system; it is the action score the existing rig was missing. Overlaps are
+    errors, because two phases cannot own the same time. Gaps are warnings; they
+    render as a held pose and should usually be an explicit `idle` phase.
+    """
+    problems: list[str] = []
+    warnings: list[str] = []
+    raw = actor.get("sequence")
+    if raw is None:
+        return problems, warnings
+    actor_id = actor.get("id", "?")
+    if not isinstance(raw, list) or len(raw) < 2:
+        return [f"{shot_id}/{actor_id}: sequence needs at least two phases"], warnings
+
+    cursor = 0.0
+    normalized: list[dict] = []
+    for index, phase in enumerate(raw):
+        if not isinstance(phase, dict):
+            problems.append(f"{shot_id}/{actor_id}: sequence phase {index} is not an object")
+            continue
+        preset = str(phase.get("preset") or "")
+        if preset not in ACTOR_PRESETS:
+            problems.append(f"{shot_id}/{actor_id}: unknown phase preset {preset!r}")
+        start = _number(phase.get("start"), cursor)
+        end = _number(phase.get("end"), min(1.0, start + 0.25))
+        if not 0.0 <= start < end <= 1.0:
+            problems.append(f"{shot_id}/{actor_id}: phase {index} window {start}..{end} is outside 0..1")
+        if start < cursor - 0.001:
+            problems.append(f"{shot_id}/{actor_id}: phase {index} overlaps the previous phase")
+        if start > cursor + 0.2:
+            warnings.append(f"{shot_id}/{actor_id}: phase {index} leaves a {start - cursor:.2f} pose gap; add an idle phase")
+        cursor = max(cursor, end)
+        normalized.append({**phase, "preset": preset, "start": round(start, 3), "end": round(end, 3)})
+
+    if normalized:
+        if normalized[0]["start"] > 0.02:
+            warnings.append(f"{shot_id}/{actor_id}: sequence starts at {normalized[0]['start']}; the actor holds the base pose first")
+        if normalized[-1]["end"] < 0.98:
+            warnings.append(f"{shot_id}/{actor_id}: sequence ends at {normalized[-1]['end']}; the last pose is held")
+        if normalized[-1]["preset"] == "walkIn":
+            warnings.append(f"{shot_id}/{actor_id}: sequence ends mid-walk; add a stop/turn phase")
+        actor["sequence"] = normalized
+    return problems, warnings
+
+
+# A same-scene shift larger than this is not a cut; it is a teleport. A story
+# may still declare an intentional blocking move with `continuityMotive`.
+MAX_SAME_SCENE_SHIFT = 260.0
+
+
+def _actor_exit(actor: dict) -> dict:
+    """The actor state at the end of a shot, resolved through the same presets."""
+    sequence = actor.get("sequence") or []
+    if sequence:
+        last = sequence[-1]
+        x = _number(last.get("x"), _number(actor.get("x"), 540.0))
+        if last.get("preset") == "walkIn":
+            x += _number(last.get("to"), 0.0)
+        facing = int(_number(last.get("facing"), _number(actor.get("facing"), 1)))
+        hold = str(last.get("hold") or actor.get("hold") or "none")
+        preset = str(last.get("preset") or actor.get("preset") or "idle")
+    else:
+        x = _number(actor.get("x"), 540.0)
+        if actor.get("preset") == "walkIn":
+            x += _number(actor.get("to"), 0.0)
+        facing = int(_number(actor.get("facing"), 1))
+        hold = str(actor.get("hold") or "none")
+        preset = str(actor.get("preset") or "idle")
+    return {
+        "x": round(x, 1),
+        "facing": 1 if facing >= 0 else -1,
+        "hold": hold,
+        "preset": preset,
+    }
+
+
+def _has_directional_preset(actor: dict) -> bool:
+    presets = [str(actor.get("preset") or "idle")]
+    presets.extend(str(p.get("preset") or "idle") for p in actor.get("sequence") or [] if isinstance(p, dict))
+    return any(p in {"turn", "point", "react", "walkIn"} for p in presets)
+
+
+def _resolve_actor_continuity(
+    shot_id: str,
+    scene: str | None,
+    actor: dict,
+    ledger: dict[str, dict],
+    problems: list[str],
+    warnings: list[str],
+) -> dict:
+    """Resolve an actor's entry state from the previous shot, or fail loudly.
+
+    `carry: true` is the explicit continuation contract: x, facing and held prop
+    come from the prior exit. It is deliberately refused across a scene change,
+    because that would be a teleport disguised as continuity. An explicit move
+    in the same scene is allowed only when it declares a `continuityMotive` and
+    stays below the teleport threshold.
+    """
+    actor_id = str(actor.get("id") or "?")
+    previous = ledger.get(actor_id)
+    carry = bool(actor.get("carry")) or str(actor.get("entry")) == "carry"
+    if carry:
+        if previous is None:
+            problems.append(f"{shot_id}/{actor_id}: carry requested but there is no previous state")
+        elif previous["scene"] != scene:
+            problems.append(f"{shot_id}/{actor_id}: cannot carry across scene change {previous['scene']!r} -> {scene!r}")
+        else:
+            actor["x"] = previous["exit"]["x"]
+            actor["facing"] = previous["exit"]["facing"]
+            actor["hold"] = previous["exit"]["hold"]
+
+    if actor.get("x") is None:
+        problems.append(f"{shot_id}/{actor_id}: no x position and no carried state")
+        actor["x"] = 540.0
+
+    entry = {
+        "x": round(_number(actor.get("x"), 540.0), 1),
+        "facing": 1 if int(_number(actor.get("facing"), 1)) >= 0 else -1,
+        "hold": str(actor.get("hold") or "none"),
+    }
+    shift = None
+    if previous is not None and previous["scene"] == scene:
+        shift = round(entry["x"] - previous["exit"]["x"], 1)
+        if not carry and abs(shift) > MAX_SAME_SCENE_SHIFT and not str(actor.get("continuityMotive") or "").strip():
+            problems.append(
+                f"{shot_id}/{actor_id}: {abs(shift):.0f}px same-scene shift without continuityMotive "
+                f"({previous['exit']['x']} -> {entry['x']})"
+            )
+        if entry["facing"] != previous["exit"]["facing"] and not _has_directional_preset(actor):
+            warnings.append(f"{shot_id}/{actor_id}: facing flips without a turn/point/react phase")
+        if entry["hold"] != previous["exit"]["hold"] and not any(
+            isinstance(p, dict) and p.get("hold") for p in actor.get("sequence") or []
+        ):
+            warnings.append(f"{shot_id}/{actor_id}: held prop changes without an explicit phase")
+
+    exit_state = _actor_exit(actor)
+    actor["continuity"] = {
+        "entry": entry,
+        "exit": exit_state,
+        "carried": carry,
+        "shift": shift,
+        "scene": scene,
+        "motive": str(actor.get("continuityMotive") or ""),
+    }
+    ledger[actor_id] = {"scene": scene, "exit": exit_state}
+    return {"shot": shot_id, "actor": actor_id, **actor["continuity"]}
+
+
 def _sound(beat: dict, seconds: float) -> tuple[list[dict], list[str]]:
     problems: list[str] = []
     cues: list[dict] = []
@@ -140,6 +316,8 @@ def plan(spec: dict) -> dict:
     narration = bool(spec.get("narration", False))
     shots: list[dict] = []
     seen_ids: set[str] = set()
+    ledger: dict[str, dict] = {}
+    continuity_records: list[dict] = []
 
     for index, beat in enumerate(beats):
         shot_id = str(beat.get("id") or f"S{index + 1:02d}")
@@ -159,6 +337,12 @@ def plan(spec: dict) -> dict:
         if camera not in CAMERA_MOVES:
             problems.append(f"{shot_id}: unknown camera {camera!r}")
             camera = DEFAULT_CAMERA[function]
+        camera_intensity = _number(beat.get("cameraIntensity"), DEFAULT_CAMERA_INTENSITY[function])
+        if camera == "static":
+            camera_intensity = 0.0
+        elif not 0.35 <= camera_intensity <= 1.35:
+            problems.append(f"{shot_id}: cameraIntensity {camera_intensity} outside 0.35..1.35")
+            camera_intensity = DEFAULT_CAMERA_INTENSITY[function]
 
         seconds = _number(beat.get("seconds"), 3.0)
         if seconds < 0.8:
@@ -188,6 +372,12 @@ def plan(spec: dict) -> dict:
             actor.setdefault("scale", 1.5)
             actor.setdefault("facing", 1)
             actor.setdefault("hold", "none")
+            sequence_problems, sequence_warnings = _actor_sequence(shot_id, actor)
+            problems.extend(sequence_problems)
+            warnings.extend(sequence_warnings)
+            continuity_records.append(
+                _resolve_actor_continuity(shot_id, beat.get("scene"), actor, ledger, problems, warnings)
+            )
 
         shots.append(
             {
@@ -196,6 +386,7 @@ def plan(spec: dict) -> dict:
                 "beat": function,
                 "scene": beat.get("scene"),
                 "camera": camera,
+                "cameraIntensity": round(camera_intensity, 3),
                 "scale": scale,
                 "cameraMotive": camera_motive,
                 "seconds": round(seconds, 3),
@@ -227,12 +418,31 @@ def plan(spec: dict) -> dict:
         warnings.append("no hook: the opening may explain instead of attract")
     if beats and not any(s["beat"] == "close" for s in shots):
         warnings.append("no close: the edit has no declared ending")
+    if shots and shots[0]["beat"] != "hook" and any(s["beat"] == "hook" for s in shots):
+        warnings.append("the hook is not the opening shot: attention arrives late")
     if shots and shots[-1]["beat"] != "close" and any(s["beat"] == "close" for s in shots):
         warnings.append("the close is not the final shot")
     if any(s["beat"] == "hook" for s in shots):
         hook = next(s for s in shots if s["beat"] == "hook")
         if hook["seconds"] > 3.8:
             warnings.append(f"the hook takes {hook['seconds']}s; the premise may arrive late")
+
+    # Continuity record: the planner does not silently move people between
+    # shots. These values are audited again by avqa; here they are explicit
+    # data for the editor and for before/after comparisons.
+    scene_changes = sum(1 for a, b in zip(shots, shots[1:]) if a.get("scene") != b.get("scene"))
+    actor_positions = {
+        actor.get("id"): []
+        for shot in shots
+        for actor in shot.get("actors", [])
+        if actor.get("id")
+    }
+    for shot in shots:
+        for actor in shot.get("actors", []):
+            if actor.get("id"):
+                actor_positions[actor["id"]].append(
+                    {"shot": shot["id"], "x": actor.get("x"), "facing": actor.get("facing")}
+                )
 
     total = sum(s["seconds"] for s in shots) - sum(s["transitionIn"] for s in shots[1:]) / fps
     functions: dict[str, int] = {}
@@ -254,6 +464,11 @@ def plan(spec: dict) -> dict:
         "transitionFrames": default_frames,
         "narration": narration,
         "library": copy.deepcopy(spec.get("library") or []),
+        "continuity": {
+            "states": continuity_records,
+            "carried": sum(1 for state in continuity_records if state.get("carried")),
+            "note": "actor entry/exit state resolved by av_director; carry refuses scene changes",
+        },
         "shots": shots,
     }
     record = {
@@ -265,6 +480,21 @@ def plan(spec: dict) -> dict:
             "functions": functions,
             "missing": [f for f in ("hook", "setup", "escalation", "reaction", "close") if f not in functions],
             "hook_seconds": next((s["seconds"] for s in shots if s["beat"] == "hook"), None),
+            "hook_first": bool(shots and shots[0]["beat"] == "hook"),
+            "close_last": bool(shots and shots[-1]["beat"] == "close"),
+            "order": [s["beat"] for s in shots],
+        },
+        "continuity": {
+            "scene_changes": scene_changes,
+            "actor_positions": actor_positions,
+            "carried": sum(1 for state in continuity_records if state.get("carried")),
+            "states": continuity_records,
+            "note": "carry inherits x/facing/hold from the previous exit; a same-scene jump over 260px needs continuityMotive",
+        },
+        "performance": {
+            "actors_with_sequence": sum(1 for s in shots for a in s.get("actors", []) if a.get("sequence")),
+            "phases": sum(len(a.get("sequence") or []) for s in shots for a in s.get("actors", [])),
+            "note": "compound actions are ordered phases of existing presets, not a second animation system",
         },
         "edit": {
             "shots": len(shots),
@@ -282,6 +512,7 @@ def plan(spec: dict) -> dict:
                 "beat": s["beat"],
                 "scale": s["scale"],
                 "camera": s["camera"],
+                "cameraIntensity": s["cameraIntensity"],
                 "seconds": s["seconds"],
                 "cameraMotive": s["cameraMotive"],
                 "transition": s["transition"],

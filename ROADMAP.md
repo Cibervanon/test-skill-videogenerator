@@ -3,6 +3,58 @@
 Ordered by what the evidence says is weak, not by what is fashionable. Each
 item names the gate that would prove it done.
 
+## Done — 0.10.6: carried character state and a new story
+
+| Item | Why | Done when | State |
+|---|---|---|---|
+| Carried actor state | the next shot reset position, facing and held prop | `carry` inherits the previous exit and refuses a scene change | 5 carried states in `av_ultima_medida`; `avqa.character_continuity` passes |
+| Teleport guard | a same-scene jump looked like drift | a >260 px move fails without `continuityMotive` | planner tests reject an unmotivated 378 px jump |
+| New workshop set | another winter/bell story would not prove range | a non-snow interior with a new object and dawn light renders | `Workshop.tsx`; S01–S06; no bell or snow |
+| New story structure | the old premise could be repeated with new labels | hook, objective, obstacle, reaction, escalation and close differ | **La última medida**; 6 shots / 22.4 s |
+| Rendered proof | continuity must survive the MP4, not only the manifest | render, QA, inspect and frame strip | **672 frames**; QA **13/13**; inspect **0/6**; `continuity_issues: []` |
+| Current regression suite | new state code must not break the delivery | full suite + `tsc` | **184 passed**; `tsc` exit 0 |
+
+## Done — 0.10.5: compound action and per-shot motion
+
+| Item | Why | Done when | State |
+|---|---|---|---|
+| Compound action sequences | a preset per shot cannot show a beginning, a change and an end | existing presets can be ordered inside one shot with normalized windows | `ActorSpec.sequence`; S02 walk→turn, S03 turn→reach; **2 sequences / 4 phases** |
+| Action completion audit | a sequence can end mid-walk and still render | `avqa` rejects invalid windows/overlaps and a last `walkIn` | `action_completion` passes; 3 new tests |
+| Per-shot motion evidence | a global mean hides one dead shot | every shot is measured independently | `qa.shot_motion`; min **2,438**, **no low-motion shots** |
+| Rendered proof | the action must survive the MP4 | assemble + QA + inspect + frames | **613 frames / 500,47 s**; QA **13/13**; inspect **0/6** |
+| Current regression suite | new code must not break the delivery | full suite + `tsc` | **184 passed**; `tsc` exit 0 |
+
+## Done — 0.10.4: direction continuity, interaction and a shorter demo
+
+| Item | Why | Done when | State |
+|---|---|---|---|
+| Camera intensity + `handheld` | a vocabulary of moves is not a vocabulary of pressure | every move can be authored at 0.35–1.35 without changing the rig | manifest `cameraIntensity`; `handheld` deterministic; `static` audited for a motive |
+| Interaction presets | reach/turn did not cover pointing or a wordless reaction | the rig has explicit `point` and `react` performances | 5/6 shots with action in the demo; `tsc` 0 |
+| Narrative continuity audit | beats existed but order, framing and screen direction were unchecked | `avqa` fails a late hook, a close that is not last, a reaction in wide, an axis flip, an unmotivated static shot or a shot with no purpose | demo passes 20/20 structural checks; 13 AV tests |
+| Length-independent before/after | a 6-shot demo cannot be compared to a 10-shot story on raw counts | comparison reports action/actor/camera/scale rates per shot | action per shot **0.50 → 0.833**; two actors **0.30 → 0.667**; camera variety **0.80 → 1.00** |
+| Mix edge fades | a hard WAV start/end clicks after AAC | 80 ms in / 120 ms out on mix and ducked bed | implemented in `mixdown`; audio tests green |
+| Shorter direction demo | the full 31 s film is expensive to iterate | 6 shots, 20.4 s, hook → setup → development → reaction → escalation → close | `projects/av_direccion_demo/`; structural QA clean; render and delivery QA recorded separately |
+
+## Done — 0.10.3: audio integrity, manifest lock, determinism slice
+
+| Item | Why | Done when | State |
+|---|---|---|---|
+| Narration actually in the delivery | the mix graph dropped the voice while QA passed | measure the MP4 against the voice stem, not only against non-silence | `voice_in_delivery` **0.9209**; QA **13/13**; MP4 re-assembled |
+| Deterministic mixer | the FFmpeg sidechain/amix graph was unreliable and clipped | one mixer with a measured voice envelope and a limiter | NumPy mixer; peak **0.844**; mix-vs-voice **0.8985**; 3 windows within 3 dB |
+| Concurrent render safety | two renders could swap `project.json` | one process holds a lock, the other fails fast | `ManifestBusy` in 5 s; lock test passes |
+| Reproducibility gate | a full double render costs 48 min | two short renders through the same path compare structurally | 30 frames × 2: PSNR **53.12 dB**, SSIM **0.99696**; mix SHA identical; full render still open |
+| No silent soundtrack fallback | `score.wav` could be muxed after a correct mix existed | `assemble` prefers `mix.wav` | soundtrack selection test passes |
+
+## Done — 0.10.2: repository audit and caption clock
+
+| Item | Why | Done when | State |
+|---|---|---|---|
+| Caption timing in the render | the SRT was timed, the burned-in layer was not | `shot.captions` from the take clock consumed by `Subtitles.tsx` | 23 cues on 8 shots; **0 ms** reveal error vs the plan (gate 120 ms) |
+| Mix sample rate | `voicecheck` assumed 48 kHz | read the rate from the file | 8 kHz fixture test passes; no false silence |
+| QA on wordless manifests | a shot without `line` crashed coverage | optional access | regression test passes |
+| Performance claim | docs said 500 frames/min | measured render governs | corrected to 38 frames/min (927 frames / 1464.45 s) |
+| Audit package | reviews were scattered | evidence in one place | `quality/repository_audit/` (7 documents) |
+
 ## Done — 0.10.1: story recovery and narration consistency
 
 | Item | Why | Done when | State |
@@ -84,35 +136,80 @@ item names the gate that would prove it done.
 5. **Per-style asset packs.** Styles currently re-tune tokens; a cartoon style
    with the same vector silhouettes still reads as the same drawing. Gate: one
    set redrawn in two styles, judged side by side by a human review file.
-6. **Caption timing in the render.** The SRT is timed from the take; the
-   burned-in layer still distributes words by character weight. Gate: frame
-   diff between caption reveal and `words.json` under 120 ms. (Still pending;
-   the narration check only proves the audio, not the burned-in reveal.)
-7. **Real style consistency check.** Palette drift is a proxy. Gate: a
+6. **Real style consistency check.** Palette drift is a proxy. Gate: a
    perceptual distance (CIEDE2000) over a reference frame per shot, with a
    threshold calibrated on accepted renders.
-8. **Camera-aware UI reflow.** This is UI work and is deliberately out of this
+7. **Camera-aware UI reflow.** This is UI work and is deliberately out of this
    iteration; boxes are still resolved once per shot. Gate: per-frame collision
    check over a moving-camera shot, with zero frames in violation.
-9. **Composition rules with teeth.** Overlap and safe area are checked; visual
+8. **Composition rules with teeth.** Overlap and safe area are checked; visual
    weight and headroom are not. Gate: a composition report that flags a subject
    pressed against the frame edge.
-10. **Regression suite over three accepted renders.** Currently two references
+9. **Regression suite over three accepted renders.** Currently two references
     are registered. Gate: `evaluate.compare` runs on every demo and fails on
     drift.
-11. **Per-character body silhouettes.** Identity now carries height, head radius,
+10. **Per-character body silhouettes.** Identity now carries height, head radius,
     hat and palette, but the torso/limb paths are still one rig. Gate: each
     recurring character has a distinct body outline, judged side by side in
     `IdentitySheet` without changing head or coat.
-12. **Word-synced burned-in captions.** The SRT is timed from the take; the
-    caption layer still distributes words by character weight, because the
-    renderer does not read `words.json`. Gate: reveal times within 120 ms of the
-    real word timings on three lines.
-13. **Render provider that cannot hang.** `studio.py render` now streams to
-    `logs/render.log` and the `--manifest` activation is exception-safe; one full
-    24-minute render completed. Priority: high (blocks a reproducible delivery).
-    Gate: two consecutive full renders through `studio.py render`, with streaming
-    logs and no manual fallback.
+11. **Render provider that cannot hang.** `studio.py render` streams to
+    `logs/render.log`, the `--manifest` activation is exception-safe, and a
+    fail-fast lock stops a second process from swapping the active manifest. One
+    full 24-minute render and two 30-frame structural renders completed. Priority:
+    high (blocks a reproducible delivery). Gate: two consecutive **full** renders
+    through `studio.py render`, with streaming logs and no manual fallback.
+
+## Staged plan to maximum practical quality
+
+Do not advance a stage because code exists; advance when its gate passes.
+
+### Stage 0 — Stability (current)
+
+- ~~Manifest lock~~ **done**: `manifest_lock` / `ManifestBusy`; the second process
+  fails in 5 s and the active bytes are untouched.
+- Short reproducibility gate **done**: two 30-frame renders, PSNR **53.12 dB**,
+  SSIM **0.99696**, mix SHA identical.
+- Two consecutive **full** renders with streaming logs (B-06) **open**: 927 frames
+  each, ≈24 min per render.
+- Calibrate QA against a third accepted render; keep **178 tests** and `tsc` green.
+
+Gate: no critical regression, reproducible full render, no global-state race.
+
+### Stage 1 — Core output quality (in progress)
+
+- ~~Camera intensity and interaction presets~~ **done**: `cameraIntensity`,
+  `handheld`, `point`, `react`.
+- ~~Narrative/continuity audit~~ **done**: beat order, beat framing, axis,
+  static intent, purpose and speech density.
+- ~~Compound action score~~ **done**: `ActorSpec.sequence`, phase validation and
+  `action_completion`; S02/S03 each carry two phases.
+- ~~Per-shot motion evidence~~ **done**: `qa.shot_motion`; min 2,438, no low-motion
+  shots in the current demo.
+- Distinct body silhouettes inside the shared rig. **Open.**
+- Prop handoff and contact tracked by position, not by preset naming. **Open.**
+- Verify caption chunks in rendered pixels (OCR or frame diff), not only in data.
+  **Open.**
+
+Gate: human-reviewed identity/pose sheet; audited prop contact; rendered reveal
+within 120 ms.
+
+### Stage 2 — Visual quality
+
+- Set density and foreground occluders.
+- Per-style drawing packs instead of token-only styles.
+- Composition rules for headroom and edge pressure.
+
+Gate: side-by-side human review against the reference corpus; no metric-only
+claim of quality.
+
+### Stage 3 — Advanced capabilities
+
+- Lip-sync from Kokoro phonemes.
+- Additional voice registers.
+- 16:9 / 1:1 format pass.
+- Optional generation providers behind the existing spend gate.
+
+Gate: each capability has a real artefact, a test and a documented limit.
 
 ## Later — capability, not polish
 

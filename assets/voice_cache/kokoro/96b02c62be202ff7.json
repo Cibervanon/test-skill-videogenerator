@@ -1,0 +1,82 @@
+{
+  "ok": true,
+  "provider": "kokoro",
+  "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+  "kokoro_version": "0.9.4",
+  "torch": "2.15.0+cpu",
+  "device": "cpu",
+  "cuda": false,
+  "voice": "ef_dora",
+  "lang_code": "e",
+  "speed": 0.98,
+  "sample_rate": 24000,
+  "duration": 2.505,
+  "chunks": 1,
+  "words": [
+    {
+      "w": "Él",
+      "s": 0.0,
+      "e": 0.139,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "dejó",
+      "s": 0.139,
+      "e": 0.53,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "su",
+      "s": 0.53,
+      "e": 0.641,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "propia",
+      "s": 0.641,
+      "e": 1.059,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "luz",
+      "s": 1.059,
+      "e": 1.366,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "en",
+      "s": 1.366,
+      "e": 1.449,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "la",
+      "s": 1.449,
+      "e": 1.533,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "nieve.",
+      "s": 1.533,
+      "e": 2.091,
+      "p": "",
+      "source": "pred_dur"
+    }
+  ],
+  "alignment": "pred_dur",
+  "timing": {
+    "load_seconds": 20.61,
+    "synth_seconds": 4.68,
+    "realtime_factor": 1.87
+  },
+  "wall_seconds": 27.55,
+  "text": "Él dejó su propia luz en la nieve.",
+  "speaker": "narrator"
+}

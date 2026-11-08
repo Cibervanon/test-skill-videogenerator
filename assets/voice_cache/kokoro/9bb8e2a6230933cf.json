@@ -1,0 +1,68 @@
+{
+  "ok": true,
+  "provider": "kokoro",
+  "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+  "kokoro_version": "0.9.4",
+  "torch": "2.15.0+cpu",
+  "device": "cpu",
+  "cuda": false,
+  "voice": "ef_dora",
+  "lang_code": "e",
+  "speed": 0.98,
+  "sample_rate": 24000,
+  "duration": 1.955,
+  "chunks": 1,
+  "words": [
+    {
+      "w": "Y",
+      "s": 0.0,
+      "e": 0.058,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "se",
+      "s": 0.058,
+      "e": 0.173,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "fue",
+      "s": 0.173,
+      "e": 0.404,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "sin",
+      "s": 0.404,
+      "e": 0.635,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "decir",
+      "s": 0.635,
+      "e": 1.038,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "nada.",
+      "s": 1.038,
+      "e": 1.587,
+      "p": "",
+      "source": "pred_dur"
+    }
+  ],
+  "alignment": "pred_dur",
+  "timing": {
+    "load_seconds": 22.27,
+    "synth_seconds": 3.81,
+    "realtime_factor": 1.95
+  },
+  "wall_seconds": 28.16,
+  "text": "Y se fue sin decir nada.",
+  "speaker": "narrator"
+}

@@ -1,0 +1,24 @@
+[avqa] PASS structure              measured  {'missing': []}
+[avqa] PASS hook                   measured  3.5
+[avqa] PASS reaction               measured  1
+[avqa] PASS beat_order             measured  {'hook_first': True, 'close_last': True}
+[avqa] PASS beat_framing           measured  []
+[avqa] PASS scale_variety          measured  {'unique': 4, 'counts': {'detail': 1, 'wide': 2, 'medium': 2, 'close': 1}}
+[avqa] PASS scale_run              measured  1
+[avqa] PASS camera_variety         measured  {'unique': 6, 'counts': {'pushInSlow': 1, 'panRight': 1, 'trackRight': 1, 'static': 1, 'reframe': 1, 'dollyOut': 1}}
+[avqa] PASS camera_motivation      measured  5/5
+[avqa] PASS movement_balance       measured  0.833
+[avqa] --   transition_motivation  measured  0/0
+[avqa] PASS sound_coverage         measured  3/6
+[avqa] PASS action_coverage        measured  4/6
+[avqa] PASS action_completion      measured  {'sequences': 3, 'unfinished': []}
+[avqa] PASS information            measured  []
+[avqa] PASS speech_density         measured  3.429
+[avqa] PASS shot_purpose           measured  []
+[avqa] PASS axis_continuity        measured  0
+[avqa] PASS character_continuity   measured  {'carried': 5, 'issues': []}
+[avqa] PASS static_intent          measured  {'shots': 1, 'ratio': 0.167, 'unmotivated': []}
+[avqa] PASS camera_intensity       measured  []
+[avqa] PASS duration               measured  22.4
+[avqa] sin fallos estructurales · pendiente de revisión humana: narrative, acting, rhythm, style_integrity
+[avqa] projects/av_ultima_medida\quality\av_audit.md

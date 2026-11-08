@@ -5,8 +5,8 @@
     "path": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\av_direccion_story\\output\\final_video.mp4",
     "file": "final_video.mp4",
     "duration": 30.933,
-    "size_bytes": 17276883,
-    "bitrate": 4468207,
+    "size_bytes": 17279149,
+    "bitrate": 4468793,
     "container": "mov,mp4,m4a,3gp,3g2,mj2",
     "video": {
       "codec": "h264",
@@ -23,7 +23,7 @@
       "codec": "aac",
       "channels": 2,
       "sample_rate": 48000,
-      "bitrate": 190758,
+      "bitrate": 191337,
       "duration": 30.933,
       "streams": 1
     }
@@ -58,7 +58,7 @@
         "codec": "aac",
         "channels": 2,
         "sample_rate": 48000,
-        "bitrate": 190758,
+        "bitrate": 191337,
         "duration": 30.933,
         "streams": 1
       },
@@ -115,13 +115,19 @@
     {
       "id": "loudness",
       "pass": true,
-      "value": -12.7,
+      "value": -16.9,
       "detail": "acceptable band -22.0..-11.0 dB (mean volume, not LUFS)"
+    },
+    {
+      "id": "voice_in_delivery",
+      "pass": true,
+      "value": 0.9209,
+      "detail": "voice present after removing the bed (signal correlation, not intelligibility); gain 2.0883"
     },
     {
       "id": "audio_activity",
       "pass": true,
-      "value": 0.195,
+      "value": 0.146,
       "detail": "the soundtrack is not near-silence"
     },
     {
@@ -166,6 +172,10 @@
     "min_motion_energy": 1.0,
     "max_black_ratio": 0.02,
     "max_freeze_ratio": 0.55,
+    "loudness_band_db": [
+      -22.0,
+      -11.0
+    ],
     "loudness_range_lufs": [
       -22.0,
       -11.0

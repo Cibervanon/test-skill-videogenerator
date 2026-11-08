@@ -1,0 +1,89 @@
+{
+  "ok": true,
+  "provider": "kokoro",
+  "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+  "kokoro_version": "0.9.4",
+  "torch": "2.15.0+cpu",
+  "device": "cpu",
+  "cuda": false,
+  "voice": "ef_dora",
+  "lang_code": "e",
+  "speed": 0.98,
+  "sample_rate": 24000,
+  "duration": 3.805,
+  "chunks": 1,
+  "words": [
+    {
+      "w": "Al",
+      "s": 0.0,
+      "e": 0.08,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "amanecer,",
+      "s": 0.08,
+      "e": 0.724,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "el",
+      "s": 0.724,
+      "e": 0.804,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "abrigo",
+      "s": 0.804,
+      "e": 1.126,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "estaba",
+      "s": 1.126,
+      "e": 1.528,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "terminado;",
+      "s": 1.528,
+      "e": 2.385,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "la",
+      "s": 2.385,
+      "e": 2.465,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "medida",
+      "s": 2.465,
+      "e": 2.841,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "también.",
+      "s": 2.841,
+      "e": 3.43,
+      "p": "",
+      "source": "pred_dur"
+    }
+  ],
+  "alignment": "pred_dur",
+  "timing": {
+    "load_seconds": 19.44,
+    "synth_seconds": 5.84,
+    "realtime_factor": 1.54
+  },
+  "wall_seconds": 27.09,
+  "text": "Al amanecer, el abrigo estaba terminado; la medida también.",
+  "speaker": "narrator"
+}

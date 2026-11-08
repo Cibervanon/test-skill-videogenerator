@@ -1,0 +1,393 @@
+{
+  "style": "cinematic",
+  "shots": [
+    {
+      "shot": "S01",
+      "scene": "workshop",
+      "mode": "A",
+      "line": "La cinta de medir se rompió a la una de la mañana.",
+      "still": "projects/av_ultima_medida/preproduction/board/S01.png",
+      "path": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\av_ultima_medida\\preproduction\\board\\S01.png",
+      "size": {
+        "width": 378,
+        "height": 672
+      },
+      "empty_ratio": 0.524,
+      "edge_density": 6.65,
+      "subject_score": 4.258,
+      "caption_contrast": {
+        "spread": 193.0,
+        "edges": 7.67
+      },
+      "palette_shift": 0.121,
+      "depth_bands": 3,
+      "depth_profile": [
+        14.48,
+        14.95,
+        13.8
+      ],
+      "has_captions": true,
+      "flags": [],
+      "status": "clean (pixels)"
+    },
+    {
+      "shot": "S02",
+      "scene": "workshop",
+      "mode": "A",
+      "line": "El sastre y su aprendiz tenían hasta el amanecer para terminar el abrigo.",
+      "still": "projects/av_ultima_medida/preproduction/board/S02.png",
+      "path": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\av_ultima_medida\\preproduction\\board\\S02.png",
+      "size": {
+        "width": 378,
+        "height": 672
+      },
+      "empty_ratio": 0.484,
+      "edge_density": 8.27,
+      "subject_score": 4.595,
+      "caption_contrast": {
+        "spread": 194.0,
+        "edges": 13.75
+      },
+      "palette_shift": 0.121,
+      "depth_bands": 3,
+      "depth_profile": [
+        15.01,
+        15.76,
+        16.34
+      ],
+      "has_captions": true,
+      "flags": [],
+      "status": "clean (pixels)"
+    },
+    {
+      "shot": "S03",
+      "scene": "workshop",
+      "mode": "A",
+      "line": "El aprendiz quería cerrar la costura y marcharse.",
+      "still": "projects/av_ultima_medida/preproduction/board/S03.png",
+      "path": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\av_ultima_medida\\preproduction\\board\\S03.png",
+      "size": {
+        "width": 378,
+        "height": 672
+      },
+      "empty_ratio": 0.484,
+      "edge_density": 8.31,
+      "subject_score": 5.688,
+      "caption_contrast": {
+        "spread": 200.0,
+        "edges": 14.85
+      },
+      "palette_shift": 0.124,
+      "depth_bands": 3,
+      "depth_profile": [
+        15.5,
+        15.7,
+        16.95
+      ],
+      "has_captions": true,
+      "flags": [],
+      "status": "clean (pixels)"
+    },
+    {
+      "shot": "S04",
+      "scene": "workshop",
+      "mode": "A",
+      "line": "",
+      "still": "projects/av_ultima_medida/preproduction/board/S04.png",
+      "path": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\av_ultima_medida\\preproduction\\board\\S04.png",
+      "size": {
+        "width": 378,
+        "height": 672
+      },
+      "empty_ratio": 0.524,
+      "edge_density": 7.47,
+      "subject_score": 4.43,
+      "caption_contrast": {
+        "spread": 110.0,
+        "edges": 6.02
+      },
+      "palette_shift": 0.119,
+      "depth_bands": 3,
+      "depth_profile": [
+        14.32,
+        20.55,
+        10.88
+      ],
+      "has_captions": false,
+      "flags": [],
+      "status": "clean (pixels)"
+    },
+    {
+      "shot": "S05",
+      "scene": "workshop",
+      "mode": "A",
+      "line": "El sastre señaló la puntada que el aprendiz había saltado.",
+      "still": "projects/av_ultima_medida/preproduction/board/S05.png",
+      "path": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\av_ultima_medida\\preproduction\\board\\S05.png",
+      "size": {
+        "width": 378,
+        "height": 672
+      },
+      "empty_ratio": 0.48,
+      "edge_density": 8.52,
+      "subject_score": 4.665,
+      "caption_contrast": {
+        "spread": 196.0,
+        "edges": 13.54
+      },
+      "palette_shift": 0.121,
+      "depth_bands": 3,
+      "depth_profile": [
+        15.15,
+        15.9,
+        16.87
+      ],
+      "has_captions": true,
+      "flags": [],
+      "status": "clean (pixels)"
+    },
+    {
+      "shot": "S06",
+      "scene": "workshop",
+      "mode": "A",
+      "line": "Al amanecer, el abrigo estaba terminado; la medida también.",
+      "still": "projects/av_ultima_medida/preproduction/board/S06.png",
+      "path": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\av_ultima_medida\\preproduction\\board\\S06.png",
+      "size": {
+        "width": 378,
+        "height": 672
+      },
+      "empty_ratio": 0.472,
+      "edge_density": 8.49,
+      "subject_score": 5.006,
+      "caption_contrast": {
+        "spread": 191.0,
+        "edges": 14.84
+      },
+      "palette_shift": 0.119,
+      "depth_bands": 3,
+      "depth_profile": [
+        14.62,
+        16.27,
+        16.86
+      ],
+      "has_captions": true,
+      "flags": [],
+      "status": "clean (pixels)"
+    }
+  ],
+  "overlays": {
+    "ok": true,
+    "style": "cinematic",
+    "problems": [],
+    "warnings": [],
+    "counts": {},
+    "shots": [
+      {
+        "id": "S01",
+        "overlays": []
+      },
+      {
+        "id": "S02",
+        "overlays": []
+      },
+      {
+        "id": "S03",
+        "overlays": []
+      },
+      {
+        "id": "S04",
+        "overlays": []
+      },
+      {
+        "id": "S05",
+        "overlays": []
+      },
+      {
+        "id": "S06",
+        "overlays": []
+      }
+    ]
+  },
+  "ui": {
+    "ok": true,
+    "modes": {
+      "A": 6
+    },
+    "totals": {
+      "overlays": 0,
+      "problems": 0,
+      "warnings": 0
+    },
+    "shots": [
+      {
+        "shot": "S01",
+        "mode": "A",
+        "mode_reason": "the scene already carries the information: no UI",
+        "intent": "hook",
+        "overlays": [],
+        "flags": [],
+        "status": "clean"
+      },
+      {
+        "shot": "S02",
+        "mode": "A",
+        "mode_reason": "the scene already carries the information: no UI",
+        "intent": "setup",
+        "overlays": [],
+        "flags": [],
+        "status": "clean"
+      },
+      {
+        "shot": "S03",
+        "mode": "A",
+        "mode_reason": "the scene already carries the information: no UI",
+        "intent": "escalation",
+        "overlays": [],
+        "flags": [],
+        "status": "clean"
+      },
+      {
+        "shot": "S04",
+        "mode": "A",
+        "mode_reason": "the scene already carries the information: no UI",
+        "intent": "reaction",
+        "overlays": [],
+        "flags": [],
+        "status": "clean"
+      },
+      {
+        "shot": "S05",
+        "mode": "A",
+        "mode_reason": "the scene already carries the information: no UI",
+        "intent": "reveal",
+        "overlays": [],
+        "flags": [],
+        "status": "clean"
+      },
+      {
+        "shot": "S06",
+        "mode": "A",
+        "mode_reason": "the scene already carries the information: no UI",
+        "intent": "close",
+        "overlays": [],
+        "flags": [],
+        "status": "clean"
+      }
+    ],
+    "problems": [],
+    "warnings": [],
+    "method": "geometría resuelta + ventanas del manifiesto; la lectura se estima por palabras del propio elemento",
+    "limits": [
+      "la caja del cuerpo es un sobre aproximado (cabeza, torso, abrigo, arco de brazos): no rastrea dedos",
+      "no hay OCR ni comprensión semántica: el motivo narrativo se audita contra el campo `intent` declarado",
+      "el tiempo de lectura es una estimación de 3.3 palabras/s, no una medición ocular"
+    ],
+    "render": {
+      "status": "measured",
+      "video": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\av_ultima_medida\\output\\final_video.mp4",
+      "frames": [
+        {
+          "shot": "S01",
+          "mode": "A",
+          "seconds": 1.93,
+          "sample": 0.55,
+          "frame": "quality/ui_frames/S01.png",
+          "scene_edges": 2.83,
+          "ui": null,
+          "ui_note": "plano sin UI"
+        },
+        {
+          "shot": "S02",
+          "mode": "A",
+          "seconds": 6.14,
+          "sample": 0.55,
+          "frame": "quality/ui_frames/S02.png",
+          "scene_edges": 3.2,
+          "ui": null,
+          "ui_note": "plano sin UI"
+        },
+        {
+          "shot": "S03",
+          "mode": "A",
+          "seconds": 10.28,
+          "sample": 0.55,
+          "frame": "quality/ui_frames/S03.png",
+          "scene_edges": 3.03,
+          "ui": null,
+          "ui_note": "plano sin UI"
+        },
+        {
+          "shot": "S04",
+          "mode": "A",
+          "seconds": 13.22,
+          "sample": 0.55,
+          "frame": "quality/ui_frames/S04.png",
+          "scene_edges": 3.97,
+          "ui": null,
+          "ui_note": "plano sin UI"
+        },
+        {
+          "shot": "S05",
+          "mode": "A",
+          "seconds": 16.5,
+          "sample": 0.55,
+          "frame": "quality/ui_frames/S05.png",
+          "scene_edges": 3.37,
+          "ui": null,
+          "ui_note": "plano sin UI"
+        },
+        {
+          "shot": "S06",
+          "mode": "A",
+          "seconds": 20.55,
+          "sample": 0.55,
+          "frame": "quality/ui_frames/S06.png",
+          "scene_edges": 3.59,
+          "ui": null,
+          "ui_note": "plano sin UI"
+        }
+      ],
+      "by_mode": {
+        "A": {
+          "shots": 6,
+          "scene_edges": 3.33,
+          "ui_contrast": null,
+          "ui_shots": 0
+        }
+      },
+      "note": "scene_edges es energía de bordes del frame completo; ui_contrast es el rango p95-p5 dentro de la caja, medido en el centro de la ventana del elemento. Confirma que B/C conservan escena y que E/F son placas gráficas; no puntúa gusto. Las etiquetas ancladas al actor no tienen caja declarada y no se miden."
+    }
+  },
+  "aesthetic_review": {
+    "status": "pending",
+    "source": "projects/av_ultima_medida/preproduction/visual_review.json",
+    "note": "composition/acting/storytelling are not measurable by this tool"
+  },
+  "method": {
+    "pixels": "PIL on the storyboard stills (downscaled tiles, luma, edge energy, quantised palette)",
+    "geometry": "overlay boxes resolved from the manifest with the renderer's own constants",
+    "limitations": "no semantic understanding, no OCR, no judgement of taste"
+  },
+  "problems": [],
+  "kind_map": {
+    "empty_ratio": "automatic (pixels)",
+    "edge_density": "automatic (pixels)",
+    "subject_score": "automatic (pixels)",
+    "caption_contrast": "automatic (pixels)",
+    "palette_shift": "automatic (pixels)",
+    "depth_bands": "automatic (pixels)",
+    "overlays": "geometry (manifest)",
+    "ui": "geometry + timing (manifest)",
+    "cuts": "automatic (video)"
+  },
+  "thresholds": {
+    "empty_ratio_max": 0.62,
+    "caption_spread_min": 70.0,
+    "caption_edge_min": 5.0,
+    "subject_score_min": 1.55,
+    "palette_shift_max": 0.3,
+    "depth_bands_min": 2,
+    "cut_sync_tolerance_s": 0.35
+  }
+}

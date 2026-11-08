@@ -1,0 +1,82 @@
+{
+  "ok": true,
+  "provider": "kokoro",
+  "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+  "kokoro_version": "0.9.4",
+  "torch": "2.15.0+cpu",
+  "device": "cpu",
+  "cuda": false,
+  "voice": "ef_dora",
+  "lang_code": "e",
+  "speed": 0.98,
+  "sample_rate": 24000,
+  "duration": 2.93,
+  "chunks": 1,
+  "words": [
+    {
+      "w": "La",
+      "s": 0.0,
+      "e": 0.082,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "vieja",
+      "s": 0.082,
+      "e": 0.384,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "esperaba",
+      "s": 0.384,
+      "e": 1.151,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "a",
+      "s": 1.151,
+      "e": 1.206,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "alguien",
+      "s": 1.206,
+      "e": 1.589,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "que",
+      "s": 1.589,
+      "e": 1.699,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "no",
+      "s": 1.699,
+      "e": 1.809,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "volvía.",
+      "s": 1.809,
+      "e": 2.494,
+      "p": "",
+      "source": "pred_dur"
+    }
+  ],
+  "alignment": "pred_dur",
+  "timing": {
+    "load_seconds": 21.99,
+    "synth_seconds": 4.92,
+    "realtime_factor": 1.68
+  },
+  "wall_seconds": 28.91,
+  "text": "La vieja esperaba a alguien que no volvía.",
+  "speaker": "narrator"
+}

@@ -1,0 +1,266 @@
+{
+  "ok": true,
+  "output": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\av_ultima_medida\\output\\final_video.mp4",
+  "file": {
+    "path": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\av_ultima_medida\\output\\final_video.mp4",
+    "file": "final_video.mp4",
+    "duration": 22.4,
+    "size_bytes": 11989156,
+    "bitrate": 4281841,
+    "container": "mov,mp4,m4a,3gp,3g2,mj2",
+    "video": {
+      "codec": "h264",
+      "width": 1080,
+      "height": 1920,
+      "fps": 30.0,
+      "fps_avg": 30.0,
+      "pix_fmt": "yuvj420p",
+      "frames": 672,
+      "aspect": 0.5625,
+      "orientation": "vertical"
+    },
+    "audio": {
+      "codec": "aac",
+      "channels": 2,
+      "sample_rate": 48000,
+      "bitrate": 191340,
+      "duration": 22.4,
+      "streams": 1
+    }
+  },
+  "checks": [
+    {
+      "id": "readable",
+      "pass": true,
+      "value": "mov,mp4,m4a,3gp,3g2,mj2",
+      "detail": "ffprobe parsed the file"
+    },
+    {
+      "id": "has_video",
+      "pass": true,
+      "value": {
+        "codec": "h264",
+        "width": 1080,
+        "height": 1920,
+        "fps": 30.0,
+        "fps_avg": 30.0,
+        "pix_fmt": "yuvj420p",
+        "frames": 672,
+        "aspect": 0.5625,
+        "orientation": "vertical"
+      },
+      "detail": "video stream present"
+    },
+    {
+      "id": "has_audio",
+      "pass": true,
+      "value": {
+        "codec": "aac",
+        "channels": 2,
+        "sample_rate": 48000,
+        "bitrate": 191340,
+        "duration": 22.4,
+        "streams": 1
+      },
+      "detail": "audio stream present"
+    },
+    {
+      "id": "duration",
+      "pass": true,
+      "value": 22.4,
+      "expected": 22.4,
+      "detail": "delta 0.000s (tolerance 0.25s)"
+    },
+    {
+      "id": "format",
+      "pass": true,
+      "value": {
+        "codec": "h264",
+        "width": 1080,
+        "height": 1920,
+        "fps": 30.0,
+        "fps_avg": 30.0,
+        "pix_fmt": "yuvj420p",
+        "frames": 672,
+        "aspect": 0.5625,
+        "orientation": "vertical"
+      },
+      "detail": "to spec"
+    },
+    {
+      "id": "motion",
+      "pass": true,
+      "value": 4.034,
+      "detail": "min 1.0 \u2014 guards against a slideshow of stills"
+    },
+    {
+      "id": "black_frames",
+      "pass": true,
+      "value": 0.0,
+      "detail": "max 0.02 \u2014 a black render must never pass"
+    },
+    {
+      "id": "freeze",
+      "pass": true,
+      "value": 0.1042,
+      "detail": "static-frame budget"
+    },
+    {
+      "id": "audio_duration",
+      "pass": true,
+      "value": 22.4,
+      "expected": 22.4,
+      "detail": "audio covers the picture; delta 0.000s"
+    },
+    {
+      "id": "loudness",
+      "pass": true,
+      "value": -17.0,
+      "detail": "acceptable band -22.0..-11.0 dB (mean volume, not LUFS)"
+    },
+    {
+      "id": "voice_in_delivery",
+      "pass": true,
+      "value": 0.9267,
+      "detail": "voice present after removing the bed (signal correlation, not intelligibility); gain 2.105"
+    },
+    {
+      "id": "audio_activity",
+      "pass": true,
+      "value": 0.101,
+      "detail": "the soundtrack is not near-silence"
+    },
+    {
+      "id": "caption_plan",
+      "pass": true,
+      "value": 0.893,
+      "detail": "computed from the cue plan (shot lines), not from OCR of the render"
+    }
+  ],
+  "captions": {
+    "coverage": 0.893,
+    "total_seconds": 22.4,
+    "uncovered": [
+      {
+        "shot": "S04",
+        "from": 11.9,
+        "to": 14.3
+      }
+    ],
+    "method": "computed from the cue plan (shot lines), not from OCR of the render"
+  },
+  "motion": {
+    "method": "SAD translation search \u00b16px on 72x128 luma @2.0fps",
+    "samples": 45,
+    "pairs": 44,
+    "mean_motion_energy": 4.034,
+    "median_motion_energy": 2.981,
+    "moving_ratio": 0.636,
+    "pan_ratio": 0.273,
+    "tilt_ratio": 0.091,
+    "median_abs_pan_px": 0,
+    "median_abs_tilt_px": 0,
+    "limits": "translation-only model; zoom/rotation/parallax not measured"
+  },
+  "shot_motion": {
+    "method": "per-shot SAD translation search on 72px luma @2.0fps",
+    "shots": [
+      {
+        "shot": "S01",
+        "start": 0.0,
+        "seconds": 3.5,
+        "samples": 7,
+        "mean_motion_energy": 2.981,
+        "median_motion_energy": 3.216,
+        "moving_ratio": 0.667,
+        "median_abs_pan_px": 0,
+        "median_abs_tilt_px": 0,
+        "low_motion": false
+      },
+      {
+        "shot": "S02",
+        "start": 3.5,
+        "seconds": 4.8,
+        "samples": 10,
+        "mean_motion_energy": 2.383,
+        "median_motion_energy": 2.472,
+        "moving_ratio": 0.556,
+        "median_abs_pan_px": 0,
+        "median_abs_tilt_px": 0,
+        "low_motion": false
+      },
+      {
+        "shot": "S03",
+        "start": 8.3,
+        "seconds": 3.6,
+        "samples": 7,
+        "mean_motion_energy": 3.133,
+        "median_motion_energy": 3.103,
+        "moving_ratio": 0.667,
+        "median_abs_pan_px": 1,
+        "median_abs_tilt_px": 0,
+        "low_motion": false
+      },
+      {
+        "shot": "S04",
+        "start": 11.9,
+        "seconds": 2.4,
+        "samples": 5,
+        "mean_motion_energy": 2.742,
+        "median_motion_energy": 2.686,
+        "moving_ratio": 0.5,
+        "median_abs_pan_px": 0,
+        "median_abs_tilt_px": 0,
+        "low_motion": false
+      },
+      {
+        "shot": "S05",
+        "start": 14.3,
+        "seconds": 4.0,
+        "samples": 8,
+        "mean_motion_energy": 2.878,
+        "median_motion_energy": 2.235,
+        "moving_ratio": 0.714,
+        "median_abs_pan_px": 0,
+        "median_abs_tilt_px": 0,
+        "low_motion": false
+      },
+      {
+        "shot": "S06",
+        "start": 18.3,
+        "seconds": 4.1,
+        "samples": 8,
+        "mean_motion_energy": 3.133,
+        "median_motion_energy": 2.564,
+        "moving_ratio": 0.714,
+        "median_abs_pan_px": 0,
+        "median_abs_tilt_px": 0,
+        "low_motion": false
+      }
+    ],
+    "summary": {
+      "shots": 6,
+      "low_motion_shots": [],
+      "mean_motion_energy": 2.875,
+      "min_motion_energy": 2.383
+    },
+    "limits": "translation-only; low motion is a diagnostic, not automatically a defect"
+  },
+  "thresholds": {
+    "duration_tolerance_s": 0.25,
+    "min_motion_energy": 1.0,
+    "max_black_ratio": 0.02,
+    "max_freeze_ratio": 0.55,
+    "loudness_band_db": [
+      -22.0,
+      -11.0
+    ],
+    "loudness_range_lufs": [
+      -22.0,
+      -11.0
+    ],
+    "caption_coverage_min": 0.55,
+    "_comment": "Thresholds are calibrated against this project's own renders (see TEST_REPORT.md); they are gates, not universal quality measurements."
+  },
+  "note": "heuristic gates calibrated on this engine's renders; not an aesthetic judgement"
+}

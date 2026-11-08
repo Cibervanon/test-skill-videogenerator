@@ -1,0 +1,56 @@
+[
+  {
+    "id": "S01",
+    "scene": "workshop",
+    "from": 0,
+    "frames": 105,
+    "frame": 57,
+    "line": "La cinta de medir se rompi\u00f3 a la una de la ma\u00f1ana.",
+    "note": "hook: the tailor is already at the table with the snapped measure; the line withholds who broke it"
+  },
+  {
+    "id": "S02",
+    "scene": "workshop",
+    "from": 105,
+    "frames": 144,
+    "frame": 184,
+    "line": "El sastre y su aprendiz ten\u00edan hasta el amanecer para terminar el abrigo.",
+    "note": "setup: the two actors share the frame, separated by the worktable and the coat"
+  },
+  {
+    "id": "S03",
+    "scene": "workshop",
+    "from": 249,
+    "frames": 108,
+    "frame": 308,
+    "line": "El aprendiz quer\u00eda cerrar la costura y marcharse.",
+    "note": "escalation: the apprentice reaches for the measure; the body continues from S02 instead of resetting"
+  },
+  {
+    "id": "S04",
+    "scene": "workshop",
+    "from": 357,
+    "frames": 72,
+    "frame": 396,
+    "line": "",
+    "note": "reaction: no line; the close-up carries the refusal"
+  },
+  {
+    "id": "S05",
+    "scene": "workshop",
+    "from": 429,
+    "frames": 120,
+    "frame": 495,
+    "line": "El sastre se\u00f1al\u00f3 la puntada que el aprendiz hab\u00eda saltado.",
+    "note": "reveal: the tailor points to the missed stitch; the apprentice's state is carried from the earlier worktable"
+  },
+  {
+    "id": "S06",
+    "scene": "workshop",
+    "from": 549,
+    "frames": 123,
+    "frame": 616,
+    "line": "Al amanecer, el abrigo estaba terminado; la medida tambi\u00e9n.",
+    "note": "close: the coat is finished; the two actors keep their final blocking"
+  }
+]

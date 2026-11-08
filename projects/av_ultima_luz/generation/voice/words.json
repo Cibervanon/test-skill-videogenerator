@@ -1,0 +1,233 @@
+[
+  {
+    "w": "La",
+    "s": 0.0,
+    "e": 0.112,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "luz",
+    "s": 0.112,
+    "e": 0.335,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "del",
+    "s": 0.335,
+    "e": 0.447,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "umbral",
+    "s": 0.447,
+    "e": 0.95,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "seguía",
+    "s": 0.95,
+    "e": 1.257,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "encendida.",
+    "s": 1.257,
+    "e": 2.124,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "La",
+    "s": 3.6,
+    "e": 3.682,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "vieja",
+    "s": 3.682,
+    "e": 3.984,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "esperaba",
+    "s": 3.984,
+    "e": 4.751,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "a",
+    "s": 4.751,
+    "e": 4.806,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "alguien",
+    "s": 4.806,
+    "e": 5.189,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "que",
+    "s": 5.189,
+    "e": 5.299,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "no",
+    "s": 5.299,
+    "e": 5.409,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "volvía.",
+    "s": 5.409,
+    "e": 6.094,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "El",
+    "s": 7.6,
+    "e": 7.714,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "farolero",
+    "s": 7.714,
+    "e": 8.342,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "vino",
+    "s": 8.342,
+    "e": 8.627,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "a",
+    "s": 8.627,
+    "e": 8.655,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "apagarla.",
+    "s": 8.655,
+    "e": 9.454,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "Él",
+    "s": 14.1,
+    "e": 14.239,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "dejó",
+    "s": 14.239,
+    "e": 14.63,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "su",
+    "s": 14.63,
+    "e": 14.741,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "propia",
+    "s": 14.741,
+    "e": 15.159,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "luz",
+    "s": 15.159,
+    "e": 15.466,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "en",
+    "s": 15.466,
+    "e": 15.549,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "la",
+    "s": 15.549,
+    "e": 15.633,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "nieve.",
+    "s": 15.633,
+    "e": 16.191,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "Y",
+    "s": 17.9,
+    "e": 17.958,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "se",
+    "s": 17.958,
+    "e": 18.073,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "fue",
+    "s": 18.073,
+    "e": 18.304,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "sin",
+    "s": 18.304,
+    "e": 18.535,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "decir",
+    "s": 18.535,
+    "e": 18.938,
+    "p": "",
+    "source": "pred_dur"
+  },
+  {
+    "w": "nada.",
+    "s": 18.938,
+    "e": 19.487,
+    "p": "",
+    "source": "pred_dur"
+  }
+]

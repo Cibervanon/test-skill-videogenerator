@@ -1,0 +1,249 @@
+{
+  "id": "av_ultima_medida",
+  "title": "La última medida",
+  "logline": "Un sastre y su aprendiz tienen una noche para terminar un abrigo; la costura que discuten decide si el aprendiz se queda.",
+  "style": "cinematic",
+  "fps": 30,
+  "transitionFrames": 10,
+  "narration": true,
+  "library": [
+    "rig:default",
+    "character:elder",
+    "character:young",
+    "set:workshop",
+    "camera:pushinslow",
+    "camera:panright",
+    "camera:trackright",
+    "camera:static",
+    "camera:reframe",
+    "camera:dollyout",
+    "transition:cut",
+    "sfx:footstep"
+  ],
+  "beats": [
+    {
+      "id": "S01",
+      "function": "hook",
+      "scene": "workshop",
+      "line": "La cinta de medir se rompió a la una de la mañana.",
+      "speaker": "narrator",
+      "seconds": 3.5,
+      "scale": "detail",
+      "camera": "pushInSlow",
+      "cameraIntensity": 0.65,
+      "cameraMotive": "start on the broken measure and the unfinished coat, before we meet the two people who disagree about it",
+      "transition": "cut",
+      "transitionMotive": "open on the problem, not on an establishing shot",
+      "sound": [],
+      "actors": [
+        {
+          "id": "elder",
+          "preset": "idle",
+          "x": 322,
+          "y": 1740,
+          "scale": 1.42,
+          "facing": 1,
+          "hold": "none",
+          "phase": 0.2
+        }
+      ],
+      "note": "hook: the tailor is already at the table with the snapped measure; the line withholds who broke it"
+    },
+    {
+      "id": "S02",
+      "function": "setup",
+      "scene": "workshop",
+      "line": "El sastre y su aprendiz tenían hasta el amanecer para terminar el abrigo.",
+      "speaker": "narrator",
+      "seconds": 4.8,
+      "scale": "wide",
+      "camera": "panRight",
+      "cameraIntensity": 0.7,
+      "cameraMotive": "cross the workroom from the old tailor to the apprentice, so the coat has a human scale and the distance between them is visible",
+      "transition": "cut",
+      "transitionMotive": "the detail opens into the room; the people enter the problem",
+      "sound": [
+        { "type": "footstep", "at": 0.9, "gain": 0.14, "pan": -0.15 },
+        { "type": "footstep", "at": 1.7, "gain": 0.12, "pan": -0.15 }
+      ],
+      "actors": [
+        {
+          "id": "elder",
+          "preset": "idle",
+          "x": 322,
+          "y": 1740,
+          "scale": 1.42,
+          "facing": 1,
+          "hold": "none",
+          "phase": 0.25
+        },
+        {
+          "id": "young",
+          "preset": "walkIn",
+          "x": 740,
+          "y": 1740,
+          "scale": 1.28,
+          "facing": -1,
+          "hold": "rope",
+          "from": 160,
+          "to": 0,
+          "start": 0.04,
+          "end": 0.48,
+          "phase": 0.2,
+          "sequence": [
+            { "preset": "walkIn", "start": 0.02, "end": 0.52, "x": 740, "from": 160, "to": 0 },
+            { "preset": "turn", "start": 0.56, "end": 1.0, "x": 740 }
+          ]
+        }
+      ],
+      "note": "setup: the two actors share the frame, separated by the worktable and the coat"
+    },
+    {
+      "id": "S03",
+      "function": "escalation",
+      "scene": "workshop",
+      "line": "El aprendiz quería cerrar la costura y marcharse.",
+      "speaker": "narrator",
+      "seconds": 3.6,
+      "scale": "medium",
+      "camera": "trackRight",
+      "cameraIntensity": 0.8,
+      "cameraMotive": "follow the measuring cord as the apprentice reaches for it, keeping the tailor in the frame",
+      "transition": "cut",
+      "transitionMotive": "cut on the hand, not on a new composition",
+      "sound": [
+        { "type": "footstep", "at": 0.45, "gain": 0.13, "pan": -0.1 }
+      ],
+      "actors": [
+        {
+          "id": "elder",
+          "preset": "idle",
+          "carry": true,
+          "y": 1740,
+          "scale": 1.42,
+          "phase": 0.55
+        },
+        {
+          "id": "young",
+          "preset": "turn",
+          "carry": true,
+          "y": 1740,
+          "scale": 1.28,
+          "phase": 0.2,
+          "sequence": [
+            { "preset": "turn", "start": 0.0, "end": 0.28 },
+            { "preset": "reach", "start": 0.33, "end": 1.0 }
+          ]
+        }
+      ],
+      "note": "escalation: the apprentice reaches for the measure; the body continues from S02 instead of resetting"
+    },
+    {
+      "id": "S04",
+      "function": "reaction",
+      "scene": "workshop",
+      "line": "",
+      "speaker": "none",
+      "seconds": 2.4,
+      "scale": "close",
+      "camera": "static",
+      "cameraIntensity": 0.0,
+      "cameraMotive": "hold the tailor's reaction; the wordless close-up is the judgement",
+      "transition": "cut",
+      "transitionMotive": "hard cut to the face that has decided not to explain",
+      "sound": [],
+      "actors": [
+        {
+          "id": "elder",
+          "preset": "react",
+          "x": 690,
+          "y": 1900,
+          "scale": 3.1,
+          "facing": 1,
+          "hold": "none",
+          "continuityMotive": "hard cut to a close-up; the actor is reframed inside the same room, not moved in the scene",
+          "phase": 0.65
+        }
+      ],
+      "note": "reaction: no line; the close-up carries the refusal"
+    },
+    {
+      "id": "S05",
+      "function": "reveal",
+      "scene": "workshop",
+      "line": "El sastre señaló la puntada que el aprendiz había saltado.",
+      "speaker": "narrator",
+      "seconds": 4.0,
+      "scale": "medium",
+      "camera": "reframe",
+      "cameraIntensity": 0.8,
+      "cameraMotive": "reframe around the pointing hand until the skipped stitch becomes the subject of the two-shot",
+      "transition": "cut",
+      "transitionMotive": "return to the worktable: the close-up has changed the argument",
+      "sound": [
+        { "type": "footstep", "at": 0.5, "gain": 0.12, "pan": 0.1 },
+        { "type": "footstep", "at": 1.4, "gain": 0.1, "pan": 0.1 }
+      ],
+      "actors": [
+        {
+          "id": "elder",
+          "preset": "point",
+          "x": 322,
+          "y": 1740,
+          "scale": 1.42,
+          "facing": 1,
+          "hold": "none",
+          "continuityMotive": "cut back to the worktable after the close-up; the spatial relation is declared, not inherited",
+          "phase": 0.4
+        },
+        {
+          "id": "young",
+          "preset": "reach",
+          "carry": true,
+          "y": 1740,
+          "scale": 1.28,
+          "phase": 0.2,
+          "sequence": [
+            { "preset": "turn", "start": 0.0, "end": 0.3 },
+            { "preset": "reach", "start": 0.35, "end": 1.0 }
+          ]
+        }
+      ],
+      "note": "reveal: the tailor points to the missed stitch; the apprentice's state is carried from the earlier worktable"
+    },
+    {
+      "id": "S06",
+      "function": "close",
+      "scene": "workshop",
+      "line": "Al amanecer, el abrigo estaba terminado; la medida también.",
+      "speaker": "narrator",
+      "seconds": 4.1,
+      "scale": "wide",
+      "camera": "dollyOut",
+      "cameraIntensity": 0.7,
+      "cameraMotive": "release the frame until the finished coat and both people are visible in the same dawn",
+      "transition": "cut",
+      "transitionMotive": "settle on the result; no new information arrives after this",
+      "sound": [],
+      "actors": [
+        {
+          "id": "elder",
+          "preset": "idle",
+          "carry": true,
+          "y": 1740,
+          "scale": 1.42,
+          "phase": 0.7
+        },
+        {
+          "id": "young",
+          "preset": "idle",
+          "carry": true,
+          "y": 1740,
+          "scale": 1.28,
+          "phase": 0.7
+        }
+      ],
+      "note": "close: the coat is finished; the two actors keep their final blocking"
+    }
+  ]
+}

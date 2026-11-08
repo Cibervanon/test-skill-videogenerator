@@ -1,0 +1,482 @@
+{
+  "provider": "kokoro",
+  "speech": true,
+  "narration": true,
+  "project_seconds": 26.3,
+  "total_lines": 6,
+  "total_words": 45,
+  "lines": [
+    {
+      "shot": "S01",
+      "scene": "greenhouse",
+      "speaker": "narrator",
+      "text": "La última hoja llevaba tres días pidiendo agua.",
+      "start": 0.0,
+      "end": 3.8,
+      "words": [
+        {
+          "w": "La",
+          "s": 0.0,
+          "e": 0.108,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "última",
+          "s": 0.108,
+          "e": 0.515,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "hoja",
+          "s": 0.515,
+          "e": 0.949,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "llevaba",
+          "s": 0.949,
+          "e": 1.328,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "tres",
+          "s": 1.328,
+          "e": 1.572,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "días",
+          "s": 1.572,
+          "e": 1.87,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "pidiendo",
+          "s": 1.87,
+          "e": 2.304,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "agua.",
+          "s": 2.304,
+          "e": 2.791,
+          "p": "",
+          "source": "pred_dur"
+        }
+      ],
+      "audio": "../../assets/voice_cache/kokoro/1c8a297b49f0e43e.wav",
+      "status": "generated",
+      "estimated": false,
+      "audio_duration": 3.305,
+      "alignment": "pred_dur",
+      "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+      "voice": "ef_dora",
+      "device": "cpu",
+      "cost_usd": 0.0,
+      "overflow": 0.0
+    },
+    {
+      "shot": "S02",
+      "scene": "greenhouse",
+      "speaker": "narrator",
+      "text": "El jardinero abrió el grifo; solo salió aire.",
+      "start": 3.8,
+      "end": 7.8,
+      "words": [
+        {
+          "w": "El",
+          "s": 3.8,
+          "e": 3.882,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "jardinero",
+          "s": 3.882,
+          "e": 4.481,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "abrió",
+          "s": 4.481,
+          "e": 4.78,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "el",
+          "s": 4.78,
+          "e": 4.862,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "grifo;",
+          "s": 4.862,
+          "e": 5.379,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "solo",
+          "s": 5.379,
+          "e": 5.652,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "salió",
+          "s": 5.652,
+          "e": 6.006,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "aire.",
+          "s": 6.006,
+          "e": 6.496,
+          "p": "",
+          "source": "pred_dur"
+        }
+      ],
+      "audio": "../../assets/voice_cache/kokoro/32fa0b65bb74731a.wav",
+      "status": "cached",
+      "estimated": false,
+      "audio_duration": 3.13,
+      "alignment": "pred_dur",
+      "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+      "voice": "ef_dora",
+      "device": "cpu",
+      "cost_usd": 0.0,
+      "overflow": 0.0
+    },
+    {
+      "shot": "S03",
+      "scene": "greenhouse",
+      "speaker": "narrator",
+      "text": "El aprendiz trajo la regadera vacía.",
+      "start": 7.8,
+      "end": 11.8,
+      "words": [
+        {
+          "w": "El",
+          "s": 7.8,
+          "e": 7.883,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "aprendiz",
+          "s": 7.883,
+          "e": 8.462,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "trajo",
+          "s": 8.462,
+          "e": 8.931,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "la",
+          "s": 8.931,
+          "e": 9.041,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "regadera",
+          "s": 9.041,
+          "e": 9.565,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "vacía.",
+          "s": 9.565,
+          "e": 10.227,
+          "p": "",
+          "source": "pred_dur"
+        }
+      ],
+      "audio": "../../assets/voice_cache/kokoro/0a367d2ddca01a72.wav",
+      "status": "cached",
+      "estimated": false,
+      "audio_duration": 2.755,
+      "alignment": "pred_dur",
+      "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+      "voice": "ef_dora",
+      "device": "cpu",
+      "cost_usd": 0.0,
+      "overflow": 0.0
+    },
+    {
+      "shot": "S04",
+      "scene": "greenhouse",
+      "speaker": "narrator",
+      "text": "Al fondo, el barril de lluvia seguía lleno.",
+      "start": 11.8,
+      "end": 15.6,
+      "words": [
+        {
+          "w": "Al",
+          "s": 11.8,
+          "e": 11.91,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "fondo,",
+          "s": 11.91,
+          "e": 12.458,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "el",
+          "s": 12.458,
+          "e": 12.541,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "barril",
+          "s": 12.541,
+          "e": 12.925,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "de",
+          "s": 12.925,
+          "e": 13.034,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "lluvia",
+          "s": 13.034,
+          "e": 13.363,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "seguía",
+          "s": 13.363,
+          "e": 13.692,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "lleno.",
+          "s": 13.692,
+          "e": 14.214,
+          "p": "",
+          "source": "pred_dur"
+        }
+      ],
+      "audio": "../../assets/voice_cache/kokoro/00918af48dccd56f.wav",
+      "status": "cached",
+      "estimated": false,
+      "audio_duration": 2.905,
+      "alignment": "pred_dur",
+      "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+      "voice": "ef_dora",
+      "device": "cpu",
+      "cost_usd": 0.0,
+      "overflow": 0.0
+    },
+    {
+      "shot": "S05",
+      "scene": "greenhouse",
+      "speaker": "narrator",
+      "text": "El aprendiz cruzó el invernadero con la regadera llena.",
+      "start": 15.6,
+      "end": 19.8,
+      "words": [
+        {
+          "w": "El",
+          "s": 15.6,
+          "e": 15.681,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "aprendiz",
+          "s": 15.681,
+          "e": 16.245,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "cruzó",
+          "s": 16.245,
+          "e": 16.728,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "el",
+          "s": 16.728,
+          "e": 16.809,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "invernadero",
+          "s": 16.809,
+          "e": 17.615,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "con",
+          "s": 17.615,
+          "e": 17.749,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "la",
+          "s": 17.749,
+          "e": 17.83,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "regadera",
+          "s": 17.83,
+          "e": 18.34,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "llena.",
+          "s": 18.34,
+          "e": 18.851,
+          "p": "",
+          "source": "pred_dur"
+        }
+      ],
+      "audio": "../../assets/voice_cache/kokoro/a6976c6a161dd2f3.wav",
+      "status": "cached",
+      "estimated": false,
+      "audio_duration": 3.68,
+      "alignment": "pred_dur",
+      "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+      "voice": "ef_dora",
+      "device": "cpu",
+      "cost_usd": 0.0,
+      "overflow": 0.0
+    },
+    {
+      "shot": "S07",
+      "scene": "greenhouse",
+      "speaker": "narrator",
+      "text": "La planta bebió; la flor abrió.",
+      "start": 22.5,
+      "end": 26.3,
+      "words": [
+        {
+          "w": "La",
+          "s": 22.5,
+          "e": 22.613,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "planta",
+          "s": 22.613,
+          "e": 23.063,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "bebió;",
+          "s": 23.063,
+          "e": 23.598,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "la",
+          "s": 23.598,
+          "e": 23.711,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "flor",
+          "s": 23.711,
+          "e": 23.936,
+          "p": "",
+          "source": "pred_dur"
+        },
+        {
+          "w": "abrió.",
+          "s": 23.936,
+          "e": 24.5,
+          "p": "",
+          "source": "pred_dur"
+        }
+      ],
+      "audio": "../../assets/voice_cache/kokoro/f01b31267f29679d.wav",
+      "status": "cached",
+      "estimated": false,
+      "audio_duration": 2.305,
+      "alignment": "pred_dur",
+      "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+      "voice": "ef_dora",
+      "device": "cpu",
+      "cost_usd": 0.0,
+      "overflow": 0.0
+    }
+  ],
+  "costs": [
+    {
+      "shot": "S01",
+      "usd": 0.0,
+      "cached": false
+    },
+    {
+      "shot": "S02",
+      "usd": 0.0,
+      "cached": true
+    },
+    {
+      "shot": "S03",
+      "usd": 0.0,
+      "cached": true
+    },
+    {
+      "shot": "S04",
+      "usd": 0.0,
+      "cached": true
+    },
+    {
+      "shot": "S05",
+      "usd": 0.0,
+      "cached": true
+    },
+    {
+      "shot": "S07",
+      "usd": 0.0,
+      "cached": true
+    }
+  ],
+  "credits": 0,
+  "model": "Kokoro-82M-v1.0",
+  "alignment": "pred_dur",
+  "stem": "generation/voice/voice.wav",
+  "note": "LOCAL Kokoro: audio, timings and stem generated on this machine. No network at synthesis time, no credits."
+}

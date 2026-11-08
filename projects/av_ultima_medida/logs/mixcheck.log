@@ -1,0 +1,4 @@
+usage: studio.py [-h] [--project PROJECT] [--manifest MANIFEST]
+                 [--title TITLE]
+                 {status,analysis,preproduction,plan,audio,render,assemble,qa,assets,compose,av,avqa,edit,voice,kokoro,subtitles,captions,storyboard,cast,identity,voicecheck,mixdown,mix,ui,styles,direct,inspect,evaluate,feedback,produce} ...
+studio.py: error: argument command: invalid choice: 'mixcheck' (choose from 'status', 'analysis', 'preproduction', 'plan', 'audio', 'render', 'assemble', 'qa', 'assets', 'compose', 'av', 'avqa', 'edit', 'voice', 'kokoro', 'subtitles', 'captions', 'storyboard', 'cast', 'identity', 'voicecheck', 'mixdown', 'mix', 'ui', 'styles', 'direct', 'inspect', 'evaluate', 'feedback', 'produce')

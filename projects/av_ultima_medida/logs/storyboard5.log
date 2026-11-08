@@ -1,0 +1,29 @@
+Traceback (most recent call last):
+  File "C:\Users\W10\Videos\SKILLS\scripts\studio.py", line 74, in manifest_lock
+    fd = os.open(lock_path, os.O_CREAT | os.O_EXCL | os.O_WRONLY)
+FileExistsError: [Errno 17] File exists: 'C:\\Users\\W10\\Videos\\SKILLS\\studio\\src\\data\\project.json.lock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\W10\Videos\SKILLS\scripts\studio.py", line 1160, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "C:\Users\W10\Videos\SKILLS\scripts\studio.py", line 1153, in main
+    return args.func(args)
+           ~~~~~~~~~^^^^^^
+  File "C:\Users\W10\Videos\SKILLS\scripts\studio.py", line 653, in cmd_storyboard
+    with use_manifest(args.manifest):
+         ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "C:\Users\W10\Videos\SKILLS\scripts\studio.py", line 113, in use_manifest
+    with manifest_lock(timeout=lock_timeout):
+         ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "C:\Users\W10\Videos\SKILLS\scripts\studio.py", line 85, in manifest_lock
+    raise ManifestBusy(
+    ...<2 lines>...
+    )
+ManifestBusy: another render owns C:\Users\W10\Videos\SKILLS\studio\src\data\project.json (lock C:\Users\W10\Videos\SKILLS\studio\src\data\project.json.lock). Wait for it to finish; the lock expires after 3 hours.

@@ -1,0 +1,110 @@
+{
+  "ok": true,
+  "provider": "kokoro",
+  "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+  "kokoro_version": "0.9.4",
+  "torch": "2.15.0+cpu",
+  "device": "cpu",
+  "cuda": false,
+  "voice": "ef_dora",
+  "lang_code": "e",
+  "speed": 0.98,
+  "sample_rate": 24000,
+  "duration": 3.255,
+  "chunks": 1,
+  "words": [
+    {
+      "w": "La",
+      "s": 0.0,
+      "e": 0.109,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "cinta",
+      "s": 0.109,
+      "e": 0.434,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "de",
+      "s": 0.434,
+      "e": 0.488,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "medir",
+      "s": 0.488,
+      "e": 1.004,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "se",
+      "s": 1.004,
+      "e": 1.113,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "rompió",
+      "s": 1.113,
+      "e": 1.574,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "a",
+      "s": 1.574,
+      "e": 1.601,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "la",
+      "s": 1.601,
+      "e": 1.71,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "una",
+      "s": 1.71,
+      "e": 1.9,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "de",
+      "s": 1.9,
+      "e": 1.954,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "la",
+      "s": 1.954,
+      "e": 2.035,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "mañana.",
+      "s": 2.035,
+      "e": 2.714,
+      "p": "",
+      "source": "pred_dur"
+    }
+  ],
+  "alignment": "pred_dur",
+  "timing": {
+    "load_seconds": 21.71,
+    "synth_seconds": 5.44,
+    "realtime_factor": 1.67
+  },
+  "wall_seconds": 28.96,
+  "text": "La cinta de medir se rompió a la una de la mañana.",
+  "speaker": "narrator"
+}

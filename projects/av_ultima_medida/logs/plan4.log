@@ -1,0 +1,10 @@
+[av] S01 hook        detail pushInSlow    3.5s  start on the broken measure and the unfinished coat, before we meet the two people who disagree about it
+[av] S02 setup       wide   panRight      4.8s  cross the workroom from the old tailor to the apprentice, so the coat has a human scale and the distance between them is visible
+[av] S03 development medium trackRight    3.6s  follow the measuring cord as the apprentice reaches for it, keeping the tailor in the frame
+[av] S04 reaction    close  static        2.4s  hold the tailor's reaction; the wordless close-up is the judgement
+[av] S05 escalation  medium reframe       4.0s  reframe around the pointing hand until the skipped stitch becomes the subject of the two-shot
+[av] S06 close       wide   dollyOut      4.1s  release the frame until the finished coat and both people are visible in the same dawn
+[av] 6 planos · 22.4s · 5 cue(s)
+[av] creative QA: sin fallos estructurales
+[av] manifest: projects/av_ultima_medida\manifest.json
+[av] plan: projects/av_ultima_medida\preproduction\av_plan.md

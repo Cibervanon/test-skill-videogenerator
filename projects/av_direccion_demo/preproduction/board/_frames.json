@@ -1,0 +1,60 @@
+{
+  "entry": "src/index.ts",
+  "composition": "CinematicDemo",
+  "frames": [
+    {
+      "id": "S01",
+      "scene": "bellInsert",
+      "from": 0,
+      "frames": 105,
+      "frame": 57,
+      "line": "Aquella noche, el guardi\u00e1n no toc\u00f3 la campana.",
+      "note": "hook: the bell is the question; the line withholds the reason"
+    },
+    {
+      "id": "S02",
+      "scene": "townNight",
+      "from": 95,
+      "frames": 114,
+      "frame": 157,
+      "line": "El pueblo llevaba tres inviernos sin o\u00edrla.",
+      "note": "setup: the village is a space, not a caption; the two men share the frame"
+    },
+    {
+      "id": "S03",
+      "scene": "townNight",
+      "from": 209,
+      "frames": 114,
+      "frame": 271,
+      "line": "El aprendiz subi\u00f3 al campanario con una cuerda.",
+      "note": "development: the elder watches; the apprentice acts in the same frame"
+    },
+    {
+      "id": "S04",
+      "scene": "doorway",
+      "from": 323,
+      "frames": 72,
+      "frame": 362,
+      "line": "",
+      "note": "reaction: wordless, one held close-up, the only static shot and it earns it"
+    },
+    {
+      "id": "S05",
+      "scene": "townNight",
+      "from": 395,
+      "frames": 114,
+      "frame": 457,
+      "line": "El aprendiz se\u00f1al\u00f3 la cuerda que faltaba.",
+      "note": "escalation: the answer is a gesture toward the missing rope, not an explanation"
+    },
+    {
+      "id": "S06",
+      "scene": "fieldDawn",
+      "from": 499,
+      "frames": 114,
+      "frame": 561,
+      "line": "Desde entonces, el silencio tuvo fecha.",
+      "note": "close: consequence, not explanation; the camera releases the two men"
+    }
+  ]
+}

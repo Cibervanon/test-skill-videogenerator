@@ -14,7 +14,8 @@ export type CameraMove =
   | "pushInSlow"
   | "trackLeft"
   | "trackRight"
-  | "reframe";
+  | "reframe"
+  | "handheld";
 
 type Transform = { scale: number; x: number; y: number; rotate: number };
 
@@ -28,6 +29,7 @@ type Transform = { scale: number; x: number; y: number; rotate: number };
  *  - reframe              : moving the subject inside a held composition
  *  - tiltUp / craneDown   : scale, arrival
  *  - drift                : hold with life, never a frozen frame
+ *  - handheld             : a human operator, not a tripod; low-amplitude, deterministic
  */
 const transformFor = (move: CameraMove, p: number, frame: number): Transform => {
   const hand = Math.sin(frame / 47) * 3.2 + Math.sin(frame / 23 + 1.7) * 1.4;
@@ -57,6 +59,13 @@ const transformFor = (move: CameraMove, p: number, frame: number): Transform => 
       return { scale: 1.08 + p * 0.04, x: 0, y: -2 + easeInOutCubic(p) * 2.4, rotate: 0 };
     case "drift":
       return { scale: 1.03, x: hand * 0.06, y: hand * 0.045, rotate: 0 };
+    case "handheld":
+      return {
+        scale: 1.035,
+        x: Math.sin(frame / 61) * 0.55 + Math.sin(frame / 37 + 2.1) * 0.28,
+        y: Math.sin(frame / 53 + 1.3) * 0.42 + Math.cos(frame / 31) * 0.18,
+        rotate: Math.sin(frame / 71) * 0.06,
+      };
     case "static":
     default:
       return { scale: 1, x: 0, y: 0, rotate: 0 };
@@ -67,14 +76,27 @@ export const CameraRig: React.FC<{
   move: CameraMove;
   /** 0..1 progress override; defaults to shot progress. */
   progress?: number;
+  /** Extra horizontal framing offset in % of frame width. */
+  offsetX?: number;
   /** Extra vertical framing offset in % of frame height. */
   offsetY?: number;
+  /** 0.35..1.35 multiplier for the move; 1 is the authored default. */
+  intensity?: number;
+  /** Optional framing magnification for a detail insert; 1 keeps the plate. */
+  zoom?: number;
   children: React.ReactNode;
-}> = ({ move, progress, offsetY = 0, children }) => {
+}> = ({ move, progress, offsetX = 0, offsetY = 0, intensity = 1, zoom = 1, children }) => {
   const frame = useCurrentFrame();
   const { durationInFrames } = useVideoConfig();
   const p = clamp(progress ?? frame / Math.max(1, durationInFrames - 1));
-  const t = transformFor(move, p, frame);
+  const authored = transformFor(move, p, frame);
+  const t = {
+    ...authored,
+    x: authored.x * intensity,
+    y: authored.y * intensity,
+    rotate: authored.rotate * intensity,
+    scale: (1 + (authored.scale - 1) * intensity) * zoom,
+  };
 
   return (
     <div
@@ -82,7 +104,7 @@ export const CameraRig: React.FC<{
         position: "absolute",
         inset: 0,
         overflow: "hidden",
-        transform: `translate3d(${t.x}%, ${t.y + offsetY}%, 0) scale(${t.scale}) rotate(${t.rotate}deg)`,
+        transform: `translate3d(${t.x + offsetX}%, ${t.y + offsetY}%, 0) scale(${t.scale}) rotate(${t.rotate}deg)`,
         transformOrigin: "50% 52%",
         willChange: "transform",
       }}

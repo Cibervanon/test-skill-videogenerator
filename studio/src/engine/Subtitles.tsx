@@ -5,11 +5,35 @@ import { clamp, easeOutCubic } from "./math";
 
 export type CaptionCue = { text: string; start: number; end: number };
 
+/** Word-timed cue from the manifest, in shot-local seconds. */
+export type TimedCaptionCue = { text: string; start: number; end: number };
+
 /**
- * Split a line into caption chunks of 1-3 words and distribute time by
- * character weight, the way the reference captions read (2-3 words per beat).
+ * Build the caption cues for a shot.
+ *
+ * When the manifest carries timings from the take (`shot.captions`), those
+ * windows win: each chunk appears on the word that actually opens it. The
+ * character-weight fallback is kept for manifests written before the voice
+ * plan existed, and for wordless shots.
  */
-export const buildCues = (line: string, startFrame: number, endFrame: number): CaptionCue[] => {
+export const buildCues = (
+  line: string,
+  startFrame: number,
+  endFrame: number,
+  timed?: TimedCaptionCue[],
+  fps = 30,
+): CaptionCue[] => {
+  if (timed && timed.length) {
+    const cues = timed
+      .filter((cue) => cue.text.trim() && cue.end > cue.start)
+      .map((cue) => ({
+        text: cue.text,
+        start: Math.max(startFrame, startFrame + Math.round(cue.start * fps)),
+        end: Math.min(endFrame, startFrame + Math.round(cue.end * fps)),
+      }))
+      .filter((cue) => cue.end > cue.start);
+    if (cues.length) return cues;
+  }
   const words = line.trim().split(/\s+/).filter(Boolean);
   const chunks: string[][] = [];
   for (let i = 0; i < words.length; i += rhythm.captionWordsPerChunk) {
@@ -18,6 +42,7 @@ export const buildCues = (line: string, startFrame: number, endFrame: number): C
   const totalChars = Math.max(1, words.join("").length);
   let cursor = startFrame;
   const span = endFrame - startFrame;
+  // Fallback only: no take timings in this manifest.
   return chunks.map((chunk) => {
     const weight = chunk.join("").length / totalChars;
     const dur = Math.max(8, Math.round(span * weight));

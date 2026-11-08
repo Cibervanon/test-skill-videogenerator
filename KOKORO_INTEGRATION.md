@@ -68,11 +68,12 @@ consumed global word times.
    `studio.py voice --fit-shots` stretch only shots whose line overflows, and
    write `preproduction/manifest_fitted.json`; the active manifest is never
    rewritten silently.
-7. **Music is ducked by the voice**, not by a static gain: `mixdown.py` runs
-   `sidechaincompress` keyed on the voice and writes both the sum (`mix.wav`) and
-   the ducked bed (`music_ducked.wav`). `mixcheck.py` now measures the voice
-   against the ducked bed — measuring it against the final mix would compare the
-   voice with itself and flag every window.
+7. **Music is ducked by the voice**, not by a static gain: `mixdown.py` follows
+   a 20 ms RMS envelope of the voice and applies 20 ms attack / 250 ms release
+   before summing the stems in NumPy; it writes both the sum (`mix.wav`) and the
+   ducked bed (`music_ducked.wav`). `mixcheck.py` measures the voice against the
+   ducked bed — measuring it against the final mix would compare the voice with
+   itself and flag every window.
 
 ## 4. Installation (reproducible, isolated)
 
@@ -118,7 +119,7 @@ Three voices is the model's limit; casting is voice + speed, not timbre range.
 | Sample rate | 24 kHz mono, PCM_16 |
 | Alignment | `pred_dur`, 100 % of words (no syllable fallback) |
 | Stem | `generation/voice/voice.wav`, peak-normalised to −1.5 dBFS |
-| Mix | `generation/audio/mix.wav`, sidechain duck, 8 windows within 3 dB of the voice (was 53 before ducking) |
+| Mix | `generation/audio/mix.wav`, RMS-envelope duck, 3 windows within 3 dB of the voice at `music_gain=0.20` |
 | Cost | **0 credits, 0 USD** |
 
 ## 7. What is honestly weak

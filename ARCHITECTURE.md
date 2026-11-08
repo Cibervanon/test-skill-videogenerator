@@ -50,12 +50,13 @@ LOCAL mode. The film is data; the renderer is a pure function of that data.
 | `project.py` | folder layout, bibles, continuity, manifest hashes |
 | `library.py` | asset catalogue derived from cast/scenes/engine/voices/score, search, validation, reuse report |
 | `storyboard.py` + `storyboard.mjs` | key-frame stills (one bundle, N stills) and the captioned contact sheet |
-| `av_director.py` | authored beat sheet → the same render manifest, with scales, camera motives and sound cues |
-| `avqa.py` | structural creative audit and before/after comparison; subjective dimensions stay human |
+| `av_director.py` | authored beat sheet → the same render manifest, with scales, camera motives, sound cues and a carried actor ledger |
+| `avqa.py` | structural creative audit (including `character_continuity`) and before/after comparison; subjective dimensions stay human |
 | `voice.py` | voice plan and word timings; narration mode, LOCAL by default, ElevenLabs behind explicit authorisation, content-hashed cache, credit log |
 | `kokoro_tts.py` | local Spanish takes, cache, timeline stem, optional shot fitting; never imports torch in the main process |
 | `narration.py` | take/stem/mix RMS, one-voice and last-spoken-line coverage gates |
-| `mixdown.py` + `mixcheck.py` | sidechain-ducked score and voice-vs-bed measurement; "not applicable" without a speech stem |
+| `captions.py` | word timings from the voice plan → `shot.captions` in shot-local seconds, with stale-plan rejection |
+| `mixdown.py` + `mixcheck.py` | deterministic NumPy mix: RMS voice envelope, attack/release ducking, linear limiter; voice-vs-bed measurement; "not applicable" without a speech stem |
 | `identity.py` | canonical cast audit, per-shot override rejection, head/body proportion band |
 | `providers/` | `base.py` (interfaces, CostGuard, JSONL log), `local.py`, `external.py`, `registry.py` |
 
@@ -72,14 +73,14 @@ src/
   engine/FilmFinish.tsx         grain, grade, vignette, halation
   engine/texture.tsx            procedural materials (stone, plank, shingle, snow, carpet, wallpaper, frost)
   engine/atmosphere.tsx         cast shadows, light shafts, fog, dust, glow, LightVeil, Cone
-  engine/Subtitles.tsx          word-chunked caption cues
+  engine/Subtitles.tsx          word-timed caption chunks (shot.captions) + fallback
   engine/Snow.tsx               deterministic particles
   characters/Character.tsx      the rig (pose, gait, blink, props)
   characters/cast.ts            cast loader (typed view of cast.json)
   composition/Actors.tsx        performance presets
   composition/CastSheet.tsx     cast sheet composition (identity check)
   composition/Demo.tsx          shot timeline, crossfades, assembly of the film
-  scenes/*.tsx                  TownNight, Doorway, FaceCloseup, FieldDawn, BellInsert
+  scenes/*.tsx                  TownNight, Doorway, FaceCloseup, FieldDawn, BellInsert, Workshop
 ```
 
 **Layering rule:** environment renders a set only; the *shot* owns the camera and
@@ -103,11 +104,14 @@ now uses `ParallaxGroup`, and the actors have their own `<svg>` layer.
     "id": "S01",
     "scene": "townNight",              // key into the environment registry
     "camera": "panLeft",               // CameraMove union
-    "seconds": 8,
-    "line": "caption text",
-    "actors": [{ "id": "elder", "preset": "walkIn", "x": 470, "y": 1690,
+    "cameraIntensity": 0.8,            // 0.35..1.35; static uses 0
+    "seconds": 8,    "line": "caption text",
+    "captions": [{"text": "caption text", "start": 0.0, "end": 1.4}], // optional, shot-local seconds from the take
+    "actors": [{"id": "elder", "preset": "walkIn", "x": 470, "y": 1690,
                  "scale": 1.5, "facing": 1, "from": -180, "to": 0,
-                 "start": 0.06, "end": 0.86, "hold": "lantern" }]
+                 "start": 0.06, "end": 0.86, "hold": "lantern",
+                 "sequence": [{"preset": "walkIn", "start": 0.02, "end": 0.62},
+                              {"preset": "turn", "start": 0.66, "end": 1.0}]}]
   }]
 }
 ```

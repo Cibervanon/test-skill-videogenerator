@@ -1,0 +1,82 @@
+{
+  "ok": true,
+  "provider": "kokoro",
+  "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+  "kokoro_version": "0.9.4",
+  "torch": "2.15.0+cpu",
+  "device": "cpu",
+  "cuda": false,
+  "voice": "ef_dora",
+  "lang_code": "e",
+  "speed": 0.98,
+  "sample_rate": 24000,
+  "duration": 3.305,
+  "chunks": 1,
+  "words": [
+    {
+      "w": "La",
+      "s": 0.0,
+      "e": 0.108,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "última",
+      "s": 0.108,
+      "e": 0.515,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "hoja",
+      "s": 0.515,
+      "e": 0.949,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "llevaba",
+      "s": 0.949,
+      "e": 1.328,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "tres",
+      "s": 1.328,
+      "e": 1.572,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "días",
+      "s": 1.572,
+      "e": 1.87,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "pidiendo",
+      "s": 1.87,
+      "e": 2.304,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "agua.",
+      "s": 2.304,
+      "e": 2.791,
+      "p": "",
+      "source": "pred_dur"
+    }
+  ],
+  "alignment": "pred_dur",
+  "timing": {
+    "load_seconds": 35.62,
+    "synth_seconds": 10.34,
+    "realtime_factor": 3.13
+  },
+  "wall_seconds": 48.67,
+  "text": "La última hoja llevaba tres días pidiendo agua.",
+  "speaker": "narrator"
+}

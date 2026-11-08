@@ -1,0 +1,16 @@
+[evaluate] PASS ui_composition  measured  geometry + timing (manifest)
+[evaluate] PASS composition     measured  automatic (pixels)
+[evaluate] PASS legibility      measured  automatic (pixels)
+[evaluate] PASS consistency     measured  automatic (pixels)
+[evaluate] PASS overlays        measured  geometry (manifest)
+[evaluate] PASS montage         measured  structural (edit plan)
+[evaluate] --   style_integrity pending   subjective
+[evaluate] --   narrative       pending   subjective
+[evaluate] --   acting          pending   subjective
+[evaluate] --   rhythm          pending   subjective
+[evaluate] PASS motion          measured  automatic (qa)
+[evaluate] PASS technical       measured  automatic (qa)
+[evaluate] PASS sound           measured  automatic (qa)
+[evaluate] PASS captions        measured  automatic (qa)
+[evaluate] sin fallos medidos · 4 pendiente(s) sin puntuar
+[evaluate] projects/av_ultima_medida\quality\evaluation.md

@@ -1,0 +1,82 @@
+{
+  "ok": true,
+  "provider": "kokoro",
+  "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+  "kokoro_version": "0.9.4",
+  "torch": "2.15.0+cpu",
+  "device": "cpu",
+  "cuda": false,
+  "voice": "ef_dora",
+  "lang_code": "e",
+  "speed": 0.98,
+  "sample_rate": 24000,
+  "duration": 3.255,
+  "chunks": 1,
+  "words": [
+    {
+      "w": "El",
+      "s": 0.0,
+      "e": 0.081,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "aprendiz",
+      "s": 0.081,
+      "e": 0.651,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "quería",
+      "s": 0.651,
+      "e": 1.058,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "cerrar",
+      "s": 1.058,
+      "e": 1.438,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "la",
+      "s": 1.438,
+      "e": 1.547,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "costura",
+      "s": 1.547,
+      "e": 2.035,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "y",
+      "s": 2.035,
+      "e": 2.062,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "marcharse.",
+      "s": 2.062,
+      "e": 2.849,
+      "p": "",
+      "source": "pred_dur"
+    }
+  ],
+  "alignment": "pred_dur",
+  "timing": {
+    "load_seconds": 25.47,
+    "synth_seconds": 7.52,
+    "realtime_factor": 2.31
+  },
+  "wall_seconds": 34.96,
+  "text": "El aprendiz quería cerrar la costura y marcharse.",
+  "speaker": "narrator"
+}

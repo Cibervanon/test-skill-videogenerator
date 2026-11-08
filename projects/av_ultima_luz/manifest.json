@@ -1,0 +1,759 @@
+{
+  "id": "av_ultima_luz",
+  "title": "La última luz",
+  "logline": "En un umbral nevado, una mujer espera a alguien que no volverá; un farolero viene a apagar la lámpara y acaba dejando la suya.",
+  "mode": "LOCAL",
+  "style": "cinematic",
+  "format": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "aspect": "9:16"
+  },
+  "transitionFrames": 10,
+  "narration": true,
+  "library": [
+    "rig:default",
+    "character:elder",
+    "character:young",
+    "set:doorway",
+    "camera:pushinslow",
+    "camera:dollyin",
+    "camera:trackright",
+    "camera:static",
+    "camera:panright",
+    "camera:dollyout",
+    "transition:cut",
+    "sfx:footstep"
+  ],
+  "shots": [
+    {
+      "id": "S01",
+      "function": "hook",
+      "scene": "doorway",
+      "line": "La luz del umbral seguía encendida.",
+      "speaker": "narrator",
+      "seconds": 3.6,
+      "scale": "detail",
+      "camera": "pushInSlow",
+      "cameraIntensity": 0.65,
+      "zoom": 1.25,
+      "offsetX": 8,
+      "offsetY": -8,
+      "cameraMotive": "start on the one light that has been kept alive; the question is who is waiting for it",
+      "transitionMotive": "open on the object that carries the waiting, not on an establishing shot",
+      "note": "hook: the lit threshold and the snow, no actor; the light is the promise that has not gone out",
+      "intent": "hook",
+      "beat": "hook",
+      "transition": "cut",
+      "transitionIn": 0,
+      "dialogue": false,
+      "actors": [],
+      "sound": [],
+      "overlays": [],
+      "presentation": {
+        "mode": "A",
+        "reason": "the scene already carries the information: no UI",
+        "scrim": 0.0,
+        "independent": false,
+        "bridge": false
+      },
+      "props": [],
+      "captions": [
+        {
+          "text": "La luz del",
+          "start": 0.0,
+          "end": 0.5
+        },
+        {
+          "text": "umbral seguía encendida.",
+          "start": 0.447,
+          "end": 2.124
+        }
+      ]
+    },
+    {
+      "id": "S02",
+      "function": "setup",
+      "scene": "doorway",
+      "line": "La vieja esperaba a alguien que no volvía.",
+      "speaker": "narrator",
+      "seconds": 4.0,
+      "scale": "medium",
+      "camera": "dollyIn",
+      "cameraIntensity": 0.7,
+      "zoom": 1.12,
+      "offsetX": 0,
+      "offsetY": -8,
+      "cameraMotive": "bring the woman and the arriving lamplighter into one frame so the wait becomes a relationship",
+      "transitionMotive": "the light becomes a person; the cut moves from the object to the waiting",
+      "note": "setup: the old woman at the door, the young lamplighter entering with his lantern",
+      "intent": "setup",
+      "beat": "setup",
+      "transition": "cut",
+      "transitionIn": 0,
+      "dialogue": false,
+      "actors": [
+        {
+          "id": "elder",
+          "preset": "idle",
+          "x": 300,
+          "y": 1740,
+          "scale": 1.35,
+          "facing": 1,
+          "hold": "none",
+          "phase": 0.3,
+          "continuity": {
+            "entry": {
+              "x": 300.0,
+              "facing": 1,
+              "hold": "none"
+            },
+            "exit": {
+              "x": 300.0,
+              "facing": 1,
+              "hold": "none",
+              "preset": "idle"
+            },
+            "carried": false,
+            "shift": null,
+            "scene": "doorway",
+            "motive": ""
+          }
+        },
+        {
+          "id": "young",
+          "preset": "walkIn",
+          "x": 720,
+          "y": 1740,
+          "scale": 1.24,
+          "facing": -1,
+          "hold": "lantern",
+          "from": 160,
+          "to": 0,
+          "start": 0.06,
+          "end": 0.48,
+          "sequence": [
+            {
+              "preset": "walkIn",
+              "start": 0.02,
+              "end": 0.52,
+              "x": 720,
+              "from": 160,
+              "to": 0,
+              "hold": "lantern"
+            },
+            {
+              "preset": "turn",
+              "start": 0.56,
+              "end": 1.0,
+              "x": 720,
+              "hold": "lantern"
+            }
+          ],
+          "continuity": {
+            "entry": {
+              "x": 720.0,
+              "facing": -1,
+              "hold": "lantern"
+            },
+            "exit": {
+              "x": 720.0,
+              "facing": -1,
+              "hold": "lantern",
+              "preset": "turn"
+            },
+            "carried": false,
+            "shift": null,
+            "scene": "doorway",
+            "motive": ""
+          }
+        }
+      ],
+      "sound": [
+        {
+          "type": "footstep",
+          "at": 0.65,
+          "gain": 0.11,
+          "pan": 0.2
+        }
+      ],
+      "overlays": [],
+      "presentation": {
+        "mode": "A",
+        "reason": "the scene already carries the information: no UI",
+        "scrim": 0.0,
+        "independent": false,
+        "bridge": false
+      },
+      "props": [],
+      "captions": [
+        {
+          "text": "La vieja esperaba",
+          "start": 0.0,
+          "end": 1.151
+        },
+        {
+          "text": "a alguien que",
+          "start": 1.151,
+          "end": 1.699
+        },
+        {
+          "text": "no volvía.",
+          "start": 1.699,
+          "end": 2.494
+        }
+      ]
+    },
+    {
+      "id": "S03",
+      "function": "escalation",
+      "scene": "doorway",
+      "line": "El farolero vino a apagarla.",
+      "speaker": "narrator",
+      "seconds": 3.8,
+      "scale": "medium",
+      "camera": "trackRight",
+      "cameraIntensity": 0.65,
+      "zoom": 1.12,
+      "offsetX": -2,
+      "offsetY": -8,
+      "cameraMotive": "follow the lamplighter's reach toward the wall lamp; the conflict is the hand that wants to end the wait",
+      "transitionMotive": "the arrival turns into an action; the camera moves with the decision",
+      "note": "escalation: he reaches for the lamp; the woman turns to stop him",
+      "intent": "escalation",
+      "beat": "escalation",
+      "transition": "cut",
+      "transitionIn": 0,
+      "dialogue": false,
+      "actors": [
+        {
+          "id": "elder",
+          "preset": "turn",
+          "x": 300,
+          "y": 1740,
+          "scale": 1.35,
+          "facing": 1,
+          "hold": "none",
+          "phase": 0.45,
+          "sequence": [
+            {
+              "preset": "turn",
+              "start": 0.02,
+              "end": 0.58,
+              "x": 300,
+              "facing": 1
+            },
+            {
+              "preset": "idle",
+              "start": 0.62,
+              "end": 1.0,
+              "x": 300,
+              "facing": 1
+            }
+          ],
+          "continuity": {
+            "entry": {
+              "x": 300.0,
+              "facing": 1,
+              "hold": "none"
+            },
+            "exit": {
+              "x": 300.0,
+              "facing": 1,
+              "hold": "none",
+              "preset": "idle"
+            },
+            "carried": false,
+            "shift": 0.0,
+            "scene": "doorway",
+            "motive": ""
+          }
+        },
+        {
+          "id": "young",
+          "preset": "reach",
+          "x": 720,
+          "y": 1740,
+          "scale": 1.24,
+          "facing": 1,
+          "hold": "lantern",
+          "armR": -12,
+          "phase": 0.35,
+          "sequence": [
+            {
+              "preset": "turn",
+              "start": 0.01,
+              "end": 0.14,
+              "x": 720,
+              "facing": 1,
+              "hold": "lantern"
+            },
+            {
+              "preset": "reach",
+              "start": 0.16,
+              "end": 1.0,
+              "x": 720,
+              "facing": 1,
+              "hold": "lantern"
+            }
+          ],
+          "continuity": {
+            "entry": {
+              "x": 720.0,
+              "facing": 1,
+              "hold": "lantern"
+            },
+            "exit": {
+              "x": 720.0,
+              "facing": 1,
+              "hold": "lantern",
+              "preset": "reach"
+            },
+            "carried": false,
+            "shift": 0.0,
+            "scene": "doorway",
+            "motive": ""
+          }
+        }
+      ],
+      "sound": [
+        {
+          "type": "footstep",
+          "at": 0.55,
+          "gain": 0.1,
+          "pan": 0.1
+        }
+      ],
+      "overlays": [],
+      "presentation": {
+        "mode": "A",
+        "reason": "the scene already carries the information: no UI",
+        "scrim": 0.0,
+        "independent": false,
+        "bridge": false
+      },
+      "props": [],
+      "captions": [
+        {
+          "text": "El farolero vino",
+          "start": 0.0,
+          "end": 1.027
+        },
+        {
+          "text": "a apagarla.",
+          "start": 1.027,
+          "end": 1.854
+        }
+      ]
+    },
+    {
+      "id": "S04",
+      "function": "reaction",
+      "scene": "doorway",
+      "line": "",
+      "speaker": "none",
+      "seconds": 2.7,
+      "scale": "close",
+      "camera": "static",
+      "cameraIntensity": 0.0,
+      "cameraMotive": "hold the woman's face as the light she has kept becomes a decision about letting go",
+      "transitionMotive": "hard cut to the person who carries the cost of the light",
+      "note": "reaction: wordless close-up; the hand at the lamp is the cause, the face is the consequence",
+      "intent": "reaction",
+      "beat": "reaction",
+      "transition": "cut",
+      "transitionIn": 0,
+      "dialogue": false,
+      "actors": [
+        {
+          "id": "elder",
+          "preset": "react",
+          "x": 540,
+          "y": 1900,
+          "scale": 2.8,
+          "facing": 1,
+          "hold": "none",
+          "phase": 0.45,
+          "continuityMotive": "cut into a close-up of the same woman at the same threshold; no stage move",
+          "continuity": {
+            "entry": {
+              "x": 540.0,
+              "facing": 1,
+              "hold": "none"
+            },
+            "exit": {
+              "x": 540.0,
+              "facing": 1,
+              "hold": "none",
+              "preset": "react"
+            },
+            "carried": false,
+            "shift": 240.0,
+            "scene": "doorway",
+            "motive": "cut into a close-up of the same woman at the same threshold; no stage move"
+          }
+        }
+      ],
+      "sound": [],
+      "overlays": [],
+      "presentation": {
+        "mode": "A",
+        "reason": "the scene already carries the information: no UI",
+        "scrim": 0.0,
+        "independent": false,
+        "bridge": false
+      },
+      "offsetY": 0,
+      "props": []
+    },
+    {
+      "id": "S05",
+      "function": "reveal",
+      "scene": "doorway",
+      "state": "left",
+      "line": "Él dejó su propia luz en la nieve.",
+      "speaker": "narrator",
+      "seconds": 3.8,
+      "scale": "medium",
+      "camera": "panRight",
+      "cameraIntensity": 0.55,
+      "zoom": 1.08,
+      "offsetX": -4,
+      "offsetY": -8,
+      "cameraMotive": "follow the lamplighter out and reveal the lantern he leaves behind, without making the object a new exposition",
+      "transitionMotive": "the decision produces a visible trace in the snow",
+      "note": "reveal: he walks away; the set state shows his lantern left in the snow",
+      "intent": "reveal",
+      "beat": "reveal",
+      "transition": "cut",
+      "transitionIn": 0,
+      "dialogue": false,
+      "actors": [
+        {
+          "id": "elder",
+          "preset": "idle",
+          "x": 300,
+          "y": 1740,
+          "scale": 1.35,
+          "facing": 1,
+          "hold": "none",
+          "phase": 0.5,
+          "continuity": {
+            "entry": {
+              "x": 300.0,
+              "facing": 1,
+              "hold": "none"
+            },
+            "exit": {
+              "x": 300.0,
+              "facing": 1,
+              "hold": "none",
+              "preset": "idle"
+            },
+            "carried": false,
+            "shift": -240.0,
+            "scene": "doorway",
+            "motive": ""
+          }
+        },
+        {
+          "id": "young",
+          "preset": "walkIn",
+          "x": 720,
+          "y": 1740,
+          "scale": 1.24,
+          "facing": 1,
+          "hold": "none",
+          "from": 0,
+          "to": 160,
+          "start": 0.05,
+          "end": 0.55,
+          "continuity": {
+            "entry": {
+              "x": 720.0,
+              "facing": 1,
+              "hold": "none"
+            },
+            "exit": {
+              "x": 880.0,
+              "facing": 1,
+              "hold": "none",
+              "preset": "walkIn"
+            },
+            "carried": false,
+            "shift": 0.0,
+            "scene": "doorway",
+            "motive": ""
+          }
+        }
+      ],
+      "sound": [
+        {
+          "type": "footstep",
+          "at": 0.7,
+          "gain": 0.1,
+          "pan": 0.25
+        }
+      ],
+      "overlays": [],
+      "presentation": {
+        "mode": "A",
+        "reason": "the scene already carries the information: no UI",
+        "scrim": 0.0,
+        "independent": false,
+        "bridge": false
+      },
+      "props": [],
+      "captions": [
+        {
+          "text": "Él dejó su",
+          "start": 0.0,
+          "end": 0.641
+        },
+        {
+          "text": "propia luz en",
+          "start": 0.641,
+          "end": 1.449
+        },
+        {
+          "text": "la nieve.",
+          "start": 1.449,
+          "end": 2.091
+        }
+      ]
+    },
+    {
+      "id": "S06",
+      "function": "close",
+      "scene": "doorway",
+      "state": "left",
+      "line": "Y se fue sin decir nada.",
+      "speaker": "narrator",
+      "seconds": 3.4,
+      "scale": "medium",
+      "camera": "dollyOut",
+      "cameraIntensity": 0.45,
+      "zoom": 1.08,
+      "offsetX": 4,
+      "offsetY": -8,
+      "cameraMotive": "release from the woman and the left lantern; the light remains as the only answer",
+      "transitionMotive": "settle on the trace and the waiting; no new information after this",
+      "note": "close: the woman stays, the young man is gone, and the second lantern is still lit in the snow",
+      "intent": "close",
+      "beat": "close",
+      "transition": "cut",
+      "transitionIn": 0,
+      "dialogue": false,
+      "actors": [
+        {
+          "id": "elder",
+          "preset": "idle",
+          "x": 300,
+          "y": 1740,
+          "scale": 1.35,
+          "facing": 1,
+          "hold": "none",
+          "phase": 0.6,
+          "continuity": {
+            "entry": {
+              "x": 300.0,
+              "facing": 1,
+              "hold": "none"
+            },
+            "exit": {
+              "x": 300.0,
+              "facing": 1,
+              "hold": "none",
+              "preset": "idle"
+            },
+            "carried": false,
+            "shift": 0.0,
+            "scene": "doorway",
+            "motive": ""
+          }
+        }
+      ],
+      "sound": [],
+      "overlays": [],
+      "presentation": {
+        "mode": "A",
+        "reason": "the scene already carries the information: no UI",
+        "scrim": 0.0,
+        "independent": false,
+        "bridge": false
+      },
+      "props": [],
+      "captions": [
+        {
+          "text": "Y se fue",
+          "start": 0.0,
+          "end": 0.5
+        },
+        {
+          "text": "sin decir nada.",
+          "start": 0.404,
+          "end": 1.587
+        }
+      ]
+    }
+  ],
+  "continuity": {
+    "states": [
+      {
+        "shot": "S02",
+        "actor": "elder",
+        "entry": {
+          "x": 300.0,
+          "facing": 1,
+          "hold": "none"
+        },
+        "exit": {
+          "x": 300.0,
+          "facing": 1,
+          "hold": "none",
+          "preset": "idle"
+        },
+        "carried": false,
+        "shift": null,
+        "scene": "doorway",
+        "motive": ""
+      },
+      {
+        "shot": "S02",
+        "actor": "young",
+        "entry": {
+          "x": 720.0,
+          "facing": -1,
+          "hold": "lantern"
+        },
+        "exit": {
+          "x": 720.0,
+          "facing": -1,
+          "hold": "lantern",
+          "preset": "turn"
+        },
+        "carried": false,
+        "shift": null,
+        "scene": "doorway",
+        "motive": ""
+      },
+      {
+        "shot": "S03",
+        "actor": "elder",
+        "entry": {
+          "x": 300.0,
+          "facing": 1,
+          "hold": "none"
+        },
+        "exit": {
+          "x": 300.0,
+          "facing": 1,
+          "hold": "none",
+          "preset": "idle"
+        },
+        "carried": false,
+        "shift": 0.0,
+        "scene": "doorway",
+        "motive": ""
+      },
+      {
+        "shot": "S03",
+        "actor": "young",
+        "entry": {
+          "x": 720.0,
+          "facing": 1,
+          "hold": "lantern"
+        },
+        "exit": {
+          "x": 720.0,
+          "facing": 1,
+          "hold": "lantern",
+          "preset": "reach"
+        },
+        "carried": false,
+        "shift": 0.0,
+        "scene": "doorway",
+        "motive": ""
+      },
+      {
+        "shot": "S04",
+        "actor": "elder",
+        "entry": {
+          "x": 540.0,
+          "facing": 1,
+          "hold": "none"
+        },
+        "exit": {
+          "x": 540.0,
+          "facing": 1,
+          "hold": "none",
+          "preset": "react"
+        },
+        "carried": false,
+        "shift": 240.0,
+        "scene": "doorway",
+        "motive": "cut into a close-up of the same woman at the same threshold; no stage move"
+      },
+      {
+        "shot": "S05",
+        "actor": "elder",
+        "entry": {
+          "x": 300.0,
+          "facing": 1,
+          "hold": "none"
+        },
+        "exit": {
+          "x": 300.0,
+          "facing": 1,
+          "hold": "none",
+          "preset": "idle"
+        },
+        "carried": false,
+        "shift": -240.0,
+        "scene": "doorway",
+        "motive": ""
+      },
+      {
+        "shot": "S05",
+        "actor": "young",
+        "entry": {
+          "x": 720.0,
+          "facing": 1,
+          "hold": "none"
+        },
+        "exit": {
+          "x": 880.0,
+          "facing": 1,
+          "hold": "none",
+          "preset": "walkIn"
+        },
+        "carried": false,
+        "shift": 0.0,
+        "scene": "doorway",
+        "motive": ""
+      },
+      {
+        "shot": "S06",
+        "actor": "elder",
+        "entry": {
+          "x": 300.0,
+          "facing": 1,
+          "hold": "none"
+        },
+        "exit": {
+          "x": 300.0,
+          "facing": 1,
+          "hold": "none",
+          "preset": "idle"
+        },
+        "carried": false,
+        "shift": 0.0,
+        "scene": "doorway",
+        "motive": ""
+      }
+    ],
+    "carried": 0,
+    "note": "actor entry/exit state resolved by av_director; carry refuses scene changes"
+  }
+}

@@ -167,6 +167,8 @@ SET_DESCRIPTIONS = {
     "doorway": "Threshold: warm furnished interior seen from the snow, lamp and light spill.",
     "fielddawn": "Dawn graveyard: headstones, chapel, stone wall, open grave, low sun.",
     "bellinsert": "Insert: belfry louvres, stone arch, headstock and the bronze bell.",
+    "workshop": "Interior: tailor's workroom at dawn, window, thread shelf, dress form and worktable.",
+    "greenhouse": "Interior: dry glasshouse at dawn, bench, rain barrel, potted plant and watering can.",
     "facecloseup": "Close-up plate: bokeh and lattice behind the keeper's face.",
 }
 
@@ -302,6 +304,7 @@ def _camera_assets(root: str) -> list[dict]:
     moves = [
         "static", "drift", "dollyIn", "dollyOut", "panLeft", "panRight",
         "tiltUp", "craneDown", "pushInSlow", "trackLeft", "trackRight", "reframe",
+        "handheld",
     ]
     return [
         _entry(
@@ -686,6 +689,11 @@ def compose(spec: dict, catalog: dict, *, default_fps: int = 30) -> dict:
         "library": spec.get("library", []),
         "shots": shots,
     }
+    # The continuity ledger is planning evidence, not render input. Preserve it
+    # through catalogue composition so avqa can audit the same manifest that
+    # the renderer will consume.
+    if "continuity" in spec:
+        manifest["continuity"] = spec["continuity"]
     return {"ok": True, "problems": [], "project": manifest}
 
 

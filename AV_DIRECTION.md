@@ -1,4 +1,4 @@
-# Audiovisual direction (0.9.0)
+# Audiovisual direction (0.9.0 → 0.10.5)
 
 The engine already had a camera, acting presets, a procedural score, a storyboard
 and a QA pipeline. What it did not have was an edit decision: why this shot, at
@@ -10,14 +10,15 @@ that decision without adding a second renderer.
 | System | Before | Reused / extended |
 |---|---|---|
 | Shot manifest | scene, camera, actors, line, transition frames | **extended** with `beat`, `scale`, `cameraMotive`, `transitionMotive`, `sound` |
-| Camera | 9 transform moves (`CameraRig.tsx`) | **extended** with `trackLeft`, `trackRight`, `reframe`; all old moves kept |
-| Acting | 7 intent presets (`Actors.tsx`) | reused unchanged; the plan chooses who acts, listens and reacts |
+| Camera | 9 transform moves (`CameraRig.tsx`) | **extended** with `trackLeft`, `trackRight`, `reframe`, `handheld` and a per-shot `cameraIntensity`; all old moves kept |
+| Acting | 7 intent presets (`Actors.tsx`) | **extended** with `point`, `react` and compound `sequence` phases; the plan chooses who acts, listens and reacts |
 | Audio | scene-derived bell/footsteps/dig | **extended**: a shot can declare timed cues, including intentional silence |
-| Score | deterministic `audio_gen` + sidechain duck | reused; demo mixed at `music_gain=0.20` after measuring competition |
+| Score | deterministic `audio_gen` + NumPy envelope duck | reused; demo mixed at `music_gain=0.20` after measuring competition |
 | Narrator / voice | Kokoro, cached takes, `voicecheck` | reused unchanged; the eight original lines are preserved |
 | Asset library | `library.compose` validates sets/characters/cameras | reused; the director manifest still fails on an unknown id |
 | Storyboard / preproduction | `project.write_preproduction` | reused; corrected to sum per-boundary transitions, not every boundary |
-| Technical QA | `qa.py` | reused unchanged |
+| Technical QA | `qa.py` | reused; delivery voice and audio-duration gates remain |
+| Creative QA | `avqa.py` | **extended** with beat order, beat framing, axis continuity, static intent, shot purpose and speech density |
 | Evaluation | measured vs subjective dimensions | **extended** with a measured `montage` dimension from `av_audit.json` |
 | Feedback | `feedback.py` scopes and categories | reused; no second memory system |
 
@@ -134,9 +135,12 @@ still reported.
 
 ## 5. Before / after
 
-`python scripts/studio.py avqa --project projects/av_direccion \
+`  python scripts/studio.py avqa --project projects/av_direccion \
   --manifest projects/av_direccion/manifest.json \
-  --baseline projects/ui_direccion/manifest.json`
+  --baseline projects/ui_direccion/manifest.json
+# shorter, interaction-led direction demo:
+# python scripts/studio.py av --project projects/av_direccion_demo \
+#   --spec projects/av_direccion_demo/spec.json`
 
 writes `projects/av_direccion/quality/before_after.md`.
 
@@ -180,9 +184,10 @@ The score and foley remain procedural. Explicit cues are offsets inside the
 shot; `audio_gen` converts them to the global timeline. A declared empty list
 means silence for that shot and suppresses the old scene-derived effects.
 
-The default mix (`music_gain=0.45`) left 40 windows within 3 dB of the voice.
+The default mix (`music_gain=0.45`) left 40 windows within 3 dB of the voice;
+the corrected `music_gain=0.20` mix now leaves **3**.
 At `0.28` it fell to 15; at `0.20` to 4, with the music still present and the
-sidechain breathing in the gaps. The delivered mix uses 0.20. This is a measured
+envelope ducking breathing in the gaps. The delivered mix uses 0.20. This is a measured
 mix decision, not a claim that the music is good.
 
 ## 7. Reproduce
@@ -198,9 +203,12 @@ python scripts/studio.py audio --project projects/av_direccion \
   --manifest projects/av_direccion/manifest.json
 python scripts/studio.py mixdown --project projects/av_direccion \
   --music-gain 0.20 --voice-gain 1.0
-python scripts/studio.py avqa --project projects/av_direccion \
+  python scripts/studio.py avqa --project projects/av_direccion \
   --manifest projects/av_direccion/manifest.json \
   --baseline projects/ui_direccion/manifest.json
+# shorter, interaction-led direction demo:
+# python scripts/studio.py av --project projects/av_direccion_demo \
+#   --spec projects/av_direccion_demo/spec.json
 cd studio && npx remotion render src/index.ts CinematicDemo \
   ../projects/av_direccion/output/picture_silent.mp4 --concurrency=4
 cd .. && python scripts/studio.py assemble --project projects/av_direccion \
@@ -209,7 +217,96 @@ python scripts/studio.py qa --project projects/av_direccion \
   --manifest projects/av_direccion/manifest.json
 ```
 
-## 8. Limits
+## 8. Camera as intention, not decoration (0.10.4)
+
+A move now carries an intensity as well as a motive:
+
+```jsonc
+{
+  "camera": "trackRight",
+  "cameraIntensity": 0.8,
+  "cameraMotive": "move with the rope hand so the climb is an action"
+}
+```
+
+The director fills a beat-specific default (hook 0.9, setup 0.7, reaction 0.85,
+close 0.75, insert/static 0). The renderer multiplies translation, rotation and
+the scale delta by that value, so the same vocabulary can whisper or push. The
+new `handheld` move is a low-amplitude, deterministic operator drift, not random
+noise; `static` remains a legitimate choice and is audited for a motive.
+
+Acting gained two presets that make interaction readable:
+
+- `point` — eyes arrive first, then the arm; the hand settles instead of
+  snapping. It is slower than `reach`, so it can carry a line.
+- `react` — a small recoil, held brow and catching breath for a wordless
+  reaction close-up.
+
+These are still preset curves, not IK or mocap. They coordinate with the shot,
+the camera and the sound cue; they do not simulate physical contact.
+
+## 9. Creative QA: what is now measured
+
+`avqa` still refuses to score taste. It now checks decisions that were previously
+only prose:
+
+| Check | What it catches |
+|---|---|
+| `beat_order` | a hook that arrives late or a close that is not last |
+| `beat_framing` | a reaction in extreme wide, a close in detail, a reveal with no face/object scale |
+| `axis_continuity` | the same two actors reversing screen direction between shots in one scene |
+| `static_intent` | an unmotivated tripod shot, or a film that is mostly static |
+| `shot_purpose` | a shot with no line, action, insert or reaction |
+| `speech_density` | narration delivered faster than the ear can follow |
+| `camera_intensity` | an intensity outside 0.35..1.35 (static may use 0) |
+| `action_completion` | a compound sequence with an invalid window or a last `walkIn` |
+| `shot_motion` | a per-shot motion reading; low readings are diagnostic, not automatic failures |
+
+Before/after comparison also reports length-independent rates: action per shot,
+two-actor shots per shot, camera and scale variety per shot, and audio events per
+second. Raw counts alone would penalise a shorter demo for being shorter.
+
+## 10. Compound actions and per-shot motion (0.10.5)
+
+A shot can now carry an action score instead of one frozen preset:
+
+```jsonc
+"sequence": [
+  {"preset": "walkIn", "start": 0.02, "end": 0.62, "from": 180, "to": -20, "x": 760},
+  {"preset": "turn",   "start": 0.66, "end": 1.00, "x": 740}
+]
+```
+
+The phase windows are normalized shot time. Each phase is evaluated on its own
+local clock through the existing `perform` function; adjacent phases cross-fade
+over ±4% of the shot. This is how S02 completes **walk → stop → turn** and S03
+completes **turn → reach** without resetting the character at a phase edge.
+
+The planner rejects unknown presets, empty scores, invalid windows and overlaps.
+It warns about pose gaps, a sequence that starts late and a sequence that ends
+mid-walk; `avqa` makes the last case a structural failure (`action_completion`).
+
+QA now also writes `shot_motion`: every visible shot is decoded separately, and
+reports mean motion, moving ratio, pan/tilt and a `low_motion` diagnostic. On the
+current demo: **min 2,438**, mean **4,249**, **0 low-motion shots**; S04 remains a
+quiet declared reaction, not a missing animation.
+
+## 10.6 Carried state and the new story
+
+`carry` is resolved in the planner, not in the renderer. The ledger records
+entry/exit `x`, `facing`, `hold`, preset, scene and shift; `manifest.continuity`
+is the same resolved evidence consumed by `avqa`. Five states are inherited in
+`av_ultima_medida`, with no scene change and no unmotivated shift. The teleport
+guard fails a same-scene move over 260 px unless the shot declares
+`continuityMotive`.
+
+The new film uses `workshop` for all six shots. This trades location variety for
+spatial continuity: the camera changes scale and angle, but the tailor and the
+apprentice keep their blocking. S04 is a deliberate wordless close-up; S05
+returns to the wide workshop with a motive. `quality/continuity_strip.jpg` was
+opened and reviewed; it is not a substitute for a full human pass.
+
+## 11. Limits
 
 - **Scale is a declared unit, not a lens.** The camera is a transform rig; there
   is no focal length, depth of field or true 3D parallax.
@@ -219,9 +316,18 @@ python scripts/studio.py qa --project projects/av_direccion \
   legibility and consistency still come from `inspect`/`evaluate` and human eyes.
   S04's detail insert is measured but exempt from the empty-scene failure by its
   declared `insert`/`detail` beat; that is a domain rule, not a universal pass.
-- **Acting is still preset-based.** The plan coordinates who acts and when, but
-  the rig has no IK, cloth or visemes.
+- **Acting is still preset-based.** The plan coordinates who acts and when; a
+  sequence blends preset parameters, but the rig has no IK, cloth, contact or
+  visemes.
+- **Carried state is planned, not simulated.** `carry` inherits x/facing/hold at
+  plan time and refuses a scene change; the renderer still receives ordinary
+  actor fields and does not own a body across `<Sequence>` boundaries. The
+  `workshop` story proves five inherited states, not physical persistence.
+- **A single set is a deliberate trade.** `av_ultima_medida` stays in the
+  workshop for all six shots; that strengthens blocking continuity and reduces
+  location variety compared with the four-set direction demo.
 - **Continuity is asserted by ids and positions, not tracked in 3D.** A prop can
-  change hands between shots if the manifest says so; the audit will not catch it.
+  change hands if an explicit sequence/blocking says so; there is no contact
+  solver and no pixel-level drift check.
 - **Human review is pending.** Narrative, performance, rhythm and style have no
   score here.

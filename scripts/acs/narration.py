@@ -35,6 +35,27 @@ def _db(value: float) -> float:
     return round(20.0 * float(np.log10(max(1e-9, value))), 2)
 
 
+def _resample(values: np.ndarray, source_rate: int, target_rate: int) -> np.ndarray:
+    if source_rate == target_rate or len(values) == 0:
+        return values
+    count = max(1, int(round(len(values) * target_rate / source_rate)))
+    return np.interp(
+        np.linspace(0, len(values) - 1, count),
+        np.arange(len(values)),
+        values,
+    )
+
+
+def _correlation(left: np.ndarray, right: np.ndarray) -> float:
+    count = min(len(left), len(right))
+    if count < 64:
+        return 0.0
+    a = left[:count] - left[:count].mean()
+    b = right[:count] - right[:count].mean()
+    denominator = float(np.sqrt((a * a).sum() * (b * b).sum()))
+    return float((a * b).sum() / denominator) if denominator else 0.0
+
+
 def validate(project_dir: str, plan: dict, *, min_rms_db: float = -40.0) -> dict:
     lines = plan.get("lines") or []
     problems: list[str] = []
@@ -45,7 +66,7 @@ def validate(project_dir: str, plan: dict, *, min_rms_db: float = -40.0) -> dict
     stem_path = os.path.join(project_dir, stem_rel)
     mix_path = os.path.join(project_dir, "generation", "audio", "mix.wav")
     voice, sr = read_wav(stem_path) if os.path.exists(stem_path) else (None, None)
-    mixed, _ = read_wav(mix_path) if os.path.exists(mix_path) else (None, None)
+    mixed, mix_sr = read_wav(mix_path) if os.path.exists(mix_path) else (None, None)
     if voice is None:
         problems.append(f"missing narration stem: {stem_rel}")
     if mixed is None:
@@ -108,8 +129,10 @@ def validate(project_dir: str, plan: dict, *, min_rms_db: float = -40.0) -> dict
             row["stem_rms_db"] = _db(np.sqrt(np.mean(segment**2))) if len(segment) else -120.0
             if len(segment) == 0 or row["stem_rms_db"] < min_rms_db:
                 problems.append(f"{row['shot']}: stem is silent at {start:.2f}s ({row['stem_rms_db']} dB)")
-        if mixed is not None:
-            mix_sr = 48000
+        if mixed is not None and mix_sr:
+            # The mix is normally 48 kHz, but the rate is a property of the file,
+            # not a constant: indexing a 44.1 kHz mix as if it were 48 kHz shifts
+            # every window and can report silence for a perfectly audible line.
             segment = mixed[int(start * mix_sr) : int(audible_end * mix_sr)]
             row["mix_rms_db"] = _db(np.sqrt(np.mean(segment**2))) if len(segment) else -120.0
             row["mix_peak_db"] = _db(float(np.max(np.abs(segment)))) if len(segment) else -120.0
@@ -124,7 +147,18 @@ def validate(project_dir: str, plan: dict, *, min_rms_db: float = -40.0) -> dict
     total = max(starts[-1] + float(lines[-1].get("audio_duration") or 0), 0.0) if lines else 0.0
     speech = sum(float(line.get("audio_duration") or 0) for line in lines)
     stem_seconds = round(len(voice) / sr, 3) if voice is not None and sr else None
-    mix_seconds = round(len(mixed) / 48000.0, 3) if mixed is not None else None
+    mix_seconds = round(len(mixed) / mix_sr, 3) if mixed is not None and mix_sr else None
+    # A mix that carries only the score passes every non-silence check. Compare
+    # it with the actual narration stem so "music but no voice" fails loudly.
+    mix_voice_correlation = None
+    if mixed is not None and mix_sr and voice is not None and sr:
+        aligned_voice = _resample(voice, sr, mix_sr)
+        mix_voice_correlation = round(_correlation(mixed, aligned_voice), 4)
+        if abs(mix_voice_correlation) < 0.10 and float(np.abs(aligned_voice).max()) > 1e-4:
+            problems.append(
+                "mix.wav does not contain the narration stem (correlation "
+                f"{mix_voice_correlation}); re-run studio.py mixdown"
+            )
     project_seconds = float(plan.get("project_seconds") or total)
     # A silent tail is legitimate; a stem that ends before the last spoken line
     # is not. This is the duration check that catches a short WAV paired with a
@@ -152,6 +186,7 @@ def validate(project_dir: str, plan: dict, *, min_rms_db: float = -40.0) -> dict
         "narration_end": round(narration_end, 3),
         "stem_seconds": stem_seconds,
         "mix_seconds": mix_seconds,
+        "mix_voice_correlation": mix_voice_correlation,
         "narration": bool(plan.get("narration")),
         "voices": sorted(voices),
         "rows": rows,

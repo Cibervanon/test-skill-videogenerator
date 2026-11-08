@@ -3,7 +3,7 @@ import { AbsoluteFill, Sequence, useCurrentFrame } from "remotion";
 import activeProject from "../data/project.json";
 import { CameraRig } from "../engine/CameraRig";
 import { FilmFinish } from "../engine/FilmFinish";
-import { buildCues, Captions } from "../engine/Subtitles";
+import { buildCues, Captions, type TimedCaptionCue } from "../engine/Subtitles";
 import { clamp } from "../engine/math";
 import { StyleProvider } from "../engine/styles";
 import { ExplainerBackdrop, OverlayLayer, Scrim } from "../motion-graphics";
@@ -14,6 +14,8 @@ import { Doorway } from "../scenes/Doorway";
 import { FaceCloseup } from "../scenes/FaceCloseup";
 import { FieldDawn } from "../scenes/FieldDawn";
 import { BellInsert } from "../scenes/BellInsert";
+import { Workshop } from "../scenes/Workshop";
+import { Greenhouse } from "../scenes/Greenhouse";
 import { GeneratedScene } from "../generated/GeneratedScene";
 import { PropLayer } from "../generated/PropLayer";
 import generated from "../data/generated_assets.json";
@@ -23,12 +25,18 @@ type Shot = {
   id: string;
   scene: string;
   camera: string;
+  cameraIntensity?: number;
   seconds: number;
   line?: string;
   transitionIn?: number;
+  /** Word-timed cues from the take (shot-local seconds); falls back if absent. */
+  captions?: TimedCaptionCue[];
   overlays?: OverlaySpec[];
   props?: PropPlacement[];
+  offsetX?: number;
   offsetY?: number;
+  zoom?: number;
+  state?: "table" | "held" | "pour" | "bloom";
   actors?: ActorSpec[];
   presentation?: ShotPresentation;
 };
@@ -44,12 +52,14 @@ export type DemoProject = {
 
 const active = activeProject as unknown as DemoProject;
 
-const envs: Record<string, React.FC<{ progress: number }>> = {
+const envs: Record<string, React.FC<{ progress: number; state?: "table" | "held" | "pour" | "bloom" | "left" }>> = {
   townNight: TownNight,
   doorway: Doorway,
   faceCloseup: FaceCloseup,
   fieldDawn: FieldDawn,
   bellInsert: BellInsert,
+  workshop: Workshop,
+  greenhouse: Greenhouse,
 };
 
 const generatedSets = (generated as unknown as { sets?: Record<string, GeneratedSet> }).sets ?? {};
@@ -99,7 +109,10 @@ const ShotView: React.FC<{ shot: Shot; index: number; frames: number; transIn: n
     throw new Error(`Unknown scene "${shot.scene}" — add it to composition/Demo.tsx or the generated asset library`);
   }
 
-  const cues = useMemo(() => buildCues(shot.line ?? "", 0, frames), [shot.line, frames]);
+  const cues = useMemo(
+    () => buildCues(shot.line ?? "", 0, frames, shot.captions, fps),
+    [shot.line, shot.captions, frames],
+  );
   const overlays = useMemo(() => (shot.overlays ?? []) as OverlaySpec[], [shot.overlays]);
   const props = useMemo(() => (shot.props ?? []) as PropPlacement[], [shot.props]);
   const actors = (shot.actors ?? []) as ActorSpec[];
@@ -112,8 +125,8 @@ const ShotView: React.FC<{ shot: Shot; index: number; frames: number; transIn: n
       {mode === "E" ? (
         <ExplainerBackdrop />
       ) : (
-        <CameraRig move={shot.camera as never} progress={p} offsetY={shot.offsetY ?? 0}>
-          {generatedSet ? <GeneratedScene spec={generatedSet} progress={p} /> : Env ? <Env progress={p} /> : null}
+        <CameraRig move={shot.camera as never} progress={p} offsetX={shot.offsetX ?? 0} offsetY={shot.offsetY ?? 0} zoom={shot.zoom ?? 1} intensity={shot.cameraIntensity ?? 1}>
+          {generatedSet ? <GeneratedScene spec={generatedSet} progress={p} /> : Env ? <Env progress={p} state={shot.state} /> : null}
           <PropLayer props={props} specs={generatedProps} layer="back" />
           {/* Actors live in their own SVG layer: a `<g>` outside an `<svg>` is
               ignored by the browser, and a silent missing cast is worse than a

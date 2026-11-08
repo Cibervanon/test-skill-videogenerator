@@ -33,7 +33,7 @@ export type RigProps = {
   mouth?: number;
   lean?: number;
   breath?: number;
-  hold?: "none" | "shovel" | "lantern" | "rope" | "bell";
+  hold?: "none" | "shovel" | "lantern" | "rope" | "bell" | "can";
   shadow?: boolean;
   opacity?: number;
   /** -1 sad/concerned .. +1 angry; 0 neutral. Drives brow angle. */
@@ -223,10 +223,26 @@ export const Character: React.FC<RigProps> = ({
               </g>
             ) : hold === "lantern" ? (
               <g transform="translate(0 8)">
-                <path d="M 0 -12 v 8" stroke={ink} strokeWidth={3} />
-                <path d="M -15 0 h 30 l 7 32 h -44 z" fill="#f7c977" stroke={ink} strokeWidth={3} />
-                <ellipse cx={0} cy={16} rx={11} ry={12} fill="#fff3c9" />
-                <path d="M -15 0 h 30" stroke="#8a5a2a" strokeWidth={4} />
+                {/* A lantern, not a yellow bag: handle, dark frame, glass and a
+                    soft halo. The old single trapezoid read as a handbag in a
+                    medium shot, which made the lamplighter's prop ambiguous. */}
+                <ellipse cx={0} cy={20} rx={32} ry={28} fill="#ffd27a" opacity={0.2} />
+                <path d="M 0 -19 v 10" stroke={ink} strokeWidth={3.4} strokeLinecap="round" />
+                <path d="M -15 -9 q 15 -13 30 0" stroke={ink} strokeWidth={3.4} fill="none" strokeLinecap="round" />
+                <path d="M -19 -5 h 38 l 6 39 h -50 z" fill="#3b2b22" stroke={ink} strokeWidth={3.4} strokeLinejoin="round" />
+                <rect x={-12} y={-2} width={24} height={30} rx={4} fill="#ffe2a1" stroke="#8a5a2a" strokeWidth={2.4} />
+                <ellipse cx={0} cy={14} rx={8} ry={10} fill="#fff8d6" />
+                <path d="M -19 -5 h 38 M -13 34 h 26" stroke="#8a5a2a" strokeWidth={4} strokeLinecap="round" />
+                <path d="M -12 1 l 24 27 M 12 1 l -24 27" stroke="#8a5a2a" strokeWidth={2} opacity={0.7} />
+              </g>
+            ) : hold === "can" ? (
+              <g transform="translate(0 12)">
+                <path d="M -22 0 Q -27 23 -17 33 L 17 33 Q 27 23 22 0 Z" fill="#b7c8c2" stroke={ink} strokeWidth={3} />
+                <path d="M -22 7 Q 0 14 22 7" stroke="#5f726c" strokeWidth={3} fill="none" opacity={0.8} />
+                <path d="M 17 3 L 33 -23 L 40 -19 L 24 6" fill="#5f726c" stroke={ink} strokeWidth={2.6} />
+                <path d="M 14 -12 Q 33 -43 48 -32 Q 40 -20 24 -16" fill="none" stroke={ink} strokeWidth={3.6} />
+                <path d="M -18 5 Q 0 11 18 5 L 17 10 Q 0 15 -17 10 Z" fill="#75b8c4" opacity={0.95} />
+                <circle cx={-11} cy={-11} r={3.2} fill={ink} opacity={0.5} />
               </g>
             ) : null,
             handR,

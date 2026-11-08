@@ -1,0 +1,445 @@
+{
+  "style": "cinematic",
+  "shots": [
+    {
+      "shot": "S01",
+      "scene": "greenhouse",
+      "mode": "A",
+      "line": "La última hoja llevaba tres días pidiendo agua.",
+      "still": "projects/av_ultima_gota/preproduction/board/S01.png",
+      "path": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\av_ultima_gota\\preproduction\\board\\S01.png",
+      "size": {
+        "width": 1080,
+        "height": 1920
+      },
+      "empty_ratio": 0.405,
+      "edge_density": 4.49,
+      "subject_score": 2.457,
+      "caption_contrast": {
+        "spread": 167.0,
+        "edges": 6.16
+      },
+      "palette_shift": 0.102,
+      "depth_bands": 3,
+      "depth_profile": [
+        7.98,
+        7.14,
+        6.77
+      ],
+      "has_captions": true,
+      "flags": [],
+      "status": "clean (pixels)"
+    },
+    {
+      "shot": "S02",
+      "scene": "greenhouse",
+      "mode": "A",
+      "line": "El jardinero abrió el grifo; solo salió aire.",
+      "still": "projects/av_ultima_gota/preproduction/board/S02.png",
+      "path": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\av_ultima_gota\\preproduction\\board\\S02.png",
+      "size": {
+        "width": 1080,
+        "height": 1920
+      },
+      "empty_ratio": 0.397,
+      "edge_density": 5.04,
+      "subject_score": 3.461,
+      "caption_contrast": {
+        "spread": 227.0,
+        "edges": 6.3
+      },
+      "palette_shift": 0.1,
+      "depth_bands": 3,
+      "depth_profile": [
+        7.78,
+        8.34,
+        7.69
+      ],
+      "has_captions": true,
+      "flags": [],
+      "status": "clean (pixels)"
+    },
+    {
+      "shot": "S03",
+      "scene": "greenhouse",
+      "mode": "A",
+      "line": "El aprendiz trajo la regadera vacía.",
+      "still": "projects/av_ultima_gota/preproduction/board/S03.png",
+      "path": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\av_ultima_gota\\preproduction\\board\\S03.png",
+      "size": {
+        "width": 1080,
+        "height": 1920
+      },
+      "empty_ratio": 0.397,
+      "edge_density": 5.28,
+      "subject_score": 3.326,
+      "caption_contrast": {
+        "spread": 222.0,
+        "edges": 8.19
+      },
+      "palette_shift": 0.083,
+      "depth_bands": 3,
+      "depth_profile": [
+        7.61,
+        8.51,
+        8.79
+      ],
+      "has_captions": true,
+      "flags": [],
+      "status": "clean (pixels)"
+    },
+    {
+      "shot": "S04",
+      "scene": "greenhouse",
+      "mode": "A",
+      "line": "Al fondo, el barril de lluvia seguía lleno.",
+      "still": "projects/av_ultima_gota/preproduction/board/S04.png",
+      "path": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\av_ultima_gota\\preproduction\\board\\S04.png",
+      "size": {
+        "width": 1080,
+        "height": 1920
+      },
+      "empty_ratio": 0.286,
+      "edge_density": 5.51,
+      "subject_score": 3.942,
+      "caption_contrast": {
+        "spread": 221.0,
+        "edges": 8.53
+      },
+      "palette_shift": 0.09,
+      "depth_bands": 3,
+      "depth_profile": [
+        7.94,
+        8.42,
+        8.8
+      ],
+      "has_captions": true,
+      "flags": [],
+      "status": "clean (pixels)"
+    },
+    {
+      "shot": "S05",
+      "scene": "greenhouse",
+      "mode": "A",
+      "line": "El aprendiz cruzó el invernadero con la regadera llena.",
+      "still": "projects/av_ultima_gota/preproduction/board/S05.png",
+      "path": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\av_ultima_gota\\preproduction\\board\\S05.png",
+      "size": {
+        "width": 1080,
+        "height": 1920
+      },
+      "empty_ratio": 0.393,
+      "edge_density": 5.16,
+      "subject_score": 3.197,
+      "caption_contrast": {
+        "spread": 79.0,
+        "edges": 5.28
+      },
+      "palette_shift": 0.097,
+      "depth_bands": 3,
+      "depth_profile": [
+        7.73,
+        8.79,
+        7.58
+      ],
+      "has_captions": true,
+      "flags": [],
+      "status": "clean (pixels)"
+    },
+    {
+      "shot": "S06",
+      "scene": "greenhouse",
+      "mode": "A",
+      "line": "",
+      "still": "projects/av_ultima_gota/preproduction/board/S06.png",
+      "path": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\av_ultima_gota\\preproduction\\board\\S06.png",
+      "size": {
+        "width": 1080,
+        "height": 1920
+      },
+      "empty_ratio": 0.341,
+      "edge_density": 5.29,
+      "subject_score": 2.866,
+      "caption_contrast": {
+        "spread": 114.0,
+        "edges": 5.33
+      },
+      "palette_shift": 0.093,
+      "depth_bands": 3,
+      "depth_profile": [
+        7.66,
+        9.56,
+        7.25
+      ],
+      "has_captions": false,
+      "flags": [],
+      "status": "clean (pixels)"
+    },
+    {
+      "shot": "S07",
+      "scene": "greenhouse",
+      "mode": "A",
+      "line": "La planta bebió; la flor abrió.",
+      "still": "projects/av_ultima_gota/preproduction/board/S07.png",
+      "path": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\av_ultima_gota\\preproduction\\board\\S07.png",
+      "size": {
+        "width": 1080,
+        "height": 1920
+      },
+      "empty_ratio": 0.393,
+      "edge_density": 4.48,
+      "subject_score": 3.233,
+      "caption_contrast": {
+        "spread": 227.0,
+        "edges": 5.45
+      },
+      "palette_shift": 0.094,
+      "depth_bands": 3,
+      "depth_profile": [
+        8.3,
+        7.25,
+        5.87
+      ],
+      "has_captions": true,
+      "flags": [],
+      "status": "clean (pixels)"
+    }
+  ],
+  "overlays": {
+    "ok": true,
+    "style": "cinematic",
+    "problems": [],
+    "warnings": [],
+    "counts": {},
+    "shots": [
+      {
+        "id": "S01",
+        "overlays": []
+      },
+      {
+        "id": "S02",
+        "overlays": []
+      },
+      {
+        "id": "S03",
+        "overlays": []
+      },
+      {
+        "id": "S04",
+        "overlays": []
+      },
+      {
+        "id": "S05",
+        "overlays": []
+      },
+      {
+        "id": "S06",
+        "overlays": []
+      },
+      {
+        "id": "S07",
+        "overlays": []
+      }
+    ]
+  },
+  "ui": {
+    "ok": true,
+    "modes": {
+      "A": 7
+    },
+    "totals": {
+      "overlays": 0,
+      "problems": 0,
+      "warnings": 0
+    },
+    "shots": [
+      {
+        "shot": "S01",
+        "mode": "A",
+        "mode_reason": "the scene already carries the information: no UI",
+        "intent": "hook",
+        "overlays": [],
+        "flags": [],
+        "status": "clean"
+      },
+      {
+        "shot": "S02",
+        "mode": "A",
+        "mode_reason": "the scene already carries the information: no UI",
+        "intent": "setup",
+        "overlays": [],
+        "flags": [],
+        "status": "clean"
+      },
+      {
+        "shot": "S03",
+        "mode": "A",
+        "mode_reason": "the scene already carries the information: no UI",
+        "intent": "escalation",
+        "overlays": [],
+        "flags": [],
+        "status": "clean"
+      },
+      {
+        "shot": "S04",
+        "mode": "A",
+        "mode_reason": "the scene already carries the information: no UI",
+        "intent": "development",
+        "overlays": [],
+        "flags": [],
+        "status": "clean"
+      },
+      {
+        "shot": "S05",
+        "mode": "A",
+        "mode_reason": "the scene already carries the information: no UI",
+        "intent": "development",
+        "overlays": [],
+        "flags": [],
+        "status": "clean"
+      },
+      {
+        "shot": "S06",
+        "mode": "A",
+        "mode_reason": "the scene already carries the information: no UI",
+        "intent": "reaction",
+        "overlays": [],
+        "flags": [],
+        "status": "clean"
+      },
+      {
+        "shot": "S07",
+        "mode": "A",
+        "mode_reason": "the scene already carries the information: no UI",
+        "intent": "close",
+        "overlays": [],
+        "flags": [],
+        "status": "clean"
+      }
+    ],
+    "problems": [],
+    "warnings": [],
+    "method": "geometría resuelta + ventanas del manifiesto; la lectura se estima por palabras del propio elemento",
+    "limits": [
+      "la caja del cuerpo es un sobre aproximado (cabeza, torso, abrigo, arco de brazos): no rastrea dedos",
+      "no hay OCR ni comprensión semántica: el motivo narrativo se audita contra el campo `intent` declarado",
+      "el tiempo de lectura es una estimación de 3.3 palabras/s, no una medición ocular"
+    ],
+    "render": {
+      "status": "measured",
+      "video": "C:\\Users\\W10\\Videos\\SKILLS\\projects\\av_ultima_gota\\output\\final_video.mp4",
+      "frames": [
+        {
+          "shot": "S01",
+          "mode": "A",
+          "seconds": 2.09,
+          "sample": 0.55,
+          "frame": "quality/ui_frames/S01.png",
+          "scene_edges": 2.83,
+          "ui": null,
+          "ui_note": "plano sin UI"
+        },
+        {
+          "shot": "S02",
+          "mode": "A",
+          "seconds": 6.0,
+          "sample": 0.55,
+          "frame": "quality/ui_frames/S02.png",
+          "scene_edges": 3.82,
+          "ui": null,
+          "ui_note": "plano sin UI"
+        },
+        {
+          "shot": "S03",
+          "mode": "A",
+          "seconds": 10.0,
+          "sample": 0.55,
+          "frame": "quality/ui_frames/S03.png",
+          "scene_edges": 4.07,
+          "ui": null,
+          "ui_note": "plano sin UI"
+        },
+        {
+          "shot": "S04",
+          "mode": "A",
+          "seconds": 13.89,
+          "sample": 0.55,
+          "frame": "quality/ui_frames/S04.png",
+          "scene_edges": 4.29,
+          "ui": null,
+          "ui_note": "plano sin UI"
+        },
+        {
+          "shot": "S05",
+          "mode": "A",
+          "seconds": 17.91,
+          "sample": 0.55,
+          "frame": "quality/ui_frames/S05.png",
+          "scene_edges": 3.91,
+          "ui": null,
+          "ui_note": "plano sin UI"
+        },
+        {
+          "shot": "S06",
+          "mode": "A",
+          "seconds": 21.29,
+          "sample": 0.55,
+          "frame": "quality/ui_frames/S06.png",
+          "scene_edges": 4.19,
+          "ui": null,
+          "ui_note": "plano sin UI"
+        },
+        {
+          "shot": "S07",
+          "mode": "A",
+          "seconds": 24.59,
+          "sample": 0.55,
+          "frame": "quality/ui_frames/S07.png",
+          "scene_edges": 3.19,
+          "ui": null,
+          "ui_note": "plano sin UI"
+        }
+      ],
+      "by_mode": {
+        "A": {
+          "shots": 7,
+          "scene_edges": 3.76,
+          "ui_contrast": null,
+          "ui_shots": 0
+        }
+      },
+      "note": "scene_edges es energía de bordes del frame completo; ui_contrast es el rango p95-p5 dentro de la caja, medido en el centro de la ventana del elemento. Confirma que B/C conservan escena y que E/F son placas gráficas; no puntúa gusto. Las etiquetas ancladas al actor no tienen caja declarada y no se miden."
+    }
+  },
+  "aesthetic_review": {
+    "status": "pending",
+    "source": "projects/av_ultima_gota/preproduction/visual_review.json",
+    "note": "composition/acting/storytelling are not measurable by this tool"
+  },
+  "method": {
+    "pixels": "PIL on the storyboard stills (downscaled tiles, luma, edge energy, quantised palette)",
+    "geometry": "overlay boxes resolved from the manifest with the renderer's own constants",
+    "limitations": "no semantic understanding, no OCR, no judgement of taste"
+  },
+  "problems": [],
+  "kind_map": {
+    "empty_ratio": "automatic (pixels)",
+    "edge_density": "automatic (pixels)",
+    "subject_score": "automatic (pixels)",
+    "caption_contrast": "automatic (pixels)",
+    "palette_shift": "automatic (pixels)",
+    "depth_bands": "automatic (pixels)",
+    "overlays": "geometry (manifest)",
+    "ui": "geometry + timing (manifest)",
+    "cuts": "automatic (video)"
+  },
+  "thresholds": {
+    "empty_ratio_max": 0.62,
+    "caption_spread_min": 70.0,
+    "caption_edge_min": 5.0,
+    "subject_score_min": 1.55,
+    "palette_shift_max": 0.3,
+    "depth_bands_min": 2,
+    "cut_sync_tolerance_s": 0.35
+  }
+}

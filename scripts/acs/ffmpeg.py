@@ -146,21 +146,38 @@ def read_pcm(tools: Tools, path: str, *, sample_rate: int = 8000, channels: int 
     return proc.stdout
 
 
-def read_video(tools: Tools, path: str, *, fps: float, width: int, height: int | None = None) -> bytes:
-    """Decode video to rgb24 at a reduced size; used for palette/energy math."""
+def read_video(
+    tools: Tools,
+    path: str,
+    *,
+    fps: float,
+    width: int,
+    height: int | None = None,
+    start: float | None = None,
+    duration: float | None = None,
+) -> bytes:
+    """Decode video to rgb24 at a reduced size; used for palette/energy math.
+
+    `start`/`duration` are optional so a caller can measure one shot without
+    decoding the whole film. Seek is placed before the input for a bounded,
+    fast read; the raw frame count is authoritative, not the requested window.
+    """
     if height is None:
         height = max(2, int(round(width * 9 / 16)))
     # Force even dimensions, FFmpeg requires it for rawvideo rgb24? (not strictly, but keep tidy)
     width -= width % 2
     height -= height % 2
-    proc = run(
-        [
-            tools.ffmpeg, "-v", "error", "-i", path,
-            "-an", "-vf", f"fps={fps},scale={width}:{height}:flags=area",
-            "-pix_fmt", "rgb24", "-f", "rawvideo", "-",
-        ],
-        binary=True,
-    )
+    cmd = [tools.ffmpeg, "-v", "error"]
+    if start is not None and start > 0:
+        cmd += ["-ss", f"{start:.3f}"]
+    cmd += ["-i", path]
+    if duration is not None and duration > 0:
+        cmd += ["-t", f"{duration:.3f}"]
+    cmd += [
+        "-an", "-vf", f"fps={fps},scale={width}:{height}:flags=area",
+        "-pix_fmt", "rgb24", "-f", "rawvideo", "-",
+    ]
+    proc = run(cmd, binary=True)
     return proc.stdout
 
 

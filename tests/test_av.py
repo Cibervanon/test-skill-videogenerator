@@ -14,6 +14,9 @@ sys.path.insert(0, os.path.join(ROOT, "scripts"))
 from acs import audio_gen, av_director, avqa, evaluate  # noqa: E402
 
 SPEC = os.path.join(ROOT, "projects", "av_direccion", "spec.json")
+DEMO_SPEC = os.path.join(ROOT, "projects", "av_direccion_demo", "spec.json")
+NEW_STORY_SPEC = os.path.join(ROOT, "projects", "av_ultima_medida", "spec.json")
+SECOND_STORY_SPEC = os.path.join(ROOT, "projects", "av_ultima_gota", "spec.json")
 BASELINE = os.path.join(ROOT, "projects", "ui_direccion", "manifest.json")
 
 
@@ -92,6 +95,105 @@ class CreativeQATests(unittest.TestCase):
         self.assertEqual(report["metrics"]["beat_counts"], {})
         self.assertIn("derived from actor scale", report["metrics"]["scale_source"])
 
+    def test_beat_order_is_audited(self):
+        manifest = copy.deepcopy(av_director.plan(load(SPEC))["manifest"])
+        manifest["shots"][0], manifest["shots"][1] = manifest["shots"][1], manifest["shots"][0]
+        report = avqa.audit(manifest)
+        self.assertIn("beat_order", report["summary"]["failed"])
+
+    def test_axis_flip_between_the_same_two_actors_is_flagged(self):
+        manifest = copy.deepcopy(av_director.plan(load(SPEC))["manifest"])
+        first = next(s for s in manifest["shots"] if s["id"] == "S05")
+        second = next(s for s in manifest["shots"] if s["id"] == "S07")
+        for actor in second["actors"]:
+            actor["x"] = 1080 - float(actor["x"])
+        # Keep the scene and cast identical; only screen direction changed.
+        report = avqa.audit({"format": {"fps": 30}, "shots": [first, second]})
+        self.assertTrue(report["metrics"]["axis_violations"])
+
+    def test_static_shot_without_a_motive_fails(self):
+        manifest = copy.deepcopy(av_director.plan(load(SPEC))["manifest"])
+        shot = next(s for s in manifest["shots"] if s["id"] == "S05")
+        shot["camera"] = "static"
+        shot["cameraIntensity"] = 0.0
+        shot["cameraMotive"] = ""
+        report = avqa.audit(manifest)
+        self.assertIn("static_intent", report["summary"]["failed"])
+
+    def test_director_records_camera_intensity(self):
+        manifest = av_director.plan(load(SPEC))["manifest"]
+        self.assertTrue(all("cameraIntensity" in shot for shot in manifest["shots"]))
+        self.assertTrue(all(0.0 <= shot["cameraIntensity"] <= 1.35 for shot in manifest["shots"]))
+
+    def test_compound_sequence_is_normalized_and_audited(self):
+        planned = av_director.plan(load(DEMO_SPEC))
+        self.assertTrue(planned["ok"], planned["problems"])
+        manifest = planned["manifest"]
+        young = next(
+            a for s in manifest["shots"] if s["id"] == "S03" for a in s["actors"] if a["id"] == "young"
+        )
+        self.assertEqual([p["preset"] for p in young["sequence"]], ["turn", "reach"])
+        self.assertEqual([(p["start"], p["end"]) for p in young["sequence"]], [(0.0, 0.34), (0.38, 1.0)])
+        report = avqa.audit(manifest)
+        self.assertGreaterEqual(report["metrics"]["phased_shots"], 2)
+        self.assertGreaterEqual(report["metrics"]["action_phases"], 4)
+        self.assertNotIn("action_completion", report["summary"]["failed"])
+
+    def test_overlapping_compound_phases_are_rejected(self):
+        spec = copy.deepcopy(load(DEMO_SPEC))
+        young = next(
+            a for b in spec["beats"] if b["id"] == "S03" for a in b["actors"] if a["id"] == "young"
+        )
+        young["sequence"][1]["start"] = 0.2
+        planned = av_director.plan(spec)
+        self.assertFalse(planned["ok"])
+        self.assertTrue(any("overlaps the previous phase" in p for p in planned["problems"]))
+
+    def test_sequence_ending_mid_walk_fails_creative_audit(self):
+        manifest = copy.deepcopy(av_director.plan(load(DEMO_SPEC))["manifest"])
+        young = next(
+            a for s in manifest["shots"] if s["id"] == "S03" for a in s["actors"] if a["id"] == "young"
+        )
+        young["sequence"][-1]["preset"] = "walkIn"
+        report = avqa.audit(manifest)
+        self.assertIn("action_completion", report["summary"]["failed"])
+        self.assertTrue(report["metrics"]["unfinished_sequences"])
+
+    def test_carry_inherits_actor_state_without_resetting(self):
+        planned = av_director.plan(load(NEW_STORY_SPEC))
+        self.assertTrue(planned["ok"], planned["problems"])
+        manifest = planned["manifest"]
+        s02 = next(a for s in manifest["shots"] if s["id"] == "S02" for a in s["actors"] if a["id"] == "young")
+        s03 = next(a for s in manifest["shots"] if s["id"] == "S03" for a in s["actors"] if a["id"] == "young")
+        self.assertEqual(s03["x"], s02["continuity"]["exit"]["x"])
+        self.assertTrue(s03["continuity"]["carried"])
+        self.assertEqual(s03["continuity"]["shift"], 0.0)
+        self.assertEqual(manifest["continuity"]["carried"], 5)
+        report = avqa.audit(manifest)
+        self.assertNotIn("character_continuity", report["summary"]["failed"])
+        self.assertEqual(report["metrics"]["continuity_issues"], [])
+
+    def test_carry_across_a_scene_change_is_rejected(self):
+        spec = copy.deepcopy(load(NEW_STORY_SPEC))
+        s04 = next(b for b in spec["beats"] if b["id"] == "S04")
+        # Force a real location change; the story itself keeps every shot in the
+        # workshop, so the old fixture no longer exercised this guard.
+        s04["scene"] = "faceCloseup"
+        s04["actors"].append({"id": "young", "preset": "idle", "carry": True, "y": 1900, "scale": 3.0})
+        planned = av_director.plan(spec)
+        self.assertFalse(planned["ok"])
+        self.assertTrue(any("cannot carry across scene change" in p for p in planned["problems"]))
+
+    def test_unmotivated_same_scene_teleport_is_rejected(self):
+        spec = copy.deepcopy(load(NEW_STORY_SPEC))
+        s03 = next(b for b in spec["beats"] if b["id"] == "S03")
+        elder = next(a for a in s03["actors"] if a["id"] == "elder")
+        elder.pop("carry")
+        elder["x"] = 700
+        planned = av_director.plan(spec)
+        self.assertFalse(planned["ok"])
+        self.assertTrue(any("same-scene shift without continuityMotive" in p for p in planned["problems"]))
+
     def test_before_after_reports_structural_deltas(self):
         before = avqa.audit(load(BASELINE))
         after = avqa.audit(av_director.plan(load(SPEC))["manifest"])
@@ -117,6 +219,49 @@ class CreativeQATests(unittest.TestCase):
         self.assertEqual(plain["dimensions"]["montage"]["status"], "pending")
         self.assertEqual(audited["dimensions"]["montage"]["status"], "measured")
         self.assertEqual(audited["summary"]["measured"], plain["summary"]["measured"] + 1)
+
+
+class SecondStoryTests(unittest.TestCase):
+    """The second authored story must be different, stateful and renderable."""
+
+    def test_second_story_is_structurally_valid_and_distinct(self):
+        planned = av_director.plan(load(SECOND_STORY_SPEC))
+        self.assertTrue(planned["ok"], planned["problems"])
+        manifest = planned["manifest"]
+        self.assertEqual(len(manifest["shots"]), 7)
+        self.assertTrue(all(s["scene"] == "greenhouse" for s in manifest["shots"]))
+        self.assertNotIn("workshop", {s["scene"] for s in manifest["shots"]})
+        self.assertEqual(
+            [s["state"] for s in manifest["shots"]],
+            ["table", "table", "held", "held", "held", "pour", "bloom"],
+        )
+        self.assertEqual(manifest["continuity"]["carried"], 1)
+        report = avqa.audit(manifest)
+        self.assertTrue(report["summary"]["ok"], report["summary"])
+        self.assertEqual(report["metrics"]["continuity_issues"], [])
+
+    def test_second_story_keeps_the_water_can_across_the_action(self):
+        manifest = av_director.plan(load(SECOND_STORY_SPEC))["manifest"]
+        young = [
+            (s["id"], a)
+            for s in manifest["shots"]
+            for a in s["actors"]
+            if a["id"] == "young"
+        ]
+        self.assertEqual([shot_id for shot_id, _ in young], ["S03", "S04", "S05"])
+        self.assertTrue(all(a["hold"] == "can" for _, a in young))
+        self.assertTrue(young[1][1]["continuity"]["carried"])
+
+    def test_second_story_opens_and_closes_on_the_changed_object(self):
+        manifest = av_director.plan(load(SECOND_STORY_SPEC))["manifest"]
+        opening = manifest["shots"][0]
+        closing = manifest["shots"][-1]
+        self.assertEqual(opening["actors"], [])
+        self.assertGreater(opening["zoom"], 1.0)
+        self.assertLess(opening["offsetX"], 0.0)
+        self.assertEqual(closing["state"], "bloom")
+        self.assertGreater(closing["zoom"], 1.0)
+        self.assertNotEqual(opening["line"], closing["line"])
 
 
 if __name__ == "__main__":

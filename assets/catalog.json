@@ -1,16 +1,16 @@
 {
   "version": 1,
-  "generated_at": "2026-11-05T21:04:24Z",
+  "generated_at": "2026-11-07T11:35:59Z",
   "source": "derived from cast.json, scenes, engine, voices.json, audio_gen and assets/registry.json (schema 2: generated assets, versions, previews, provenance)",
   "counts": {
-    "camera": 12,
+    "camera": 13,
     "character": 4,
     "engine": 4,
     "expression": 1,
     "motion_graphic": 1,
     "prop": 1,
     "rig": 1,
-    "set": 6,
+    "set": 8,
     "sfx": 3,
     "transition": 2,
     "voice": 3
@@ -23,11 +23,11 @@
       "category": "Camera move",
       "path": "studio/src/engine/CameraRig.tsx",
       "description": "Named camera intent expressed as a transform curve.",
-      "version": 1793890678,
+      "version": 1794017650,
       "dependencies": [],
       "config": {},
       "license": "original",
-      "created": "2026-11-05",
+      "created": "2026-11-07",
       "validated": true,
       "tags": [
         "camera",
@@ -41,11 +41,11 @@
       "category": "Camera move",
       "path": "studio/src/engine/CameraRig.tsx",
       "description": "Named camera intent expressed as a transform curve.",
-      "version": 1793890678,
+      "version": 1794017650,
       "dependencies": [],
       "config": {},
       "license": "original",
-      "created": "2026-11-05",
+      "created": "2026-11-07",
       "validated": true,
       "tags": [
         "camera",
@@ -59,11 +59,11 @@
       "category": "Camera move",
       "path": "studio/src/engine/CameraRig.tsx",
       "description": "Named camera intent expressed as a transform curve.",
-      "version": 1793890678,
+      "version": 1794017650,
       "dependencies": [],
       "config": {},
       "license": "original",
-      "created": "2026-11-05",
+      "created": "2026-11-07",
       "validated": true,
       "tags": [
         "camera",
@@ -77,15 +77,33 @@
       "category": "Camera move",
       "path": "studio/src/engine/CameraRig.tsx",
       "description": "Named camera intent expressed as a transform curve.",
-      "version": 1793890678,
+      "version": 1794017650,
       "dependencies": [],
       "config": {},
       "license": "original",
-      "created": "2026-11-05",
+      "created": "2026-11-07",
       "validated": true,
       "tags": [
         "camera",
         "drift"
+      ]
+    },
+    {
+      "id": "camera:handheld",
+      "name": "handheld",
+      "type": "camera",
+      "category": "Camera move",
+      "path": "studio/src/engine/CameraRig.tsx",
+      "description": "Named camera intent expressed as a transform curve.",
+      "version": 1794017650,
+      "dependencies": [],
+      "config": {},
+      "license": "original",
+      "created": "2026-11-07",
+      "validated": true,
+      "tags": [
+        "camera",
+        "handheld"
       ]
     },
     {
@@ -95,11 +113,11 @@
       "category": "Camera move",
       "path": "studio/src/engine/CameraRig.tsx",
       "description": "Named camera intent expressed as a transform curve.",
-      "version": 1793890678,
+      "version": 1794017650,
       "dependencies": [],
       "config": {},
       "license": "original",
-      "created": "2026-11-05",
+      "created": "2026-11-07",
       "validated": true,
       "tags": [
         "camera",
@@ -113,11 +131,11 @@
       "category": "Camera move",
       "path": "studio/src/engine/CameraRig.tsx",
       "description": "Named camera intent expressed as a transform curve.",
-      "version": 1793890678,
+      "version": 1794017650,
       "dependencies": [],
       "config": {},
       "license": "original",
-      "created": "2026-11-05",
+      "created": "2026-11-07",
       "validated": true,
       "tags": [
         "camera",
@@ -131,11 +149,11 @@
       "category": "Camera move",
       "path": "studio/src/engine/CameraRig.tsx",
       "description": "Named camera intent expressed as a transform curve.",
-      "version": 1793890678,
+      "version": 1794017650,
       "dependencies": [],
       "config": {},
       "license": "original",
-      "created": "2026-11-05",
+      "created": "2026-11-07",
       "validated": true,
       "tags": [
         "camera",
@@ -149,11 +167,11 @@
       "category": "Camera move",
       "path": "studio/src/engine/CameraRig.tsx",
       "description": "Named camera intent expressed as a transform curve.",
-      "version": 1793890678,
+      "version": 1794017650,
       "dependencies": [],
       "config": {},
       "license": "original",
-      "created": "2026-11-05",
+      "created": "2026-11-07",
       "validated": true,
       "tags": [
         "camera",
@@ -167,11 +185,11 @@
       "category": "Camera move",
       "path": "studio/src/engine/CameraRig.tsx",
       "description": "Named camera intent expressed as a transform curve.",
-      "version": 1793890678,
+      "version": 1794017650,
       "dependencies": [],
       "config": {},
       "license": "original",
-      "created": "2026-11-05",
+      "created": "2026-11-07",
       "validated": true,
       "tags": [
         "camera",
@@ -185,11 +203,11 @@
       "category": "Camera move",
       "path": "studio/src/engine/CameraRig.tsx",
       "description": "Named camera intent expressed as a transform curve.",
-      "version": 1793890678,
+      "version": 1794017650,
       "dependencies": [],
       "config": {},
       "license": "original",
-      "created": "2026-11-05",
+      "created": "2026-11-07",
       "validated": true,
       "tags": [
         "camera",
@@ -203,11 +221,11 @@
       "category": "Camera move",
       "path": "studio/src/engine/CameraRig.tsx",
       "description": "Named camera intent expressed as a transform curve.",
-      "version": 1793890678,
+      "version": 1794017650,
       "dependencies": [],
       "config": {},
       "license": "original",
-      "created": "2026-11-05",
+      "created": "2026-11-07",
       "validated": true,
       "tags": [
         "camera",
@@ -221,11 +239,11 @@
       "category": "Camera move",
       "path": "studio/src/engine/CameraRig.tsx",
       "description": "Named camera intent expressed as a transform curve.",
-      "version": 1793890678,
+      "version": 1794017650,
       "dependencies": [],
       "config": {},
       "license": "original",
-      "created": "2026-11-05",
+      "created": "2026-11-07",
       "validated": true,
       "tags": [
         "camera",
@@ -733,7 +751,7 @@
       "category": "Rig",
       "path": "studio/src/characters/Character.tsx",
       "description": "Two-segment arms with elbow, volume-shaded coat, brows, boots, head lead.",
-      "version": 1793887932,
+      "version": 1794050831,
       "dependencies": [
         "engine:math"
       ],
@@ -747,7 +765,7 @@
         ]
       },
       "license": "original",
-      "created": "2026-11-05",
+      "created": "2026-11-07",
       "validated": true,
       "tags": [
         "rig",
@@ -786,7 +804,7 @@
       "category": "Set",
       "path": "studio/src/scenes/Doorway.tsx",
       "description": "Threshold: warm furnished interior seen from the snow, lamp and light spill.",
-      "version": 1793801676,
+      "version": 1794050688,
       "dependencies": [
         "engine:atmosphere",
         "engine:texture"
@@ -795,7 +813,7 @@
         "component": "Doorway"
       },
       "license": "original",
-      "created": "2026-11-04",
+      "created": "2026-11-07",
       "validated": true,
       "tags": [
         "set",
@@ -848,6 +866,30 @@
       "tags": [
         "set",
         "fielddawn",
+        "svg"
+      ]
+    },
+    {
+      "id": "set:greenhouse",
+      "name": "Greenhouse",
+      "type": "set",
+      "category": "Set",
+      "path": "studio/src/scenes/Greenhouse.tsx",
+      "description": "Interior: dry glasshouse at dawn, bench, rain barrel, potted plant and watering can.",
+      "version": 1794050609,
+      "dependencies": [
+        "engine:atmosphere",
+        "engine:texture"
+      ],
+      "config": {
+        "component": "Greenhouse"
+      },
+      "license": "original",
+      "created": "2026-11-07",
+      "validated": true,
+      "tags": [
+        "set",
+        "greenhouse",
         "svg"
       ]
     },
@@ -969,6 +1011,30 @@
       ]
     },
     {
+      "id": "set:workshop",
+      "name": "Workshop",
+      "type": "set",
+      "category": "Set",
+      "path": "studio/src/scenes/Workshop.tsx",
+      "description": "Interior: tailor's workroom at dawn, window, thread shelf, dress form and worktable.",
+      "version": 1794013474,
+      "dependencies": [
+        "engine:atmosphere",
+        "engine:texture"
+      ],
+      "config": {
+        "component": "Workshop"
+      },
+      "license": "original",
+      "created": "2026-11-07",
+      "validated": true,
+      "tags": [
+        "set",
+        "workshop",
+        "svg"
+      ]
+    },
+    {
       "id": "sfx:bell",
       "name": "bell",
       "type": "sfx",
@@ -1041,11 +1107,11 @@
       "category": "Transition",
       "path": "studio/src/composition/Demo.tsx",
       "description": "0 frames of overlap: subject continues, framing changes.",
-      "version": 1793895735,
+      "version": 1794050610,
       "dependencies": [],
       "config": {},
       "license": "original",
-      "created": "2026-11-05",
+      "created": "2026-11-07",
       "validated": true,
       "tags": [
         "transition",
@@ -1060,11 +1126,11 @@
       "category": "Transition",
       "path": "studio/src/composition/Demo.tsx",
       "description": "Overlap of the next shot's transitionIn frames: different setup.",
-      "version": 1793895735,
+      "version": 1794050610,
       "dependencies": [],
       "config": {},
       "license": "original",
-      "created": "2026-11-05",
+      "created": "2026-11-07",
       "validated": true,
       "tags": [
         "transition",

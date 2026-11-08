@@ -725,3 +725,210 @@ falte texto.
 - La auditoría de identidad es estructural y de proporción, no perceptiva.
 - La puerta de dos renders consecutivos con log streaming sigue abierta: este
   pase completó uno.
+
+---
+
+## 0.10.2 — auditoría y subtítulos con reloj real (2026-11-06)
+
+Ejecutado en esta máquina sobre el árbol de trabajo posterior a `5eaec1e`.
+
+| Comprobación | Comando | Resultado |
+|---|---|---|
+| Suite Python | `python -m pytest tests -q` | **167 passed**, 288 warnings de Pillow, 73.47 s |
+| TypeScript | `cd studio && npx tsc --noEmit` | exit 0 |
+| Tests nuevos | `python -m pytest tests/test_captions.py -q` | **8 passed**, 0.33 s |
+| Subtítulos | `studio.py captions --dry-run` | 8 planos, 23 cues, **0 ms** de error (gate 120 ms) |
+| Storyboard real | `studio.py storyboard --scale 0.35` | 10 stills + contact sheet, **54 s** |
+| Restauración de manifest | SHA-256 antes/después | `2af5cfb4a38a5915` sin cambios |
+| Narración | `studio.py voicecheck` | **OK**, 8 líneas, 58 palabras, 23.09 s |
+| QA de entrega | `studio.py qa` | **PASS 12/12** |
+
+### Lo que este pase no prueba
+
+- El MP4 entregado no se re-renderizó: sus subtítulos quemados son del build
+  anterior. La evidencia de render del camino nuevo es el storyboard.
+- El error de 0 ms es contra `voice_plan.json` (`pred_dur`), no contra la señal
+  acústica; no hay ASR ni alineación forzada.
+- No hay OCR ni frame-diff que confirme qué chunk se ve en qué fotograma.
+- La puerta de dos renders completos sigue abierta (24 min por render).
+
+### Rendimiento medido
+
+927 frames en 1464.45 s = **38 frames/min (0.63 fps)**, no los ~500 frames/min
+que afirmaba `LIMITATIONS.md`. La cifra está corregida y el perfilado queda como
+siguiente paso en `quality/repository_audit/performance.md`.
+
+---
+
+## 0.10.3 — Reparación de audio, lock y determinismo (2026-11-06)
+
+### Qué se probó
+
+| Comprobación | Comando | Resultado |
+|---|---|---|
+| Suite completa | `python -m pytest tests -q` | **174 passed**, 288 warnings de Pillow, 68.06 s |
+| TypeScript | `cd studio && npx tsc --noEmit` | exit 0 |
+| Tests de audio/lock | `python -m pytest tests/test_audio_integrity.py -q` | **7 passed**, 2.10 s |
+| Narración | `studio.py voicecheck` | **OK**, 8 líneas, 58 palabras, 23.09 s; mix-voz **0.8985** |
+| Voz en la entrega | `qa.voice_in_delivery` | **0.9209** (gate 0.35) |
+| QA de entrega | `studio.py qa` | **PASS 13/13** |
+| Mix | `studio.py mix --margin 3` | **3 ventanas** dentro de 3 dB; `mix_check.md` regenerado |
+| MP4 | `ffprobe` | 30.933 s, 1080×1920, 30 fps, AAC 48 kHz estéreo, 17.279.149 bytes |
+| Determinismo del mix | SHA-256 de dos regeneraciones | `6fb129fa9384dd4aed6f18dc` idéntico |
+| Determinismo corto | dos renders de 30 frames por el mismo camino | PSNR **53.12 dB**, SSIM **0.99696**, diferencia media **0.39/255** |
+| Lock de manifest | segundo render concurrente | `ManifestBusy` en 5 s; manifest activo intacto |
+
+### Defecto de audio corregido
+
+El MP4 anterior correlacionaba **0.987** con su mix pero **0.0002** con
+`voice.wav`: sonaba la música, no la narración. El grafo FFmpeg reutilizaba la
+voz como sidechain y como entrada de `amix`, y referenciaba `[ducked]` dos
+veces. `mixdown.py` se reescribió como mezclador NumPy determinista; `assemble`
+prefiere `mix.wav`; QA mide la voz dentro del MP4. El video se reensambló y la
+narración está presente.
+
+### Lo que este pase no prueba
+
+- No se re-renderizaron los 927 frames: el MP4 conserva los subtítulos quemados
+  del build anterior. La evidencia del camino nuevo sigue siendo el storyboard.
+- La puerta de dos renders **completos** sigue abierta; la de 30 frames pasa con
+  diferencia sub-píxel de rasterizado (Chrome re-rasteriza el grano SVG), no con
+  MD5 exacto.
+- No hay OCR/ASR: los 0 ms de subtítulos son contra el plan `pred_dur`, y la
+  correlación de voz prueba señal, no inteligibilidad.
+
+---
+
+## 0.10.4 — Dirección, continuidad y demo renderizada (2026-11-06)
+
+### Qué se añadió
+
+- `cameraIntensity` por plano y movimiento `handheld`; presets de actuación
+  `point` y `react`.
+- Checks creativos nuevos: orden de beats, encuadre por beat, eje entre dos
+  actores, intención de planos estáticos, propósito de cada plano, densidad de
+  habla e intensidad de cámara.
+- Comparación antes/después normalizada por plano, no por duración.
+- Fades de 80/120 ms en la mezcla.
+
+### Demo `projects/av_direccion_demo/`
+
+| Comprobación | Comando | Resultado |
+|---|---|---|
+| Plan | `studio.py av` | 6 planos, **20,433 s**, 10 cues, QA creativo sin fallos |
+| Voz | `studio.py voicecheck` | **OK**, 5 líneas, 36 palabras, 15,15 s |
+| Subtítulos | `studio.py captions` | 5 planos, 14 cues, **0 ms** de error (gate 120 ms) |
+| Mezcla | `studio.py mix --margin 3` | **1 ventana** dentro de 3 dB a `music_gain=0.14` |
+| Render | `studio.py render` | **613 frames en 751,16 s** |
+| Entrega | `ffprobe` | 20,433 s, 1080×1920, 30 fps, AAC 48 kHz, 11.021.347 bytes |
+| QA técnico | `studio.py qa` | **PASS 13/13**; voz en entrega **0,9273**; motion **8,853** |
+| Inspección | `studio.py inspect` | **0/6** planos marcados; overlays OK; UI A |
+| Evaluación | `studio.py evaluate` | **10 medidas / 4 humanas pendientes**, sin fallos medidos |
+| Suite | `python -m pytest tests -q` | **178 passed**, 46,71 s |
+| TypeScript | `npx tsc --noEmit` | exit 0 |
+
+### Antes / después (normalizado)
+
+| Métrica | Relato 10 planos | Demo 6 planos |
+|---|---|---|
+| Acción por plano | 0,50 | **0,833** |
+| Dos actores por plano | 0,30 | **0,667** |
+| Variedad de cámara por plano | 0,80 | **1,00** |
+| Variedad de escala por plano | 0,40 | **0,667** |
+| Densidad máxima de habla | 2,778 palabras/s | **2,286** |
+| Violaciones de eje | 0 | **0** |
+
+### Lo que no prueba
+
+- La demo es más corta que el relato: la comparación normalizada evita premiar
+  o castigar por duración, pero no convierte 6 planos en una película de 10.
+- No hay revisión humana de narrativa, actuación, ritmo o estilo; `evaluate` las
+  deja pendientes.
+- No hay OCR/ASR, lip-sync, geometría over-the-shoulder/POV ni IK de contacto.
+- El render es una sola pasada; la puerta de dos renders completos sigue abierta.
+
+---
+
+## 0.10.5 — Acción compuesta y movimiento por plano (2026-11-07)
+
+### Cambios verificados
+
+- `ActorSpec.sequence` ordena presets existentes en una acción compuesta; S02 es
+  `walkIn → turn` y S03 es `turn → reach`.
+- El planificador rechaza ventanas inválidas y solapamientos; `avqa` añade
+  `action_completion` y falla si la secuencia termina en `walkIn`.
+- `motion.analyze_shots` mide cada plano visible y `qa` escribe `shot_motion` con
+  energía, proporción en movimiento, pan/tilt y `low_motion`.
+
+### Evidencia de la demo
+
+| Comprobación | Comando | Resultado |
+|---|---|---|
+| Plan | `studio.py av` | 6 planos, 20,433 s, **2 secuencias / 4 fases**, QA sin fallos |
+| Render | `studio.py render` | **613 frames en 500,47 s** |
+| Entrega | `ffprobe` | 20,433 s, 1080×1920, 30 fps, 11.024.558 bytes, 612 frames |
+| QA técnico | `studio.py qa` | **PASS 13/13**; voz **0,9273**; motion **8,858** |
+| Movimiento por plano | `qa.shot_motion` | mínimo **2,438**, media **4,249**, **0 low-motion** |
+| Inspección | `studio.py inspect` | **0/6** planos marcados; overlays OK |
+| QA creativo | `studio.py avqa` | **20/20**, sin fallos; acción compuesta completa |
+| Evaluación | `studio.py evaluate` | **10 medidas / 4 humanas pendientes** |
+| Suite | `python -m pytest tests -q` | **181 passed**, 73,97 s |
+| TypeScript | `npx tsc --noEmit` | exit 0 |
+
+La tira de frames `quality/action_sequence.jpg` muestra S02/S03 en el MP4 final.
+La revisión visual confirma la continuidad de las fases; no sustituye una
+revisión humana de actuación.
+
+### Lo que no prueba
+
+- Las fases interpolan parámetros de presets; no hay IK, contacto de props ni
+  visemas.
+- La secuencia es intra-plano; el estado entre planos sigue declarado en el
+  manifiesto.
+- El movimiento por plano es un modelo de traslación; `low_motion` es un
+  diagnóstico, y S04 (reacción sostenida) es intencionalmente tranquilo.
+
+---
+
+## 0.10.6 — Continuidad de personajes y nueva historia (2026-11-07)
+
+### Cambios verificados
+
+- `av_director` mantiene un ledger por actor y baja `entry`/`exit` a
+  `manifest.continuity.states`; `carry` hereda `x`, `facing` y `hold`.
+- `carry` se rechaza al cambiar de escena; un salto de más de 260 px en la misma
+  escena exige `continuityMotive`.
+- `avqa.character_continuity` audita estados heredados, saltos sin motivo y
+  ledger ausente; los tests cubren herencia, rechazo entre escenas y teleport.
+- `Workshop.tsx` añade un set no invernal; `projects/av_ultima_medida/` usa
+  únicamente ese set y una estructura narrativa distinta.
+
+### Evidencia de la demo
+
+| Comprobación | Comando | Resultado |
+|---|---|---|
+| Plan | `studio.py av` | 6 planos, 22,4 s, **5 estados heredados**, 3 secuencias / 6 fases |
+| Render | `studio.py render` | **672 frames**, 1080×1920, 30 fps |
+| Entrega | `ffprobe` | 22,4 s, H.264/AAC, **11.989.156 bytes** |
+| QA técnico | `studio.py qa` | **PASS 13/13**; voz **0,9267**; motion **4,034**; freeze **0,1042**; loudness **−17,0 dB** |
+| Continuidad | `studio.py avqa` | `carried: 5`, `continuity_issues: []`, 3 secuencias / 6 fases |
+| Inspección | `studio.py inspect` | **0/6** planos marcados; overlays OK |
+| Evaluación | `studio.py evaluate` | **10 medidas / 0 fallos / 4 humanas pendientes** |
+| Storyboard | `studio.py storyboard` | 6 key frames; empty ratio 0,472–0,524 |
+| Suite | `python -m pytest tests -q` | **184 passed**, 110,92 s |
+| TypeScript | `npx tsc --noEmit` (desde `studio/`) | exit 0 |
+
+La tira `projects/av_ultima_medida/quality/continuity_strip.jpg` se abrió y
+revisó: S01–S03 mantienen el taller y el bloqueo del sastre/aprendiz; S04 es un
+close-up del mismo taller; S05–S06 conservan la posición y no reaparecen nieve ni
+campana. La revisión visual no sustituye la evaluación humana de narrativa,
+actuación, ritmo y estilo.
+
+### Lo que no prueba
+
+- `carry` es estado de planificación; el renderer no conserva un cuerpo entre
+  `<Sequence>` y no hay IK, contacto físico de props ni comprobación de píxeles.
+- El guard de 260 px está calibrado para este escenario; no es una regla universal.
+- La comparación con el vídeo anterior es estructural y visual, no una prueba a
+  ciegas ni una puntuación de entretenimiento: `quality/comparison.md`.
+- `evaluate` deja 4 dimensiones subjetivas pendientes.

@@ -1,0 +1,69 @@
+{
+  "entry": "src/index.ts",
+  "composition": "CinematicDemo",
+  "frames": [
+    {
+      "id": "S01",
+      "scene": "greenhouse",
+      "from": 0,
+      "frames": 114,
+      "frame": 57,
+      "line": "La \u00faltima hoja llevaba tres d\u00edas pidiendo agua.",
+      "note": "hook: the dry leaf and the empty can, no actor, no exposition of the room"
+    },
+    {
+      "id": "S02",
+      "scene": "greenhouse",
+      "from": 114,
+      "frames": 120,
+      "frame": 174,
+      "line": "El jardinero abri\u00f3 el grifo; solo sali\u00f3 aire.",
+      "note": "setup: the tap fails; the gardener's reach is the first action, not a pose"
+    },
+    {
+      "id": "S03",
+      "scene": "greenhouse",
+      "from": 234,
+      "frames": 120,
+      "frame": 294,
+      "line": "El aprendiz trajo la regadera vac\u00eda.",
+      "note": "escalation: the empty can is the obstacle made visible; no long explanation"
+    },
+    {
+      "id": "S04",
+      "scene": "greenhouse",
+      "from": 354,
+      "frames": 114,
+      "frame": 411,
+      "line": "Al fondo, el barril de lluvia segu\u00eda lleno.",
+      "note": "development: the decision is spatial; the barrel is revealed and the apprentice turns toward it"
+    },
+    {
+      "id": "S05",
+      "scene": "greenhouse",
+      "from": 468,
+      "frames": 126,
+      "frame": 531,
+      "line": "El aprendiz cruz\u00f3 el invernadero con la regadera llena.",
+      "note": "action: the carried can moves 140 px, under the teleport guard; the reach is the pour"
+    },
+    {
+      "id": "S06",
+      "scene": "greenhouse",
+      "from": 594,
+      "frames": 81,
+      "frame": 634,
+      "line": "",
+      "note": "reaction: wordless close-up; the plant's change is the cause"
+    },
+    {
+      "id": "S07",
+      "scene": "greenhouse",
+      "from": 675,
+      "frames": 114,
+      "frame": 732,
+      "line": "La planta bebi\u00f3; la flor abri\u00f3.",
+      "note": "close: the plant blooms; the object changed state, not only the narration"
+    }
+  ]
+}

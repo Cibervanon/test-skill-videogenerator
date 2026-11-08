@@ -1,0 +1,82 @@
+{
+  "ok": true,
+  "provider": "kokoro",
+  "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+  "kokoro_version": "0.9.4",
+  "torch": "2.15.0+cpu",
+  "device": "cpu",
+  "cuda": false,
+  "voice": "ef_dora",
+  "lang_code": "e",
+  "speed": 0.98,
+  "sample_rate": 24000,
+  "duration": 3.13,
+  "chunks": 1,
+  "words": [
+    {
+      "w": "El",
+      "s": 0.0,
+      "e": 0.082,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "jardinero",
+      "s": 0.082,
+      "e": 0.681,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "abrió",
+      "s": 0.681,
+      "e": 0.98,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "el",
+      "s": 0.98,
+      "e": 1.062,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "grifo;",
+      "s": 1.062,
+      "e": 1.579,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "solo",
+      "s": 1.579,
+      "e": 1.852,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "salió",
+      "s": 1.852,
+      "e": 2.206,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "aire.",
+      "s": 2.206,
+      "e": 2.696,
+      "p": "",
+      "source": "pred_dur"
+    }
+  ],
+  "alignment": "pred_dur",
+  "timing": {
+    "load_seconds": 22.26,
+    "synth_seconds": 5.54,
+    "realtime_factor": 1.77
+  },
+  "wall_seconds": 29.81,
+  "text": "El jardinero abrió el grifo; solo salió aire.",
+  "speaker": "narrator"
+}

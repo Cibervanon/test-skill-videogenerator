@@ -100,7 +100,7 @@ Read but not executed — no keys, no GPU, and the brief forbids spending:
 | SAD block matching ±6 px | `acs/motion.py` | pan ratios reported per video |
 | Karplus–Strong pluck + additive bell | `acs/audio_gen.py` | 34.13 s WAV, rms −18.8 dBFS |
 | EBU R128 loudness normalisation | `acs/assemble.py` | `loudnorm` in the FFmpeg chain |
-| Deterministic PRNG (mulberry32) for particles | `studio/src/engine/math.ts` | identical frames on re-render |
+| Deterministic PRNG (mulberry32) for particles | `studio/src/engine/math.ts` | structurally identical frames on re-render (PSNR 53.12 dB; pixel MD5 differs from Chrome rasterisation) |
 | Frame-difference / freeze / blackdetect gates | `acs/qa.py` | `final_quality_report.md` |
 
 ---

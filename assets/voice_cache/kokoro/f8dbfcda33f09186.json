@@ -1,0 +1,68 @@
+{
+  "ok": true,
+  "provider": "kokoro",
+  "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+  "kokoro_version": "0.9.4",
+  "torch": "2.15.0+cpu",
+  "device": "cpu",
+  "cuda": false,
+  "voice": "ef_dora",
+  "lang_code": "e",
+  "speed": 0.98,
+  "sample_rate": 24000,
+  "duration": 2.455,
+  "chunks": 1,
+  "words": [
+    {
+      "w": "La",
+      "s": 0.0,
+      "e": 0.112,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "luz",
+      "s": 0.112,
+      "e": 0.335,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "del",
+      "s": 0.335,
+      "e": 0.447,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "umbral",
+      "s": 0.447,
+      "e": 0.95,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "seguía",
+      "s": 0.95,
+      "e": 1.257,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "encendida.",
+      "s": 1.257,
+      "e": 2.124,
+      "p": "",
+      "source": "pred_dur"
+    }
+  ],
+  "alignment": "pred_dur",
+  "timing": {
+    "load_seconds": 21.36,
+    "synth_seconds": 5.56,
+    "realtime_factor": 2.27
+  },
+  "wall_seconds": 29.15,
+  "text": "La luz del umbral seguía encendida.",
+  "speaker": "narrator"
+}

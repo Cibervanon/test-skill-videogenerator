@@ -1,0 +1,369 @@
+{
+  "project": "av_ultima_gota",
+  "generated_at": "2026-11-07T11:28:08Z",
+  "method": "beat sheet -> manifest; no generated footage, no extra shots",
+  "narration": true,
+  "structure": {
+    "functions": {
+      "hook": 1,
+      "setup": 1,
+      "escalation": 1,
+      "development": 2,
+      "reaction": 1,
+      "close": 1
+    },
+    "missing": [],
+    "hook_seconds": 3.8,
+    "hook_first": true,
+    "close_last": true,
+    "order": [
+      "hook",
+      "setup",
+      "escalation",
+      "development",
+      "development",
+      "reaction",
+      "close"
+    ]
+  },
+  "continuity": {
+    "scene_changes": 0,
+    "actor_positions": {
+      "elder": [
+        {
+          "shot": "S02",
+          "x": 300,
+          "facing": -1
+        },
+        {
+          "shot": "S03",
+          "x": 300,
+          "facing": 1
+        },
+        {
+          "shot": "S04",
+          "x": 300,
+          "facing": 1
+        },
+        {
+          "shot": "S05",
+          "x": 300,
+          "facing": 1
+        },
+        {
+          "shot": "S06",
+          "x": 690,
+          "facing": 1
+        }
+      ],
+      "young": [
+        {
+          "shot": "S03",
+          "x": 720,
+          "facing": -1
+        },
+        {
+          "shot": "S04",
+          "x": 720.0,
+          "facing": -1
+        },
+        {
+          "shot": "S05",
+          "x": 720,
+          "facing": 1
+        }
+      ]
+    },
+    "carried": 1,
+    "states": [
+      {
+        "shot": "S02",
+        "actor": "elder",
+        "entry": {
+          "x": 300.0,
+          "facing": -1,
+          "hold": "none"
+        },
+        "exit": {
+          "x": 300.0,
+          "facing": -1,
+          "hold": "none",
+          "preset": "reach"
+        },
+        "carried": false,
+        "shift": null,
+        "scene": "greenhouse",
+        "motive": ""
+      },
+      {
+        "shot": "S03",
+        "actor": "elder",
+        "entry": {
+          "x": 300.0,
+          "facing": 1,
+          "hold": "none"
+        },
+        "exit": {
+          "x": 300.0,
+          "facing": 1,
+          "hold": "none",
+          "preset": "turn"
+        },
+        "carried": false,
+        "shift": 0.0,
+        "scene": "greenhouse",
+        "motive": ""
+      },
+      {
+        "shot": "S03",
+        "actor": "young",
+        "entry": {
+          "x": 720.0,
+          "facing": -1,
+          "hold": "can"
+        },
+        "exit": {
+          "x": 720.0,
+          "facing": -1,
+          "hold": "can",
+          "preset": "turn"
+        },
+        "carried": false,
+        "shift": null,
+        "scene": "greenhouse",
+        "motive": "first appearance with the can; the cut shows the object already in hand"
+      },
+      {
+        "shot": "S04",
+        "actor": "elder",
+        "entry": {
+          "x": 300.0,
+          "facing": 1,
+          "hold": "none"
+        },
+        "exit": {
+          "x": 300.0,
+          "facing": 1,
+          "hold": "none",
+          "preset": "idle"
+        },
+        "carried": false,
+        "shift": 0.0,
+        "scene": "greenhouse",
+        "motive": ""
+      },
+      {
+        "shot": "S04",
+        "actor": "young",
+        "entry": {
+          "x": 720.0,
+          "facing": -1,
+          "hold": "can"
+        },
+        "exit": {
+          "x": 720.0,
+          "facing": -1,
+          "hold": "can",
+          "preset": "turn"
+        },
+        "carried": true,
+        "shift": 0.0,
+        "scene": "greenhouse",
+        "motive": ""
+      },
+      {
+        "shot": "S05",
+        "actor": "elder",
+        "entry": {
+          "x": 300.0,
+          "facing": 1,
+          "hold": "none"
+        },
+        "exit": {
+          "x": 300.0,
+          "facing": 1,
+          "hold": "none",
+          "preset": "idle"
+        },
+        "carried": false,
+        "shift": 0.0,
+        "scene": "greenhouse",
+        "motive": ""
+      },
+      {
+        "shot": "S05",
+        "actor": "young",
+        "entry": {
+          "x": 720.0,
+          "facing": 1,
+          "hold": "can"
+        },
+        "exit": {
+          "x": 860.0,
+          "facing": 1,
+          "hold": "can",
+          "preset": "reach"
+        },
+        "carried": false,
+        "shift": 0.0,
+        "scene": "greenhouse",
+        "motive": ""
+      },
+      {
+        "shot": "S06",
+        "actor": "elder",
+        "entry": {
+          "x": 690.0,
+          "facing": 1,
+          "hold": "none"
+        },
+        "exit": {
+          "x": 690.0,
+          "facing": 1,
+          "hold": "none",
+          "preset": "react"
+        },
+        "carried": false,
+        "shift": 390.0,
+        "scene": "greenhouse",
+        "motive": "hard cut to a close-up inside the same greenhouse; no stage move"
+      }
+    ],
+    "note": "carry inherits x/facing/hold from the previous exit; a same-scene jump over 260px needs continuityMotive"
+  },
+  "performance": {
+    "actors_with_sequence": 2,
+    "phases": 4,
+    "note": "compound actions are ordered phases of existing presets, not a second animation system"
+  },
+  "edit": {
+    "shots": 7,
+    "seconds": 26.3,
+    "average_shot_seconds": 3.76,
+    "scale_counts": {
+      "detail": 1,
+      "medium": 4,
+      "wide": 1,
+      "close": 1
+    },
+    "camera_counts": {
+      "pushInSlow": 1,
+      "tiltUp": 1,
+      "trackRight": 1,
+      "panLeft": 1,
+      "reframe": 1,
+      "static": 1,
+      "dollyOut": 1
+    },
+    "wordless_shots": 1,
+    "sound_cues": 6
+  },
+  "validation": {
+    "ok": true,
+    "problems": [],
+    "warnings": []
+  },
+  "shots": [
+    {
+      "id": "S01",
+      "beat": "hook",
+      "scale": "detail",
+      "camera": "pushInSlow",
+      "cameraIntensity": 1.2,
+      "seconds": 3.8,
+      "cameraMotive": "start on the dry plant and the empty can: the problem is visible before anyone explains it",
+      "transition": "cut",
+      "transitionMotive": "open on the object that carries the need, not on an establishing shot",
+      "line": "La última hoja llevaba tres días pidiendo agua.",
+      "sound": []
+    },
+    {
+      "id": "S02",
+      "beat": "setup",
+      "scale": "medium",
+      "camera": "tiltUp",
+      "cameraIntensity": 0.7,
+      "seconds": 4.0,
+      "cameraMotive": "tilt from the dry tap to the gardener's face, so the failed gesture has a reaction",
+      "transition": "cut",
+      "transitionMotive": "the object problem becomes a person trying to solve it",
+      "line": "El jardinero abrió el grifo; solo salió aire.",
+      "sound": [
+        "footstep"
+      ]
+    },
+    {
+      "id": "S03",
+      "beat": "escalation",
+      "scale": "medium",
+      "camera": "trackRight",
+      "cameraIntensity": 0.8,
+      "seconds": 4.0,
+      "cameraMotive": "follow the apprentice entering with the can, keeping the dry plant in the same frame",
+      "transition": "cut",
+      "transitionMotive": "a second person enters the problem; the can changes hands at the cut",
+      "line": "El aprendiz trajo la regadera vacía.",
+      "sound": [
+        "footstep",
+        "footstep"
+      ]
+    },
+    {
+      "id": "S04",
+      "beat": "development",
+      "scale": "wide",
+      "camera": "panLeft",
+      "cameraIntensity": 0.65,
+      "seconds": 3.8,
+      "cameraMotive": "scan from the dry bench to the rain barrel, revealing the available water without a new location",
+      "transition": "cut",
+      "transitionMotive": "the solution is in the same room; the camera finds it",
+      "line": "Al fondo, el barril de lluvia seguía lleno.",
+      "sound": [
+        "footstep"
+      ]
+    },
+    {
+      "id": "S05",
+      "beat": "development",
+      "scale": "medium",
+      "camera": "reframe",
+      "cameraIntensity": 0.75,
+      "seconds": 4.2,
+      "cameraMotive": "reframe around the walk until the plant, the can and the gardener share the frame",
+      "transition": "cut",
+      "transitionMotive": "the second action moves the story from decision to consequence",
+      "line": "El aprendiz cruzó el invernadero con la regadera llena.",
+      "sound": [
+        "footstep",
+        "footstep"
+      ]
+    },
+    {
+      "id": "S06",
+      "beat": "reaction",
+      "scale": "close",
+      "camera": "static",
+      "cameraIntensity": 0.0,
+      "seconds": 2.7,
+      "cameraMotive": "hold the gardener's face while the plant takes the water; the reaction is the consequence",
+      "transition": "cut",
+      "transitionMotive": "hard cut to the person who has been waiting for the plant to answer",
+      "line": "",
+      "sound": []
+    },
+    {
+      "id": "S07",
+      "beat": "close",
+      "scale": "medium",
+      "camera": "dollyOut",
+      "cameraIntensity": 0.55,
+      "seconds": 3.8,
+      "cameraMotive": "release from the plant as the flower opens, leaving the room that made the change possible",
+      "transition": "cut",
+      "transitionMotive": "settle on the visible result; no new information after this",
+      "line": "La planta bebió; la flor abrió.",
+      "sound": []
+    }
+  ]
+}

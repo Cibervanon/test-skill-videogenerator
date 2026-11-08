@@ -1,0 +1,292 @@
+{
+  "project": "av_ultima_gota",
+  "generated_at": "2026-11-08T17:51:16Z",
+  "method": "structural audit of the edit plan; narrative, performance and taste remain human review",
+  "metrics": {
+    "shots": 7,
+    "seconds": 26.3,
+    "average_shot_seconds": 3.76,
+    "beat_counts": {
+      "hook": 1,
+      "setup": 1,
+      "escalation": 1,
+      "development": 2,
+      "reaction": 1,
+      "close": 1
+    },
+    "scale_counts": {
+      "detail": 1,
+      "medium": 4,
+      "wide": 1,
+      "close": 1
+    },
+    "scale_source": [
+      "declared"
+    ],
+    "longest_scale_run": 2,
+    "camera_counts": {
+      "pushInSlow": 1,
+      "tiltUp": 1,
+      "trackRight": 1,
+      "panLeft": 1,
+      "reframe": 1,
+      "static": 1,
+      "dollyOut": 1
+    },
+    "moving_ratio": 0.857,
+    "camera_motives": "6/6",
+    "dissolve_motives": "0/0",
+    "sound_shots": 4,
+    "sound_cues": 6,
+    "action_shots": 5,
+    "phased_shots": 2,
+    "action_phases": 4,
+    "action_sequences": 2,
+    "unfinished_sequences": [],
+    "sequence_issues": [],
+    "reaction_shots": 1,
+    "two_actor_shots": 3,
+    "axis_violations": [],
+    "carried_actors": 1,
+    "continuity_issues": [],
+    "static_shots": 1,
+    "static_ratio": 0.143,
+    "framing_mismatches": [],
+    "purpose_missing": [],
+    "max_words_per_second": 2.143,
+    "camera_intensity_invalid": [],
+    "wordless_shots": 1,
+    "spoken_lines": 6,
+    "actors_used": [
+      "elder",
+      "young"
+    ],
+    "scenes": [
+      "greenhouse"
+    ]
+  },
+  "checks": [
+    {
+      "id": "structure",
+      "label": "hook, setup, escalation, reaction and close are declared",
+      "status": "measured",
+      "value": {
+        "missing": []
+      },
+      "pass": true,
+      "evidence": "beats present in the manifest"
+    },
+    {
+      "id": "hook",
+      "label": "the hook stays short",
+      "status": "measured",
+      "value": 3.8,
+      "pass": true,
+      "evidence": "the premise must arrive before the first explanation"
+    },
+    {
+      "id": "reaction",
+      "label": "there is at least one reaction shot",
+      "status": "measured",
+      "value": 1,
+      "pass": true,
+      "evidence": "reaction is a separate edit decision, not an actor idle"
+    },
+    {
+      "id": "beat_order",
+      "label": "the hook opens and the close ends the cut",
+      "status": "measured",
+      "value": {
+        "hook_first": true,
+        "close_last": true
+      },
+      "pass": true,
+      "evidence": "the order is a narrative decision, not just a set of labels"
+    },
+    {
+      "id": "beat_framing",
+      "label": "every beat has a framing that can carry it",
+      "status": "measured",
+      "value": [],
+      "pass": true,
+      "evidence": "hook/reaction/close are checked against a framing range"
+    },
+    {
+      "id": "scale_variety",
+      "label": "shot scales vary",
+      "status": "measured",
+      "value": {
+        "unique": 4,
+        "counts": {
+          "detail": 1,
+          "medium": 4,
+          "wide": 1,
+          "close": 1
+        }
+      },
+      "pass": true,
+      "evidence": "at least three scales; source: declared"
+    },
+    {
+      "id": "scale_run",
+      "label": "no more than two consecutive shots of the same scale",
+      "status": "measured",
+      "value": 2,
+      "pass": true,
+      "evidence": "repetition is allowed, a run is not"
+    },
+    {
+      "id": "camera_variety",
+      "label": "camera intents vary",
+      "status": "measured",
+      "value": {
+        "unique": 7,
+        "counts": {
+          "pushInSlow": 1,
+          "tiltUp": 1,
+          "trackRight": 1,
+          "panLeft": 1,
+          "reframe": 1,
+          "static": 1,
+          "dollyOut": 1
+        }
+      },
+      "pass": true,
+      "evidence": "static shots are allowed; an entire film of one move is not"
+    },
+    {
+      "id": "camera_motivation",
+      "label": "every non-static camera move has a narrative motive",
+      "status": "measured",
+      "value": "6/6",
+      "pass": true,
+      "evidence": "motive fields in the manifest"
+    },
+    {
+      "id": "movement_balance",
+      "label": "movement is neither absent nor constant",
+      "status": "measured",
+      "value": 0.857,
+      "pass": true,
+      "evidence": "share of moving shots; quiet shots are not penalised by themselves"
+    },
+    {
+      "id": "transition_motivation",
+      "label": "every dissolve is motivated",
+      "status": "measured",
+      "value": "0/0",
+      "pass": null,
+      "evidence": "cuts need no overlap; a dissolve must explain why"
+    },
+    {
+      "id": "sound_coverage",
+      "label": "sound follows action in at least half the shots",
+      "status": "measured",
+      "value": "4/7",
+      "pass": true,
+      "evidence": "declared cues or the existing scene-derived effects"
+    },
+    {
+      "id": "action_coverage",
+      "label": "characters perform actions, not only poses",
+      "status": "measured",
+      "value": "5/7",
+      "pass": true,
+      "evidence": "walkIn/dig/reach/turn/call presets, including phases"
+    },
+    {
+      "id": "action_completion",
+      "label": "declared compound actions are ordered and finish on a terminal preset",
+      "status": "measured",
+      "value": {
+        "sequences": 2,
+        "unfinished": []
+      },
+      "pass": true,
+      "evidence": "a sequence ending mid-walk or with an invalid window is a performance error"
+    },
+    {
+      "id": "information",
+      "label": "no narration line is repeated",
+      "status": "measured",
+      "value": [],
+      "pass": true,
+      "evidence": "duplicate spoken lines would repeat information"
+    },
+    {
+      "id": "speech_density",
+      "label": "no line is delivered faster than the ear can follow",
+      "status": "measured",
+      "value": 2.143,
+      "pass": true,
+      "evidence": "worst word/second rate; wordless shots are skipped"
+    },
+    {
+      "id": "shot_purpose",
+      "label": "every shot carries a line, an action or a declared insert/reaction",
+      "status": "measured",
+      "value": [],
+      "pass": true,
+      "evidence": "a shot with no information is a candidate for removal"
+    },
+    {
+      "id": "axis_continuity",
+      "label": "two-shots in the same scene keep screen direction",
+      "status": "measured",
+      "value": 0,
+      "pass": true,
+      "evidence": "only a reversed actor order between the same two actors is flagged"
+    },
+    {
+      "id": "character_continuity",
+      "label": "actors keep their stage state or declare a motivated move",
+      "status": "measured",
+      "value": {
+        "carried": 1,
+        "issues": []
+      },
+      "pass": true,
+      "evidence": "resolved entry/exit ledger; carry across a scene change is refused"
+    },
+    {
+      "id": "static_intent",
+      "label": "static shots are deliberate and bounded",
+      "status": "measured",
+      "value": {
+        "shots": 1,
+        "ratio": 0.143,
+        "unmotivated": []
+      },
+      "pass": true,
+      "evidence": "a held frame must have a motive; a film of tripods is not variety"
+    },
+    {
+      "id": "camera_intensity",
+      "label": "declared camera intensity stays inside the authored range",
+      "status": "measured",
+      "value": [],
+      "pass": true,
+      "evidence": "0.35..1.35; static shots use 0"
+    },
+    {
+      "id": "duration",
+      "label": "the cut is a short vertical piece, not a fragment",
+      "status": "measured",
+      "value": 26.3,
+      "pass": true,
+      "evidence": "measured after transition overlaps"
+    }
+  ],
+  "summary": {
+    "ok": true,
+    "failed": [],
+    "pending": [],
+    "headline": "sin fallos estructurales"
+  },
+  "human_review": [
+    "narrative",
+    "acting",
+    "rhythm",
+    "style_integrity"
+  ]
+}

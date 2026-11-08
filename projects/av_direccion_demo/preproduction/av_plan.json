@@ -1,0 +1,209 @@
+{
+  "project": "av_direccion_demo",
+  "generated_at": "2026-11-07T00:22:57Z",
+  "method": "beat sheet -> manifest; no generated footage, no extra shots",
+  "narration": true,
+  "structure": {
+    "functions": {
+      "hook": 1,
+      "setup": 1,
+      "development": 1,
+      "reaction": 1,
+      "escalation": 1,
+      "close": 1
+    },
+    "missing": [],
+    "hook_seconds": 3.5,
+    "hook_first": true,
+    "close_last": true,
+    "order": [
+      "hook",
+      "setup",
+      "development",
+      "reaction",
+      "escalation",
+      "close"
+    ]
+  },
+  "continuity": {
+    "scene_changes": 4,
+    "actor_positions": {
+      "elder": [
+        {
+          "shot": "S02",
+          "x": 350,
+          "facing": 1
+        },
+        {
+          "shot": "S03",
+          "x": 340,
+          "facing": 1
+        },
+        {
+          "shot": "S04",
+          "x": 700,
+          "facing": 1
+        },
+        {
+          "shot": "S05",
+          "x": 330,
+          "facing": 1
+        },
+        {
+          "shot": "S06",
+          "x": 380,
+          "facing": 1
+        }
+      ],
+      "young": [
+        {
+          "shot": "S02",
+          "x": 760,
+          "facing": -1
+        },
+        {
+          "shot": "S03",
+          "x": 650,
+          "facing": -1
+        },
+        {
+          "shot": "S05",
+          "x": 640,
+          "facing": -1
+        },
+        {
+          "shot": "S06",
+          "x": 720,
+          "facing": -1
+        }
+      ]
+    },
+    "note": "x is the declared stage position; a change is allowed only when the shot's motive explains it"
+  },
+  "performance": {
+    "actors_with_sequence": 2,
+    "phases": 4,
+    "note": "compound actions are ordered phases of existing presets, not a second animation system"
+  },
+  "edit": {
+    "shots": 6,
+    "seconds": 20.433,
+    "average_shot_seconds": 3.41,
+    "scale_counts": {
+      "detail": 1,
+      "wide": 2,
+      "medium": 2,
+      "close": 1
+    },
+    "camera_counts": {
+      "tiltUp": 1,
+      "panRight": 1,
+      "trackRight": 1,
+      "static": 1,
+      "reframe": 1,
+      "dollyOut": 1
+    },
+    "wordless_shots": 1,
+    "sound_cues": 10
+  },
+  "validation": {
+    "ok": true,
+    "problems": [],
+    "warnings": []
+  },
+  "shots": [
+    {
+      "id": "S01",
+      "beat": "hook",
+      "scale": "detail",
+      "camera": "tiltUp",
+      "cameraIntensity": 0.8,
+      "seconds": 3.5,
+      "cameraMotive": "start on the silent bell and reveal its size before we meet the man who refused it",
+      "transition": "cut",
+      "transitionMotive": "open on the object, not on an establishing shot",
+      "line": "Aquella noche, el guardián no tocó la campana.",
+      "sound": [
+        "bell"
+      ]
+    },
+    {
+      "id": "S02",
+      "beat": "setup",
+      "scale": "wide",
+      "camera": "panRight",
+      "cameraIntensity": 0.65,
+      "seconds": 3.8,
+      "cameraMotive": "follow the two men across the square so the empty bell has a human scale",
+      "transition": "dissolve",
+      "transitionMotive": "the bell gives way to the square and the two men who disagree about it",
+      "line": "El pueblo llevaba tres inviernos sin oírla.",
+      "sound": [
+        "footstep",
+        "footstep",
+        "footstep"
+      ]
+    },
+    {
+      "id": "S03",
+      "beat": "development",
+      "scale": "medium",
+      "camera": "trackRight",
+      "cameraIntensity": 0.8,
+      "seconds": 3.8,
+      "cameraMotive": "move with the rope hand so the climb is an action, not an illustration",
+      "transition": "cut",
+      "transitionMotive": "cut on the reaching hand: the action continues",
+      "line": "El aprendiz subió al campanario con una cuerda.",
+      "sound": [
+        "footstep",
+        "footstep"
+      ]
+    },
+    {
+      "id": "S04",
+      "beat": "reaction",
+      "scale": "close",
+      "camera": "static",
+      "cameraIntensity": 0.0,
+      "seconds": 2.4,
+      "cameraMotive": "hold the reaction without moving: the performance is the event",
+      "transition": "cut",
+      "transitionMotive": "hard cut into the keeper's judgement; no dissolve softens it",
+      "line": "",
+      "sound": []
+    },
+    {
+      "id": "S05",
+      "beat": "escalation",
+      "scale": "medium",
+      "camera": "reframe",
+      "cameraIntensity": 0.9,
+      "seconds": 3.8,
+      "cameraMotive": "reframe around the pointing hand so the missing rope becomes the subject",
+      "transition": "cut",
+      "transitionMotive": "from the keeper's silence to the gesture that answers it",
+      "line": "El aprendiz señaló la cuerda que faltaba.",
+      "sound": [
+        "footstep",
+        "footstep"
+      ]
+    },
+    {
+      "id": "S06",
+      "beat": "close",
+      "scale": "wide",
+      "camera": "dollyOut",
+      "cameraIntensity": 0.7,
+      "seconds": 3.8,
+      "cameraMotive": "release the frame to the graveyard and let the empty space carry the unanswered question",
+      "transition": "dissolve",
+      "transitionMotive": "night yields to first light: a deliberate change of time and place",
+      "line": "Desde entonces, el silencio tuvo fecha.",
+      "sound": [
+        "dig",
+        "dig"
+      ]
+    }
+  ]
+}

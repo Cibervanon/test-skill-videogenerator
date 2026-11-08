@@ -1,0 +1,82 @@
+{
+  "ok": true,
+  "provider": "kokoro",
+  "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+  "kokoro_version": "0.9.4",
+  "torch": "2.15.0+cpu",
+  "device": "cpu",
+  "cuda": false,
+  "voice": "ef_dora",
+  "lang_code": "e",
+  "speed": 0.98,
+  "sample_rate": 24000,
+  "duration": 2.905,
+  "chunks": 1,
+  "words": [
+    {
+      "w": "Al",
+      "s": 0.0,
+      "e": 0.11,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "fondo,",
+      "s": 0.11,
+      "e": 0.658,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "el",
+      "s": 0.658,
+      "e": 0.741,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "barril",
+      "s": 0.741,
+      "e": 1.125,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "de",
+      "s": 1.125,
+      "e": 1.234,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "lluvia",
+      "s": 1.234,
+      "e": 1.563,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "seguía",
+      "s": 1.563,
+      "e": 1.892,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "lleno.",
+      "s": 1.892,
+      "e": 2.414,
+      "p": "",
+      "source": "pred_dur"
+    }
+  ],
+  "alignment": "pred_dur",
+  "timing": {
+    "load_seconds": 22.89,
+    "synth_seconds": 5.14,
+    "realtime_factor": 1.77
+  },
+  "wall_seconds": 30.0,
+  "text": "Al fondo, el barril de lluvia seguía lleno.",
+  "speaker": "narrator"
+}

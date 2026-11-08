@@ -1,0 +1,8 @@
+[voice] provider=kokoro speech=True lines=6 words=45
+[voice] model Kokoro-82M-v1.0 · alignment pred_dur · stem generation/voice/voice.wav
+[voice]   S01: 3.31s audio in 3.80s shot (generated, ef_dora)
+[voice]   S02: 3.13s audio in 4.00s shot (cached, ef_dora)
+[voice]   S03: 2.75s audio in 4.00s shot (cached, ef_dora)
+[voice]   S04: 2.90s audio in 3.80s shot (cached, ef_dora)
+[voice]   S05: 3.68s audio in 4.20s shot (cached, ef_dora)
+[voice]   S07: 2.31s audio in 3.80s shot (cached, ef_dora)

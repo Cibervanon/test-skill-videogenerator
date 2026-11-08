@@ -1,0 +1,56 @@
+[
+  {
+    "id": "S01",
+    "scene": "doorway",
+    "from": 0,
+    "frames": 108,
+    "frame": 54,
+    "line": "La luz del umbral segu\u00eda encendida.",
+    "note": "hook: the lit threshold and the snow, no actor; the light is the promise that has not gone out"
+  },
+  {
+    "id": "S02",
+    "scene": "doorway",
+    "from": 108,
+    "frames": 120,
+    "frame": 168,
+    "line": "La vieja esperaba a alguien que no volv\u00eda.",
+    "note": "setup: the old woman at the door, the young lamplighter entering with his lantern"
+  },
+  {
+    "id": "S03",
+    "scene": "doorway",
+    "from": 228,
+    "frames": 114,
+    "frame": 285,
+    "line": "El farolero vino a apagarla.",
+    "note": "escalation: he reaches for the lamp; the woman turns to stop him"
+  },
+  {
+    "id": "S04",
+    "scene": "doorway",
+    "from": 342,
+    "frames": 81,
+    "frame": 382,
+    "line": "",
+    "note": "reaction: wordless close-up; the hand at the lamp is the cause, the face is the consequence"
+  },
+  {
+    "id": "S05",
+    "scene": "doorway",
+    "from": 423,
+    "frames": 114,
+    "frame": 480,
+    "line": "\u00c9l dej\u00f3 su propia luz en la nieve.",
+    "note": "reveal: he walks away; the set state shows his lantern left in the snow"
+  },
+  {
+    "id": "S06",
+    "scene": "doorway",
+    "from": 537,
+    "frames": 102,
+    "frame": 588,
+    "line": "Y se fue sin decir nada.",
+    "note": "close: the woman stays, the young man is gone, and the second lantern is still lit in the snow"
+  }
+]

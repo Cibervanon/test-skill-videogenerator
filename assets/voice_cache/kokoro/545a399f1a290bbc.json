@@ -1,0 +1,61 @@
+{
+  "ok": true,
+  "provider": "kokoro",
+  "model": "Kokoro-82M (hexgrad/Kokoro-82M)",
+  "kokoro_version": "0.9.4",
+  "torch": "2.15.0+cpu",
+  "device": "cpu",
+  "cuda": false,
+  "voice": "ef_dora",
+  "lang_code": "e",
+  "speed": 0.98,
+  "sample_rate": 24000,
+  "duration": 2.105,
+  "chunks": 1,
+  "words": [
+    {
+      "w": "El",
+      "s": 0.0,
+      "e": 0.114,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "farolero",
+      "s": 0.114,
+      "e": 0.742,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "vino",
+      "s": 0.742,
+      "e": 1.027,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "a",
+      "s": 1.027,
+      "e": 1.055,
+      "p": "",
+      "source": "pred_dur"
+    },
+    {
+      "w": "apagarla.",
+      "s": 1.055,
+      "e": 1.854,
+      "p": "",
+      "source": "pred_dur"
+    }
+  ],
+  "alignment": "pred_dur",
+  "timing": {
+    "load_seconds": 22.03,
+    "synth_seconds": 3.79,
+    "realtime_factor": 1.8
+  },
+  "wall_seconds": 27.92,
+  "text": "El farolero vino a apagarla.",
+  "speaker": "narrator"
+}

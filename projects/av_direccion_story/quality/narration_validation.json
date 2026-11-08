@@ -9,7 +9,8 @@
   "project_seconds": 30.933,
   "narration_end": 30.188,
   "stem_seconds": 31.183,
-  "mix_seconds": 30.933,
+  "mix_seconds": 31.183,
+  "mix_voice_correlation": 0.8985,
   "narration": true,
   "voices": [
     "ef_dora"
@@ -28,8 +29,8 @@
       "take_rms_db": -26.78,
       "take_peak_db": -7.44,
       "stem_rms_db": -23.7,
-      "mix_rms_db": -10.18,
-      "mix_peak_db": -1.41
+      "mix_rms_db": -25.96,
+      "mix_peak_db": -7.79
     },
     {
       "shot": "S02",
@@ -44,8 +45,8 @@
       "take_rms_db": -26.36,
       "take_peak_db": -7.13,
       "stem_rms_db": -23.33,
-      "mix_rms_db": -12.62,
-      "mix_peak_db": -0.23
+      "mix_rms_db": -26.01,
+      "mix_peak_db": -7.0
     },
     {
       "shot": "S03",
@@ -60,8 +61,8 @@
       "take_rms_db": -26.71,
       "take_peak_db": -4.54,
       "stem_rms_db": -23.68,
-      "mix_rms_db": -15.37,
-      "mix_peak_db": -0.59
+      "mix_rms_db": -26.46,
+      "mix_peak_db": -4.42
     },
     {
       "shot": "S05",
@@ -76,8 +77,8 @@
       "take_rms_db": -26.32,
       "take_peak_db": -5.16,
       "stem_rms_db": -23.3,
-      "mix_rms_db": -11.66,
-      "mix_peak_db": -0.35
+      "mix_rms_db": -25.85,
+      "mix_peak_db": -5.29
     },
     {
       "shot": "S07",
@@ -92,8 +93,8 @@
       "take_rms_db": -26.67,
       "take_peak_db": -6.23,
       "stem_rms_db": -23.65,
-      "mix_rms_db": -10.13,
-      "mix_peak_db": -1.77
+      "mix_rms_db": -25.87,
+      "mix_peak_db": -6.01
     },
     {
       "shot": "S08",
@@ -108,8 +109,8 @@
       "take_rms_db": -26.82,
       "take_peak_db": -10.01,
       "stem_rms_db": -23.8,
-      "mix_rms_db": -13.45,
-      "mix_peak_db": -1.18
+      "mix_rms_db": -26.39,
+      "mix_peak_db": -9.87
     },
     {
       "shot": "S09",
@@ -124,8 +125,8 @@
       "take_rms_db": -26.54,
       "take_peak_db": -4.99,
       "stem_rms_db": -23.52,
-      "mix_rms_db": -15.77,
-      "mix_peak_db": -1.28
+      "mix_rms_db": -26.3,
+      "mix_peak_db": -4.86
     },
     {
       "shot": "S10",
@@ -140,8 +141,8 @@
       "take_rms_db": -26.7,
       "take_peak_db": -9.14,
       "stem_rms_db": -23.67,
-      "mix_rms_db": -11.77,
-      "mix_peak_db": -0.19
+      "mix_rms_db": -26.16,
+      "mix_peak_db": -8.98
     }
   ],
   "problems": [],

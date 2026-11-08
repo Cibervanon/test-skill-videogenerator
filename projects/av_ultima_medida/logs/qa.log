@@ -1,0 +1,14 @@
+[qa] PASS readable: mov,mp4,m4a,3gp,3g2,mj2 — ffprobe parsed the file
+[qa] PASS has_video: {'codec': 'h264', 'width': 1080, 'height': 1920, 'fps': 30.0, 'fps_avg': 30.0, 'pix_fmt': 'yuvj420p', 'frames': 672, 'aspect': 0.5625, 'orientation': 'vertical'} — video stream present
+[qa] PASS has_audio: {'codec': 'aac', 'channels': 2, 'sample_rate': 48000, 'bitrate': 191340, 'duration': 22.4, 'streams': 1} — audio stream present
+[qa] PASS duration: 22.4 — delta 0.000s (tolerance 0.25s)
+[qa] PASS format: {'codec': 'h264', 'width': 1080, 'height': 1920, 'fps': 30.0, 'fps_avg': 30.0, 'pix_fmt': 'yuvj420p', 'frames': 672, 'aspect': 0.5625, 'orientation': 'vertical'} — to spec
+[qa] PASS motion: 4.002 — min 1.0 — guards against a slideshow of stills
+[qa] PASS black_frames: 0.0 — max 0.02 — a black render must never pass
+[qa] PASS freeze: 0.1116 — static-frame budget
+[qa] PASS audio_duration: 22.4 — audio covers the picture; delta 0.000s
+[qa] PASS loudness: -17.0 — acceptable band -22.0..-11.0 dB (mean volume, not LUFS)
+[qa] PASS voice_in_delivery: 0.9267 — voice present after removing the bed (signal correlation, not intelligibility); gain 2.105
+[qa] PASS audio_activity: 0.101 — the soundtrack is not near-silence
+[qa] PASS caption_plan: 0.893 — computed from the cue plan (shot lines), not from OCR of the render
+[qa] overall: PASS

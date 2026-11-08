@@ -12,10 +12,11 @@ python scripts/studio.py status
 python scripts/studio.py produce --project projects/demo_001 --reference "Ejemplos/Video/reference.mp4"
 ```
 
-Latest story delivery: `projects/av_direccion_story/output/final_video.mp4`
-(1080×1920, 30 fps, 30.933 s, one Spanish narrator, no UI overlays).
+Latest story delivery: `projects/av_ultima_medida/output/final_video.mp4`
+(1080×1920, 30 fps, 22.4 s, one Spanish narrator, no UI overlays).
 The previous films are kept in `projects/demo_001/output/`,
-`projects/demo_002/output/` and `projects/av_direccion/output/`;
+`projects/demo_002/output/`, `projects/av_direccion/output/`,
+`projects/av_direccion_demo/output/` and `projects/av_direccion_story/output/`;
 `VISUAL_AUDIT.md` compares the earlier set against the reference corpus.
 
 ## Generate, inspect, correct (0.6.0)
@@ -107,18 +108,83 @@ elementos de UI. Es una copia corregida; `projects/av_direccion/` se conserva.
 ```bash
 python scripts/studio.py voice --project projects/av_direccion_story \
     --manifest projects/av_direccion_story/manifest.json --provider kokoro
+python scripts/studio.py captions --project projects/av_direccion_story \
+    --manifest projects/av_direccion_story/manifest.json
 python scripts/studio.py mixdown --project projects/av_direccion_story --music-gain 0.20
 python scripts/studio.py render --project projects/av_direccion_story \
     --manifest projects/av_direccion_story/manifest.json
+# reproducibility slice without overwriting the silent picture:
+#   render ... --frames 0-29 --out .tmp/a.mp4
 python scripts/studio.py assemble --project projects/av_direccion_story \
     --audio projects/av_direccion_story/generation/audio/mix.wav
 python scripts/studio.py qa --project projects/av_direccion_story \
     --manifest projects/av_direccion_story/manifest.json
 ```
 
-Evidencia: QA 12/12, inspección 0/10, 5 ventanas de música cercanas a la voz,
-157 tests y `tsc` sin errores. La narración sigue siendo signal-verified, no
-ASR; narrativa, actuación, ritmo y estilo siguen pendientes de revisión humana.
+Evidencia: QA 13/13, inspección 0/10, **3 ventanas** de música cercanas a la voz,
+**181 tests** y `tsc` sin errores. La voz está medida dentro del MP4
+(`voice_in_delivery` **0,9209**), no solo en el WAV; el video se reensambló con
+el mix corregido. Los subtítulos quemados ya usan el reloj real de las tomas
+(`captions`, 23 cues, 0 ms de error frente al plan); siguen siendo chunks de 2–3
+palabras, no énfasis palabra a palabra, y el MP4 conserva los subtítulos del
+build anterior porque no se re-renderizó. La narración sigue siendo
+signal-verified, no ASR; narrativa, actuación, ritmo y estilo siguen pendientes
+de revisión humana.
+
+## Demo de dirección (0.10.5)
+
+`projects/av_direccion_demo/` es un corte de **6 planos / 20,433 s** construido
+con el mismo motor: hook en la campana, presentación de los dos hombres, subida
+con la cuerda, reacción sin diálogo, señalamiento de la cuerda que falta y cierre
+al amanecer. S02 completa caminar→girar y S03 gira→alcanza: **2 secuencias /
+4 fases**. El render completo son **613 frames en 500,47 s**; el MP4 muxea 612
+frames (el último lo descarta el muxer) y pesa **11,0 MB**.
+
+```bash
+python scripts/studio.py av --project projects/av_direccion_demo \
+    --spec projects/av_direccion_demo/spec.json
+python scripts/studio.py audio --project projects/av_direccion_demo \
+    --manifest projects/av_direccion_demo/manifest.json
+python scripts/studio.py voice --project projects/av_direccion_demo \
+    --manifest projects/av_direccion_demo/manifest.json --provider kokoro
+python scripts/studio.py captions --project projects/av_direccion_demo \
+    --manifest projects/av_direccion_demo/manifest.json
+python scripts/studio.py mixdown --project projects/av_direccion_demo --music-gain 0.14
+python scripts/studio.py render --project projects/av_direccion_demo \
+    --manifest projects/av_direccion_demo/manifest.json
+python scripts/studio.py assemble --project projects/av_direccion_demo
+python scripts/studio.py qa --project projects/av_direccion_demo \
+    --manifest projects/av_direccion_demo/manifest.json
+```
+
+Evidencia: QA **13/13**, `voice_in_delivery` **0,9273**, loudness −17,2 dB,
+motion **8,858**, inspección **0/6**, QA creativo **20/20**, evaluación **10
+dimensiones medidas / 4 humanas pendientes**, 1 ventana de música dentro de 3 dB
+y `voicecheck` OK (5 líneas, 36 palabras, 15,15 s). Movimiento por plano: mínimo
+**2,438**, media **4,249**, **0 planos low-motion**. Frente al relato de 10 planos,
+la comparación normalizada sube acción por plano **0,50 → 0,833**, dos actores
+**0,30 → 0,667**, variedad de cámara **0,80 → 1,00** y variedad de escala
+**0,40 → 0,667**. La comparación es estructural: narrativa, actuación, ritmo y
+estilo siguen sin puntuación automática.
+
+## Continuidad de personajes y nueva historia (0.10.6)
+
+`carry` hereda `x`, `facing` y `hold` del estado de salida del actor; un salto
+mayor de 260 px en la misma escena exige `continuityMotive`, y `carry` se rechaza
+al cambiar de escenario. El estado resuelto queda en `manifest.continuity` y
+`avqa` lo audita; el renderer sigue recibiendo campos de actor normales.
+
+- **Nueva historia:** `projects/av_ultima_medida/` — *La última medida*, en un
+taller de sastrería al amanecer. Seis planos, 22,4 s, hook → setup → escalation
+→ reaction → reveal → close; sin campana, pueblo nevado ni cementerio.
+- **Nuevo set:** `Workshop.tsx` — ventana al amanecer, mesa, maniquí, cinta rota
+y costura saltada.
+- **Evidencia:** 5 estados heredados, 3 secuencias / 6 fases, 4/6 planos con
+acción, `continuity_issues: []`, inspección **0/6**, QA técnico **13/13**.
+- **Render:** 672 frames, 1080×1920, 30 fps, H.264/AAC, 11.989.156 bytes.
+- **Tests:** `python -m pytest tests -q` → **184 passed**; `tsc --noEmit` → 0.
+
+See `CONTINUITY.md` and `projects/av_ultima_medida/quality/comparison.md`.
 
 ## Identidad y narración (0.8.0)
 
@@ -153,7 +219,7 @@ See `AV_DIRECTION.md`, `CAPABILITY_MATRIX.md`, `ROADMAP.md`, `UI_DIRECTION.md`,
 - `scripts/analyze_reference.py` — FFmpeg/FFprobe measurements (cuts, palette,
   motion by SAD search, loudness, activity), run on the 3 reference shorts.
 - `scripts/acs/audio_gen.py` — additive-synthesis score, deterministic.
-- `studio/` — Remotion engine: SVG character rig, five hand-built sets, camera
+- `studio/` — Remotion engine: SVG character rig, six hand-built sets, camera
   vocabulary, captions, grain/vignette, procedural particles.
 - `scripts/acs/assemble.py` + `qa.py` — FFmpeg mux, two-pass loudnorm to −14 LUFS, quality gates.
 - `scripts/acs/library.py` + `assets/catalog.json` — the single asset library:
@@ -169,16 +235,19 @@ See `AV_DIRECTION.md`, `CAPABILITY_MATRIX.md`, `ROADMAP.md`, `UI_DIRECTION.md`,
 - **Kokoro TTS, local and free** (`scripts/acs/kokoro_worker.py` + `kokoro_tts.py`):
   Spanish speech on CPU in `.venv-kokoro` (Python 3.12), word timings from the
   model's `pred_dur`, cache shared across projects, SRT from the same clock, and
-  a sidechain-ducked mix (`mixdown.py`). No key, no credits, no network at
-  synthesis time. See `KOKORO_INTEGRATION.md`.
+  a deterministic NumPy mix (`mixdown.py`) that ducks the score from a measured
+  voice envelope. No key, no credits, no network at synthesis time. See
+  `KOKORO_INTEGRATION.md`.
 - `scripts/acs/edit.py` — word-guided edit: aligns shot boundaries to word
   timings, reports drift beyond tolerance, derives caption windows from the same
   clock (`studio.py edit`).
 - `studio.py compose` — builds a manifest *through* the catalogue: a spec names
   scenes, cameras and characters by asset id and an unknown id aborts before a
   manifest exists. `projects/demo_003/spec.json` is a worked example.
-- `tests/` — 159 unit tests over the deterministic core, including the asset
-  forge, versions, references, narration coverage and composition (the Kokoro
+- `tests/` — **184** unit tests over the deterministic core, including compound
+  action phases, per-shot motion reporting and carried character state, plus the
+  asset forge, versions,
+  references, narration coverage, audio integrity and composition (the Kokoro
   tests use fixtures, never the model).
 
 ## What is not

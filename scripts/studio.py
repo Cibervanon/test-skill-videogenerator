@@ -23,6 +23,7 @@ import argparse
 import json
 import os
 import sys
+import time
 from contextlib import contextmanager
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -52,8 +53,53 @@ def load_project(path: str | None = None) -> dict:
         return json.load(fh)
 
 
+class ManifestBusy(RuntimeError):
+    """Another render owns the single active manifest."""
+
+
 @contextmanager
-def use_manifest(path: str | None):
+def manifest_lock(timeout: float = 5.0):
+    """Serialise activation of the one file Remotion imports at bundle time.
+
+    Remotion reads ``studio/src/data/project.json``, so two concurrent renders
+    would otherwise swap the film under each other. The lock is fail-fast: the
+    second render gets a clear error instead of silently rendering the wrong
+    project.
+    """
+    os.makedirs(os.path.dirname(os.path.abspath(PROJECT_MANIFEST)), exist_ok=True)
+    lock_path = PROJECT_MANIFEST + ".lock"
+    started = time.time()
+    while True:
+        try:
+            fd = os.open(lock_path, os.O_CREAT | os.O_EXCL | os.O_WRONLY)
+            break
+        except FileExistsError:
+            # A crashed process must not block every future render.
+            try:
+                if time.time() - os.path.getmtime(lock_path) > 3 * 3600:
+                    os.remove(lock_path)
+                    continue
+            except OSError:
+                pass
+            if time.time() - started >= timeout:
+                raise ManifestBusy(
+                    f"another render owns {PROJECT_MANIFEST} (lock {lock_path}). "
+                    "Wait for it to finish; the lock expires after 3 hours."
+                )
+            time.sleep(0.2)
+    try:
+        os.write(fd, f"{os.getpid()} {time.time():.3f}\n".encode("ascii"))
+        os.close(fd)
+        yield
+    finally:
+        try:
+            os.remove(lock_path)
+        except OSError:
+            pass
+
+
+@contextmanager
+def use_manifest(path: str | None, *, lock_timeout: float = 5.0):
     """Temporarily make a manifest active for the Remotion CLI.
 
     Remotion imports ``studio/src/data/project.json`` at bundle time. Commands
@@ -64,24 +110,25 @@ def use_manifest(path: str | None):
     if not path:
         yield
         return
-    previous = None
-    if os.path.exists(PROJECT_MANIFEST):
-        with open(PROJECT_MANIFEST, "rb") as fh:
-            previous = fh.read()
-    project = load_project(path)
-    os.makedirs(os.path.dirname(PROJECT_MANIFEST), exist_ok=True)
-    with open(PROJECT_MANIFEST, "w", encoding="utf-8") as fh:
-        json.dump(project, fh, indent=2, ensure_ascii=False)
-        fh.write("\n")
-    try:
-        yield project
-    finally:
-        if previous is None:
-            if os.path.exists(PROJECT_MANIFEST):
-                os.remove(PROJECT_MANIFEST)
-        else:
-            with open(PROJECT_MANIFEST, "wb") as fh:
-                fh.write(previous)
+    with manifest_lock(timeout=lock_timeout):
+        previous = None
+        if os.path.exists(PROJECT_MANIFEST):
+            with open(PROJECT_MANIFEST, "rb") as fh:
+                previous = fh.read()
+        project = load_project(path)
+        os.makedirs(os.path.dirname(PROJECT_MANIFEST), exist_ok=True)
+        with open(PROJECT_MANIFEST, "w", encoding="utf-8") as fh:
+            json.dump(project, fh, indent=2, ensure_ascii=False)
+            fh.write("\n")
+        try:
+            yield project
+        finally:
+            if previous is None:
+                if os.path.exists(PROJECT_MANIFEST):
+                    os.remove(PROJECT_MANIFEST)
+            else:
+                with open(PROJECT_MANIFEST, "wb") as fh:
+                    fh.write(previous)
 
 
 def load_cast() -> dict:
@@ -163,27 +210,43 @@ def cmd_render(args) -> int:
     config = load_config(CONFIG_PATH)
     registry = build_registry(config, project_dir=args.project)
     paths = project_paths(args.project)
+    destination = os.path.abspath(args.out or paths["silent"])
+    extra = [f"--concurrency={config.get('render', {}).get('concurrency', 4)}"]
+    if args.frames:
+        extra.append(f"--frames={args.frames}")
     request = ProviderRequest(
         capability="video.render",
-        destination=paths["silent"],
+        destination=destination,
         params={
             "entry": config.get("render", {}).get("entry", "src/index.ts"),
             "composition": config.get("render", {}).get("composition", "CinematicDemo"),
-            "args": [f"--concurrency={config.get('render', {}).get('concurrency', 4)}"],
+            "args": extra,
             "log": os.path.join(paths["logs"], "render.log"),
         },
     )
     with use_manifest(args.manifest):
         result = registry.execute("video.render", request)
-    print(f"[render] {paths['silent']} in {result.meta.get('seconds')}s")
+    print(f"[render] {destination} in {result.meta.get('seconds')}s")
     return 0
+
+
+def default_soundtrack(project: str, score: str) -> str:
+    """Prefer the narrated mix when it exists.
+
+    The score is the pre-voice bed. Defaulting to it produced a delivered MP4
+    with music and effects but no narration, even though mix.wav existed.
+    """
+    mix = os.path.join(project, "generation", "audio", "mix.wav")
+    return mix if os.path.exists(mix) else score
 
 
 def cmd_assemble(args) -> int:
     config = load_config(CONFIG_PATH)
     tools = Tools.detect()
     paths = project_paths(args.project)
-    audio = None if getattr(args, "silent", False) else (getattr(args, "audio", None) or paths["audio"])
+    audio = None if getattr(args, "silent", False) else (getattr(args, "audio", None) or default_soundtrack(args.project, paths["audio"]))
+    if audio:
+        print(f"[assemble] soundtrack: {audio}")
     report = assemble_mod.assemble(
         tools,
         video=paths["silent"],
@@ -211,12 +274,16 @@ def cmd_qa(args) -> int:
     tools = Tools.detect()
     paths = project_paths(args.project)
     project = load_project(args.manifest)
+    voice = os.path.join(args.project, "generation", "voice", "voice.wav")
+    score = os.path.join(args.project, "generation", "audio", "score.wav")
     report = qa_mod.run_qa(
         tools,
         output=paths["delivery"],
         project=project,
         thresholds=config.get("qa"),
         out_dir=paths["quality"],
+        voice_stem=voice if os.path.exists(voice) else None,
+        score_stem=score if os.path.exists(score) else None,
     )
     for check in report["checks"]:
         mark = "PASS" if check["pass"] else "FAIL"
@@ -545,6 +612,39 @@ def cmd_subtitles(args) -> int:
     with open(path, "w", encoding="utf-8", newline="\n") as fh:
         fh.write(subs.to_srt(cues))
     print(f"[subtitles] {len(cues)} cues -> {path}")
+    return 0
+
+
+def cmd_captions(args) -> int:
+    """Carry the take's word timings into the manifest for the burned-in layer."""
+    from acs import captions as captions_mod
+
+    project = load_project(args.manifest)
+    plan_path = os.path.join(args.project, "generation", "voice", "voice_plan.json")
+    if not os.path.exists(plan_path):
+        print("[captions] no voice_plan.json: run `studio.py voice --provider kokoro` first", file=sys.stderr)
+        return 1
+    with open(plan_path, "r", encoding="utf-8") as fh:
+        plan = json.load(fh)
+    result = captions_mod.attach(project, plan, max_words=args.max_words)
+    for problem in result["problems"]:
+        print(f"[captions] ! {problem}", file=sys.stderr)
+    for warning in result["warnings"]:
+        print(f"[captions]   {warning}")
+    if not result["ok"]:
+        return 1
+    out = os.path.abspath(args.out or args.manifest)
+    if args.dry_run:
+        print(f"[captions] dry run: {result['shots']} shot(s), {result['cues']} cue(s); nothing written")
+        return 0
+    with open(out, "w", encoding="utf-8") as fh:
+        json.dump(result["project"], fh, indent=2, ensure_ascii=False)
+        fh.write("\n")
+    worst = captions_mod.max_reveal_error(result["project"], plan)
+    print(
+        f"[captions] {result['shots']} shot(s), {result['cues']} cue(s) -> {out}; "
+        f"max reveal error {worst * 1000:.0f} ms (gate 120 ms)"
+    )
     return 0
 
 
@@ -883,6 +983,8 @@ def build_parser() -> argparse.ArgumentParser:
     p.set_defaults(func=cmd_audio)
 
     p = sub.add_parser("render", parents=[common])
+    p.add_argument("--out", default=None, help="output path (defaults to output/picture_silent.mp4)")
+    p.add_argument("--frames", default=None, help="Remotion frame range, e.g. 0-59 (short deterministic check)")
     p.set_defaults(func=cmd_render)
 
     p = sub.add_parser("assemble", parents=[common])
@@ -960,6 +1062,12 @@ def build_parser() -> argparse.ArgumentParser:
     p = sub.add_parser("subtitles", parents=[common])
     p.add_argument("--max-words", type=int, default=3)
     p.set_defaults(func=cmd_subtitles)
+
+    p = sub.add_parser("captions", parents=[common])
+    p.add_argument("--out", default=None, help="manifest to write (defaults to --manifest)")
+    p.add_argument("--max-words", type=int, default=3)
+    p.add_argument("--dry-run", action="store_true", help="validate and report without writing")
+    p.set_defaults(func=cmd_captions)
 
     p = sub.add_parser("storyboard", parents=[common])
     p.add_argument("--scale", type=float, default=0.45)

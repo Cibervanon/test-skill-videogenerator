@@ -1,0 +1,351 @@
+{
+  "project": "av_ultima_luz",
+  "generated_at": "2026-11-07T11:35:59Z",
+  "method": "beat sheet -> manifest; no generated footage, no extra shots",
+  "narration": true,
+  "structure": {
+    "functions": {
+      "hook": 1,
+      "setup": 1,
+      "escalation": 1,
+      "reaction": 1,
+      "reveal": 1,
+      "close": 1
+    },
+    "missing": [],
+    "hook_seconds": 3.6,
+    "hook_first": true,
+    "close_last": true,
+    "order": [
+      "hook",
+      "setup",
+      "escalation",
+      "reaction",
+      "reveal",
+      "close"
+    ]
+  },
+  "continuity": {
+    "scene_changes": 0,
+    "actor_positions": {
+      "elder": [
+        {
+          "shot": "S02",
+          "x": 300,
+          "facing": 1
+        },
+        {
+          "shot": "S03",
+          "x": 300,
+          "facing": 1
+        },
+        {
+          "shot": "S04",
+          "x": 540,
+          "facing": 1
+        },
+        {
+          "shot": "S05",
+          "x": 300,
+          "facing": 1
+        },
+        {
+          "shot": "S06",
+          "x": 300,
+          "facing": 1
+        }
+      ],
+      "young": [
+        {
+          "shot": "S02",
+          "x": 720,
+          "facing": -1
+        },
+        {
+          "shot": "S03",
+          "x": 720,
+          "facing": 1
+        },
+        {
+          "shot": "S05",
+          "x": 720,
+          "facing": 1
+        }
+      ]
+    },
+    "carried": 0,
+    "states": [
+      {
+        "shot": "S02",
+        "actor": "elder",
+        "entry": {
+          "x": 300.0,
+          "facing": 1,
+          "hold": "none"
+        },
+        "exit": {
+          "x": 300.0,
+          "facing": 1,
+          "hold": "none",
+          "preset": "idle"
+        },
+        "carried": false,
+        "shift": null,
+        "scene": "doorway",
+        "motive": ""
+      },
+      {
+        "shot": "S02",
+        "actor": "young",
+        "entry": {
+          "x": 720.0,
+          "facing": -1,
+          "hold": "lantern"
+        },
+        "exit": {
+          "x": 720.0,
+          "facing": -1,
+          "hold": "lantern",
+          "preset": "turn"
+        },
+        "carried": false,
+        "shift": null,
+        "scene": "doorway",
+        "motive": ""
+      },
+      {
+        "shot": "S03",
+        "actor": "elder",
+        "entry": {
+          "x": 300.0,
+          "facing": 1,
+          "hold": "none"
+        },
+        "exit": {
+          "x": 300.0,
+          "facing": 1,
+          "hold": "none",
+          "preset": "idle"
+        },
+        "carried": false,
+        "shift": 0.0,
+        "scene": "doorway",
+        "motive": ""
+      },
+      {
+        "shot": "S03",
+        "actor": "young",
+        "entry": {
+          "x": 720.0,
+          "facing": 1,
+          "hold": "lantern"
+        },
+        "exit": {
+          "x": 720.0,
+          "facing": 1,
+          "hold": "lantern",
+          "preset": "reach"
+        },
+        "carried": false,
+        "shift": 0.0,
+        "scene": "doorway",
+        "motive": ""
+      },
+      {
+        "shot": "S04",
+        "actor": "elder",
+        "entry": {
+          "x": 540.0,
+          "facing": 1,
+          "hold": "none"
+        },
+        "exit": {
+          "x": 540.0,
+          "facing": 1,
+          "hold": "none",
+          "preset": "react"
+        },
+        "carried": false,
+        "shift": 240.0,
+        "scene": "doorway",
+        "motive": "cut into a close-up of the same woman at the same threshold; no stage move"
+      },
+      {
+        "shot": "S05",
+        "actor": "elder",
+        "entry": {
+          "x": 300.0,
+          "facing": 1,
+          "hold": "none"
+        },
+        "exit": {
+          "x": 300.0,
+          "facing": 1,
+          "hold": "none",
+          "preset": "idle"
+        },
+        "carried": false,
+        "shift": -240.0,
+        "scene": "doorway",
+        "motive": ""
+      },
+      {
+        "shot": "S05",
+        "actor": "young",
+        "entry": {
+          "x": 720.0,
+          "facing": 1,
+          "hold": "none"
+        },
+        "exit": {
+          "x": 880.0,
+          "facing": 1,
+          "hold": "none",
+          "preset": "walkIn"
+        },
+        "carried": false,
+        "shift": 0.0,
+        "scene": "doorway",
+        "motive": ""
+      },
+      {
+        "shot": "S06",
+        "actor": "elder",
+        "entry": {
+          "x": 300.0,
+          "facing": 1,
+          "hold": "none"
+        },
+        "exit": {
+          "x": 300.0,
+          "facing": 1,
+          "hold": "none",
+          "preset": "idle"
+        },
+        "carried": false,
+        "shift": 0.0,
+        "scene": "doorway",
+        "motive": ""
+      }
+    ],
+    "note": "carry inherits x/facing/hold from the previous exit; a same-scene jump over 260px needs continuityMotive"
+  },
+  "performance": {
+    "actors_with_sequence": 3,
+    "phases": 6,
+    "note": "compound actions are ordered phases of existing presets, not a second animation system"
+  },
+  "edit": {
+    "shots": 6,
+    "seconds": 21.3,
+    "average_shot_seconds": 3.55,
+    "scale_counts": {
+      "detail": 1,
+      "medium": 4,
+      "close": 1
+    },
+    "camera_counts": {
+      "pushInSlow": 1,
+      "dollyIn": 1,
+      "trackRight": 1,
+      "static": 1,
+      "panRight": 1,
+      "dollyOut": 1
+    },
+    "wordless_shots": 1,
+    "sound_cues": 3
+  },
+  "validation": {
+    "ok": true,
+    "problems": [],
+    "warnings": [
+      "S05/young: held prop changes without an explicit phase"
+    ]
+  },
+  "shots": [
+    {
+      "id": "S01",
+      "beat": "hook",
+      "scale": "detail",
+      "camera": "pushInSlow",
+      "cameraIntensity": 0.65,
+      "seconds": 3.6,
+      "cameraMotive": "start on the one light that has been kept alive; the question is who is waiting for it",
+      "transition": "cut",
+      "transitionMotive": "open on the object that carries the waiting, not on an establishing shot",
+      "line": "La luz del umbral seguía encendida.",
+      "sound": []
+    },
+    {
+      "id": "S02",
+      "beat": "setup",
+      "scale": "medium",
+      "camera": "dollyIn",
+      "cameraIntensity": 0.7,
+      "seconds": 4.0,
+      "cameraMotive": "bring the woman and the arriving lamplighter into one frame so the wait becomes a relationship",
+      "transition": "cut",
+      "transitionMotive": "the light becomes a person; the cut moves from the object to the waiting",
+      "line": "La vieja esperaba a alguien que no volvía.",
+      "sound": [
+        "footstep"
+      ]
+    },
+    {
+      "id": "S03",
+      "beat": "escalation",
+      "scale": "medium",
+      "camera": "trackRight",
+      "cameraIntensity": 0.65,
+      "seconds": 3.8,
+      "cameraMotive": "follow the lamplighter's reach toward the wall lamp; the conflict is the hand that wants to end the wait",
+      "transition": "cut",
+      "transitionMotive": "the arrival turns into an action; the camera moves with the decision",
+      "line": "El farolero vino a apagarla.",
+      "sound": [
+        "footstep"
+      ]
+    },
+    {
+      "id": "S04",
+      "beat": "reaction",
+      "scale": "close",
+      "camera": "static",
+      "cameraIntensity": 0.0,
+      "seconds": 2.7,
+      "cameraMotive": "hold the woman's face as the light she has kept becomes a decision about letting go",
+      "transition": "cut",
+      "transitionMotive": "hard cut to the person who carries the cost of the light",
+      "line": "",
+      "sound": []
+    },
+    {
+      "id": "S05",
+      "beat": "reveal",
+      "scale": "medium",
+      "camera": "panRight",
+      "cameraIntensity": 0.55,
+      "seconds": 3.8,
+      "cameraMotive": "follow the lamplighter out and reveal the lantern he leaves behind, without making the object a new exposition",
+      "transition": "cut",
+      "transitionMotive": "the decision produces a visible trace in the snow",
+      "line": "Él dejó su propia luz en la nieve.",
+      "sound": [
+        "footstep"
+      ]
+    },
+    {
+      "id": "S06",
+      "beat": "close",
+      "scale": "medium",
+      "camera": "dollyOut",
+      "cameraIntensity": 0.45,
+      "seconds": 3.4,
+      "cameraMotive": "release from the woman and the left lantern; the light remains as the only answer",
+      "transition": "cut",
+      "transitionMotive": "settle on the trace and the waiting; no new information after this",
+      "line": "Y se fue sin decir nada.",
+      "sound": []
+    }
+  ]
+}

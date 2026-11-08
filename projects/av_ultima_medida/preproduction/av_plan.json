@@ -1,0 +1,400 @@
+{
+  "project": "av_ultima_medida",
+  "generated_at": "2026-11-07T01:24:13Z",
+  "method": "beat sheet -> manifest; no generated footage, no extra shots",
+  "narration": true,
+  "structure": {
+    "functions": {
+      "hook": 1,
+      "setup": 1,
+      "escalation": 1,
+      "reaction": 1,
+      "reveal": 1,
+      "close": 1
+    },
+    "missing": [],
+    "hook_seconds": 3.5,
+    "hook_first": true,
+    "close_last": true,
+    "order": [
+      "hook",
+      "setup",
+      "escalation",
+      "reaction",
+      "reveal",
+      "close"
+    ]
+  },
+  "continuity": {
+    "scene_changes": 0,
+    "actor_positions": {
+      "elder": [
+        {
+          "shot": "S01",
+          "x": 322,
+          "facing": 1
+        },
+        {
+          "shot": "S02",
+          "x": 322,
+          "facing": 1
+        },
+        {
+          "shot": "S03",
+          "x": 322.0,
+          "facing": 1
+        },
+        {
+          "shot": "S04",
+          "x": 690,
+          "facing": 1
+        },
+        {
+          "shot": "S05",
+          "x": 322,
+          "facing": 1
+        },
+        {
+          "shot": "S06",
+          "x": 322.0,
+          "facing": 1
+        }
+      ],
+      "young": [
+        {
+          "shot": "S02",
+          "x": 740,
+          "facing": -1
+        },
+        {
+          "shot": "S03",
+          "x": 740.0,
+          "facing": -1
+        },
+        {
+          "shot": "S05",
+          "x": 740.0,
+          "facing": -1
+        },
+        {
+          "shot": "S06",
+          "x": 740.0,
+          "facing": -1
+        }
+      ]
+    },
+    "carried": 5,
+    "states": [
+      {
+        "shot": "S01",
+        "actor": "elder",
+        "entry": {
+          "x": 322.0,
+          "facing": 1,
+          "hold": "none"
+        },
+        "exit": {
+          "x": 322.0,
+          "facing": 1,
+          "hold": "none",
+          "preset": "idle"
+        },
+        "carried": false,
+        "shift": null,
+        "scene": "workshop",
+        "motive": ""
+      },
+      {
+        "shot": "S02",
+        "actor": "elder",
+        "entry": {
+          "x": 322.0,
+          "facing": 1,
+          "hold": "none"
+        },
+        "exit": {
+          "x": 322.0,
+          "facing": 1,
+          "hold": "none",
+          "preset": "idle"
+        },
+        "carried": false,
+        "shift": 0.0,
+        "scene": "workshop",
+        "motive": ""
+      },
+      {
+        "shot": "S02",
+        "actor": "young",
+        "entry": {
+          "x": 740.0,
+          "facing": -1,
+          "hold": "rope"
+        },
+        "exit": {
+          "x": 740.0,
+          "facing": -1,
+          "hold": "rope",
+          "preset": "turn"
+        },
+        "carried": false,
+        "shift": null,
+        "scene": "workshop",
+        "motive": ""
+      },
+      {
+        "shot": "S03",
+        "actor": "elder",
+        "entry": {
+          "x": 322.0,
+          "facing": 1,
+          "hold": "none"
+        },
+        "exit": {
+          "x": 322.0,
+          "facing": 1,
+          "hold": "none",
+          "preset": "idle"
+        },
+        "carried": true,
+        "shift": 0.0,
+        "scene": "workshop",
+        "motive": ""
+      },
+      {
+        "shot": "S03",
+        "actor": "young",
+        "entry": {
+          "x": 740.0,
+          "facing": -1,
+          "hold": "rope"
+        },
+        "exit": {
+          "x": 740.0,
+          "facing": -1,
+          "hold": "rope",
+          "preset": "reach"
+        },
+        "carried": true,
+        "shift": 0.0,
+        "scene": "workshop",
+        "motive": ""
+      },
+      {
+        "shot": "S04",
+        "actor": "elder",
+        "entry": {
+          "x": 690.0,
+          "facing": 1,
+          "hold": "none"
+        },
+        "exit": {
+          "x": 690.0,
+          "facing": 1,
+          "hold": "none",
+          "preset": "react"
+        },
+        "carried": false,
+        "shift": 368.0,
+        "scene": "workshop",
+        "motive": "hard cut to a close-up; the actor is reframed inside the same room, not moved in the scene"
+      },
+      {
+        "shot": "S05",
+        "actor": "elder",
+        "entry": {
+          "x": 322.0,
+          "facing": 1,
+          "hold": "none"
+        },
+        "exit": {
+          "x": 322.0,
+          "facing": 1,
+          "hold": "none",
+          "preset": "point"
+        },
+        "carried": false,
+        "shift": -368.0,
+        "scene": "workshop",
+        "motive": "cut back to the worktable after the close-up; the spatial relation is declared, not inherited"
+      },
+      {
+        "shot": "S05",
+        "actor": "young",
+        "entry": {
+          "x": 740.0,
+          "facing": -1,
+          "hold": "rope"
+        },
+        "exit": {
+          "x": 740.0,
+          "facing": -1,
+          "hold": "rope",
+          "preset": "reach"
+        },
+        "carried": true,
+        "shift": 0.0,
+        "scene": "workshop",
+        "motive": ""
+      },
+      {
+        "shot": "S06",
+        "actor": "elder",
+        "entry": {
+          "x": 322.0,
+          "facing": 1,
+          "hold": "none"
+        },
+        "exit": {
+          "x": 322.0,
+          "facing": 1,
+          "hold": "none",
+          "preset": "idle"
+        },
+        "carried": true,
+        "shift": 0.0,
+        "scene": "workshop",
+        "motive": ""
+      },
+      {
+        "shot": "S06",
+        "actor": "young",
+        "entry": {
+          "x": 740.0,
+          "facing": -1,
+          "hold": "rope"
+        },
+        "exit": {
+          "x": 740.0,
+          "facing": -1,
+          "hold": "rope",
+          "preset": "idle"
+        },
+        "carried": true,
+        "shift": 0.0,
+        "scene": "workshop",
+        "motive": ""
+      }
+    ],
+    "note": "carry inherits x/facing/hold from the previous exit; a same-scene jump over 260px needs continuityMotive"
+  },
+  "performance": {
+    "actors_with_sequence": 3,
+    "phases": 6,
+    "note": "compound actions are ordered phases of existing presets, not a second animation system"
+  },
+  "edit": {
+    "shots": 6,
+    "seconds": 22.4,
+    "average_shot_seconds": 3.73,
+    "scale_counts": {
+      "detail": 1,
+      "wide": 2,
+      "medium": 2,
+      "close": 1
+    },
+    "camera_counts": {
+      "pushInSlow": 1,
+      "panRight": 1,
+      "trackRight": 1,
+      "static": 1,
+      "reframe": 1,
+      "dollyOut": 1
+    },
+    "wordless_shots": 1,
+    "sound_cues": 5
+  },
+  "validation": {
+    "ok": true,
+    "problems": [],
+    "warnings": []
+  },
+  "shots": [
+    {
+      "id": "S01",
+      "beat": "hook",
+      "scale": "detail",
+      "camera": "pushInSlow",
+      "cameraIntensity": 0.65,
+      "seconds": 3.5,
+      "cameraMotive": "start on the broken measure and the unfinished coat, before we meet the two people who disagree about it",
+      "transition": "cut",
+      "transitionMotive": "open on the problem, not on an establishing shot",
+      "line": "La cinta de medir se rompió a la una de la mañana.",
+      "sound": []
+    },
+    {
+      "id": "S02",
+      "beat": "setup",
+      "scale": "wide",
+      "camera": "panRight",
+      "cameraIntensity": 0.7,
+      "seconds": 4.8,
+      "cameraMotive": "cross the workroom from the old tailor to the apprentice, so the coat has a human scale and the distance between them is visible",
+      "transition": "cut",
+      "transitionMotive": "the detail opens into the room; the people enter the problem",
+      "line": "El sastre y su aprendiz tenían hasta el amanecer para terminar el abrigo.",
+      "sound": [
+        "footstep",
+        "footstep"
+      ]
+    },
+    {
+      "id": "S03",
+      "beat": "escalation",
+      "scale": "medium",
+      "camera": "trackRight",
+      "cameraIntensity": 0.8,
+      "seconds": 3.6,
+      "cameraMotive": "follow the measuring cord as the apprentice reaches for it, keeping the tailor in the frame",
+      "transition": "cut",
+      "transitionMotive": "cut on the hand, not on a new composition",
+      "line": "El aprendiz quería cerrar la costura y marcharse.",
+      "sound": [
+        "footstep"
+      ]
+    },
+    {
+      "id": "S04",
+      "beat": "reaction",
+      "scale": "close",
+      "camera": "static",
+      "cameraIntensity": 0.0,
+      "seconds": 2.4,
+      "cameraMotive": "hold the tailor's reaction; the wordless close-up is the judgement",
+      "transition": "cut",
+      "transitionMotive": "hard cut to the face that has decided not to explain",
+      "line": "",
+      "sound": []
+    },
+    {
+      "id": "S05",
+      "beat": "reveal",
+      "scale": "medium",
+      "camera": "reframe",
+      "cameraIntensity": 0.8,
+      "seconds": 4.0,
+      "cameraMotive": "reframe around the pointing hand until the skipped stitch becomes the subject of the two-shot",
+      "transition": "cut",
+      "transitionMotive": "return to the worktable: the close-up has changed the argument",
+      "line": "El sastre señaló la puntada que el aprendiz había saltado.",
+      "sound": [
+        "footstep",
+        "footstep"
+      ]
+    },
+    {
+      "id": "S06",
+      "beat": "close",
+      "scale": "wide",
+      "camera": "dollyOut",
+      "cameraIntensity": 0.7,
+      "seconds": 4.1,
+      "cameraMotive": "release the frame until the finished coat and both people are visible in the same dawn",
+      "transition": "cut",
+      "transitionMotive": "settle on the result; no new information arrives after this",
+      "line": "Al amanecer, el abrigo estaba terminado; la medida también.",
+      "sound": []
+    }
+  ]
+}

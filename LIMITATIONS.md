@@ -70,10 +70,13 @@ Everything below is a known, verified gap. None of it is simulated away.
   its own frame; the night square still has nothing between camera and subject.
 - **Facial acting is parametric** (blink, mouth aperture, head tilt). No
   lip-sync to real audio, because there is no voice track in LOCAL mode.
-- **Five sets only** (`townNight`, `doorway`, `faceCloseup`, `fieldDawn`,
-  `bellInsert`). New sets are code; there is no set generator.
-- **Performance.** 1080×1920 SVG with `feTurbulence` grain renders at roughly
-  500 frames/min on this machine; a 34 s film takes ~8–10 minutes.
+- **Six sets only** (`townNight`, `doorway`, `faceCloseup`, `fieldDawn`,
+  `bellInsert`, `workshop`). New sets are code; there is no set generator.
+- **Performance.** The measured provider render is 927 frames in 1464.45 s:
+  **38 frames/min (0.63 fps)**, i.e. 24 min 24 s for 31 s of film with
+  `concurrency=4`. The earlier "500 frames/min / 8–10 minutes" estimate is not
+  supported by that run and has been removed. See
+  `quality/repository_audit/performance.md`.
 
 ## 4. Audio
 
@@ -149,19 +152,24 @@ Everything below is a known, verified gap. None of it is simulated away.
   compare pixels. `IdentitySheet` and `identity_shots.png` are for human review;
   there is no face embedding and no automatic identity score.
 - **Narration is verified by signal, not by ear.** `voicecheck` measures take,
-  stem and mix RMS/peak and checks order, duplicates and trims. It does not
-  transcribe, so it cannot prove the words are intelligible or correctly
-  pronounced; listening is still required.
-- **Burned-in captions are shot-synced, not word-synced.** The SRT and
-  `words.json` carry real take timings, but `buildCues` still distributes the
-  burned-in words by character weight. This is the open roadmap item, not a
-  claim of lip-sync.
+  stem and mix RMS/peak, checks order, duplicates and trims, and now correlates
+  the mix against the voice stem. `qa.voice_in_delivery` repeats that measurement
+  on the muxed MP4 after removing the bed. Neither gate transcribes, so they
+  cannot prove the words are intelligible or correctly pronounced; listening is
+  still required.
+- **Burned-in captions are chunk-timed, not lip-sync.** `studio.py captions`
+  writes 2–3-word cues from the take's word timings into `shot.captions`; the
+  renderer reveals each chunk on its first word (0 ms error against the plan).
+  The timings are Kokoro `pred_dur`, not forced alignment, and there is no
+  word-level emphasis or viseme track. Manifests without cues still fall back to
+  character-weight distribution.
 - **The takes are cached from real Kokoro runs.** `voicecheck` proves the WAVs
   exist and are audible; the plan marks them `cached`, and regenerating them is
   only necessary when text, voice or speed changes.
-- **The intermediate mix can still peak at 0.0 dBFS in one window (S04); the
-  delivery is capped by two-pass loudnorm at −1.5 dBTP.** `voicecheck` reports
-  the peak instead of hiding it. The mix file is an intermediate, not a master.
+- **The mix is an intermediate, not a master.** The NumPy mixer limits it
+  linearly at 0.89; the current mix peaks at **0.844** and has RMS −24.01 dB. The
+  delivery is still capped by two-pass loudnorm at −1.5 dBTP. `voicecheck`
+  reports the peak instead of hiding it.
 
 ## 8c. Audiovisual direction (0.9.0)
 
@@ -171,7 +179,9 @@ Everything below is a known, verified gap. None of it is simulated away.
 - **`scale` is a declared unit, not focal length.** The renderer still applies
   actor scale and a 2.5D camera transform; there is no depth of field, true
   parallax or lens model. A close-up is close because the actor is large and the
-  camera moves in, not because a lens was chosen.
+  camera moves in, not because a lens was chosen. `cameraIntensity` changes the
+  pressure of that transform, not the perspective; there is no over-the-shoulder
+  or POV geometry yet.
 - **The creative audit is structural.** It can prove that a reaction shot exists,
   that scales vary and that a dissolve has a motive. It cannot see whether the
   reaction is good, whether the composition works or whether the film is moving.
@@ -180,11 +190,13 @@ Everything below is a known, verified gap. None of it is simulated away.
   and props are in the manifest; there is no 3D scene or hand-off tracker, so a
   prop can change hands between shots if the plan says so.
 - **Acting remains preset-based.** The plan coordinates actor, listener and
-  reaction, but the rig has no IK, cloth or visemes; a reach is a parametric arm
-  arc, not a hand locked to the rope.
+  reaction, and `point`/`react` make interaction readable, but the rig has no IK,
+  cloth or visemes; a reach is a parametric arm arc, not a hand locked to the
+  rope.
 - **The audio cues are synthesised, not recorded.** Bell, footstep and dig are
-  procedural; ambience is a wind bed. The mix was measured for voice competition
-  (4 windows within 3 dB at `music_gain=0.20`), not judged as a soundtrack.
+  procedural; ambience is a wind bed. The current story mix measures 3 windows
+  within 3 dB at `music_gain=0.20`; the demo measures 1 at 0.14. That is a
+  measured competition warning, not a judgement of the soundtrack.
 - **The demo's two wordless shots are intentional, not missing captions.** S04 is
   the pause after the rope arrives; S06 is the keeper's reaction. The caption
   coverage check reports 8/10 because the plan says so.
@@ -256,14 +268,51 @@ Everything below is a known, verified gap. None of it is simulated away.
   story stem is 31.183 s (8 lines, last line ends at 30.188 s), and the mix is
   30.933 s. The 18.45 s file in the workspace belongs to `projects/kokoro_demo`.
   This is an ownership mismatch, not a truncation in the rendered MP4.
-- **Music can still sit close to the voice.** With `music_gain=0.20` five windows
-  are within 3 dB; that is a measured warning, not proof of intelligibility.
-  Listening remains a manual QA step.
+- **Music can still sit close to the voice.** With `music_gain=0.20` three
+  windows are within 3 dB; that is a measured warning, not proof of
+  intelligibility. Listening remains a manual QA step.
 - **Identity is canonical but not pixel-perceptual.** `head_to_body` is measured
   from the rig geometry; there is no face embedding, no pixel diff and no
   automatic identity score. The two unused cast entries remain available for
   other stories and are warnings, not failures.
-- **The render-provider gate is only partly closed.** Progress now streams to
-  `logs/render.log` and the manifest is restored on failure, but only one full
-  provider render has been exercised after the change; two consecutive renders
-  remain the acceptance gate.
+- **The render-provider gate is only partly closed.** Progress streams to
+  `logs/render.log`, the manifest is restored on failure, and a fail-fast lock
+  prevents a second process from swapping it. Two 30-frame renders match
+  structurally (PSNR 53.12 dB, SSIM 0.99696), but two consecutive **full**
+  renders remain the acceptance gate; exact pixel MD5 is not stable because
+  Chrome re-rasterises the SVG grain filter.
+
+## 10. Compound action and per-shot motion (0.10.5)
+
+- **Phases are a preset score, not IK.** `ActorSpec.sequence` orders existing
+  presets and cross-fades their parameters. A hand still does not lock to a prop;
+  a pick-up or handoff remains a planned pose, not physical contact.
+- **Carried state is plan-time data.** `carry` inherits x/facing/hold across
+  shots and refuses a scene change, but the renderer does not own a persistent
+  body across `<Sequence>` boundaries. It is a resolved recipe, not simulation.
+- **The teleport guard is 260 px.** A motivated reframing can exceed it only with
+  an explicit `continuityMotive`; the threshold is calibrated to this stage, not
+  a universal blocking rule.
+- **`shot_motion` is a translation heuristic.** It decodes each visible shot at
+  low resolution and reports SAD motion, pan/tilt and a low-motion diagnostic. It
+  cannot distinguish an intentional held reaction from missing animation; the
+  human review still decides.
+- **Low motion is not automatically a failure.** S04 is a declared reaction and
+  is allowed to be quiet; the report records it instead of forcing movement.
+
+## 11. Carried character state (0.10.6)
+
+- **State is planned, not simulated.** `carry` inherits `x`, `facing` and `hold`
+  at plan time; the renderer receives ordinary actor fields and does not own a
+  body across `<Sequence>` boundaries.
+- **A scene cut is a reset by design.** `carry` is refused across scenes because
+  there is no transition model that preserves stage position through a set
+  change. The new scene must declare its own blocking.
+- **The teleport guard is local.** A same-scene shift over 260 px needs a
+  `continuityMotive`; the value is calibrated to this stage and is not a general
+  blocking rule.
+- **No pixel drift check.** `avqa` measures the resolved plan and the render is
+  inspected through frames; there is no per-pixel identity or position tracker.
+- **The new story shares the rig and cast.** `elder` and `young` are reused; the
+  difference is scene, object, beat order and resolution, not a new character
+  system.
